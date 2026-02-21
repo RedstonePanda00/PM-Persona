@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: install Protoss Heart -->
+  <PMPH_InstallProtossHeart.label>安装星灵心脏</PMPH_InstallProtossHeart.label>
+  <!-- EN: Install a Protoss heart. -->
+  <PMPH_InstallProtossHeart.description>安装一个星灵心脏。</PMPH_InstallProtossHeart.description>
+  <!-- EN: Installing Protoss heart. -->
+  <PMPH_InstallProtossHeart.jobString>正在安装星灵心脏。</PMPH_InstallProtossHeart.jobString>
+  
+  <!-- EN: install Protoss Nerve Cords -->
+  <PMPH_InstallProtossNerveCords.label>安装星灵神经索</PMPH_InstallProtossNerveCords.label>
+  <!-- EN: Install Protoss nerve cords. -->
+  <PMPH_InstallProtossNerveCords.description>安装一条星灵神经索。</PMPH_InstallProtossNerveCords.description>
+  <!-- EN: Installing Protoss nerve cords. -->
+  <PMPH_InstallProtossNerveCords.jobString>正在安装星灵神经索。</PMPH_InstallProtossNerveCords.jobString>
+  
+</LanguageData>

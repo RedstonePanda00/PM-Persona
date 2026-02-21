@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>Name_GestalZero</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>Name_GestalZero->David 'Gestalt No.0' Mason</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

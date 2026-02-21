@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Unyielding -->
+  <PMPH_Unyielding.degreeDatas.Unyielding.label>不屈</PMPH_Unyielding.degreeDatas.Unyielding.label>
+  <!-- EN: {PAWN_nameDef} possesses an unbreakable mind. {PAWN_pronoun} is completely immune to all forms of mental breaks. -->
+  <PMPH_Unyielding.degreeDatas.Unyielding.description>{PAWN_nameDef} 拥有坚不可摧的意志。{PAWN_pronoun} 完全免疫所有形式的精神崩溃。</PMPH_Unyielding.degreeDatas.Unyielding.description>
+  
+</LanguageData>

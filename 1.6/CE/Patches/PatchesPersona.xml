@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Kaldalis -->
+     <Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PMPH_Kaldalis"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>256</ArmorRating_Blunt>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PMPH_Kaldalis"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+			<ArmorRating_Sharp>80</ArmorRating_Sharp>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="PMPH_Kaldalis"]/statBases</xpath>
+		<value>
+			<AimingAccuracy>0.99</AimingAccuracy>
+			<ShootingAccuracyPawn>0.99</ShootingAccuracyPawn>
+			<MeleeDodgeChance>0.99</MeleeDodgeChance>
+			<MeleeCritChance>0.87</MeleeCritChance>
+			<MeleeParryChance>0.99</MeleeParryChance>
+			<!-- <MaxHitPoints>150</MaxHitPoints> -->
+			<NightVisionEfficiency>1.0</NightVisionEfficiency>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="PMPH_Kaldalis"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PMPH_Kaldalis"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left Energy Blade</label>
+					<capacities>
+						<li>Cut</li>
+						<li>Stab</li>
+					</capacities>
+					<power>27</power>
+					<cooldownTime>0.5</cooldownTime>
+					<armorPenetrationSharp>400.0</armorPenetrationSharp>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right Energy Blade</label>
+					<capacities>
+						<li>Cut</li>
+						<li>Stab</li>
+					</capacities>
+					<power>27</power>
+					<cooldownTime>0.5</cooldownTime>
+					<armorPenetrationSharp>400.0</armorPenetrationSharp>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="PMPH_Kaldalis"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_ArmorDurability">
+				<Durability>4000</Durability>
+				<Regenerates>true</Regenerates>
+				<RegenInterval>60</RegenInterval>
+				<RegenValue>5</RegenValue>
+				<Repairable>true</Repairable>
+				<RepairIngredients>
+					<PM_Solarite>5</PM_Solarite>
+				</RepairIngredients>
+				<RepairTime>300</RepairTime>
+				<RepairValue>1500</RepairValue>
+				<CanOverHeal>true</CanOverHeal>
+				<MaxOverHeal>1500</MaxOverHeal>
+				<MinArmorPct>1.0</MinArmorPct>
+			</li>
+		</value>
+	</Operation>
+
+    <!-- Taldarin -->
+     <Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PMPH_Taldarin"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>480.0</ArmorRating_Blunt>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PMPH_Taldarin"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+			<ArmorRating_Sharp>180.0</ArmorRating_Sharp>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="PMPH_Taldarin"]/statBases</xpath>
+		<value>
+			<AimingAccuracy>1</AimingAccuracy>
+			<ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+			<MeleeDodgeChance>0.05</MeleeDodgeChance>
+			<MeleeCritChance>0.87</MeleeCritChance>
+			<MeleeParryChance>0.99</MeleeParryChance>
+			<!-- <MaxHitPoints>200</MaxHitPoints> -->
+			<NightVisionEfficiency>1.0</NightVisionEfficiency>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="PMPH_Taldarin"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_ArmorDurability">
+				<Durability>4000</Durability>
+				<Regenerates>true</Regenerates>
+				<RegenInterval>60</RegenInterval>
+				<RegenValue>5</RegenValue>
+				<Repairable>true</Repairable>
+				<RepairIngredients>
+					<PM_Solarite>5</PM_Solarite>
+				</RepairIngredients>
+				<RepairTime>300</RepairTime>
+				<RepairValue>2500</RepairValue>
+				<CanOverHeal>true</CanOverHeal>
+				<MaxOverHeal>2500</MaxOverHeal>
+				<MinArmorPct>1.0</MinArmorPct>
+			</li>
+		</value>
+	</Operation>
+
+    <!-- Warbringer -->
+     <Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PMPH_Warbringer"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>1000.0</ArmorRating_Blunt>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PMPH_Warbringer"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+			<ArmorRating_Sharp>600.0</ArmorRating_Sharp>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="PMPH_Warbringer"]/statBases</xpath>
+		<value>
+			<AimingAccuracy>1.95</AimingAccuracy>
+			<ShootingAccuracyPawn>1.95</ShootingAccuracyPawn>
+			<MeleeDodgeChance>0.05</MeleeDodgeChance>
+			<MeleeCritChance>0.87</MeleeCritChance>
+			<MeleeParryChance>0.99</MeleeParryChance>
+			<!-- <MaxHitPoints>500</MaxHitPoints> -->
+			<NightVisionEfficiency>1.0</NightVisionEfficiency>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="PMPH_Warbringer"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_ArmorDurability">
+				<Durability>4000</Durability>
+				<Regenerates>true</Regenerates>
+				<RegenInterval>60</RegenInterval>
+				<RegenValue>5</RegenValue>
+				<Repairable>true</Repairable>
+				<RepairIngredients>
+					<PM_Solarite>5</PM_Solarite>
+				</RepairIngredients>
+				<RepairTime>300</RepairTime>
+				<RepairValue>3000</RepairValue>
+				<CanOverHeal>true</CanOverHeal>
+				<MaxOverHeal>3000</MaxOverHeal>
+				<MinArmorPct>1.0</MinArmorPct>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>

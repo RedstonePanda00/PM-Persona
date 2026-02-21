@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <PawnKindDef Name="GestaltBase" Abstract="True">
+        <race>Human</race>
+        <defaultFactionDef>PlayerColony</defaultFactionDef>
+        <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+        <invNutrition>3</invNutrition>
+        <gearHealthRange>1.0~1.0</gearHealthRange>
+        <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+        <maxGenerationAge>45</maxGenerationAge>
+        <minGenerationAge>10</minGenerationAge>
+        <initialWillRange>150~200</initialWillRange>
+        <initialResistanceRange>800~1200</initialResistanceRange>
+        <xenotypeSet>
+            <xenotypeChances>
+                <Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
+                <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+                <Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+                <Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
+                <Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
+                <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+                <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+                <Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
+                <Waster MayRequire="Ludeon.RimWorld.Biotech">0</Waster>
+                <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+                <Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+            </xenotypeChances>
+        </xenotypeSet>
+        <useFactionXenotypes>false</useFactionXenotypes>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="GestaltBase">
+        <defName>PMPH_GestaltZero</defName>
+        <label>Gestalt No.0</label>
+        <race>Human</race>
+        <combatPower>50</combatPower>
+        <fixedGender>Male</fixedGender>
+        <nameMaker>Name_GestalZero</nameMaker>
+        <chemicalAddictionChance>0</chemicalAddictionChance>
+        <maxPerGroup>1</maxPerGroup>
+        <itemQuality>Masterwork</itemQuality>
+        <isFighter>true</isFighter>
+        <factionLeader>false</factionLeader>
+        <maxGenerationAge>35</maxGenerationAge>
+        <minGenerationAge>25</minGenerationAge>
+        <apparelMoney>0~2500</apparelMoney>
+        <apparelRequired>
+            <li>Apparel_ArmorLocust</li>
+            <li>Apparel_ArmorHelmetMechCommander</li>
+            <li>Apparel_CollarShirt</li>
+            <li>Apparel_Pants</li>
+        </apparelRequired>
+        <apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <backstoryFiltersOverride>
+            <li>
+                <categoriesChildhood>
+                    <li>PM_DavidYoung</li>
+                </categoriesChildhood>
+                <categoriesAdulthood>
+                    <li>PM_DavidAdult</li>
+                </categoriesAdulthood>
+            </li>
+        </backstoryFiltersOverride>
+        <techHediffsMoney>1000~2000</techHediffsMoney>
+        <techHediffsTags>
+            <li>Simple</li>
+            <li>Advanced</li>
+            <li>AdvancedWeapon</li>
+        </techHediffsTags>
+        <techHediffsRequired>
+            <li>Mechlink</li>
+            <li>PsychicAmplifier</li>
+            <li>PMPH_ProtossHeart</li>
+            <li>PMPH_NerveCords</li>
+        </techHediffsRequired>
+        <forcedTraits>
+            <PMPH_Unyielding>0</PMPH_Unyielding>
+            <PsychicSensitivity>2</PsychicSensitivity>
+            <Tough>0</Tough>
+        </forcedTraits>
+        <disallowedTraits>
+            <li>BodyPurist</li>
+        </disallowedTraits>
+        <disallowedTraitsWithDegree>
+            <PsychicSensitivity>-1</PsychicSensitivity>
+            <PsychicSensitivity>-2</PsychicSensitivity>
+        </disallowedTraitsWithDegree>
+        <abilities>
+            <li>PMPH_GestaltZeroInvisibility</li>
+            <li>PMP_GravemakerShot</li>
+        </abilities>
+        <skipResistant>true</skipResistant>
+    </PawnKindDef>
+
+</Defs>

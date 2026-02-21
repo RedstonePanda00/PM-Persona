@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: As one of the first elites to leave Earth, {PAWN_nameDef} drifted in space for an unknown era before being captured. {PAWN_possessive} captors forcibly implanted {PAWN_pronoun} with Protoss organs and a mind-control device in {PAWN_possessive} brain, forcing {PAWN_pronoun} to commit acts against {PAWN_possessive} will. Only after a Protoss prisoner sacrificed himself to break the mental link did {PAWN_nameDef} regain {PAWN_possessive} freedom. Now, {PAWN_pronoun} serves the Protoss as a member of the Purifiers, fighting in hopes of one day returning to Earth. -->
+  <PMPH_DavidAdult.description>作为首批离开地球的精英之一，[PAWN_nameDef]在太空中漂流了不知多久，最终被不明势力捕获。[PAWN_nameDef]被强行移植了外星种族星灵的器官，并且被那些人在大脑植入了控制装置，因此精神遭受控制，被迫做出了许多违背意愿之事。直到另一位星灵牺牲自己切断了控制，[PAWN_nameDef]才重获自由。如今，[PAWN_pronoun]作为“净化者”的一员为星灵效力，希望有一天能够重返地球。</PMPH_DavidAdult.description>
+  <!-- EN: Gestalt No.0 -->
+  <PMPH_DavidAdult.title>格式塔零号</PMPH_DavidAdult.title>
+  <!-- EN: Gestalt -->
+  <PMPH_DavidAdult.titleShort>格式塔</PMPH_DavidAdult.titleShort>
+  
+  <!-- EN: {PAWN_nameDef} was born on Earth, the third planet of the Sol system. {PAWN_pronoun} was raised by {PAWN_possessive} father's former comrade-in-arms, a man who lived in eternal regret for accidentally killing {PAWN_nameDef}'s father during a mission. Driven by this legacy, {PAWN_nameDef} followed in {PAWN_possessive} father's footsteps and joined the Navy, eventually commanding elite special forces. -->
+  <PMPH_DavidChildhood.description>[PAWN_nameDef]出生于太阳系的第三颗行星——地球。[PAWN_pronoun]由父亲的战友抚养长大，但这名养父因在任务中误杀大卫的父亲而抱憾终身。[PAWN_nameDef]追随父亲的足迹加入了海军，并最终成为了一名指挥精锐特种部队的指挥官。</PMPH_DavidChildhood.description>
+  <!-- EN: SEAL Commander -->
+  <PMPH_DavidChildhood.title>海豹突击队指挥官</PMPH_DavidChildhood.title>
+  <!-- EN: SEAL Cmdr. -->
+  <PMPH_DavidChildhood.titleShort>SEAL指挥官</PMPH_DavidChildhood.titleShort>
+  
+</LanguageData>

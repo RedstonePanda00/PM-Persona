@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>PMPH_GestaltZeroInvisibility</defName>
+    <label>GestaltZeroInvisibility</label>
+    <description>Use psychic to become invisible for a short duration.</description>
+    <iconPath>UI/Abilities/OpticalCamo</iconPath>
+    <cooldownTicksRange>7500</cooldownTicksRange>
+    <writeCombatLog>True</writeCombatLog>
+    <targetRequired>false</targetRequired>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_Duration>15</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <warmupTime>0</warmupTime>
+      <range>19.9</range>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>True</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>PsychicInvisibility</hediffDef>
+        <psychic>False</psychic>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>PMP_GravemakerShot</defName>
+    <label>Gravemaker Protocol</label>
+    <description>Materialize the Gravemaker cannon to execute a target through obstacles.</description>
+    <iconPath>Things/Weapon/GraveMaker</iconPath>
+    <targetRequired>False</targetRequired>
+    <jobDef>CastAbilityOnThing</jobDef>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <!-- <stunTargetWhileCasting>True</stunTargetWhileCasting> -->
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <warmupTime>0</warmupTime>
+      <range>19.9</range>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>True</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="PMP_Persona.CompProperties_EquipGravemaker">
+        <weaponDef>PMP_Gun_Gravemaker</weaponDef>
+        <shotsCount>6</shotsCount>
+      </li>
+    </comps>
+  </AbilityDef>
+  
+</Defs>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Protoss Nerve Cords -->
+  <PMPH_NerveCords.label>星灵神经索</PMPH_NerveCords.label>
+  <!-- EN: A Protoss nerve cords. -->
+  <PMPH_NerveCords.description>一条星灵神经索。</PMPH_NerveCords.description>
+  
+  <!-- EN: Protoss heart -->
+  <PMPH_ProtossHeart.label>星灵心脏</PMPH_ProtossHeart.label>
+  <!-- EN: A Protoss heart. -->
+  <PMPH_ProtossHeart.description>一颗星灵心脏。</PMPH_ProtossHeart.description>
+  
+</LanguageData>

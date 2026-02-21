@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Purifier conclave -->
+  <PMPH_conclave.label>净化者议会</PMPH_conclave.label>
+  <!-- EN: Purifier conclave provide interface between Persona Hero and their Shell. -->
+  <PMPH_conclave.description>净化者议会作为净化者网络的本地分发器，为人格英雄的下载提供接口。</PMPH_conclave.description>
+  
+</LanguageData>

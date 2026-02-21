@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>PMPH_conclave</defName>
+        <label>Purifier conclave</label>
+        <thingClass>Building</thingClass>
+        <description>Purifier conclave provide interface between Persona Hero and their Shell.</description>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <graphicData>
+            <texPath>Things/Structure/PurifierConclave</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3.0, 3.0)</drawSize>
+            <drawOffset>(0,0,-0.1)</drawOffset>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.9</fillPercent>
+        <pathCost>50</pathCost>
+        <rotatable>false</rotatable>
+        <stealable>false</stealable>
+        <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <designationCategory>Misc</designationCategory>
+        <uiOrder>3000</uiOrder>
+        <statBases>
+            <MaxHitPoints>20000</MaxHitPoints>
+            <WorkToBuild>10000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Beauty>100</Beauty>
+        </statBases>
+        <size>(3,3)</size>
+        <costList>
+            <PM_Solarite>100</PM_Solarite>
+            <Plasteel>100</Plasteel>
+        </costList>
+        <researchPrerequisites>
+            <li>PM_PurifierProjectFinal</li>
+        </researchPrerequisites>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <overlightRadius>5</overlightRadius>
+                <glowRadius>5</glowRadius>
+                <glowColor>(370,370,370,0)</glowColor>
+            </li>
+            <li Class="CompProperties_Breakdownable" />
+            <li Class="PMP_Persona.CompProperties_AvengerProtocolManager">
+                <hediffDef>PMP_AvengingProtocol</hediffDef>
+                <chargeResetTicks>60000</chargeResetTicks>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

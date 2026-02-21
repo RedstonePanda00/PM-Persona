@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Protoss Heart-->
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>PMPH_HediffProtossHeart</defName>
+        <label>Protoss Heart</label>
+        <labelNoun>a Protoss heart</labelNoun>
+        <description>An installed Protoss heart.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PMPH_ProtossHeart</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>PMPH_ProtossHeart</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.0</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <comps>
+            <li Class="RsPandaLibrary.HediffCompProperties_IgnorePathCost" />
+            <li Class="RsPandaLibrary.HediffCompProperties_Regeneration">
+                <regenerationRate>1</regenerationRate>
+                <tickInterval>240</tickInterval>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartArchotechBase">
+        <defName>PMPH_ProtossHeart</defName>
+        <label>Protoss heart</label>
+        <description>A Protoss heart.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>PMPH_InstallProtossHeart</RecipeDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>PMPH_InstallProtossHeart</defName>
+        <label>install Protoss Heart</label>
+        <description>Install a Protoss heart.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PMPH_ProtossHeart</ThingDef>
+            <HediffDef>PMPH_HediffProtossHeart</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing Protoss heart.</jobString>
+        <deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+        <skillRequirements>
+            <Medicine>8</Medicine>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>PMPH_ProtossHeart</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>PMPH_ProtossHeart</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Heart</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>PMPH_HediffProtossHeart</addsHediff>
+    </RecipeDef>
+
+    <!-- Protoss Nerve Cords -->
+    <ThingDef ParentName="BodyPartArchotechBase">
+        <defName>PMPH_NerveCords</defName>
+        <label>Protoss Nerve Cords</label>
+        <description>A Protoss nerve cords.</description>
+        <descriptionHyperlinks>
+            <HediffDef>PMPH_HediffNerveCords</HediffDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>PMPH_HediffNerveCords</defName>
+        <descriptionHyperlinks>
+            <ThingDef>PMPH_NerveCords</ThingDef>
+        </descriptionHyperlinks>
+        <label>Protoss nerve cords</label>
+        <labelNoun>a Protoss nerve cords</labelNoun>
+        <description>A Protoss nerve cords.</description>
+        <spawnThingOnRemoved>PMPH_NerveCords</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+        </addedPartProps>
+        <stages>
+            <li>
+                <statFactors>
+                    <PsychicSensitivity>2.0</PsychicSensitivity>
+                    <PsychicEntropyRecoveryRate>2.0</PsychicEntropyRecoveryRate>
+                    <PsychicEntropyMax>2.0</PsychicEntropyMax>
+                </statFactors>
+                <statOffsets>
+                    <MechBandwidth>9</MechBandwidth>
+                    <MechControlGroups>3</MechControlGroups>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>1.0</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>PMPH_InstallProtossNerveCords</defName>
+        <label>install Protoss Nerve Cords</label>
+        <description>Install Protoss nerve cords.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PMPH_NerveCords</ThingDef>
+            <HediffDef>PMPH_HediffNerveCords</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing Protoss nerve cords.</jobString>
+        <deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+        <skillRequirements>
+            <Medicine>8</Medicine>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>PMPH_NerveCords</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>PMPH_NerveCords</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>PMPH_HediffNerveCords</addsHediff>
+    </RecipeDef>
+
+</Defs>

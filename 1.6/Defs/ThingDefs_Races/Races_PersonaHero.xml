@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Kaldalis -->
+  <ThingDef ParentName="ProtossMechanoid">
+    <defName>PMPH_Kaldalis</defName>
+    <label>Kaldalis</label>
+    <description>Kaldalis is a Purifier Hero Personality derived from the preserved neural imprints of the renowned zealot Kaldalis — the Akhundelar, the tip of the spear — who played a pivotal role in the reclamation of Aiur. After his consciousness was integrated into the Purifier network, he once again took up arms, fighting valiantly under Executor Talandar during the war against Amon. \n\n Oh, and by the way — he’s also the champion of the very first Aiur Chef competition. \n\n Even now, some question whether a warrior of such legendary stature should truly be assigned to… mining duty.</description>
+    <statBases>
+      <BandwidthCost>0</BandwidthCost>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+      <MoveSpeed>7.5</MoveSpeed>
+      <MeleeHitChance>100.0</MeleeHitChance>
+      <FoodPoisonChance>0</FoodPoisonChance>
+    </statBases>
+    <race>
+      <body>PMP_HumanoidBody</body>
+      <baseBodySize>2</baseBodySize>
+      <mechEnabledWorkTypes>
+        <li>Hauling</li>
+        <li>Cleaning</li>
+        <li>Hunting</li>
+        <li>Mining</li>
+        <li>Cooking</li>
+      </mechEnabledWorkTypes>
+      <mechWorkTypePriorities>
+        <Mining>2</Mining>
+        <Hauling>3</Hauling>
+        <Cooking>1</Cooking>
+        <Cleaning>2</Cleaning> <!-- It is very important for a chef to keep the kitchen clean and tidy -->
+      </mechWorkTypePriorities>
+      <mechFixedSkillLevel>20</mechFixedSkillLevel>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <baseHealthScale>10.0</baseHealthScale>
+    </race>
+    <butcherProducts>
+      <PM_Adanium>100</PM_Adanium>
+    </butcherProducts>
+
+    <tools>
+      <li>
+        <label>left Energy Blade</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Stab</li>
+        </capacities>
+        <power>27</power>
+        <cooldownTime>0.4</cooldownTime>
+        <armorPenetration>2.0</armorPenetration>
+      </li>
+      <li>
+        <label>right Energy Blade</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Stab</li>
+        </capacities>
+        <power>27</power>
+        <cooldownTime>0.4</cooldownTime>
+        <armorPenetration>2.0</armorPenetration>
+      </li>
+    </tools>
+
+    <comps>
+      <li Class="ProtossMech.CompProperties_ProtossMechShield">
+        <energyMax>200</energyMax>
+        <energyGainPerTick>0.25</energyGainPerTick>
+        <ticksToBeginRecharge>600</ticksToBeginRecharge>
+        <minDrawSize>0</minDrawSize>
+        <maxDrawSize>2</maxDrawSize>
+      </li>
+      <li Class="PMP_Persona.CompProperties_SplashOnMelee">
+        <splashRadius>1.9</splashRadius>
+        <splashDamageFactor>0.67</splashDamageFactor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="ProtossMechanoidKind">
+    <defName>PMPH_Kaldalis</defName>
+    <label>Kaldalis</label>
+    <race>PMPH_Kaldalis</race>
+    <combatPower>42</combatPower>
+    <allowInMechClusters>false</allowInMechClusters>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Kaldalis</texPath>
+          <shaderType>Cutout</shaderType>
+          <drawSize>2.0</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <abilities>
+      <li>LegionnaireJump</li>
+      <li>MechCharge</li>
+    </abilities>
+    <skipResistant>true</skipResistant>
+  </PawnKindDef>
+
+  <!-- Taldarin -->
+  <ThingDef ParentName="ProtossMechanoid">
+    <defName>PMPH_Taldarin</defName>
+    <label>Taldarin</label>
+    <description>Taldarin is a Purifier AI construct modeled from the brain scans of Praetor Taldarin. He fought in the End War under Talandar, and was able to inhabit the shell of Purifier immortals. The AI construct maintained his base personality's rank of praetor.</description>
+    <statBases>
+      <MoveSpeed>5</MoveSpeed>
+      <BandwidthCost>0</BandwidthCost>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <body>PMP_ImmortalBody</body>
+      <mechWeightClass>Heavy</mechWeightClass>
+      <baseBodySize>4</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Apocriton_Wounded</soundWounded>
+          <soundAngry>Pawn_Mech_Apocriton_Call</soundAngry>
+          <soundDeath>Pawn_Mech_Apocriton_Death</soundDeath>
+          <soundCall>Pawn_Mech_Apocriton_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <butcherProducts>
+      <PM_Adanium>125</PM_Adanium>
+    </butcherProducts>
+    <comps>
+      <li Class="ProtossMech.CompProperties_ProtossMechShield">
+        <energyMax>200</energyMax>
+        <energyGainPerTick>0.25</energyGainPerTick>
+        <ticksToBeginRecharge>600</ticksToBeginRecharge>
+        <minDrawSize>0</minDrawSize>
+        <maxDrawSize>3</maxDrawSize>
+        <HardenedShields>true</HardenedShields>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="ProtossMechanoidKind">
+    <defName>PMPH_Taldarin</defName>
+    <label>Taldarin</label>
+    <race>PMPH_Taldarin</race>
+    <combatPower>42</combatPower>
+    <allowInMechClusters>false</allowInMechClusters>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Taldarin</texPath>
+          <shaderType>Cutout</shaderType>
+          <drawSize>3.0</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>Gun_Taldarin</li>
+    </weaponTags>
+    <techHediffsChance>1</techHediffsChance>
+    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <skipResistant>true</skipResistant>
+    <abilities>
+      <li>PMP_RestoreShield</li>
+    </abilities>
+  </PawnKindDef>
+
+  <!-- Warbringer -->
+  <ThingDef ParentName="ProtossMechanoid">
+    <defName>PMPH_Warbringer</defName>
+    <label>Warbringer</label>
+    <description>Warbringer is a Purifier AI construct modeled from scans of the reaver AI
+      Warbringer. It fought in the End War under Talandar, and was able to inhabit the bodies of
+      Purifier colossi.</description>
+    <statBases>
+      <MoveSpeed>8</MoveSpeed>
+      <BandwidthCost>0</BandwidthCost>
+      <ArmorRating_Blunt>2.0</ArmorRating_Blunt>
+      <ArmorRating_Sharp>2.0</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <body>PMP_ColossusBody</body>
+      <mechWeightClass>UltraHeavy</mechWeightClass>
+      <baseBodySize>5</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Apocriton_Wounded</soundWounded>
+          <soundAngry>Pawn_Mech_Apocriton_Call</soundAngry>
+          <soundDeath>Pawn_Mech_Apocriton_Death</soundDeath>
+          <soundCall>Pawn_Mech_Apocriton_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <butcherProducts>
+      <PM_Adanium>150</PM_Adanium>
+    </butcherProducts>
+    <comps>
+      <li Class="ProtossMech.CompProperties_ProtossMechShield">
+        <energyMax>300</energyMax>
+        <energyGainPerTick>0.25</energyGainPerTick>
+        <ticksToBeginRecharge>600</ticksToBeginRecharge>
+        <minDrawSize>0</minDrawSize>
+        <maxDrawSize>5</maxDrawSize>
+      </li>
+      <li Class="RsPandaLibrary.CompProperties_MultiTurretGun">
+        <turrets>
+          <li>
+            <turretDef>turretgun_PurificationBlast</turretDef>
+            <warmupTime>0.5</warmupTime>
+            <cooldownTime>1</cooldownTime>
+            <renderNodeProperties>
+              <nodeClass>ProtossMech.PawnRenderNode_MultiTurretGun</nodeClass>
+              <workerClass>ProtossMech.PawnRenderNodeWorker_MultiTurretGun</workerClass>
+              <parentTagDef>Body</parentTagDef>
+              <drawData>
+                <dataWest>
+                  <offset>(0, 0, 0.5)</offset>
+                </dataWest>
+              </drawData>
+              <baseLayer>20</baseLayer>
+            </renderNodeProperties>
+          </li>
+        </turrets>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="ProtossMechanoidKind">
+    <defName>PMPH_Warbringer</defName>
+    <label>Warbringer</label>
+    <race>PMPH_Warbringer</race>
+    <combatPower>42</combatPower>
+    <allowInMechClusters>false</allowInMechClusters>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Warbringer</texPath>
+          <shaderType>Cutout</shaderType>
+          <drawSize>5.0</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>ThermalLances</li>
+    </weaponTags>
+    <techHediffsChance>1</techHediffsChance>
+    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <skipResistant>true</skipResistant>
+  </PawnKindDef>
+
+</Defs>

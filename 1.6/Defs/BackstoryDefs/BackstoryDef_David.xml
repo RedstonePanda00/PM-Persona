@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <BackstoryDef>
+        <defName>PMPH_DavidChildhood</defName>
+        <title>SEAL Commander</title>
+        <titleShort>SEAL Cmdr.</titleShort>
+        <baseDesc>{PAWN_nameDef} was born on Earth, the third planet of the Sol system. {PAWN_pronoun} was raised by {PAWN_possessive} father's former comrade-in-arms, a man who lived in eternal regret for accidentally killing {PAWN_nameDef}'s father during a mission. Driven by this legacy, {PAWN_nameDef} followed in {PAWN_possessive} father's footsteps and joined the Navy, eventually commanding elite special forces.</baseDesc>
+
+        <skillGains>
+            <Shooting>4</Shooting>
+            <Melee>4</Melee>
+            <Intellectual>4</Intellectual>
+            <Social>-3</Social>
+        </skillGains>
+
+        <workDisables>
+            <li>Artistic</li>
+        </workDisables>
+
+        <slot>Childhood</slot>
+        <bodyTypeGlobal>Male</bodyTypeGlobal>
+        <spawnCategories>
+            <li>PM_DavidYoung</li>
+        </spawnCategories>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>PMPH_DavidAdult</defName>
+        <title>Gestalt No.0</title>
+        <titleShort>Gestalt</titleShort>
+        <baseDesc>As one of the first elites to leave Earth, {PAWN_nameDef} drifted in space for an unknown era before being captured. {PAWN_possessive} captors forcibly implanted {PAWN_pronoun} with Protoss organs and a mind-control device in {PAWN_possessive} brain, forcing {PAWN_pronoun} to commit acts against {PAWN_possessive} will. Only after a Protoss prisoner sacrificed himself to break the mental link did {PAWN_nameDef} regain {PAWN_possessive} freedom. Now, {PAWN_pronoun} serves the Protoss as a member of the Purifiers, fighting in hopes of one day returning to Earth.</baseDesc>
+
+        <skillGains>
+            <Shooting>13</Shooting>
+            <Melee>13</Melee>
+            <Intellectual>13</Intellectual>
+            <Social>-3</Social>
+        </skillGains>
+
+        <workDisables>
+            <li>Artistic</li>
+            <li>Animals</li>
+            <li>Mining</li>
+            <li>PlantWork</li>
+        </workDisables>
+
+        <slot>Adulthood</slot>
+        <bodyTypeGlobal>Male</bodyTypeGlobal>
+        <spawnCategories>
+            <li>PM_DavidAdult</li>
+        </spawnCategories>
+    </BackstoryDef>
+</Defs>

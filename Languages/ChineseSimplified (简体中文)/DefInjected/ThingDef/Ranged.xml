@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Gun Taldarin -->
+  <Gun_Taldarin.label>塔尔达林武器</Gun_Taldarin.label>
+  <!-- EN: Gun Taldarin -->
+  <Gun_Taldarin.description>塔尔达林武器</Gun_Taldarin.description>
+  <!-- EN: barrel -->
+  <Gun_Taldarin.tools.barrel.label>枪管</Gun_Taldarin.tools.barrel.label>
+  <!-- EN: Gun Taldarin -->
+  <Gun_Taldarin.verbs.Verb_GravityPulse.label>塔尔达林武器</Gun_Taldarin.verbs.Verb_GravityPulse.label>
+  
+  <!-- EN: PurificationBlast Projectile -->
+  <PMPH_PurificationBlastProjectile.label>TODO</PMPH_PurificationBlastProjectile.label>
+  
+  <!-- EN: Mote -->
+  <PMPHMote_PurificationBlast.label>TODO</PMPHMote_PurificationBlast.label>
+  
+  <!-- EN: turretgun Purification Blast -->
+  <turretgun_PurificationBlast.label>净化轰击炮塔</turretgun_PurificationBlast.label>
+  <!-- EN: turretgun Purification Blast -->
+  <turretgun_PurificationBlast.description>净化轰击炮塔</turretgun_PurificationBlast.description>
+  <!-- EN: turretgun Purification Blast -->
+  <turretgun_PurificationBlast.verbs.Verb_ApplyDebuff.label>净化轰击炮塔</turretgun_PurificationBlast.verbs.Verb_ApplyDebuff.label>
+  
+</LanguageData>

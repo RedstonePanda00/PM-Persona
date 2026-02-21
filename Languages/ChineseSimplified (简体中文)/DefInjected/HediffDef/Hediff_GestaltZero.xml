@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Protoss nerve cords -->
+  <PMPH_HediffNerveCords.label>星灵神经索</PMPH_HediffNerveCords.label>
+  <!-- EN: A Protoss nerve cords. -->
+  <PMPH_HediffNerveCords.description>一条星灵神经索</PMPH_HediffNerveCords.description>
+  <!-- EN: a Protoss nerve cords -->
+  <PMPH_HediffNerveCords.labelNoun>一条星灵神经索</PMPH_HediffNerveCords.labelNoun>
+  
+  <!-- EN: Protoss Heart -->
+  <PMPH_HediffProtossHeart.label>星灵心脏</PMPH_HediffProtossHeart.label>
+  <!-- EN: An installed Protoss heart. -->
+  <PMPH_HediffProtossHeart.description>一个安装的星灵心脏</PMPH_HediffProtossHeart.description>
+  <!-- EN: a Protoss heart -->
+  <PMPH_HediffProtossHeart.labelNoun>一个星灵心脏</PMPH_HediffProtossHeart.labelNoun>
+  
+</LanguageData>

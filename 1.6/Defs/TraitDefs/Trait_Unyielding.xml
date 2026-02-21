@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <TraitDef>
+        <defName>PMPH_Unyielding</defName>
+        <commonality>0.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>Unyielding</label>
+                <description>{PAWN_nameDef} possesses an unbreakable mind. {PAWN_pronoun} is completely immune to all forms of mental breaks.</description>
+                <marketValueFactorOffset>0.5</marketValueFactorOffset>
+                <statOffsets>
+                    <IncomingDamageFactor>-0.5</IncomingDamageFactor>
+                </statOffsets>
+                <statFactors>
+                    <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.25</CertaintyLossFactor>
+                </statFactors>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Wimp</li>
+            <li>Nerves</li>
+        </conflictingTraits>
+    </TraitDef>
+</Defs>

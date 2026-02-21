@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Taldarin weapon -->
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_Taldarin</defName>
+    <label>Gun Taldarin</label>
+    <description>Gun Taldarin</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Weapon/transparent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.1, 0.1)</drawSize>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <statBases>
+      <MarketValue>400</MarketValue>
+      <Mass>2.6</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Gun_Taldarin</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>LongShots</li>
+    </weaponClasses>
+
+    <comps>
+      <li Class="PMP_Persona.CompProperties_DamageConfig">
+        <damageDef>AntiArmorShock</damageDef>
+      </li>
+    </comps>
+
+    <verbs>
+      <li>
+        <verbClass>PMP_Persona.Verb_GravityPulse</verbClass>
+        <warmupTime>0</warmupTime>
+        <burstShotCount>1</burstShotCount>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_NeedleGun</defaultProjectile>
+        <range>44.9</range>
+        <soundCast>Shot_NeedleGun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>40</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- turretgun_PurificationBlast -->
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>turretgun_PurificationBlast</defName>
+    <label>turretgun Purification Blast</label>
+    <description>turretgun Purification Blast</description>
+    <graphicData>
+      <texPath>Things/Weapon/transparent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <statBases>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>1.00</AccuracyMedium>
+      <AccuracyLong>1.00</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>40</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>PMP_Persona.Verb_ApplyDebuff</verbClass>
+        <warmupTime>0</warmupTime>
+        <burstShotCount>1</burstShotCount>
+        <minRange>0</minRange>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_NeedleGun</defaultProjectile>
+        <range>44.9</range>
+        <soundCast>Shot_NeedleGun</soundCast>
+        <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+        <defaultCooldownTime>1.0</defaultCooldownTime>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+        <consumeFuelPerShot>0</consumeFuelPerShot>
+      </li>
+    </verbs>
+
+    <comps>
+      <li Class="PMP_Persona.CompProperties_HediffOnHit">
+        <debuffHediff>Hediff_TemporalSlow</debuffHediff>
+
+        <biologicalHediffs>
+          <li>Carcinoma</li>
+          <li>HeartAttack</li>
+          <li>BadBack</li>
+          <li>Frail</li>
+          <li>Cataract</li>
+          <li>Dementia</li>
+          <li>Alzheimers</li>
+          <li>Asthma</li>
+          <li>HeartArteryBlockage</li>
+        </biologicalHediffs>
+
+        <vitalPartDamage>150</vitalPartDamage>
+
+        <projectileDefName>PMPH_PurificationBlastProjectile</projectileDefName>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMPH_PurificationBlastProjectile</defName>
+    <label>PurificationBlast Projectile</label>
+    <thingClass>Beam</thingClass>
+    <graphicData>
+      <texPath>Things/Weapon/Projectile_PurificationBlast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <beamMoteDef>PMPHMote_PurificationBlast</beamMoteDef>
+      <stoppingPower>0</stoppingPower>
+      <!-- <beamStartOffset>0.5</beamStartOffset> -->
+      <armorPenetrationBase>0</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>PMPHMote_PurificationBlast</defName>
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <fadeOutTime>0.1</fadeOutTime>
+      <solidTime>0.1</solidTime>
+      <rotateTowardsTarget>True</rotateTowardsTarget>
+      <scaleToConnectTargets>True</scaleToConnectTargets>
+    </mote>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <texPath>Things/Weapon/Projectile_PurificationBlast</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MoteBeam</shaderType>
+      <shaderParameters>
+        <_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA>
+        <_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
+        <_ScrollSpeedA>0</_ScrollSpeedA>
+        <_ScrollSpeedB>0</_ScrollSpeedB>
+        <_Intensity>2</_Intensity>
+      </shaderParameters>
+      <drawSize>(3, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

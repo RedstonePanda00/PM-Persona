@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<packageId>Redstone.PMPersona</packageId>
+	<name>ProtossMechPersonaHero</name>
+	<author>Redstone</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>Biotech</displayName>
+		</li>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>RedstonePanda.ProtossMechCore</packageId>
+			<displayName>ProtossMech: Core</displayName>
+			<!-- <steamWorkshopUrl>steam://url/CommunityFilePage/3464281098</steamWorkshopUrl> -->
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>RedstonePanda.ProtossMechCore</li>
+	</loadAfter>
+	<description>Protoss Mech Persona Hero extention.</description>
+</ModMetaData>

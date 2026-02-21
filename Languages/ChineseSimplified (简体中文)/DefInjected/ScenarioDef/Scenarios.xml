@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Akhundelar -->
+  <PMPH_Akhundelar.label>阿昆德拉</PMPH_Akhundelar.label>
+  <!-- EN: After passing through the event horizon, the Cybros was thrown into an unfamiliar universe. The seemingly undamaged FTL drive has failed due to unknown reasons, indicating that no viable superluminal travel method exists in this universe. You voluntarily joined the "Akhundelar" team, and Kaldalis willingly accompanied you. -->
+  <PMPH_Akhundelar.description>赛布罗斯号穿过事件视界后，被抛入一个陌生的宇宙。毫无损坏的超光速引擎因未知原因失灵，显然，这个宇宙没有可行的超光速手段。你自愿加入“阿昆德拉”，卡尔达利斯与你同行。</PMPH_Akhundelar.description>
+  <!-- EN: After passing through the event horizon, the Cybros was thrown into an unfamiliar universe. The seemingly undamaged FTL drive has failed due to unknown reasons, indicating that no viable superluminal travel method exists in this universe. You voluntarily joined the "Akhundelar" team, and Kaldalis willingly accompanied you. -->
+  <PMPH_Akhundelar.scenario.description>赛布罗斯号穿过事件视界后，被抛入一个陌生的宇宙。毫无损坏的超光速引擎因未知原因失灵，显然，这个宇宙没有可行的超光速手段。你自愿加入“阿昆德拉”，卡尔达利斯与你同行。</PMPH_Akhundelar.scenario.description>
+  <!-- EN: Akhundelar -->
+  <PMPH_Akhundelar.scenario.name>阿昆德拉</PMPH_Akhundelar.scenario.name>
+  <!-- EN: "David!" Kaldalis's shout jolts you awake from your stupor. The drop pod finally settles after a violent impact. With the C-link status confirmed to be intact, you lead your team out of the pod.\n Facing the unfamiliar star, five Probes pour out of the drop pod, and one after another, warp beacons are placed.\n It is time to begin work. -->
+  <PMPH_Akhundelar.scenario.parts.GameStartDialog.text>“大卫！”卡尔达利斯的呼喊将你从恍惚中惊醒。空投舱在猛烈撞击地面后终于静止。C-link状态完好，你带领着小队离开空投舱。\n面对着陌生的恒星，五只探机从空投舱中涌出，一个个折跃信标被放置。\n该开始工作了。</PMPH_Akhundelar.scenario.parts.GameStartDialog.text>
+  <!-- EN: An elite Purifier Tactical team. -->
+  <PMPH_Akhundelar.scenario.summary>一支精英净化者战术小队。</PMPH_Akhundelar.scenario.summary>
+  
+</LanguageData>

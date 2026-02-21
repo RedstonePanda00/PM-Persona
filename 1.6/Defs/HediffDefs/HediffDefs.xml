@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef>
+        <defName>Hediff_TemporalSlow</defName>
+        <label>temporal slow</label>
+        <description>The pawn is trapped in twist time.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>600</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statFactors>
+                    <AimingDelayFactor>2.0</AimingDelayFactor>
+                    <MoveSpeed>-10.0</MoveSpeed>
+                    <WorkSpeedGlobal>-10.0</WorkSpeedGlobal>
+                </statFactors>
+                <statOffsets>
+                    <MeleeCooldownFactor>4.8</MeleeCooldownFactor>
+                    <RangedCooldownFactor>4.8</RangedCooldownFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>PMP_AvengingProtocol</defName>
+        <label>Avenging Protocol</label>
+        <description>The unit's combat protocols are overclocked, significantly increasing combat
+            effectiveness. This effect can stack.</description>
+        <hediffClass>PMP_Persona.Hediff_AvengingProtocol</hediffClass>
+        <defaultLabelColor>(0.8, 0.3, 0.3)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>60000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+        <maxSeverity>20</maxSeverity>
+    </HediffDef>
+
+</Defs>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: temporal slow -->
+  <Hediff_TemporalSlow.label>时空错位</Hediff_TemporalSlow.label>
+  <!-- EN: The pawn is trapped in twist time. -->
+  <Hediff_TemporalSlow.description>这个单位被困在扭曲的时间内，他们的行动变得更慢。</Hediff_TemporalSlow.description>
+  
+  <!-- EN: Avenging Protocol -->
+  <PMP_AvengingProtocol.label>复仇协议</PMP_AvengingProtocol.label>
+  <!-- EN: The unit's combat protocols are overclocked, significantly increasing combat\n            effectiveness. This effect can stack. -->
+  <PMP_AvengingProtocol.description>这个单位的战斗协议被超频了，显著提升了他的战斗能力。（每层复仇协议都会提升战斗力）</PMP_AvengingProtocol.description>
+  
+</LanguageData>

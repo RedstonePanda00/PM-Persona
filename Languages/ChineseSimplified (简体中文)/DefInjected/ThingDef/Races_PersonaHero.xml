@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Kaldalis -->
+  <PMPH_Kaldalis.label>卡尔达利斯</PMPH_Kaldalis.label>
+  <!-- EN: Kaldalis is a Purifier Hero Personality derived from the preserved neural imprints of the renowned zealot Kaldalis — the Akhundelar, the tip of the spear — who played a pivotal role in the reclamation of Aiur. After his consciousness was integrated into the Purifier network, he once again took up arms, fighting valiantly under Executor Talandar during the war against Amon. \n\n Oh, and by the way — he’s also the champion of the very first Aiur Chef competition. \n\n Even now, some question whether a warrior of such legendary stature should truly be assigned to… mining duty. -->
+  <PMPH_Kaldalis.description>卡尔达利斯是一位净化者英雄人格，源自狂热者卡尔达利斯的神经印迹——他被誉为“阿昆德拉”，利矛之刃，在夺回艾尔的战役中立下了卓越的功勋。\n\n 在其意识被整合进净化者网络之后，他再次投入战斗，于对抗埃蒙的战争中，随执行官塔兰达尔并肩奋战。\n\n 顺带一提，他还是首届“艾尔厨神”的冠军。\n\n 直到今天，仍有人疑惑——如此传奇的战士，真的该被派去……挖矿吗？</PMPH_Kaldalis.description>
+  <!-- EN: head -->
+  <PMPH_Kaldalis.tools.head.label>机械星灵头部</PMPH_Kaldalis.tools.head.label>
+  <!-- EN: left Energy Blade -->
+  <PMPH_Kaldalis.tools.left_Energy_Blade.label>左臂能量刃</PMPH_Kaldalis.tools.left_Energy_Blade.label>
+  <!-- EN: right Energy Blade -->
+  <PMPH_Kaldalis.tools.right_Energy_Blade.label>右臂能量刃</PMPH_Kaldalis.tools.right_Energy_Blade.label>
+  
+  <!-- EN: Taldarin -->
+  <PMPH_Taldarin.label>塔尔达林</PMPH_Taldarin.label>
+  <!-- EN: Taldarin is a Purifier AI construct modeled from the brain scans of Praetor Taldarin. He fought in the End War under Talandar, and was able to inhabit the shell of Purifier immortals. The AI construct maintained his base personality's rank of praetor. -->
+  <PMPH_Taldarin.description>塔尔达林是一位至高议会时期的执行官，他如今作为不朽者跟随塔兰达尔屹立在在末世之战的前线。</PMPH_Taldarin.description>
+  <!-- EN: head -->
+  <PMPH_Taldarin.tools.head.label>执政官不朽者头部</PMPH_Taldarin.tools.head.label>
+  
+  <!-- EN: Warbringer -->
+  <PMPH_Warbringer.label>战争使者</PMPH_Warbringer.label>
+  <!-- EN: Warbringer is a Purifier AI construct modeled from scans of the reaver AI\n      Warbringer. It fought in the End War under Talandar, and was able to inhabit the bodies of\n      Purifier colossi. -->
+  <PMPH_Warbringer.description>战争使者是净化者项目的绝密计划，卡莱工程师设计了复杂的人工神经网络，得到了几乎和其他净化者无异的强人工智能。</PMPH_Warbringer.description>
+  <!-- EN: head -->
+  <PMPH_Warbringer.tools.head.label>战争使者头部</PMPH_Warbringer.tools.head.label>
+  
+</LanguageData>

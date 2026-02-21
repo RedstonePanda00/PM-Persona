@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseGun">
+    <defName>PMP_Gun_Gravemaker</defName>
+    <label>Gravemaker</label>
+    <description>A weapon that defies physics, capable of striking targets through solid walls.</description>
+    <techLevel>Archotech</techLevel>
+    <graphicData>
+      <texPath>Things/Weapon/GraveMaker</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <statBases>
+      <MarketValue>400</MarketValue>
+      <Mass>15</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>PMP_Gun_Gravemaker</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>LongShots</li>
+    </weaponClasses>
+
+    <modExtensions>
+      <li Class="PMP_Persona.DefModExtension_Gravemaker">
+        <beamFleckDef>ShotFlash</beamFleckDef>
+
+        <hitFleckDef>ExplosionFlash</hitFleckDef>
+
+        <beamColor>(1.0, 0.2, 0.2, 1.0)</beamColor>
+
+        <beamScale>1.5</beamScale>
+      </li>
+    </modExtensions>
+
+    <verbs>
+      <li>
+        <verbClass>PMP_Persona.Verb_Gravemaker</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+
+        <defaultProjectile>Bullet_ChargeLance</defaultProjectile>
+
+        <warmupTime>0.5</warmupTime>
+        <range>45.9</range>
+
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+
+        <burstShotCount>1</burstShotCount>
+        <requireLineOfSight>false</requireLineOfSight>
+      </li>
+    </verbs>
+
+    <comps>
+      <li Class="PMP_Persona.CompProperties_GravemakerWeapon" />
+    </comps>
+  </ThingDef>
+</Defs>

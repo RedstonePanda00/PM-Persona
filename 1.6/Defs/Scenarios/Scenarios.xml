@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ScenarioDef ParentName="ScenarioBase">
+        <defName>PMPH_Akhundelar</defName>
+        <label>Akhundelar</label>
+        <description>After passing through the event horizon, the Cybros was thrown into an unfamiliar universe. The seemingly undamaged FTL drive has failed due to unknown reasons, indicating that no viable superluminal travel method exists in this universe. You voluntarily joined the "Akhundelar" team, and Kaldalis willingly accompanied you.</description>
+        <scenario>
+            <summary>An elite Purifier Tactical team.</summary>
+            <parts>
+
+                <!-- Game start dialog -->
+                <li Class="ScenPart_GameStartDialog">
+                    <def>GameStartDialog</def>
+                    <text>"David!" Kaldalis's shout jolts you awake from your stupor. The drop pod finally settles after a violent impact. With the C-link status confirmed to be intact, you lead your team out of the pod.\n Facing the unfamiliar star, five Probes pour out of the drop pod, and one after another, warp beacons are placed.\n It is time to begin work.</text>
+                    <closeSound>GameStartSting</closeSound>
+                </li>
+
+                <!-- Config pages -->
+                <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
+                    <def>ConfigurePawnsKindDefs</def>
+                    <pawnChoiceCount>1</pawnChoiceCount>
+                    <leftBehindPawnKind>PMPH_GestaltZero</leftBehindPawnKind>
+                    <kindCounts>
+                        <li>
+                            <kindDef>PMPH_GestaltZero</kindDef>
+                            <count>1</count>
+                            <requiredAtStart>true</requiredAtStart>
+                        </li>
+                    </kindCounts>
+                </li>
+
+                <!-- Player starting stuff spawn method-->
+                <li Class="ScenPart_PlayerPawnsArriveMethod">
+                    <def>PlayerPawnsArriveMethod</def>
+                    <visible>false</visible>
+                    <method>DropPods</method>
+                </li>
+
+                <!-- Starting research -->
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>PM_KhalaiMechAdvance</project>
+                </li>
+
+                <!-- Starting mechs -->
+                 <li Class="ScenPart_StartingMech">
+                    <def>StartingMech</def>
+                    <mechKind>PMPH_Kaldalis</mechKind>
+                    <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+                </li>
+                <li Class="ScenPart_StartingMech">
+                    <def>StartingMech</def>
+                    <mechKind>PMP_Probe</mechKind>
+                    <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+                </li>
+                <li Class="ScenPart_StartingMech">
+                    <def>StartingMech</def>
+                    <mechKind>PMP_Probe</mechKind>
+                    <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+                </li>
+                <li Class="ScenPart_StartingMech">
+                    <def>StartingMech</def>
+                    <mechKind>PMP_Probe</mechKind>
+                    <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+                </li>
+                <li Class="ScenPart_StartingMech">
+                    <def>StartingMech</def>
+                    <mechKind>PMP_Probe</mechKind>
+                    <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+                </li>
+                <li Class="ScenPart_StartingMech">
+                    <def>StartingMech</def>
+                    <mechKind>PMP_Probe</mechKind>
+                    <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+                </li>
+
+                <!-- Player starting things -->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Silver</thingDef>
+                    <count>2000</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MealSurvivalPack</thingDef>
+                    <count>40</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MedicineUltratech</thingDef>
+                    <count>30</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>ComponentIndustrial</thingDef>
+                    <count>30</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Gun_ChargeRifle</thingDef>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Plasteel</thingDef>
+                    <count>150</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>PM_Solarite</thingDef>
+                    <count>100</count>
+                </li>
+
+                <li Class="ScenPart_DisableMapGen">
+                    <def>DisableExostriderRemains</def>
+                </li>
+
+                <!-- Scatter some things near player start -->
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>Steel</thingDef>
+                    <count>450</count>
+                </li>
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>WoodLog</thingDef>
+                    <count>300</count>
+                </li>
+
+            </parts>
+        </scenario>
+    </ScenarioDef>
+
+</Defs>

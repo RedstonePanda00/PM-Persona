@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PMP_ColossusPrototype"]/comps</xpath>
+    <value>
+      <li Class="RsPandaLibrary.CompProperties_AutoTransform">
+        <checkInterval>300</checkInterval>
+        <DetectList>
+          <li>PMP_ColossusPrototype</li>
+          <li>PMPH_conclave</li>
+        </DetectList>
+        <targetDef>PMPH_Warbringer</targetDef>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PMP_Legionnaire"]/comps</xpath>
+    <value>
+      <li Class="RsPandaLibrary.CompProperties_AutoTransform">
+        <checkInterval>300</checkInterval>
+        <DetectList>
+          <li>PMP_Legionnaire</li>
+          <li>PMPH_conclave</li>
+        </DetectList>
+        <targetDef>PMPH_Kaldalis</targetDef>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PMP_PurifierImmortal"]/comps</xpath>
+    <value>
+      <li Class="RsPandaLibrary.CompProperties_AutoTransform">
+        <checkInterval>300</checkInterval>
+        <DetectList>
+          <li>PMP_PurifierImmortal</li>
+          <li>PMPH_conclave</li>
+        </DetectList>
+        <targetDef>PMPH_Taldarin</targetDef>
+      </li>
+    </value>
+  </Operation>
+  
+</Patch>
