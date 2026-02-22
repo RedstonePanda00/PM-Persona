@@ -91,6 +91,14 @@
             <li>PMP_GravemakerShot</li>
         </abilities>
         <skipResistant>true</skipResistant>
+        <modExtensions>
+            <li Class="RsPandaLibrary.Compatibility.RimTalk.RimTalkPersonaExtension">
+                <personaKeys>
+                    <li>Protoss_Persona_GestaltZero</li>
+                </personaKeys>
+                <chattiness>0.25</chattiness>
+            </li>
+        </modExtensions>
     </PawnKindDef>
 
 </Defs>

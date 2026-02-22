@@ -84,6 +84,15 @@
         <splashDamageFactor>0.67</splashDamageFactor>
       </li>
     </comps>
+
+    <modExtensions>
+        <li Class="RsPandaLibrary.Compatibility.RimTalk.RimTalkPersonaExtension">
+            <personaKeys>
+                <li>Protoss_Persona_Kaldalis</li>
+            </personaKeys>
+            <chattiness>0.75</chattiness>
+        </li>
+    </modExtensions>
   </ThingDef>
 
   <PawnKindDef ParentName="ProtossMechanoidKind">
@@ -148,6 +157,14 @@
         <HardenedShields>true</HardenedShields>
       </li>
     </comps>
+    <modExtensions>
+        <li Class="RsPandaLibrary.Compatibility.RimTalk.RimTalkPersonaExtension">
+            <personaKeys>
+                <li>Protoss_Persona_Taldarin</li>
+            </personaKeys>
+            <chattiness>0.25</chattiness>
+        </li>
+    </modExtensions>
   </ThingDef>
 
   <PawnKindDef ParentName="ProtossMechanoidKind">
@@ -181,9 +198,7 @@
   <ThingDef ParentName="ProtossMechanoid">
     <defName>PMPH_Warbringer</defName>
     <label>Warbringer</label>
-    <description>Warbringer is a Purifier AI construct modeled from scans of the reaver AI
-      Warbringer. It fought in the End War under Talandar, and was able to inhabit the bodies of
-      Purifier colossi.</description>
+    <description>Warbringer is a Purifier AI construct modeled from scans of the reaver AI Warbringer. It fought in the End War under Talandar, and was able to inhabit the bodies of Purifier colossi.</description>
     <statBases>
       <MoveSpeed>8</MoveSpeed>
       <BandwidthCost>0</BandwidthCost>
@@ -238,6 +253,14 @@
         </turrets>
       </li>
     </comps>
+    <modExtensions>
+        <li Class="RsPandaLibrary.Compatibility.RimTalk.RimTalkPersonaExtension">
+            <personaKeys>
+                <li>Protoss_Persona_Warbringer</li>
+            </personaKeys>
+            <chattiness>0.2</chattiness>
+        </li>
+    </modExtensions>
   </ThingDef>
 
   <PawnKindDef ParentName="ProtossMechanoidKind">
