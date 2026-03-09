@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- True damage: no armorCategory so armor does not reduce it. Standalone def to avoid ParentName load-order issues. -->
+  <DamageDef>
+    <defName>PMP_PurificationBeamDamage</defName>
+    <label>purification beam</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} has been killed by a purification beam.</deathMessage>
+    <hediff>Crush</hediff>
+    <hediffSkin>Cut</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <overkillPctToDestroyPart>0.4~1.0</overkillPctToDestroyPart>
+  </DamageDef>
+</Defs>

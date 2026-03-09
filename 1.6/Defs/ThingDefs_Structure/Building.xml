@@ -50,4 +50,41 @@
             </li>
         </comps>
     </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>PMP_PurificationBeam</defName>
+        <label>Purification beam</label>
+        <thingClass>PMP_Persona.Building_MobileBeam</thingClass>
+        <description>A mobile orbital beam. Select and right-click to move. Deals heat damage in a 5x5 area every 30 ticks and ignites ground. No hitpoints.</description>
+        <useHitPoints>false</useHitPoints>
+        <tickerType>Normal</tickerType>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+            <texPath>Things/Weapon/transparent</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.0, 1.0)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.5</fillPercent>
+        <pathCost>0</pathCost>
+        <rotatable>false</rotatable>
+        <stealable>false</stealable>
+        <statBases>
+            <Flammability>0</Flammability>
+            <Beauty>-8</Beauty>
+        </statBases>
+        <size>(1,1)</size>
+        <modExtensions>
+            <li Class="RsPandaLibrary.MobileBuildingExtension">
+                <moveSpeedPerSecond>4</moveSpeedPerSecond>
+            </li>
+        </modExtensions>
+        <comps>
+            <li Class="CompProperties_OrbitalBeam">
+                <width>6</width>
+                <color>(1, 0.9, 0, 1)</color>
+            </li>
+        </comps>
+    </ThingDef>
 </Defs>

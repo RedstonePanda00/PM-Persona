@@ -1,9 +1,14 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: Purifier conclave -->
   <PMPH_conclave.label>净化者议会</PMPH_conclave.label>
   <!-- EN: Purifier conclave provide interface between Persona Hero and their Shell. -->
   <PMPH_conclave.description>净化者议会作为净化者网络的本地分发器，为人格英雄的下载提供接口。</PMPH_conclave.description>
-  
+
+  <!-- EN: Purification beam -->
+  <PMP_PurificationBeam.label>净化光束</PMP_PurificationBeam.label>
+  <!-- EN: A mobile orbital beam. Select and right-click to move. Deals heat damage in a 5x5 area every 30 ticks and ignites ground. No hitpoints. -->
+  <PMP_PurificationBeam.description>可移动的轨道光束。选中后右键指定位置移动。每30 tick对5x5范围内敌人造成热能伤害并点燃地面，无生命值。</PMP_PurificationBeam.description>
+
 </LanguageData>
