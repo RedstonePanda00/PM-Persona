@@ -79,6 +79,10 @@
             <li Class="RsPandaLibrary.MobileBuildingExtension">
                 <moveSpeedPerSecond>4</moveSpeedPerSecond>
             </li>
+            <li Class="PMP_Persona.MobileBeamExtension">
+                <groundHaloColor>(1, 0.95, 0.85, 0.85)</groundHaloColor>
+                <drawGroundHalo>true</drawGroundHalo>
+            </li>
         </modExtensions>
         <comps>
             <li Class="CompProperties_OrbitalBeam">
