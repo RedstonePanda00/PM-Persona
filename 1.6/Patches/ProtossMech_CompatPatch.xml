@@ -12,6 +12,8 @@
                     <xpath>Defs/ProtossMech.DefaultAllowedHediffsDef[defName="ProtossMech_DefaultWhitelist"]/hediffs</xpath>
                     <value>
                         <li>PMP_AvengingProtocol</li>
+                        <li>PMP_TacticalDataWebKaldalis</li>
+                        <li>PMP_TacticalDataWebTaldarin</li>
                     </value>
                 </li>
             </operations>

@@ -30,6 +30,30 @@
   </Operation>
 
   <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PMPH_Kaldalis"]/comps</xpath>
+    <value>
+      <li Class="RsPandaLibrary.CompProperties_EnsureHediffList">
+        <hediffDefs>
+          <li>PMP_TacticalDataWebKaldalis</li>
+        </hediffDefs>
+        <checkInterval>250</checkInterval>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PMPH_Taldarin"]/comps</xpath>
+    <value>
+      <li Class="RsPandaLibrary.CompProperties_EnsureHediffList">
+        <hediffDefs>
+          <li>PMP_TacticalDataWebTaldarin</li>
+        </hediffDefs>
+        <checkInterval>250</checkInterval>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="PMP_PurifierImmortal"]/comps</xpath>
     <value>
       <li Class="RsPandaLibrary.CompProperties_AutoTransform">

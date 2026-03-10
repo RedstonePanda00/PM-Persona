@@ -44,4 +44,22 @@
         <maxSeverity>20</maxSeverity>
     </HediffDef>
 
+    <HediffDef>
+        <defName>PMP_TacticalDataWebKaldalis</defName>
+        <label>Tactical Data Web: Kaldalis</label>
+        <description>The number in brackets is how many backup Legionnaire bodies are on this map. Each backup body increases Kaldalis's melee splash damage by 67% of the initial hit (e.g. 0 bodies = 67% splash, 1 body = 133%, 2 bodies = 200% to nearby enemies).</description>
+        <hediffClass>PMP_Persona.Hediff_TacticalDataWebKaldalis</hediffClass>
+        <isBad>false</isBad>
+        <defaultLabelColor>(0.4, 0.8, 1.0)</defaultLabelColor>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>PMP_TacticalDataWebTaldarin</defName>
+        <label>Tactical Data Web: Taldarin</label>
+        <description>The number in brackets is how many Purifier Immortals (backup bodies) are in your faction on this map. Each backup body adds extra damage: vs buildings, one extra attack hit; vs pawns, one extra AoE pulse to the main target and nearby enemies.</description>
+        <hediffClass>PMP_Persona.Hediff_TacticalDataWebTaldarin</hediffClass>
+        <isBad>false</isBad>
+        <defaultLabelColor>(0.4, 0.8, 1.0)</defaultLabelColor>
+    </HediffDef>
+
 </Defs>

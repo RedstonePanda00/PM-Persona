@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: temporal slow -->
@@ -10,5 +10,15 @@
   <PMP_AvengingProtocol.label>复仇协议</PMP_AvengingProtocol.label>
   <!-- EN: The unit's combat protocols are overclocked, significantly increasing combat\n            effectiveness. This effect can stack. -->
   <PMP_AvengingProtocol.description>这个单位的战斗协议被超频了，显著提升了他的战斗能力。（每层复仇协议都会提升战斗力）</PMP_AvengingProtocol.description>
-  
+
+  <!-- EN: Tactical Data Web: Kaldalis -->
+  <PMP_TacticalDataWebKaldalis.label>战术数据网络:卡尔达利斯</PMP_TacticalDataWebKaldalis.label>
+  <!-- EN: The number in brackets is how many backup Legionnaire bodies are on this map. Each backup body increases Kaldalis's melee splash damage by 67% of the initial hit (e.g. 0 bodies = 67% splash, 1 body = 133%, 2 bodies = 200% to nearby enemies). -->
+  <PMP_TacticalDataWebKaldalis.description>括号内为当前地图上的备用军团躯体数量。每具备用躯体会使卡尔达利斯的近战溅射伤害在基础 67% 上再增加 67%（例如：0 具＝67% 溅射，1 具＝133%，2 具＝200%，对范围内敌人生效）。</PMP_TacticalDataWebKaldalis.description>
+
+  <!-- EN: Tactical Data Web: Taldarin -->
+  <PMP_TacticalDataWebTaldarin.label>战术数据网络:塔尔达林</PMP_TacticalDataWebTaldarin.label>
+  <!-- EN: The number in brackets is how many other Taldarin (backup bodies) are in your faction on this map. Each backup body adds extra damage: vs buildings, one extra attack hit; vs pawns, one extra AoE pulse to the main target and nearby enemies. -->
+  <PMP_TacticalDataWebTaldarin.description>括号内为当前地图同阵营的净化者不朽者（备用躯体）数量。主目标是建筑时，每具备用躯体对该建筑额外造成一次攻击伤害；主目标是单位时，每具备用躯体对主目标及范围内敌人额外造成一次重力脉冲 AOE。</PMP_TacticalDataWebTaldarin.description>
+
 </LanguageData>
