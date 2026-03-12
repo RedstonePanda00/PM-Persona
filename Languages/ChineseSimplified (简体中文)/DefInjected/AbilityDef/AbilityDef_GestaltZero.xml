@@ -1,9 +1,14 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: GestaltZeroInvisibility -->
   <PMPH_GestaltZeroInvisibility.label>格式塔零号隐身</PMPH_GestaltZeroInvisibility.label>
   <!-- EN: Use psychic to become invisible for a short duration. -->
   <PMPH_GestaltZeroInvisibility.description>使用心灵能力在短时间内隐身。</PMPH_GestaltZeroInvisibility.description>
-  
+
+  <!-- EN: Gravemaker Protocol -->
+  <PMP_GravemakerShot.label>掘墓人协议</PMP_GravemakerShot.label>
+  <!-- EN: Materialize the Gravemaker cannon to execute a target through obstacles. -->
+  <PMP_GravemakerShot.description>具现掘墓人炮，可无视障碍处决目标。</PMP_GravemakerShot.description>
+
 </LanguageData>

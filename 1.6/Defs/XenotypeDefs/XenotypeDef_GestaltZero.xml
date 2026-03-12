@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <XenotypeDef>
+    <defName>PMP_GestaltZero</defName>
+    <label>North American (Earth)</label>
+    <description>David hails from distant Earth, humanity's homeworld—an ancient, vibrant planet that exists in legend to the people of the rim.</description>
+    <iconPath>UI/Icons/Xenotypes/Baseliner</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Hair_InkBlack</li>
+      <li>Skin_Melanin1</li>
+    </genes>
+  </XenotypeDef>
+</Defs>

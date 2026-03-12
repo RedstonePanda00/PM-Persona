@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.WarpTab_Ships>Ships</PMP.WarpTab_Ships>
+  <PMP.ShipSummon>Summon</PMP.ShipSummon>
+  <PMP.ShipSelect>Select</PMP.ShipSelect>
+  <PMP.NoShipsAvailable>No ships available</PMP.NoShipsAvailable>
+  <PMP.ShipCooldown>Cooldown: {0}</PMP.ShipCooldown>
+  <PMP.ShipNoValidPosition>No valid position to summon.</PMP.ShipNoValidPosition>
+</LanguageData>

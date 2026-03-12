@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 折跃窗口 - 舰船 Tab 标签 -->
+  <PMP.WarpTab_Ships>舰船</PMP.WarpTab_Ships>
+  <PMP.ShipSummon>召唤</PMP.ShipSummon>
+  <PMP.ShipSelect>选中</PMP.ShipSelect>
+  <PMP.NoShipsAvailable>暂无可用舰船</PMP.NoShipsAvailable>
+  <PMP.ShipCooldown>冷却: {0}</PMP.ShipCooldown>
+  <PMP.ShipNoValidPosition>没有合适位置召唤。</PMP.ShipNoValidPosition>
+</LanguageData>

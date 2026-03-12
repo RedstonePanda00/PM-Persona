@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Weapon 1: plasma bombardment. Based on antigrain look, Bullet damage, radius 2.9, factor 10. -->
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>PMP_PlasmaBombardmentIncoming</defName>
+    <label>plasma bombardment (incoming)</label>
+    <size>(1, 1)</size>
+    <graphicData>
+      <texPath>Things/Projectile/ShellAntigrainWarhead</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>ConstantSpeed</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(1.2, 1.2)</shadowSize>
+      <speed>0.5</speed>
+      <ticksToImpactRange>60~60</ticksToImpactRange>
+      <explosionRadius>2.9</explosionRadius>
+      <explosionDamage>Bomb</explosionDamage>
+      <explosionDamageFactor>1</explosionDamageFactor>
+      <impactSound>Explosion_GiantBomb</impactSound>
+      <motesPerCell>0</motesPerCell>
+    </skyfaller>
+  </ThingDef>
+
+  <!-- Weapon 2: antiparticle shells. Same off-screen entry as drop pod, but ConstantSpeed (no deceleration, direct impact). -->
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>PMP_AntiparticleShellIncoming</defName>
+    <label>antiparticle shell (incoming)</label>
+    <size>(1, 1)</size>
+    <graphicData>
+      <texPath>Things/Projectile/ShellAntigrainWarhead</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>ConstantSpeed</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(1.2, 1.2)</shadowSize>
+      <speed>0.5</speed>
+      <ticksToImpactRange>60~60</ticksToImpactRange>
+      <explosionRadius>14.9</explosionRadius>
+      <explosionDamage>BombSuper</explosionDamage>
+      <explosionDamageFactor>0.4</explosionDamageFactor>
+      <impactSound>Explosion_GiantBomb</impactSound>
+      <motesPerCell>0</motesPerCell>
+    </skyfaller>
+  </ThingDef>
+</Defs>

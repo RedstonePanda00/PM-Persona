@@ -33,6 +33,11 @@
         <defName>PMPH_GestaltZero</defName>
         <label>Gestalt No.0</label>
         <race>Human</race>
+        <xenotypeSet>
+            <xenotypeChances>
+                <PMP_GestaltZero>1</PMP_GestaltZero>
+            </xenotypeChances>
+        </xenotypeSet>
         <combatPower>50</combatPower>
         <fixedGender>Male</fixedGender>
         <nameMaker>Name_GestalZero</nameMaker>
