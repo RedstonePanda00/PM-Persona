@@ -48,17 +48,14 @@
                 <hediffDef>PMP_AvengingProtocol</hediffDef>
                 <chargeResetTicks>60000</chargeResetTicks>
             </li>
-            <li Class="PMP_Persona.VoidRayGunship.CompProperties_ConclaveOrbitSkill">
-                <summonedDef>PMP_VoidRayOrbiter</summonedDef>
-                <globalCooldownTicks>3600</globalCooldownTicks>
-            </li>
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="BuildingBase">
+    <ThingDef>
         <defName>PMP_PurificationBeam</defName>
+        <category>Building</category>
         <label>Purification beam</label>
-        <thingClass>PMP_Persona.Building_MobileBeam</thingClass>
+        <thingClass>PMP_Persona.Thing_MobileBeam</thingClass>
         <description>A mobile orbital beam. Select and right-click to move. Deals heat damage in a 5x5 area every 30 ticks and ignites ground. No hitpoints.</description>
         <useHitPoints>false</useHitPoints>
         <tickerType>Normal</tickerType>
@@ -80,29 +77,25 @@
         </statBases>
         <size>(1,1)</size>
         <modExtensions>
-            <li Class="RsPandaLibrary.MobileBuildingExtension">
-                <moveSpeedPerSecond>4</moveSpeedPerSecond>
-            </li>
             <li Class="PMP_Persona.MobileBeamExtension">
                 <groundHaloColor>(1, 0.95, 0.85, 0.85)</groundHaloColor>
                 <drawGroundHalo>true</drawGroundHalo>
             </li>
         </modExtensions>
         <comps>
+            <li Class="RsPandaLibrary.CompProperties_Mobile">
+                <moveSpeedPerSecond>4</moveSpeedPerSecond>
+            </li>
             <li Class="CompProperties_OrbitalBeam">
                 <width>6</width>
                 <color>(1, 0.9, 0, 1)</color>
             </li>
         </comps>
-        <building>
-            <isEdifice>true</isEdifice>
-            <ai_chillDestination>false</ai_chillDestination>
-            <deconstructible>false</deconstructible>
-        </building>
     </ThingDef>
 
-    <ThingDef ParentName="BuildingBase">
+    <ThingDef>
         <defName>PMP_OrbitalLaser</defName>
+        <category>Building</category>
         <label>Orbital laser</label>
         <thingClass>PMP_Persona.VoidRayGunship.Building_OrbitalLaser</thingClass>
         <description>Orbital laser beam. Moves in a straight line from start to end. Deals heat damage in a 3-cell radius. Blue beam with same-color ground halo (radius 3).</description>
@@ -126,9 +119,6 @@
         </statBases>
         <size>(1,1)</size>
         <modExtensions>
-            <li Class="RsPandaLibrary.MobileBuildingExtension">
-                <moveSpeedPerSecond>6</moveSpeedPerSecond>
-            </li>
             <li Class="PMP_Persona.MobileBeamExtension">
                 <groundHaloColor>(0.35, 0.75, 1, 0.85)</groundHaloColor>
                 <drawGroundHalo>true</drawGroundHalo>
@@ -136,21 +126,20 @@
             </li>
         </modExtensions>
         <comps>
+            <li Class="RsPandaLibrary.CompProperties_Mobile">
+                <moveSpeedPerSecond>12</moveSpeedPerSecond>
+            </li>
             <li Class="CompProperties_OrbitalBeam">
                 <width>6</width>
                 <color>(0.35, 0.75, 1, 1)</color>
             </li>
         </comps>
-        <building>
-            <isEdifice>true</isEdifice>
-            <ai_chillDestination>false</ai_chillDestination>
-            <deconstructible>false</deconstructible>
-        </building>
     </ThingDef>
 
-    <ThingDef ParentName="BuildingBase">
+    <ThingDef>
         <defName>PMP_VoidRayOrbiter</defName>
-        <label>Void Ray guardian</label>
+        <category>Building</category>
+        <label>Void Ray</label>
         <thingClass>PMP_Persona.VoidRayGunship.Building_VoidRayOrbiter</thingClass>
         <description>A summoned guardian; the visual orbits the map center for 60 seconds. Anchor building is 1x1 and does not move.</description>
         <useHitPoints>false</useHitPoints>
@@ -183,6 +172,49 @@
         <defName>PMP_VoidRayShadowGlow</defName>
         <graphicData>
             <texPath>Things/Structure/VoidRayShadow</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>Mote</shaderType>
+            <drawSize>(4, 4)</drawSize>
+        </graphicData>
+        <altitudeLayer>MetaOverlays</altitudeLayer>
+    </ThingDef>
+
+    <ThingDef>
+        <defName>PMP_ScoutOrbiter</defName>
+        <category>Building</category>
+        <label>Scout</label>
+        <thingClass>PMP_Persona.ScoutGunner.Building_ScoutOrbiter</thingClass>
+        <description>A summoned scout; the visual follows the mouse on a circle with inertia. Anchor building is 1x1 and does not move.</description>
+        <useHitPoints>false</useHitPoints>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <graphicData>
+            <texPath>Things/Weapon/transparent</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.0, 1.0)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0</fillPercent>
+        <pathCost>0</pathCost>
+        <rotatable>false</rotatable>
+        <stealable>false</stealable>
+        <selectable>true</selectable>
+        <size>(1,1)</size>
+        <statBases>
+            <Flammability>0</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <building>
+            <isEdifice>false</isEdifice>
+            <deconstructible>false</deconstructible>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="MoteBase">
+        <defName>PMP_ScoutShadowGlow</defName>
+        <graphicData>
+            <texPath>Things/Structure/ScoutShadow</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>Mote</shaderType>
             <drawSize>(4, 4)</drawSize>

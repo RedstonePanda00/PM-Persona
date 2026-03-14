@@ -25,6 +25,31 @@
     </skyfaller>
   </ThingDef>
 
+  <!-- Scout weapon 1: neutron autocannon — small explosion at mouse with random offset. -->
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>PMP_ScoutNeutronIncoming</defName>
+    <label>neutron round (incoming)</label>
+    <size>(1, 1)</size>
+    <graphicData>
+      <texPath>Things/Projectile/ShellAntigrainWarhead</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>ConstantSpeed</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(0.8, 0.8)</shadowSize>
+      <speed>60</speed>
+      <ticksToImpactRange>10~15</ticksToImpactRange>
+      <explosionRadius>1.5</explosionRadius>
+      <explosionDamage>BombSuper</explosionDamage>
+      <explosionDamageFactor>0.1</explosionDamageFactor>
+      <impactSound>Explosion_GiantBomb</impactSound>
+      <motesPerCell>0</motesPerCell>
+    </skyfaller>
+  </ThingDef>
+
   <!-- Weapon 2: antiparticle shells. Same off-screen entry as drop pod, but ConstantSpeed (no deceleration, direct impact). -->
   <ThingDef ParentName="SkyfallerBase">
     <defName>PMP_AntiparticleShellIncoming</defName>

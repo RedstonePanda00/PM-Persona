@@ -11,4 +11,14 @@
   <!-- EN: A mobile orbital beam. Select and right-click to move. Deals heat damage in a 5x5 area every 30 ticks and ignites ground. No hitpoints. -->
   <PMP_PurificationBeam.description>可移动的轨道光束。选中后右键指定位置移动。每30 tick对5x5范围内敌人造成热能伤害并点燃地面，无生命值。</PMP_PurificationBeam.description>
 
+  <!-- EN: Void Ray -->
+  <PMP_VoidRayOrbiter.label>虚空辉光舰</PMP_VoidRayOrbiter.label>
+  <!-- EN: A summoned guardian; the visual orbits the map center for 60 seconds. Anchor building is 1x1 and does not move. -->
+  <PMP_VoidRayOrbiter.description>召唤出的护卫单位；视觉上的光晕绕地图中心飞行60秒。锚定建筑为1x1且不移动。</PMP_VoidRayOrbiter.description>
+
+  <!-- EN: Scout -->
+  <PMP_ScoutOrbiter.label>侦察舰</PMP_ScoutOrbiter.label>
+  <!-- EN: A summoned scout; the visual follows the mouse on a circle with inertia. -->
+  <PMP_ScoutOrbiter.description>召唤出的侦察单位；视觉光晕在鼠标周围固定半径圆环上随惯性移动。锚定建筑为1x1且不移动。</PMP_ScoutOrbiter.description>
+
 </LanguageData>
