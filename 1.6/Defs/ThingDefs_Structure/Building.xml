@@ -71,6 +71,7 @@
         <pathCost>0</pathCost>
         <rotatable>false</rotatable>
         <stealable>false</stealable>
+        <selectable>true</selectable>
         <statBases>
             <Flammability>0</Flammability>
             <Beauty>-8</Beauty>
@@ -89,6 +90,11 @@
             <li Class="CompProperties_OrbitalBeam">
                 <width>6</width>
                 <color>(1, 0.9, 0, 1)</color>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>3600</delayTicks>
+                <destroyMode>KillFinalize</destroyMode>
+                <countdownLabel>End in</countdownLabel>
             </li>
         </comps>
     </ThingDef>
@@ -172,6 +178,49 @@
         <defName>PMP_VoidRayShadowGlow</defName>
         <graphicData>
             <texPath>Things/Structure/VoidRayShadow</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>Mote</shaderType>
+            <drawSize>(4, 4)</drawSize>
+        </graphicData>
+        <altitudeLayer>MetaOverlays</altitudeLayer>
+    </ThingDef>
+
+    <ThingDef>
+        <defName>PMP_CarrierOrbiter</defName>
+        <category>Building</category>
+        <label>Carrier</label>
+        <thingClass>PMP_Persona.CarrierAircraftLegion.Building_CarrierOrbiter</thingClass>
+        <description>A summoned carrier; visuals draw anti-clockwise drone shadows and provide a 60s support.</description>
+        <useHitPoints>false</useHitPoints>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <graphicData>
+            <texPath>Things/Weapon/transparent</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.0, 1.0)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0</fillPercent>
+        <pathCost>0</pathCost>
+        <rotatable>false</rotatable>
+        <stealable>false</stealable>
+        <selectable>true</selectable>
+        <size>(1,1)</size>
+        <statBases>
+            <Flammability>0</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <building>
+            <isEdifice>false</isEdifice>
+            <deconstructible>false</deconstructible>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="MoteBase">
+        <defName>PMP_CarrierShadowGlow</defName>
+        <graphicData>
+            <texPath>Things/Structure/InterceptorShadow</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>Mote</shaderType>
             <drawSize>(4, 4)</drawSize>
