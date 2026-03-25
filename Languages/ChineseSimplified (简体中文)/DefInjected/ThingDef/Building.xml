@@ -21,4 +21,9 @@
   <!-- EN: A summoned scout; the visual follows the mouse on a circle with inertia. -->
   <PMP_ScoutOrbiter.description>召唤出的侦察单位；视觉光晕在鼠标周围固定半径圆环上随惯性移动。锚定建筑为1x1且不移动。</PMP_ScoutOrbiter.description>
 
+  <!-- EN: Air patrol -->
+  <PMP_AirPatrolOrbiter.label>空中巡逻队</PMP_AirPatrolOrbiter.label>
+  <!-- EN: Summoned air patrol: five Mirage craft sweep the map left then right, eliminating hostile flying units and extra defs from mod extension. Anchor is 1x1 and does not move. -->
+  <PMP_AirPatrolOrbiter.description>召唤的空中巡逻：五架 Mirage 先自左向右再自右向左扫过地图，清除敌对飞行单位（原版 Pawn.Flying）以及 AirPatrolExtraTargetsDef（可单独 XML / LoadFolders 合并）中列出的额外 ThingDef。锚定建筑为 1x1 且不移动。</PMP_AirPatrolOrbiter.description>
+
 </LanguageData>

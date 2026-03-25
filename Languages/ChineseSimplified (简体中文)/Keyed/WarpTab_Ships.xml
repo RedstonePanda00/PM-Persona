@@ -7,4 +7,12 @@
   <PMP.NoShipsAvailable>暂无可用舰船</PMP.NoShipsAvailable>
   <PMP.ShipCooldown>冷却: {0}</PMP.ShipCooldown>
   <PMP.ShipNoValidPosition>没有合适位置召唤。</PMP.ShipNoValidPosition>
+  <PMP.Settings.Category>ProtossMech: Persona</PMP.Settings.Category>
+  <PMP.Settings.SectionsTitle>分区</PMP.Settings.SectionsTitle>
+  <PMP.Settings.Tab.AirPatrol>空中巡逻</PMP.Settings.Tab.AirPatrol>
+  <PMP.Settings.NoSectionContent>请在左侧选择配置分区。</PMP.Settings.NoSectionContent>
+  <PMP.AirPatrolSettings.Title>额外敌对目标（ThingDef 总数：{0}）。勾选与 XML 中 AirPatrolExtraTargetsDef 合并生效。</PMP.AirPatrolSettings.Title>
+  <PMP.AirPatrolSettings.SearchHint>按 defName、当前语言标签或 XML 英文 label 搜索。</PMP.AirPatrolSettings.SearchHint>
+  <PMP.AirPatrolSettings.NoDefs>未加载任何 ThingDef。</PMP.AirPatrolSettings.NoDefs>
+  <PMP.AirPatrolSettings.AllPackages>全部模组 / DLC</PMP.AirPatrolSettings.AllPackages>
 </LanguageData>

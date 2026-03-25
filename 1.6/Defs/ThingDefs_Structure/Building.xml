@@ -260,6 +260,58 @@
         </building>
     </ThingDef>
 
+    <ThingDef>
+        <defName>PMP_AirPatrolOrbiter</defName>
+        <category>Building</category>
+        <label>Air patrol</label>
+        <thingClass>PMP_Persona.AirPatrolLegion.Building_AirPatrolOrbiter</thingClass>
+        <description>Summoned air patrol: five Mirage craft sweep the map left then right, eliminating hostile flying units and extra ThingDefs merged from all AirPatrolExtraTargetsDef XML. Anchor is 1x1 and does not move.</description>
+        <useHitPoints>false</useHitPoints>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <graphicData>
+            <texPath>Things/Weapon/transparent</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.0, 1.0)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0</fillPercent>
+        <pathCost>0</pathCost>
+        <rotatable>false</rotatable>
+        <stealable>false</stealable>
+        <selectable>true</selectable>
+        <size>(1,1)</size>
+        <statBases>
+            <Flammability>0</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <building>
+            <isEdifice>false</isEdifice>
+            <deconstructible>false</deconstructible>
+        </building>
+        <modExtensions>
+            <li Class="PMP_Persona.AirPatrolLegion.DefModExtension_AirPatrolOrbiter">
+                <formationForwardSpacing>7</formationForwardSpacing>
+                <formationLateralSpacing>7</formationLateralSpacing>
+                <speedCellsPerTick>3.0</speedCellsPerTick>
+                <planeDrawScale>10.5</planeDrawScale>
+                <mapEdgeMarginCells>4</mapEdgeMarginCells>
+                <wingTrailEnabled>true</wingTrailEnabled>
+                <wingTrailRingCapacity>28</wingTrailRingCapacity>
+                <wingTrailSampleIntervalTicks>0</wingTrailSampleIntervalTicks>
+                <wingTrailWidthFactor>0.04</wingTrailWidthFactor>
+                <wingTrailSegmentLengthFactor>1.7</wingTrailSegmentLengthFactor>
+                <wingTrailSpanFactor>0.4</wingTrailSpanFactor>
+                <wingTrailAlphaMin>0.18</wingTrailAlphaMin>
+                <wingTrailAlphaMax>0.98</wingTrailAlphaMax>
+                <wingTrailYOffset>0.04</wingTrailYOffset>
+                <missileTurnLerp>0.18</missileTurnLerp>
+                <missileInitialForwardBias>0.65</missileInitialForwardBias>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
     <ThingDef ParentName="MoteBase">
         <defName>PMP_ScoutShadowGlow</defName>
         <graphicData>

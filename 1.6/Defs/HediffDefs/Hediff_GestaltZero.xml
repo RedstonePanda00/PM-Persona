@@ -28,6 +28,7 @@
         <defName>PMPH_ProtossHeart</defName>
         <label>Protoss heart</label>
         <description>A Protoss heart.</description>
+        <tradeability>None</tradeability>
         <descriptionHyperlinks>
             <RecipeDef>PMPH_InstallProtossHeart</RecipeDef>
         </descriptionHyperlinks>
@@ -72,6 +73,7 @@
         <defName>PMPH_NerveCords</defName>
         <label>Protoss Nerve Cords</label>
         <description>A Protoss nerve cords.</description>
+        <tradeability>None</tradeability>
         <descriptionHyperlinks>
             <HediffDef>PMPH_HediffNerveCords</HediffDef>
         </descriptionHyperlinks>

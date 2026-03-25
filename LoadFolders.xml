@@ -10,5 +10,8 @@
 
     <li IfModActive="cj.rimtalk,cj.rimtalk_steam">1.6/RimTalk</li>
 
+    <!-- Optional AirPatrol extra targets: add folder with Defs/Misc/*.xml containing AirPatrolExtraTargetsDef, e.g. -->
+    <!-- <li IfModActive="some.package">1.6/OptionalPatches/AirPatrolCompat</li> -->
+
   </v1.6>
 </loadFolders>

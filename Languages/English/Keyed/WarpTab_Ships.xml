@@ -6,4 +6,12 @@
   <PMP.NoShipsAvailable>No ships available</PMP.NoShipsAvailable>
   <PMP.ShipCooldown>Cooldown: {0}</PMP.ShipCooldown>
   <PMP.ShipNoValidPosition>No valid position to summon.</PMP.ShipNoValidPosition>
+  <PMP.Settings.Category>ProtossMech: Persona</PMP.Settings.Category>
+  <PMP.Settings.SectionsTitle>Sections</PMP.Settings.SectionsTitle>
+  <PMP.Settings.Tab.AirPatrol>Air patrol</PMP.Settings.Tab.AirPatrol>
+  <PMP.Settings.NoSectionContent>Select a section on the left.</PMP.Settings.NoSectionContent>
+  <PMP.AirPatrolSettings.Title>Extra hostile targets (ThingDefs: {0}). Checked defs are merged with XML AirPatrolExtraTargetsDef.</PMP.AirPatrolSettings.Title>
+  <PMP.AirPatrolSettings.SearchHint>Search by defName, translated label, or English label from XML.</PMP.AirPatrolSettings.SearchHint>
+  <PMP.AirPatrolSettings.NoDefs>No ThingDefs loaded.</PMP.AirPatrolSettings.NoDefs>
+  <PMP.AirPatrolSettings.AllPackages>All mods / DLC</PMP.AirPatrolSettings.AllPackages>
 </LanguageData>
