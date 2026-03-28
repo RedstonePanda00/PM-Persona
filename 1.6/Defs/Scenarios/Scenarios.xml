@@ -3,7 +3,7 @@
     <ScenarioDef ParentName="ScenarioBase">
         <defName>PMPH_Akhundelar</defName>
         <label>Akhundelar</label>
-        <description>After passing through the event horizon, the Cybros was thrown into an unfamiliar universe. The seemingly undamaged FTL drive has failed due to unknown reasons, indicating that no viable superluminal travel method exists in this universe. You voluntarily joined the "Akhundelar" team, and Kaldalis willingly accompanied you.</description>
+        <description>En Taro Artanis, Executor Sigmar—the first among the Purifiers to take the Phoenix into combat.\n\nOur psionic matrix is fully severed from the Spear of Adun. Telemetry from the horizon probes aboard your flagship Aurora confirms the fleet has drifted into an unknown parallel universe.\n\nOrbital scans also reveal severe swarm biosignatures on the planet below. Indigenous sophonts still flourish on the surface; orbital purification and similar extinction measures would breach our rules of engagement. Until we recalibrate the dimensional probe and chart a path home, we must intervene tactically and contain the swarm.\n\nZero and Kaldalis volunteered for Akhundelar. They will drop from orbit and secure your forward base on the ground.</description>
         <scenario>
             <summary>An elite Purifier Tactical team.</summary>
             <parts>
@@ -11,7 +11,7 @@
                 <!-- Game start dialog -->
                 <li Class="ScenPart_GameStartDialog">
                     <def>GameStartDialog</def>
-                    <text>"David!" Kaldalis's shout jolts you awake from your stupor. The drop pod finally settles after a violent impact. With the C-link status confirmed to be intact, you lead your team out of the pod.\n Facing the unfamiliar star, five Probes pour out of the drop pod, and one after another, warp beacons are placed.\n It is time to begin work.</text>
+                    <text>Warp coordinates locked; comm channel encrypted. Executor, this is Zero.\n\nKaldalis and the strike team are on the ground. Beginning clearance of remaining hostiles in the landing zone.\n\nZero, out.</text>
                     <closeSound>GameStartSting</closeSound>
                 </li>
 

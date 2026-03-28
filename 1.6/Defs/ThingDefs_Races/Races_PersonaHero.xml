@@ -90,7 +90,7 @@
             <personaKeys>
                 <li>Protoss_Persona_Kaldalis</li>
             </personaKeys>
-            <chattiness>0.75</chattiness>
+            <chattiness>0.2</chattiness>
         </li>
     </modExtensions>
   </ThingDef>
@@ -162,7 +162,7 @@
             <personaKeys>
                 <li>Protoss_Persona_Taldarin</li>
             </personaKeys>
-            <chattiness>0.25</chattiness>
+            <chattiness>0.2</chattiness>
         </li>
     </modExtensions>
   </ThingDef>
@@ -280,7 +280,7 @@
     </lifeStages>
     <weaponMoney>9999~9999</weaponMoney>
     <weaponTags>
-      <li>ThermalLances</li>
+      <li>ChronoLance</li>
     </weaponTags>
     <techHediffsChance>1</techHediffsChance>
     <techHediffsMoney>9999~9999</techHediffsMoney>

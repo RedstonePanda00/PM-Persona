@@ -1,16 +1,16 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: Akhundelar -->
   <PMPH_Akhundelar.label>阿昆德拉</PMPH_Akhundelar.label>
-  <!-- EN: After passing through the event horizon, the Cybros was thrown into an unfamiliar universe. The seemingly undamaged FTL drive has failed due to unknown reasons, indicating that no viable superluminal travel method exists in this universe. You voluntarily joined the "Akhundelar" team, and Kaldalis willingly accompanied you. -->
-  <PMPH_Akhundelar.description>赛布罗斯号穿过事件视界后，被抛入一个陌生的宇宙。毫无损坏的超光速引擎因未知原因失灵，显然，这个宇宙没有可行的超光速手段。你自愿加入“阿昆德拉”，卡尔达利斯与你同行。</PMPH_Akhundelar.description>
-  <!-- EN: After passing through the event horizon, the Cybros was thrown into an unfamiliar universe. The seemingly undamaged FTL drive has failed due to unknown reasons, indicating that no viable superluminal travel method exists in this universe. You voluntarily joined the "Akhundelar" team, and Kaldalis willingly accompanied you. -->
-  <PMPH_Akhundelar.scenario.description>赛布罗斯号穿过事件视界后，被抛入一个陌生的宇宙。毫无损坏的超光速引擎因未知原因失灵，显然，这个宇宙没有可行的超光速手段。你自愿加入“阿昆德拉”，卡尔达利斯与你同行。</PMPH_Akhundelar.scenario.description>
+  <!-- EN: En Taro Artanis, Executor Sigmar—the first among the Purifiers to take the Phoenix into combat. Our psionic matrix is fully severed from the Spear of Adun. Telemetry from the horizon probes aboard your flagship Aurora confirms the fleet has drifted into an unknown parallel universe. Orbital scans also reveal severe swarm biosignatures on the planet below. Indigenous sophonts still flourish on the surface; orbital purification and similar extinction measures would breach our rules of engagement. Until we recalibrate the dimensional probe and chart a path home, we must intervene tactically and contain the swarm. Zero and Kaldalis volunteered for Akhundelar. They will drop from orbit and secure your forward base on the ground. -->
+  <PMPH_Akhundelar.description>En Taro Artanis，执行官 Sigmar——净化者执行官，亦是史上首位驾驭凤凰战机的驾驶员。\n\n我们的灵能矩阵已与“亚顿之矛”彻底断开连接。根据您的旗舰——“曙光号”（Aurora）视界探针传回的遥测数据，舰队已偏航至一个未知的平行宇宙。\n\n此外，轨道扫描在下方行星侦测到了极具威胁的虫群生物信号。鉴于地表仍繁衍着大量原生智慧物种，启动“轨道净化”等灭绝手段有违我们的交战法则。在重新校准维度探针、寻得归途之前，我们必须进行战术干预，遏制虫群的蔓延。\n\n零与卡尔达利斯自愿加入“阿昆德拉”，将自轨道空降，为您开辟并稳固地面前线基地。</PMPH_Akhundelar.description>
+  <!-- EN: En Taro Artanis, Executor Sigmar—the first among the Purifiers to take the Phoenix into combat. Our psionic matrix is fully severed from the Spear of Adun. Telemetry from the horizon probes aboard your flagship Aurora confirms the fleet has drifted into an unknown parallel universe. Orbital scans also reveal severe swarm biosignatures on the planet below. Indigenous sophonts still flourish on the surface; orbital purification and similar extinction measures would breach our rules of engagement. Until we recalibrate the dimensional probe and chart a path home, we must intervene tactically and contain the swarm. Zero and Kaldalis volunteered for Akhundelar. They will drop from orbit and secure your forward base on the ground. -->
+  <PMPH_Akhundelar.scenario.description>En Taro Artanis，执行官 Sigmar——净化者执行官，亦是史上首位驾驭凤凰战机的驾驶员。\n\n我们的灵能矩阵已与“亚顿之矛”彻底断开连接。根据您的旗舰——“曙光号”（Aurora）视界探针传回的遥测数据，舰队已偏航至一个未知的平行宇宙。\n\n此外，轨道扫描在下方行星侦测到了极具威胁的虫群生物信号。鉴于地表仍繁衍着大量原生智慧物种，启动“轨道净化”等灭绝手段有违我们的交战法则。在重新校准维度探针、寻得归途之前，我们必须进行战术干预，遏制虫群的蔓延。\n\n零与卡尔达利斯自愿加入“阿昆德拉”，将自轨道空降，为您开辟并稳固地面前线基地。</PMPH_Akhundelar.scenario.description>
   <!-- EN: Akhundelar -->
   <PMPH_Akhundelar.scenario.name>阿昆德拉</PMPH_Akhundelar.scenario.name>
-  <!-- EN: "David!" Kaldalis's shout jolts you awake from your stupor. The drop pod finally settles after a violent impact. With the C-link status confirmed to be intact, you lead your team out of the pod.\n Facing the unfamiliar star, five Probes pour out of the drop pod, and one after another, warp beacons are placed.\n It is time to begin work. -->
-  <PMPH_Akhundelar.scenario.parts.GameStartDialog.text>“大卫！”卡尔达利斯的呼喊将你从恍惚中惊醒。空投舱在猛烈撞击地面后终于静止。C-link状态完好，你带领着小队离开空投舱。\n面对着陌生的恒星，五只探机从空投舱中涌出，一个个折跃信标被放置。\n该开始工作了。</PMPH_Akhundelar.scenario.parts.GameStartDialog.text>
+  <!-- EN: Warp coordinates locked; comm channel encrypted. Executor, this is Zero. Kaldalis and the strike team are on the ground. Beginning clearance of remaining hostiles in the landing zone. Zero, out. -->
+  <PMPH_Akhundelar.scenario.parts.GameStartDialog.text>折跃坐标锚定，通讯频段加密完毕。执行官，这里是零。\n\n卡尔达利斯与突击部队已着陆。开始肃清着陆区的残余敌人。\n\n零，通信结束。</PMPH_Akhundelar.scenario.parts.GameStartDialog.text>
   <!-- EN: An elite Purifier Tactical team. -->
   <PMPH_Akhundelar.scenario.summary>一支精英净化者战术小队。</PMPH_Akhundelar.scenario.summary>
   

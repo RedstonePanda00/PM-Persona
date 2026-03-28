@@ -63,6 +63,80 @@
     </tools>
   </ThingDef>
 
+  <!-- Chrono Lance -->
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_ChronoLance</defName>
+    <label>Chrono Lance</label>
+    <description>A custom temporal beam weapon made exclusively for Warbringer. It kills targets by slicing through space itself.</description>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <graphicData>
+      <texPath>Things/Weapon/transparent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5.0, 5.0)</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>2.00</AccuracyTouch>
+      <AccuracyShort>2.00</AccuracyShort>
+      <AccuracyMedium>2.00</AccuracyMedium>
+      <AccuracyLong>2.00</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <equippedAngleOffset>-53</equippedAngleOffset>
+    <verbs>
+      <li Class="ProtossMech.VerbProperties_ProtossMeltBeam">
+        <verbClass>ProtossMech.Verb_ShootMeltBeam</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>0.0</warmupTime>
+        <range>45.0</range>
+        <minRange>1</minRange>
+        <beamFullWidthRange>9.0</beamFullWidthRange>
+        <burstShotCount>100</burstShotCount>
+        <showBurstShotStats>false</showBurstShotStats>
+        <beamWidth>10</beamWidth>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <beamDamageDef>Beam</beamDamageDef>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+        <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
+        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+        <beamMoteDef>Mote_GraserBeamBase</beamMoteDef>
+        <beamMoteColor>(0.0, 1.0, 0.8, 1.0)</beamMoteColor>
+        <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+        <beamChanceToStartFire>0</beamChanceToStartFire>
+        <beamChanceToAttachFire>0</beamChanceToAttachFire>
+        <beamFireSizeRange>1.0</beamFireSizeRange>
+        <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
+        <beamStartOffset>0.8</beamStartOffset>
+        <beamLineFleckChanceCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.65, 0.4)</li>
+            <li>(1, 0.75)</li>
+          </points>
+        </beamLineFleckChanceCurve>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>ChronoLance</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>40</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
   <!-- turretgun_PurificationBlast -->
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>turretgun_PurificationBlast</defName>
@@ -145,7 +219,7 @@
 
   <ThingDef ParentName="MoteBase">
     <defName>PMPHMote_PurificationBlast</defName>
-    <thingClass>MoteDualAttached</thingClass>
+    <thingClass>PMP_Persona.MoteDualAttached_HeatRefractionBeam</thingClass>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <mote>
       <fadeInTime>0.1</fadeInTime>
@@ -162,11 +236,12 @@
       <shaderParameters>
         <_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA>
         <_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
-        <_ScrollSpeedA>0</_ScrollSpeedA>
-        <_ScrollSpeedB>0</_ScrollSpeedB>
-        <_Intensity>2</_Intensity>
+        <!-- Animated scroll gives shimmering/wavy beam edges. -->
+        <_ScrollSpeedA>4.6</_ScrollSpeedA>
+        <_ScrollSpeedB>-7.4</_ScrollSpeedB>
+        <_Intensity>2.6</_Intensity>
       </shaderParameters>
-      <drawSize>(3, 1)</drawSize>
+      <drawSize>(3.6, 1)</drawSize>
     </graphicData>
   </ThingDef>
 

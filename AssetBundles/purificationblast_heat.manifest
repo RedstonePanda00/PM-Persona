@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 2545382640
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9ab289dba7d2183ba004d22ee7691a69
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5e762ccb57c4caaabbb5a4199ac82c23
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 9ab289dba7d2183ba004d22ee7691a69
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Shaders/Mat_PurificationBlastHeat.mat
+- Assets/Shaders/HeatRefractionBeam.shader
+Dependencies: []

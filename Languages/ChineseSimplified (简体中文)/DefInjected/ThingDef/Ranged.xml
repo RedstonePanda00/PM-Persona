@@ -9,6 +9,13 @@
   <Gun_Taldarin.tools.barrel.label>枪管</Gun_Taldarin.tools.barrel.label>
   <!-- EN: Gun Taldarin -->
   <Gun_Taldarin.verbs.Verb_GravityPulse.label>塔尔达林武器</Gun_Taldarin.verbs.Verb_GravityPulse.label>
+
+  <!-- EN: Chrono Lance -->
+  <Gun_ChronoLance.label>时空光束</Gun_ChronoLance.label>
+  <!-- EN: A custom temporal beam weapon made exclusively for Warbringer. It kills targets by slicing through space itself. -->
+  <Gun_ChronoLance.description>专为战争使者打造的时空光束武器，通过切割空间本身来杀伤目标。</Gun_ChronoLance.description>
+  <!-- EN: barrel -->
+  <Gun_ChronoLance.tools.barrel.label>枪管</Gun_ChronoLance.tools.barrel.label>
   
   <!-- EN: PurificationBlast Projectile -->
   <PMPH_PurificationBlastProjectile.label>TODO</PMPH_PurificationBlastProjectile.label>
