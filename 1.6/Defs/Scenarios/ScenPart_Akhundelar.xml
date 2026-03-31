@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ScenPartDef>
+        <defName>PMPH_AkhundelarWarpArrival</defName>
+        <label>Akhundelar protoss warp arrival</label>
+        <category>Misc</category>
+        <scenPartClass>PMP_Persona.ScenarioAkhundelar.ScenPart_AkhundelarWarpArrival</scenPartClass>
+        <maxUses>1</maxUses>
+    </ScenPartDef>
+</Defs>

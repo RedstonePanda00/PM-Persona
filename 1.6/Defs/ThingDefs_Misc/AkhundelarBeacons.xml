@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Initial map-center beacon: becomes Pylon after countdown, then orchestrates unit warps. -->
+    <ThingDef>
+        <defName>PMPH_AkhundelarAnchorBeacon</defName>
+        <label>warp beacon</label>
+        <description>Temporary scenario warp anchor.</description>
+        <thingClass>ThingWithComps</thingClass>
+        <graphicData>
+            <texPath>Things/Structure/WarpBeacon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.0, 1.0)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <drawerType>RealtimeOnly</drawerType>
+        <selectable>true</selectable>
+        <tickerType>Normal</tickerType>
+        <destroyable>true</destroyable>
+        <useHitPoints>false</useHitPoints>
+        <passability>Standable</passability>
+        <fillPercent>0</fillPercent>
+        <pathCost>0</pathCost>
+        <blockWind>false</blockWind>
+        <size>(1,1)</size>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <statBases>
+            <Flammability>0</Flammability>
+        </statBases>
+        <building>
+            <claimable>false</claimable>
+            <deconstructible>false</deconstructible>
+            <isInert>true</isInert>
+        </building>
+        <comps>
+            <li Class="PMP_Persona.ScenarioAkhundelar.CompProperties_AkhundelarAnchorBeacon">
+                <ticksToPylon>180</ticksToPylon>
+                <buildingDefName>Pylon</buildingDefName>
+                <strikeFleck>PM_WarpInStrike</strikeFleck>
+                <continuousFleck>PM_WarpInFleck</continuousFleck>
+                <fleckScale>1.0</fleckScale>
+                <fleckSpawnInterval>45</fleckSpawnInterval>
+                <fleckExtraTicksBeforeStaticPulse>2</fleckExtraTicksBeforeStaticPulse>
+                <fleckOffsetZ>6</fleckOffsetZ>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Unit warp-in beacon (pre-generated pawns from scenario). -->
+    <ThingDef>
+        <defName>PMPH_AkhundelarPawnWarpBeacon</defName>
+        <label>warp beacon</label>
+        <description>Temporary unit warp beacon.</description>
+        <thingClass>ThingWithComps</thingClass>
+        <graphicData>
+            <texPath>Things/Structure/WarpBeacon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.0, 1.0)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <drawerType>RealtimeOnly</drawerType>
+        <selectable>true</selectable>
+        <tickerType>Normal</tickerType>
+        <destroyable>true</destroyable>
+        <useHitPoints>false</useHitPoints>
+        <passability>Standable</passability>
+        <fillPercent>0</fillPercent>
+        <pathCost>0</pathCost>
+        <blockWind>false</blockWind>
+        <size>(1,1)</size>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <statBases>
+            <Flammability>0</Flammability>
+        </statBases>
+        <building>
+            <claimable>false</claimable>
+            <deconstructible>false</deconstructible>
+            <isInert>true</isInert>
+        </building>
+        <comps>
+            <li Class="PMP_Persona.ScenarioAkhundelar.CompProperties_AkhundelarPawnWarp">
+                <warpTicks>180</warpTicks>
+                <strikeFleck>PM_WarpInStrike</strikeFleck>
+                <continuousFleck>PM_WarpInFleck</continuousFleck>
+                <fleckScale>1.0</fleckScale>
+                <fleckSpawnInterval>45</fleckSpawnInterval>
+                <fleckExtraTicksBeforeStaticPulse>2</fleckExtraTicksBeforeStaticPulse>
+                <fleckOffsetZ>6</fleckOffsetZ>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>
