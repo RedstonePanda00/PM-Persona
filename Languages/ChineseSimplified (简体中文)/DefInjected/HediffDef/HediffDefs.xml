@@ -21,4 +21,9 @@
   <!-- EN: The number in brackets is how many other Taldarin (backup bodies) are in your faction on this map. Each backup body adds extra damage: vs buildings, one extra attack hit; vs pawns, one extra AoE pulse to the main target and nearby enemies. -->
   <PMP_TacticalDataWebTaldarin.description>括号内为当前地图同阵营的净化者不朽者（备用躯体）数量。主目标是建筑时，每具备用躯体对该建筑额外造成一次攻击伤害；主目标是单位时，每具备用躯体对主目标及范围内敌人额外造成一次重力脉冲 AOE。</PMP_TacticalDataWebTaldarin.description>
 
+  <!-- EN: Tactical Data Web: Warbringer -->
+  <PMP_TacticalDataWebWarbringer.label>战术数据网络:战争使者</PMP_TacticalDataWebWarbringer.label>
+  <!-- EN: The number in brackets is how many Purifier Colossus prototypes (backup bodies) are in your faction on this map. Each backup body causes Purification Blast to deal one additional full damage hit to the target (same brain hit as the base shot). -->
+  <PMP_TacticalDataWebWarbringer.description>括号内为当前地图同阵营的净化者巨像原型机（备用躯体）数量。每具备用躯体使净化轰击对目标额外造成一次与基础射击相同的大脑部位伤害。</PMP_TacticalDataWebWarbringer.description>
+
 </LanguageData>

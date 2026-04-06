@@ -51,6 +51,9 @@
         <hediffClass>PMP_Persona.Hediff_TacticalDataWebKaldalis</hediffClass>
         <isBad>false</isBad>
         <defaultLabelColor>(0.4, 0.8, 1.0)</defaultLabelColor>
+        <comps>
+            <li Class="RsPandaLibrary.HediffCompProperties_IgnorePathCost" />
+        </comps>
     </HediffDef>
 
     <HediffDef>
@@ -60,6 +63,21 @@
         <hediffClass>PMP_Persona.Hediff_TacticalDataWebTaldarin</hediffClass>
         <isBad>false</isBad>
         <defaultLabelColor>(0.4, 0.8, 1.0)</defaultLabelColor>
+        <comps>
+            <li Class="RsPandaLibrary.HediffCompProperties_IgnorePathCost" />
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>PMP_TacticalDataWebWarbringer</defName>
+        <label>Tactical Data Web: Warbringer</label>
+        <description>The number in brackets is how many Purifier Colossus prototypes (backup bodies) are in your faction on this map. Each backup body causes Purification Blast to deal one additional full damage hit to the target (same brain hit as the base shot).</description>
+        <hediffClass>PMP_Persona.Hediff_TacticalDataWebWarbringer</hediffClass>
+        <isBad>false</isBad>
+        <defaultLabelColor>(0.4, 0.8, 1.0)</defaultLabelColor>
+        <comps>
+            <li Class="RsPandaLibrary.HediffCompProperties_IgnorePathCost" />
+        </comps>
     </HediffDef>
 
 </Defs>

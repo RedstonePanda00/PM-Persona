@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: Kaldalis -->
@@ -25,5 +25,12 @@
   <PMPH_Warbringer.description>战争使者是净化者项目的绝密计划，卡莱工程师设计了复杂的人工神经网络，得到了几乎和其他净化者无异的强人工智能。</PMPH_Warbringer.description>
   <!-- EN: head -->
   <PMPH_Warbringer.tools.head.label>战争使者头部</PMPH_Warbringer.tools.head.label>
+  
+  <!-- EN: Zeratul -->
+  <PMPH_Zeratul.label>泽拉图</PMPH_Zeratul.label>
+  <!-- EN: Zeratul, Dark Prelate of the Nerazim... -->
+  <PMPH_Zeratul.description>黑暗教长泽拉图的一生都在寻求萨尔纳加预言和救赎，在末世之战结束后，他也被作为达拉姆的英雄永世传唱。\n\n如今，这份净化者英雄人格栖身于渊影素体之中，一如往昔穿行于阴影与启示之间。</PMPH_Zeratul.description>
+  <!-- EN: Master Warp Blade -->
+  <PMPH_Zeratul.tools.Master_Warp_Blade.label>宗师曲刃</PMPH_Zeratul.tools.Master_Warp_Blade.label>
   
 </LanguageData>

@@ -184,4 +184,80 @@
 		</value>
 	</Operation>
 
+    <!-- Zeratul: scaled from Umbra CE by vanilla armor 2.0/1.5; tool/durability match buffed ThingDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PMPH_Zeratul"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>1707</ArmorRating_Blunt>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PMPH_Zeratul"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+			<ArmorRating_Sharp>600</ArmorRating_Sharp>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="PMPH_Zeratul"]/statBases</xpath>
+		<value>
+			<AimingAccuracy>0.95</AimingAccuracy>
+			<ShootingAccuracyPawn>0.95</ShootingAccuracyPawn>
+			<MeleeDodgeChance>0.95</MeleeDodgeChance>
+			<MeleeCritChance>0.55</MeleeCritChance>
+			<MeleeParryChance>0.95</MeleeParryChance>
+			<NightVisionEfficiency>1.0</NightVisionEfficiency>
+			<ArmorRating_Heat>2</ArmorRating_Heat>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="PMPH_Zeratul"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PMPH_Zeratul"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>Master Warp Blade</label>
+					<capacities>
+						<li>Cut</li>
+						<li>Stab</li>
+					</capacities>
+					<power>100</power>
+					<cooldownTime>1.5</cooldownTime>
+					<armorPenetrationSharp>444</armorPenetrationSharp>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="PMPH_Zeratul"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_ArmorDurability">
+				<Durability>4000</Durability>
+				<Regenerates>true</Regenerates>
+				<RegenInterval>60</RegenInterval>
+				<RegenValue>5</RegenValue>
+				<Repairable>true</Repairable>
+				<RepairIngredients>
+					<PM_Solarite>5</PM_Solarite>
+				</RepairIngredients>
+				<RepairTime>300</RepairTime>
+				<RepairValue>2500</RepairValue>
+				<CanOverHeal>true</CanOverHeal>
+				<MaxOverHeal>2500</MaxOverHeal>
+				<MinArmorPct>1.0</MinArmorPct>
+			</li>
+		</value>
+	</Operation>
+
 </Patch>

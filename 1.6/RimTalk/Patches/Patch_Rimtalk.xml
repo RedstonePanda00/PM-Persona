@@ -37,4 +37,16 @@
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="PMPH_Zeratul"]/comps</xpath>
+        <value>
+            <li Class="RsPandaLibrary.CompProperties_EnsureHediffList">
+                <hediffDefs>
+                    <li>VocalLinkImplant</li>
+                </hediffDefs>
+                <checkInterval>120</checkInterval>
+            </li>
+        </value>
+    </Operation>
+
 </Patch>

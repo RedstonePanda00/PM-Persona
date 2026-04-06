@@ -54,6 +54,18 @@
   </Operation>
 
   <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PMPH_Warbringer"]/comps</xpath>
+    <value>
+      <li Class="RsPandaLibrary.CompProperties_EnsureHediffList">
+        <hediffDefs>
+          <li>PMP_TacticalDataWebWarbringer</li>
+        </hediffDefs>
+        <checkInterval>250</checkInterval>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="PMP_PurifierImmortal"]/comps</xpath>
     <value>
       <li Class="RsPandaLibrary.CompProperties_AutoTransform">
@@ -63,6 +75,20 @@
           <li>PMPH_conclave</li>
         </DetectList>
         <targetDef>PMPH_Taldarin</targetDef>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PMP_Umbra"]/comps</xpath>
+    <value>
+      <li Class="RsPandaLibrary.CompProperties_AutoTransform">
+        <checkInterval>300</checkInterval>
+        <DetectList>
+          <li>PMP_Umbra</li>
+          <li>PMPH_conclave</li>
+        </DetectList>
+        <targetDef>PMPH_Zeratul</targetDef>
       </li>
     </value>
   </Operation>

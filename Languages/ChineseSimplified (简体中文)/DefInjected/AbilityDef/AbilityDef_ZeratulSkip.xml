@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: void stride -->
+  <PMPH_ZeratulSkip.label>虚空折跃</PMPH_ZeratulSkip.label>
+  <!-- EN: Phase to the targeted location... -->
+  <PMPH_ZeratulSkip.description>传送到目标格位，可穿透墙体。落地时对周围敌人造成100点处决伤害。</PMPH_ZeratulSkip.description>
+</LanguageData>

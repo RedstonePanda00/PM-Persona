@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Same behavior as PMP_UmbraSkip (ProtossMech CompAbilityEffect_UmbraSkip); higher landing damage for PMPH_Zeratul -->
+  <AbilityDef>
+    <defName>PMPH_ZeratulSkip</defName>
+    <label>void stride</label>
+    <description>Phase to the targeted location, ignoring walls. Upon arrival, deal 100 execute damage to hostile pawns in a small radius.</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <groupAbility>true</groupAbility>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <requireLineOfSight>false</requireLineOfSight>
+      <range>25</range>
+      <warmupTime>0.25</warmupTime>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ProtossMech.CompProperties_UmbraSkip">
+        <damageAmount>100</damageAmount>
+        <damageRadius>2.9</damageRadius>
+        <damageDef>ExecutionCut</damageDef>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>
