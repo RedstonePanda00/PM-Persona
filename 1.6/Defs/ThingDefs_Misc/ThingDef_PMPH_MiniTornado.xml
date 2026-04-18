@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Custom tornado: vanilla-style draw; pull + TornadoScratch every 30 ticks (see PMPH_MiniTornado.cs). -->
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>PMPH_MiniTornado</defName>
+    <label>mini tornado</label>
+    <thingClass>PMP_Persona.PMPH_MiniTornado</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <seeThroughFog>true</seeThroughFog>
+    <alwaysFlee>true</alwaysFlee>
+  </ThingDef>
+</Defs>

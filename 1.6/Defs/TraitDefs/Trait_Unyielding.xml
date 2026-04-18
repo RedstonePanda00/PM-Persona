@@ -2,7 +2,7 @@
 <Defs>
     <TraitDef>
         <defName>PMPH_Unyielding</defName>
-        <commonality>0.5</commonality>
+        <commonality>0</commonality>
         <degreeDatas>
             <li>
                 <label>Unyielding</label>

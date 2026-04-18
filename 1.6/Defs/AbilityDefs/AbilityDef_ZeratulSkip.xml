@@ -4,7 +4,7 @@
   <AbilityDef>
     <defName>PMPH_ZeratulSkip</defName>
     <label>void stride</label>
-    <description>Phase to the targeted location, ignoring walls. Upon arrival, deal 100 execute damage to hostile pawns in a small radius.</description>
+    <description>Phase to the targeted location, ignoring walls. Upon arrival, deal 100 execute damage to hostile pawns in a small radius. Every cell in a circular radius around the landing site is struck once by vanilla lightning, and a short-lived vanilla-style tornado with the same radius appears for 1 second.</description>
     <iconPath>UI/Abilities/Skip</iconPath>
     <cooldownTicksRange>300</cooldownTicksRange>
     <groupAbility>true</groupAbility>
@@ -26,6 +26,10 @@
         <damageAmount>100</damageAmount>
         <damageRadius>2.9</damageRadius>
         <damageDef>ExecutionCut</damageDef>
+      </li>
+      <li Class="PMP_Persona.CompProperties_ZeratulLandingLightning">
+        <lightningRadius>3</lightningRadius>
+        <tornadoDurationSeconds>2</tornadoDurationSeconds>
       </li>
     </comps>
   </AbilityDef>

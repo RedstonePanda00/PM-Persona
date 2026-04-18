@@ -21,7 +21,7 @@
       <AccuracyShort>1</AccuracyShort>
       <AccuracyMedium>1</AccuracyMedium>
       <AccuracyLong>1</AccuracyLong>
-      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
       <li>Gun_Taldarin</li>
@@ -94,7 +94,7 @@
         <range>45.0</range>
         <minRange>1</minRange>
         <beamFullWidthRange>9.0</beamFullWidthRange>
-        <burstShotCount>100</burstShotCount>
+        <burstShotCount>50</burstShotCount>
         <showBurstShotStats>false</showBurstShotStats>
         <beamWidth>10</beamWidth>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>

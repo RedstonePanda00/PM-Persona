@@ -11,6 +11,7 @@
       <shaderType>CutoutFlying</shaderType>
       <drawSize>1.0</drawSize>
     </graphicData>
+    <thingClass>PMP_Persona.PMPH_OrbitalIncoming</thingClass>
     <skyfaller>
       <movementType>ConstantSpeed</movementType>
       <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
@@ -36,6 +37,7 @@
       <shaderType>CutoutFlying</shaderType>
       <drawSize>0.6</drawSize>
     </graphicData>
+    <thingClass>PMP_Persona.PMPH_OrbitalIncoming</thingClass>
     <skyfaller>
       <movementType>ConstantSpeed</movementType>
       <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
@@ -61,6 +63,7 @@
       <shaderType>CutoutFlying</shaderType>
       <drawSize>1.0</drawSize>
     </graphicData>
+    <thingClass>PMP_Persona.PMPH_OrbitalIncoming</thingClass>
     <skyfaller>
       <movementType>ConstantSpeed</movementType>
       <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>

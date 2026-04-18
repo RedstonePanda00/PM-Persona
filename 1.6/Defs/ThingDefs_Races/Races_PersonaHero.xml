@@ -362,6 +362,7 @@
         <bladeTexPath>Things/Pawn/Mechanoid/Umbra_blade</bladeTexPath>
         <drawSize>2.2</drawSize>
       </li>
+      <li Class="PMP_Persona.CompProperties_PawnHaloRenderer" />
     </comps>
 
     <modExtensions>
