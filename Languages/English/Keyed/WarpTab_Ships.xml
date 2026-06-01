@@ -6,6 +6,8 @@
   <PMP.NoShipsAvailable>No ships available</PMP.NoShipsAvailable>
   <PMP.ShipCooldown>Cooldown: {0}</PMP.ShipCooldown>
   <PMP.ShipNoValidPosition>No valid position to summon.</PMP.ShipNoValidPosition>
+  <PMP.EnergyFieldDeployFailed>Could not deploy energy field at this location.</PMP.EnergyFieldDeployFailed>
+  <PMP.EnergyFieldDeploy>Deploy</PMP.EnergyFieldDeploy>
   <PMP.Settings.Category>ProtossMech: Persona</PMP.Settings.Category>
   <PMP.Settings.SectionsTitle>Sections</PMP.Settings.SectionsTitle>
   <PMP.Settings.Tab.AirPatrol>Air patrol</PMP.Settings.Tab.AirPatrol>
@@ -14,4 +16,19 @@
   <PMP.AirPatrolSettings.SearchHint>Search by defName, translated label, or English label from XML.</PMP.AirPatrolSettings.SearchHint>
   <PMP.AirPatrolSettings.NoDefs>No ThingDefs loaded.</PMP.AirPatrolSettings.NoDefs>
   <PMP.AirPatrolSettings.AllPackages>All mods / DLC</PMP.AirPatrolSettings.AllPackages>
+  <PMP.SupportLetter.Prism.Label>Prism Alpha: Low-Orbit Suppression</PMP.SupportLetter.Prism.Label>
+  <PMP.SupportLetter.Prism.Description>Acknowledged. This is Prism Alpha. Friendly ship inbound. All batteries ready. Low-orbit suppression active.</PMP.SupportLetter.Prism.Description>
+  <PMP.SupportLetter.Carrier.Label>Aurora: Attack Drone Legion</PMP.SupportLetter.Carrier.Label>
+  <PMP.SupportLetter.Carrier.Description>Acknowledged. Graviton slingshot charged. Launching attack drone cluster. Legion bombardment active. Mind friendly fire. Out.</PMP.SupportLetter.Carrier.Description>
+  <PMP.SupportLetter.Vanguard.Label>Vanguard Zeta: Orbital Bombardment</PMP.SupportLetter.Vanguard.Label>
+  <PMP.SupportLetter.Vanguard.Description>Vanguard Zeta on station in low orbit. Target locked to your requested coordinates. Carpet bombing underway.</PMP.SupportLetter.Vanguard.Description>
+  <PMP.SupportLetter.GreatWyrm.Label>Great Wyrm: Air-to-Air Sweep</PMP.SupportLetter.GreatWyrm.Label>
+  <PMP.SupportLetter.GreatWyrm.Description>Acknowledged. Fighter wing warped in. Great Wyrm airspace sweep underway.</PMP.SupportLetter.GreatWyrm.Description>
+  <PMP.SupportLetter.EnergyField.Label>Aurora: Projected Energy Field</PMP.SupportLetter.EnergyField.Label>
+  <PMP.SupportLetter.EnergyField.Description>Acknowledged. Beginning energy field projection at your designated location.</PMP.SupportLetter.EnergyField.Description>
+  <PMP.SupernovaDeploy>Deploy Supernova</PMP.SupernovaDeploy>
+  <PMP.SupernovaDeployFailed>Could not deploy supernova at this location.</PMP.SupernovaDeployFailed>
+  <PMP.SupernovaCooldown>Cooldown: {0}</PMP.SupernovaCooldown>
+  <PMP.SupportLetter.Supernova.Label>Aurora: Supernova</PMP.SupportLetter.Supernova.Label>
+  <PMP.SupportLetter.Supernova.Description>Acknowledged. Warping supernova to target coordinates.</PMP.SupportLetter.Supernova.Description>
 </LanguageData>

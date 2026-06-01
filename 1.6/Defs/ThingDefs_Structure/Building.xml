@@ -103,7 +103,7 @@
         <defName>PMP_OrbitalLaser</defName>
         <category>Building</category>
         <label>Orbital laser</label>
-        <thingClass>PMP_Persona.VoidRayGunship.Building_OrbitalLaser</thingClass>
+        <thingClass>PMP_Persona.PrismSupport.Building_OrbitalLaser</thingClass>
         <description>Orbital laser beam. Moves in a straight line from start to end. Deals heat damage in a 3-cell radius. Blue beam with same-color ground halo (radius 3).</description>
         <useHitPoints>false</useHitPoints>
         <tickerType>Normal</tickerType>
@@ -143,10 +143,10 @@
     </ThingDef>
 
     <ThingDef>
-        <defName>PMP_VoidRayOrbiter</defName>
+        <defName>PMP_PrismOrbiter</defName>
         <category>Building</category>
-        <label>Void Ray</label>
-        <thingClass>PMP_Persona.VoidRayGunship.Building_VoidRayOrbiter</thingClass>
+        <label>Prism Alpha: Low-Orbit Suppression</label>
+        <thingClass>PMP_Persona.PrismSupport.Building_PrismOrbiter</thingClass>
         <description>A summoned guardian; the visual orbits the map center for 60 seconds. Anchor building is 1x1 and does not move.</description>
         <useHitPoints>false</useHitPoints>
         <tickerType>Normal</tickerType>
@@ -172,15 +172,23 @@
             <isEdifice>false</isEdifice>
             <deconstructible>false</deconstructible>
         </building>
+        <modExtensions>
+            <li Class="PMP_Persona.DefModExtension_SupportSummonLetter">
+                <enableSummonEventLetter>true</enableSummonEventLetter>
+                <summonEventLetterLabel>PMP.SupportLetter.Prism.Label</summonEventLetterLabel>
+                <summonEventLetterDescription>PMP.SupportLetter.Prism.Description</summonEventLetterDescription>
+            </li>
+        </modExtensions>
     </ThingDef>
 
     <ThingDef ParentName="MoteBase">
-        <defName>PMP_VoidRayShadowGlow</defName>
+        <defName>PMP_PrismShadowGlow</defName>
         <graphicData>
-            <texPath>Things/Structure/VoidRayShadow</texPath>
+            <texPath>Things/CAS/PrismShadow</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>Mote</shaderType>
             <drawSize>(4, 4)</drawSize>
+            <color>(255, 255, 255, 90)</color>
         </graphicData>
         <altitudeLayer>MetaOverlays</altitudeLayer>
     </ThingDef>
@@ -188,7 +196,7 @@
     <ThingDef>
         <defName>PMP_CarrierOrbiter</defName>
         <category>Building</category>
-        <label>Carrier</label>
+        <label>Aurora: Strikecraft Legion</label>
         <thingClass>PMP_Persona.CarrierAircraftLegion.Building_CarrierOrbiter</thingClass>
         <description>A summoned carrier; visuals draw anti-clockwise drone shadows and provide a 60s support.</description>
         <useHitPoints>false</useHitPoints>
@@ -215,12 +223,44 @@
             <isEdifice>false</isEdifice>
             <deconstructible>false</deconstructible>
         </building>
+        <modExtensions>
+            <li Class="PMP_Persona.DefModExtension_SupportSummonLetter">
+                <enableSummonEventLetter>true</enableSummonEventLetter>
+                <summonEventLetterLabel>PMP.SupportLetter.Carrier.Label</summonEventLetterLabel>
+                <summonEventLetterDescription>PMP.SupportLetter.Carrier.Description</summonEventLetterDescription>
+            </li>
+            <li Class="PMP_Persona.CarrierAircraftLegion.DefModExtension_CarrierLegionSwarm">
+                <variants>
+                    <li>
+                        <variantId>AA</variantId>
+                        <droneTexPath>Things/CAS/Legion/Legion_AA</droneTexPath>
+                        <droneGlowDefName>PMP_LegionShadow_AA</droneGlowDefName>
+                        <droneCoreGlowDefName>PMP_LegionCore_AA</droneCoreGlowDefName>
+                        <bombardmentHandlerClass>PMP_Persona.CarrierAircraftLegion.LegionBombardmentHandler_AA</bombardmentHandlerClass>
+                    </li>
+                    <li>
+                        <variantId>AG</variantId>
+                        <droneTexPath>Things/CAS/Legion/Legion_AG</droneTexPath>
+                        <droneGlowDefName>PMP_LegionShadow_AG</droneGlowDefName>
+                        <droneCoreGlowDefName>PMP_LegionCore_AG</droneCoreGlowDefName>
+                        <bombardmentHandlerClass>PMP_Persona.CarrierAircraftLegion.LegionBombardmentHandler_AG</bombardmentHandlerClass>
+                    </li>
+                    <li>
+                        <variantId>LB</variantId>
+                        <droneTexPath>Things/CAS/Legion/Legion_LB</droneTexPath>
+                        <droneGlowDefName>PMP_LegionShadow_LB</droneGlowDefName>
+                        <droneCoreGlowDefName>PMP_LegionCore_LB</droneCoreGlowDefName>
+                        <bombardmentHandlerClass>PMP_Persona.CarrierAircraftLegion.LegionBombardmentHandler_LB</bombardmentHandlerClass>
+                    </li>
+                </variants>
+            </li>
+        </modExtensions>
     </ThingDef>
 
     <ThingDef ParentName="MoteBase">
-        <defName>PMP_CarrierShadowGlow</defName>
+        <defName>PMP_LegionShadow_AA</defName>
         <graphicData>
-            <texPath>Things/Structure/InterceptorShadow</texPath>
+            <texPath>Things/CAS/Legion/Legion_AA</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>Mote</shaderType>
             <drawSize>(4, 4)</drawSize>
@@ -228,11 +268,88 @@
         <altitudeLayer>MetaOverlays</altitudeLayer>
     </ThingDef>
 
+    <ThingDef ParentName="MoteBase">
+        <defName>PMP_LegionShadow_AG</defName>
+        <graphicData>
+            <texPath>Things/CAS/Legion/Legion_AG</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>Mote</shaderType>
+            <drawSize>(4, 4)</drawSize>
+        </graphicData>
+        <altitudeLayer>MetaOverlays</altitudeLayer>
+    </ThingDef>
+
+    <ThingDef ParentName="MoteBase">
+        <defName>PMP_LegionShadow_LB</defName>
+        <graphicData>
+            <texPath>Things/CAS/Legion/Legion_LB</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>Mote</shaderType>
+            <drawSize>(4, 4)</drawSize>
+        </graphicData>
+        <altitudeLayer>MetaOverlays</altitudeLayer>
+    </ThingDef>
+
+    <ThingDef ParentName="MoteBase">
+        <defName>PMP_LegionCore_AA</defName>
+        <graphicData>
+            <texPath>Things/CAS/Legion/Legion_AA</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>(2, 2)</drawSize>
+            <color>(190, 245, 255, 220)</color>
+        </graphicData>
+        <altitudeLayer>MetaOverlays</altitudeLayer>
+    </ThingDef>
+
+    <ThingDef ParentName="MoteBase">
+        <defName>PMP_LegionCore_AG</defName>
+        <graphicData>
+            <texPath>Things/CAS/Legion/Legion_AG</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>(2, 2)</drawSize>
+            <color>(190, 245, 255, 220)</color>
+        </graphicData>
+        <altitudeLayer>MetaOverlays</altitudeLayer>
+    </ThingDef>
+
+    <ThingDef ParentName="MoteBase">
+        <defName>PMP_LegionCore_LB</defName>
+        <graphicData>
+            <texPath>Things/CAS/Legion/Legion_LB</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>(2, 2)</drawSize>
+            <color>(190, 245, 255, 220)</color>
+        </graphicData>
+        <altitudeLayer>MetaOverlays</altitudeLayer>
+    </ThingDef>
+
+    <ThingDef ParentName="MoteBase">
+        <defName>PMP_CarrierSwarmDust</defName>
+        <thingClass>MoteThrown</thingClass>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Things/Mote/Smoke</texPath>
+            <graphicClass>Graphic_Mote</graphicClass>
+            <shaderType>Mote</shaderType>
+            <drawSize>(0.35, 0.35)</drawSize>
+            <color>(140, 200, 255, 90)</color>
+        </graphicData>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <mote>
+            <fadeInTime>0.04</fadeInTime>
+            <solidTime>0.2</solidTime>
+            <fadeOutTime>0.12</fadeOutTime>
+        </mote>
+    </ThingDef>
+
     <ThingDef>
-        <defName>PMP_ScoutOrbiter</defName>
+        <defName>PMP_VanguardOrbiter</defName>
         <category>Building</category>
-        <label>Scout</label>
-        <thingClass>PMP_Persona.ScoutGunner.Building_ScoutOrbiter</thingClass>
+        <label>Vanguard Zeta: Orbital Bombardment</label>
+        <thingClass>PMP_Persona.VanguardSupport.Building_VanguardOrbiter</thingClass>
         <description>A summoned scout; the visual follows the mouse on a circle with inertia. Anchor building is 1x1 and does not move.</description>
         <useHitPoints>false</useHitPoints>
         <tickerType>Normal</tickerType>
@@ -258,14 +375,21 @@
             <isEdifice>false</isEdifice>
             <deconstructible>false</deconstructible>
         </building>
+        <modExtensions>
+            <li Class="PMP_Persona.DefModExtension_SupportSummonLetter">
+                <enableSummonEventLetter>true</enableSummonEventLetter>
+                <summonEventLetterLabel>PMP.SupportLetter.Vanguard.Label</summonEventLetterLabel>
+                <summonEventLetterDescription>PMP.SupportLetter.Vanguard.Description</summonEventLetterDescription>
+            </li>
+        </modExtensions>
     </ThingDef>
 
     <ThingDef>
-        <defName>PMP_AirPatrolOrbiter</defName>
+        <defName>PMP_GreatWyrmOrbiter</defName>
         <category>Building</category>
-        <label>Air patrol</label>
-        <thingClass>PMP_Persona.AirPatrolLegion.Building_AirPatrolOrbiter</thingClass>
-        <description>Summoned air patrol: five Mirage craft sweep the map left then right, eliminating hostile flying units and extra ThingDefs merged from all AirPatrolExtraTargetsDef XML. Anchor is 1x1 and does not move.</description>
+        <label>Great Wyrm: Air-to-Air Sweep</label>
+        <thingClass>PMP_Persona.AirPatrolLegion.Building_GreatWyrmOrbiter</thingClass>
+        <description>Summoned air patrol: five Great Wyrm craft sweep the map left then right, eliminating hostile flying units and extra ThingDefs merged from all AirPatrolExtraTargetsDef XML. Anchor is 1x1 and does not move.</description>
         <useHitPoints>false</useHitPoints>
         <tickerType>Normal</tickerType>
         <drawerType>RealtimeOnly</drawerType>
@@ -291,34 +415,136 @@
             <deconstructible>false</deconstructible>
         </building>
         <modExtensions>
-            <li Class="PMP_Persona.AirPatrolLegion.DefModExtension_AirPatrolOrbiter">
+            <li Class="PMP_Persona.AirPatrolLegion.DefModExtension_GreatWyrmOrbiter">
                 <formationForwardSpacing>7</formationForwardSpacing>
                 <formationLateralSpacing>7</formationLateralSpacing>
                 <speedCellsPerTick>3.0</speedCellsPerTick>
                 <planeDrawScale>10.5</planeDrawScale>
+                <planeDrawDepthFactor>0.75</planeDrawDepthFactor>
                 <mapEdgeMarginCells>4</mapEdgeMarginCells>
                 <wingTrailEnabled>true</wingTrailEnabled>
                 <wingTrailRingCapacity>28</wingTrailRingCapacity>
                 <wingTrailSampleIntervalTicks>0</wingTrailSampleIntervalTicks>
                 <wingTrailWidthFactor>0.04</wingTrailWidthFactor>
                 <wingTrailSegmentLengthFactor>1.7</wingTrailSegmentLengthFactor>
-                <wingTrailSpanFactor>0.4</wingTrailSpanFactor>
+                <wingTrailSpanFactor>0.476</wingTrailSpanFactor>
+                <wingTrailAftFactor>-0.433</wingTrailAftFactor>
                 <wingTrailAlphaMin>0.18</wingTrailAlphaMin>
                 <wingTrailAlphaMax>0.98</wingTrailAlphaMax>
                 <wingTrailYOffset>0.04</wingTrailYOffset>
+                <orbSize>1.0</orbSize>
+                <orbIntensity>3.0</orbIntensity>
+                <trailIntensity>2.4</trailIntensity>
+                <missileOrbSize>0.55</missileOrbSize>
+                <missileTrailWidthFactor>0.45</missileTrailWidthFactor>
+                <trailWidthFactor>1.0</trailWidthFactor>
+                <missileTrailTipWidthFactor>0.18</missileTrailTipWidthFactor>
                 <missileTurnLerp>0.18</missileTurnLerp>
                 <missileInitialForwardBias>0.65</missileInitialForwardBias>
+            </li>
+            <li Class="PMP_Persona.DefModExtension_SupportSummonLetter">
+                <enableSummonEventLetter>true</enableSummonEventLetter>
+                <summonEventLetterLabel>PMP.SupportLetter.GreatWyrm.Label</summonEventLetterLabel>
+                <summonEventLetterDescription>PMP.SupportLetter.GreatWyrm.Description</summonEventLetterDescription>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef>
+        <defName>PMP_EnergyField</defName>
+        <label>Aurora: Projected Energy Field</label>
+        <description>Placeholder, u should not see this description...</description>
+        <thingClass>Thing</thingClass>
+        <category>Building</category>
+        <useHitPoints>false</useHitPoints>
+        <selectable>false</selectable>
+        <size>(1,1)</size>
+        <graphicData>
+            <texPath>Things/Structure/EnergyField</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <uiIconPath>Things/Structure/EnergyField</uiIconPath>
+        <uiIconScale>0.22</uiIconScale>
+        <statBases>
+            <Flammability>0</Flammability>
+        </statBases>
+        <building>
+            <isEdifice>false</isEdifice>
+            <deconstructible>false</deconstructible>
+        </building>
+        <modExtensions>
+            <li Class="PMP_Persona.DefModExtension_SupportSummonLetter">
+                <enableSummonEventLetter>false</enableSummonEventLetter>
+                <summonEventLetterLabel>PMP.SupportLetter.EnergyField.Label</summonEventLetterLabel>
+                <summonEventLetterDescription>PMP.SupportLetter.EnergyField.Description</summonEventLetterDescription>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef>
+        <defName>PMP_Supernova</defName>
+        <label>Aurora: Supernova</label>
+        <description>A warped supernova core. Hostiles within 30 cells take repeated vaporize damage through cover; pain and heat armor debilitation stack while they remain inside.</description>
+        <thingClass>PMP_Persona.SupernovaSupport.Thing_Supernova</thingClass>
+        <useHitPoints>false</useHitPoints>
+        <tickerType>Normal</tickerType>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <destroyable>true</destroyable>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <graphicData>
+            <texPath>Things/Weapon/transparent</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.0, 1.0)</drawSize>
+        </graphicData>
+        <uiIconPath>Things/Structure/EnergyField</uiIconPath>
+        <uiIconScale>0.22</uiIconScale>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0</fillPercent>
+        <pathCost>0</pathCost>
+        <blockWind>false</blockWind>
+        <rotatable>false</rotatable>
+        <selectable>true</selectable>
+        <statBases>
+            <Flammability>0</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <comps>
+            <li Class="PMP_Persona.SupernovaSupport.CompProperties_StarVisual">
+                <radius>1.0</radius>
+            </li>
+            <li Class="PMP_Persona.SupernovaSupport.CompProperties_SupernovaShell">
+                <shellDiameter>60</shellDiameter>
+            </li>
+            <li Class="CompProperties_Glower">
+                <overlightRadius>30</overlightRadius>
+                <glowRadius>30</glowRadius>
+                <glowColor>(255, 140, 40, 0)</glowColor>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>7200</delayTicks>
+                <destroyMode>KillFinalize</destroyMode>
+                <countdownLabel>End in</countdownLabel>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="PMP_Persona.DefModExtension_SupportSummonLetter">
+                <enableSummonEventLetter>true</enableSummonEventLetter>
+                <summonEventLetterLabel>PMP.SupportLetter.Supernova.Label</summonEventLetterLabel>
+                <summonEventLetterDescription>PMP.SupportLetter.Supernova.Description</summonEventLetterDescription>
             </li>
         </modExtensions>
     </ThingDef>
 
     <ThingDef ParentName="MoteBase">
-        <defName>PMP_ScoutShadowGlow</defName>
+        <defName>PMP_VanguardShadowGlow</defName>
         <graphicData>
-            <texPath>Things/Structure/ScoutShadow</texPath>
+            <texPath>Things/CAS/VanguardShadow</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>Mote</shaderType>
             <drawSize>(4, 4)</drawSize>
+            <color>(255, 255, 255, 90)</color>
         </graphicData>
         <altitudeLayer>MetaOverlays</altitudeLayer>
     </ThingDef>

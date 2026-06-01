@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 4114354240
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: efb159c859b5c07a0420e5db089ad4b9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5e762ccb57c4caaabbb5a4199ac82c23
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: efb159c859b5c07a0420e5db089ad4b9
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Shaders/SuperNova/SN_Shockwave.mat
+- Assets/Shaders/SuperNova/SN_GasCloud.shader
+- Assets/Shaders/SuperNova/SN_GasCloud.mat
+- Assets/Shaders/SuperNova/SN_Shockwave.shader
+Dependencies: []

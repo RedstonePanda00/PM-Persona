@@ -84,6 +84,42 @@
         <splashRadius>1.9</splashRadius>
         <splashDamageFactor>0.67</splashDamageFactor>
       </li>
+      <li Class="PMP_Persona.CompProperties_KaldalisDualBladeRenderer">
+        <twinBladeLateralOffset>0.5</twinBladeLateralOffset>
+        <drawSize>2</drawSize>
+        <twinBladeFacingOffset>0.2</twinBladeFacingOffset>
+        <eastWestRearDrawOffset>0.5</eastWestRearDrawOffset>
+      </li>
+      <li Class="ProtossMech.CompProperties_PawnLightRender">
+        <texPathBase>Things/Pawn/PersonaHalo/halo</texPathBase>
+        <haloColor>(1,0.65,0.2,1)</haloColor>
+        <drawSizeScale>1</drawSizeScale>
+        <breathMinAlpha>0.25</breathMinAlpha>
+        <breathMaxAlpha>0.9</breathMaxAlpha>
+        <breathSpeed>2.5</breathSpeed>
+        <boostInDarkness>true</boostInDarkness>
+        <darknessBoostMax>3</darknessBoostMax>
+        <enableLight>false</enableLight>
+        <lightUpdateIntervalTicks>10</lightUpdateIntervalTicks>
+        <glowRadius>3</glowRadius>
+        <glowColor>(255,180,80)</glowColor>
+      </li>
+      <li Class="ProtossMech.CompProperties_PawnLightRender">
+        <texPathBase>Things/Pawn/Mechanoid/KaldalisLight</texPathBase>
+        <haloColor>(1,0.65,0.2,1)</haloColor>
+        <drawSizeScale>1</drawSizeScale>
+        <breathMinAlpha>0.25</breathMinAlpha>
+        <breathMaxAlpha>0.9</breathMaxAlpha>
+        <breathSpeed>2.5</breathSpeed>
+        <boostInDarkness>false</boostInDarkness>
+        <renderQueueBack>3100</renderQueueBack>
+        <renderQueueNorth>2950</renderQueueNorth>
+        <layerSouth>100</layerSouth>
+        <layerEast>100</layerEast>
+        <layerWest>100</layerWest>
+        <layerNorth>100</layerNorth>
+        <enableLight>false</enableLight>
+      </li>
     </comps>
 
     <modExtensions>
@@ -359,10 +395,38 @@
       </li>
       <!-- Persona warp blade: change bladeTexPath to Things/Pawn/Mechanoid/Zeratul_blade when you add art under Textures/ (same layout as ProtossMech Umbra_blade). -->
       <li Class="ProtossMech.CompProperties_UmbraWarpBladeRenderer">
-        <bladeTexPath>Things/Pawn/Mechanoid/Umbra_blade</bladeTexPath>
+        <bladeTexPath>Things/Pawn/Mechanoid/MasterBlade</bladeTexPath>
         <drawSize>2.2</drawSize>
       </li>
-      <li Class="PMP_Persona.CompProperties_PawnHaloRenderer" />
+      <li Class="ProtossMech.CompProperties_PawnLightRender">
+        <texPathBase>Things/Pawn/PersonaHalo/halo</texPathBase>
+        <haloColor>(1,0.65,0.2,1)</haloColor>
+        <drawSizeScale>1</drawSizeScale>
+        <breathMinAlpha>0.25</breathMinAlpha>
+        <breathMaxAlpha>0.9</breathMaxAlpha>
+        <breathSpeed>2.5</breathSpeed>
+        <boostInDarkness>true</boostInDarkness>
+        <darknessBoostMax>3</darknessBoostMax>
+        <enableLight>false</enableLight>
+        <lightUpdateIntervalTicks>10</lightUpdateIntervalTicks>
+        <glowRadius>3</glowRadius>
+        <glowColor>(255,180,80)</glowColor>
+      </li>
+      <li Class="ProtossMech.CompProperties_PawnLightRender">
+        <texPathBase>Things/Pawn/Mechanoid/ZeratulLight</texPathBase>
+        <haloColor>(1,0.65,0.2,1)</haloColor>
+        <drawSizeScale>1</drawSizeScale>
+        <breathMinAlpha>0.25</breathMinAlpha>
+        <breathMaxAlpha>0.85</breathMaxAlpha>
+        <breathSpeed>2.5</breathSpeed>
+        <boostInDarkness>false</boostInDarkness>
+        <!-- Layering:
+             - South uses renderQueueBack and must be above halo + body.
+             - North uses renderQueueNorth and must be above body but below halo. -->
+        <renderQueueBack>3100</renderQueueBack>
+        <renderQueueNorth>2950</renderQueueNorth>
+        <enableLight>false</enableLight>
+      </li>
     </comps>
 
     <modExtensions>
@@ -384,7 +448,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Mechanoid/Umbra</texPath>
+          <texPath>Things/Pawn/Mechanoid/Zeratul</texPath>
           <shaderType>Transparent</shaderType>
           <drawSize>2.0</drawSize>
         </bodyGraphicData>
@@ -392,6 +456,7 @@
     </lifeStages>
     <abilities>
       <li>PMPH_ZeratulSkip</li>
+      <li>PMPH_ZeratulCycloneSlash</li>
     </abilities>
     <skipResistant>true</skipResistant>
   </PawnKindDef>

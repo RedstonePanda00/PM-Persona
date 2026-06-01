@@ -11,19 +11,32 @@
   <!-- EN: A mobile orbital beam. Select and right-click to move. Deals heat damage in a 5x5 area every 30 ticks and ignites ground. No hitpoints. -->
   <PMP_PurificationBeam.description>可移动的轨道光束。选中后右键指定位置移动。每30 tick对5x5范围内敌人造成热能伤害并点燃地面，无生命值。</PMP_PurificationBeam.description>
 
-  <!-- EN: Void Ray -->
-  <PMP_VoidRayOrbiter.label>虚空辉光舰</PMP_VoidRayOrbiter.label>
+  <!-- EN: Prism Alpha: Low-Orbit Suppression -->
+  <PMP_PrismOrbiter.label>棱镜Alpha:近轨道压制</PMP_PrismOrbiter.label>
   <!-- EN: A summoned guardian; the visual orbits the map center for 60 seconds. Anchor building is 1x1 and does not move. -->
-  <PMP_VoidRayOrbiter.description>召唤出的护卫单位；视觉上的光晕绕地图中心飞行60秒。锚定建筑为1x1且不移动。</PMP_VoidRayOrbiter.description>
+  <PMP_PrismOrbiter.description>召唤出的护卫单位；视觉上的光晕绕地图中心飞行60秒。锚定建筑为1x1且不移动。</PMP_PrismOrbiter.description>
+
+  <!-- EN: Dawn: Strikecraft Legion -->
+  <PMP_CarrierOrbiter.label>曙光号:强击机军团</PMP_CarrierOrbiter.label>
 
   <!-- EN: Scout -->
-  <PMP_ScoutOrbiter.label>侦察舰</PMP_ScoutOrbiter.label>
+  <PMP_VanguardOrbiter.label>尖兵Zeta:轨道轰炸</PMP_VanguardOrbiter.label>
   <!-- EN: A summoned scout; the visual follows the mouse on a circle with inertia. -->
-  <PMP_ScoutOrbiter.description>召唤出的侦察单位；视觉光晕在鼠标周围固定半径圆环上随惯性移动。锚定建筑为1x1且不移动。</PMP_ScoutOrbiter.description>
+  <PMP_VanguardOrbiter.description>召唤出的侦察单位；视觉光晕在鼠标周围固定半径圆环上随惯性移动。锚定建筑为1x1且不移动。</PMP_VanguardOrbiter.description>
 
-  <!-- EN: Air patrol -->
-  <PMP_AirPatrolOrbiter.label>空中巡逻队</PMP_AirPatrolOrbiter.label>
-  <!-- EN: Summoned air patrol: five Mirage craft sweep the map left then right, eliminating hostile flying units and extra defs from mod extension. Anchor is 1x1 and does not move. -->
-  <PMP_AirPatrolOrbiter.description>召唤的空中巡逻：五架 Mirage 先自左向右再自右向左扫过地图，清除敌对飞行单位（原版 Pawn.Flying）以及 AirPatrolExtraTargetsDef（可单独 XML / LoadFolders 合并）中列出的额外 ThingDef。锚定建筑为 1x1 且不移动。</PMP_AirPatrolOrbiter.description>
+  <!-- EN: Great Wyrm: Air-to-Air Sweep -->
+  <PMP_GreatWyrmOrbiter.label>巨龙:空对空掠袭</PMP_GreatWyrmOrbiter.label>
+  <!-- EN: Summoned air patrol: five Great Wyrm craft sweep the map left then right, eliminating hostile flying units and extra defs from mod extension. Anchor is 1x1 and does not move. -->
+  <PMP_GreatWyrmOrbiter.description>召唤的空中巡逻：五架巨龙先自左向右再自右向左扫过地图，清除敌对飞行单位（原版 Pawn.Flying）以及 AirPatrolExtraTargetsDef（可单独 XML / LoadFolders 合并）中列出的额外 ThingDef。锚定建筑为 1x1 且不移动。</PMP_GreatWyrmOrbiter.description>
+
+  <!-- EN: Dawn: Projected Energy Field -->
+  <PMP_EnergyField.label>曙光号:投射能量场</PMP_EnergyField.label>
+  <!-- EN: Permanent deployed energy field. Uses the same radius as a Pylon for warp placement. Summoned from the Ships warp tab. -->
+  <PMP_EnergyField.description>占位说明。</PMP_EnergyField.description>
+
+  <!-- EN: Aurora: Supernova -->
+  <PMP_Supernova.label>曙光号:超新星</PMP_Supernova.label>
+  <!-- EN: A warped supernova core. Hostiles within 30 cells take repeated vaporize damage through cover; pain and heat armor debilitation stack while they remain inside. -->
+  <PMP_Supernova.description>折跃至目标区的超新星核心。30格内敌对单位将无视掩体持续受到汽化伤害；停留在场内时痛觉不断加剧，热能护甲被逐层瓦解。</PMP_Supernova.description>
 
 </LanguageData>

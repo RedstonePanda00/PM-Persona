@@ -80,4 +80,18 @@
         </comps>
     </HediffDef>
 
+    <HediffDef>
+        <defName>PMP_SupernovaExposure</defName>
+        <label>supernova irradiation</label>
+        <description>Inside a warped supernova thermal field. Pain intensifies and heat armor is stripped away layer by layer.</description>
+        <hediffClass>PMP_Persona.SupernovaSupport.Hediff_SupernovaExposure</hediffClass>
+        <defaultLabelColor>(1, 0.45, 0.15)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="PMP_Persona.SupernovaSupport.HediffCompProperties_SupernovaExposure">
+                <severityPerPulse>0.125</severityPerPulse>
+            </li>
+        </comps>
+    </HediffDef>
+
 </Defs>

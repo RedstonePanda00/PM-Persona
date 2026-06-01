@@ -1,0 +1,47 @@
+ManifestFileVersion: 0
+CRC: 1397635723
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 598ad8c021d2201606f43cc8c8f7d9b0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b30fce1a9ad74efb72be6c308c56e365
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 598ad8c021d2201606f43cc8c8f7d9b0
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Shaders/SuperNova/star_visual/Textures/Flares/prominence_arc_01.png
+- Assets/Shaders/SuperNova/star_visual/Textures/Glow/limb_glow_01.png
+- Assets/Shaders/SuperNova/star_visual/Textures/Surface/surface_detail_01.png
+- Assets/Shaders/SuperNova/star_visual/Textures/Flares/hot_burst_01.png
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarLayer_ProminenceArc.mat
+- Assets/Shaders/SuperNova/star_visual/Textures/Flares/flare_spike_02.png
+- Assets/Shaders/SuperNova/star_visual/Textures/Surface/hotspot_mask_01.png
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarLayer_FlareSpikeA.mat
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarLayer_SurfaceB.mat
+- Assets/Shaders/SuperNova/star_visual/Shaders/StarCorona.shader
+- Assets/Shaders/SuperNova/star_visual/Textures/Flares/flare_spike_01.png
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarLayer_Detail.mat
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarCoronaInner.mat
+- Assets/Shaders/SuperNova/star_visual/Textures/Surface/surface_large_02.png
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarLayer_HotBurstB.mat
+- Assets/Shaders/SuperNova/star_visual/Textures/Surface/surface_large_01.png
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarCoronaOuter.mat
+- Assets/Shaders/SuperNova/star_visual/Textures/Flares/hot_burst_02.png
+- Assets/Shaders/SuperNova/star_visual/Shaders/StarLayer.shader
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarLayer_HotBurstA.mat
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarLayer_FlareSpikeB.mat
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarLayer_LimbGlow.mat
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarLayer_Hotspot.mat
+- Assets/Shaders/SuperNova/star_visual/Materials/Mat_StarLayer_SurfaceA.mat
+Dependencies: []

@@ -93,7 +93,6 @@
         </disallowedTraitsWithDegree>
         <abilities>
             <li>PMPH_GestaltZeroInvisibility</li>
-            <li>PMP_GravemakerShot</li>
         </abilities>
         <skipResistant>true</skipResistant>
         <modExtensions>

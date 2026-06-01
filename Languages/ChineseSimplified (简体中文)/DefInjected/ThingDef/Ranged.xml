@@ -29,10 +29,4 @@
   <turretgun_PurificationBlast.description>净化轰击炮塔</turretgun_PurificationBlast.description>
   <!-- EN: turretgun Purification Blast -->
   <turretgun_PurificationBlast.verbs.Verb_ApplyDebuff.label>净化轰击炮塔</turretgun_PurificationBlast.verbs.Verb_ApplyDebuff.label>
-
-  <!-- EN: Gravemaker -->
-  <PMP_Gun_Gravemaker.label>掘墓人</PMP_Gun_Gravemaker.label>
-  <!-- EN: A weapon that defies physics, capable of striking targets through solid walls. -->
-  <PMP_Gun_Gravemaker.description>违背物理法则的武器，能穿透坚固墙体命中目标。</PMP_Gun_Gravemaker.description>
-
 </LanguageData>

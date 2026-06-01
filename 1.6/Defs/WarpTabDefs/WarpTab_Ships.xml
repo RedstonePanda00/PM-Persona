@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ProtossMech.WarpTabDef>
+        <defName>PMP_WarpTab_Ships</defName>
+        <label>Ships</label>
+        <order>10</order>
+        <workerClass>PMP_Persona.PrismSupport.WarpTabWorker_Ships</workerClass>
+    </ProtossMech.WarpTabDef>
+
+</Defs>

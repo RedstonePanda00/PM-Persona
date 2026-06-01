@@ -26,4 +26,9 @@
   <!-- EN: The number in brackets is how many Purifier Colossus prototypes (backup bodies) are in your faction on this map. Each backup body causes Purification Blast to deal one additional full damage hit to the target (same brain hit as the base shot). -->
   <PMP_TacticalDataWebWarbringer.description>括号内为当前地图同阵营的净化者巨像原型机（备用躯体）数量。每具备用躯体使净化轰击对目标额外造成一次与基础射击相同的大脑部位伤害。</PMP_TacticalDataWebWarbringer.description>
 
+  <!-- EN: supernova irradiation -->
+  <PMP_SupernovaExposure.label>超新星辐照</PMP_SupernovaExposure.label>
+  <!-- EN: Inside a warped supernova thermal field. Pain intensifies and heat armor is stripped away layer by layer. -->
+  <PMP_SupernovaExposure.description>处于超新星折跃体的热辐射场内，痛觉不断加剧，热能护甲被逐层瓦解。</PMP_SupernovaExposure.description>
+
 </LanguageData>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>PMPH_ZeratulCycloneSlash</defName>
+    <label>cyclone slash</label>
+    <description>Spin the warp blade at your current location. Deal 100 execute damage to hostile pawns in a small radius. Every cell in a circular radius is struck once by vanilla lightning, and a short-lived vanilla-style tornado with the same radius appears for 2 seconds.</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <groupAbility>true</groupAbility>
+    <hostile>false</hostile>
+    <targetRequired>false</targetRequired>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <warmupTime>0</warmupTime>
+      <range>19.9</range>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="PMP_Persona.CompProperties_ZeratulCycloneStrike">
+        <damageAmount>100</damageAmount>
+        <damageRadius>2.9</damageRadius>
+        <damageDef>ExecutionCut</damageDef>
+      </li>
+      <li Class="PMP_Persona.CompProperties_ZeratulLandingLightning">
+        <lightningRadius>3</lightningRadius>
+        <tornadoDurationSeconds>2</tornadoDurationSeconds>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

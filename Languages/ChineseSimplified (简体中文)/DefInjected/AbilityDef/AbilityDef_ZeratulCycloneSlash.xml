@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: cyclone slash -->
+  <PMPH_ZeratulCycloneSlash.label>旋风斩</PMPH_ZeratulCycloneSlash.label>
+  <!-- EN: Spin the warp blade at your current location... -->
+  <PMPH_ZeratulCycloneSlash.description>在当前位置旋转曲刃。对周围敌人造成100点处决伤害；以自身为中心，半径内每格触发一次原版闪电，并生成持续2秒的迷你龙卷风。冷却15秒，无预热。</PMPH_ZeratulCycloneSlash.description>
+</LanguageData>

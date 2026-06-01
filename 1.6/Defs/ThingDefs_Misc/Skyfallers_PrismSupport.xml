@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- Weapon 1: plasma bombardment. Based on antigrain look, Bullet damage, radius 2.9, factor 10. -->
+  <!-- Prism weapon 1: plasma barrage. Bomb damage, radius 2.9, factor 1. -->
   <ThingDef ParentName="SkyfallerBase">
     <defName>PMP_PlasmaBombardmentIncoming</defName>
     <label>plasma bombardment (incoming)</label>
@@ -13,11 +13,12 @@
     </graphicData>
     <thingClass>PMP_Persona.PMPH_OrbitalIncoming</thingClass>
     <skyfaller>
-      <movementType>ConstantSpeed</movementType>
+      <movementType>Accelerate</movementType>
+      <rotateGraphicTowardsDirection>true</rotateGraphicTowardsDirection>
       <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
       <shadowSize>(1.2, 1.2)</shadowSize>
-      <speed>0.5</speed>
-      <ticksToImpactRange>60~60</ticksToImpactRange>
+      <speed>0.38</speed>
+      <ticksToImpactRange>70~90</ticksToImpactRange>
       <explosionRadius>2.9</explosionRadius>
       <explosionDamage>Bomb</explosionDamage>
       <explosionDamageFactor>1</explosionDamageFactor>
@@ -26,9 +27,9 @@
     </skyfaller>
   </ThingDef>
 
-  <!-- Scout weapon 1: neutron autocannon — small explosion at mouse with random offset. -->
+  <!-- Vanguard weapon 1: neutron autocannon — small explosion at mouse with random offset. -->
   <ThingDef ParentName="SkyfallerBase">
-    <defName>PMP_ScoutNeutronIncoming</defName>
+    <defName>PMP_VanguardNeutronIncoming</defName>
     <label>neutron round (incoming)</label>
     <size>(1, 1)</size>
     <graphicData>
@@ -39,11 +40,12 @@
     </graphicData>
     <thingClass>PMP_Persona.PMPH_OrbitalIncoming</thingClass>
     <skyfaller>
-      <movementType>ConstantSpeed</movementType>
+      <movementType>Accelerate</movementType>
+      <rotateGraphicTowardsDirection>true</rotateGraphicTowardsDirection>
       <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
       <shadowSize>(0.8, 0.8)</shadowSize>
-      <speed>60</speed>
-      <ticksToImpactRange>10~15</ticksToImpactRange>
+      <speed>38</speed>
+      <ticksToImpactRange>8~14</ticksToImpactRange>
       <explosionRadius>1.5</explosionRadius>
       <explosionDamage>BombSuper</explosionDamage>
       <explosionDamageFactor>0.1</explosionDamageFactor>
@@ -52,7 +54,7 @@
     </skyfaller>
   </ThingDef>
 
-  <!-- Weapon 2: antiparticle shells. Same off-screen entry as drop pod, but ConstantSpeed (no deceleration, direct impact). -->
+  <!-- Prism/Vanguard weapon 2: antiparticle shells. Heavy orbital strike from screen top. -->
   <ThingDef ParentName="SkyfallerBase">
     <defName>PMP_AntiparticleShellIncoming</defName>
     <label>antiparticle shell (incoming)</label>
@@ -65,11 +67,12 @@
     </graphicData>
     <thingClass>PMP_Persona.PMPH_OrbitalIncoming</thingClass>
     <skyfaller>
-      <movementType>ConstantSpeed</movementType>
+      <movementType>Accelerate</movementType>
+      <rotateGraphicTowardsDirection>true</rotateGraphicTowardsDirection>
       <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
       <shadowSize>(1.2, 1.2)</shadowSize>
-      <speed>0.5</speed>
-      <ticksToImpactRange>60~60</ticksToImpactRange>
+      <speed>0.32</speed>
+      <ticksToImpactRange>85~110</ticksToImpactRange>
       <explosionRadius>14.9</explosionRadius>
       <explosionDamage>BombSuper</explosionDamage>
       <explosionDamageFactor>0.4</explosionDamageFactor>

@@ -7,6 +7,8 @@
   <PMP.NoShipsAvailable>暂无可用舰船</PMP.NoShipsAvailable>
   <PMP.ShipCooldown>冷却: {0}</PMP.ShipCooldown>
   <PMP.ShipNoValidPosition>没有合适位置召唤。</PMP.ShipNoValidPosition>
+  <PMP.EnergyFieldDeployFailed>无法在此位置部署能量场。</PMP.EnergyFieldDeployFailed>
+  <PMP.EnergyFieldDeploy>部署能量场</PMP.EnergyFieldDeploy>
   <PMP.Settings.Category>ProtossMech: Persona</PMP.Settings.Category>
   <PMP.Settings.SectionsTitle>分区</PMP.Settings.SectionsTitle>
   <PMP.Settings.Tab.AirPatrol>空中巡逻</PMP.Settings.Tab.AirPatrol>
@@ -15,4 +17,19 @@
   <PMP.AirPatrolSettings.SearchHint>按 defName、当前语言标签或 XML 英文 label 搜索。</PMP.AirPatrolSettings.SearchHint>
   <PMP.AirPatrolSettings.NoDefs>未加载任何 ThingDef。</PMP.AirPatrolSettings.NoDefs>
   <PMP.AirPatrolSettings.AllPackages>全部模组 / DLC</PMP.AirPatrolSettings.AllPackages>
+  <PMP.SupportLetter.Prism.Label>棱镜Alpha:近轨道压制</PMP.SupportLetter.Prism.Label>
+  <PMP.SupportLetter.Prism.Description>请求确认，棱镜幺杠零已折跃入场，全舰火力就绪，近轨道压制任务开始。</PMP.SupportLetter.Prism.Description>
+  <PMP.SupportLetter.Carrier.Label>曙光号:强击机军团</PMP.SupportLetter.Carrier.Label>
+  <PMP.SupportLetter.Carrier.Description>请求确认，引力弹弓充能完毕，开始弹射强击机集群。军团轰炸开始，注意误伤，完毕。</PMP.SupportLetter.Carrier.Description>
+  <PMP.SupportLetter.Vanguard.Label>尖兵Zeta:轨道轰炸</PMP.SupportLetter.Vanguard.Label>
+  <PMP.SupportLetter.Vanguard.Description>尖兵陆杠陆已抵达近地轨道，已锁定你请求的位置，地毯式轰炸开始。</PMP.SupportLetter.Vanguard.Description>
+  <PMP.SupportLetter.GreatWyrm.Label>巨龙:空对空掠袭</PMP.SupportLetter.GreatWyrm.Label>
+  <PMP.SupportLetter.GreatWyrm.Description>请求确认，战机编队已折跃入场，巨龙开始空域扫荡任务。</PMP.SupportLetter.GreatWyrm.Description>
+  <PMP.SupportLetter.EnergyField.Label>曙光号:投射能量场</PMP.SupportLetter.EnergyField.Label>
+  <PMP.SupportLetter.EnergyField.Description>请求确认，开始在你指定的位置投射能量场。</PMP.SupportLetter.EnergyField.Description>
+  <PMP.SupernovaDeploy>部署超新星</PMP.SupernovaDeploy>
+  <PMP.SupernovaDeployFailed>无法在此位置部署超新星。</PMP.SupernovaDeployFailed>
+  <PMP.SupernovaCooldown>冷却: {0}</PMP.SupernovaCooldown>
+  <PMP.SupportLetter.Supernova.Label>曙光号:超新星</PMP.SupportLetter.Supernova.Label>
+  <PMP.SupportLetter.Supernova.Description>请求确认，正在向目标地点折跃超新星。</PMP.SupportLetter.Supernova.Description>
 </LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: purification beam -->
+  <PMP_PurificationBeamDamage.label>净化光束</PMP_PurificationBeamDamage.label>
+  <!-- EN: {0} has been incinerated by a purification beam. -->
+  <PMP_PurificationBeamDamage.deathMessage>{0}已被净化光束焚毁。</PMP_PurificationBeamDamage.deathMessage>
+
+</LanguageData>
