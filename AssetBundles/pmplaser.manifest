@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2545382640
+CRC: 1075731048
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9ab289dba7d2183ba004d22ee7691a69
+    Hash: ae9aa4465d561148ecf5ff62f6b5ba2a
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5e762ccb57c4caaabbb5a4199ac82c23
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 9ab289dba7d2183ba004d22ee7691a69
+    Hash: ae9aa4465d561148ecf5ff62f6b5ba2a
 HashAppended: 0
 ClassTypes:
 - Class: 21
@@ -18,6 +18,6 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Shaders/Mat_PurificationBlastHeat.mat
-- Assets/Shaders/HeatRefractionBeam.shader
+- Assets/Shaders/PMPLaser/LaserBeam.mat
+- Assets/Shaders/PMPLaser/LaserBeam.shader
 Dependencies: []

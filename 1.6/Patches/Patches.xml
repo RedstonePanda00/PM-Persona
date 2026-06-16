@@ -2,12 +2,12 @@
 <Patch>
 
     <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="PMP_ColossusPrototype"]/comps</xpath>
+    <xpath>Defs/ThingDef[defName="PM_ColossusPrototype"]/comps</xpath>
     <value>
       <li Class="RsPandaLibrary.CompProperties_AutoTransform">
         <checkInterval>300</checkInterval>
         <DetectList>
-          <li>PMP_ColossusPrototype</li>
+          <li>PM_ColossusPrototype</li>
           <li>PMPH_conclave</li>
         </DetectList>
         <targetDef>PMPH_Warbringer</targetDef>
@@ -16,12 +16,12 @@
   </Operation>
 
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="PMP_Legionnaire"]/comps</xpath>
+    <xpath>Defs/ThingDef[defName="PM_Legionnaire"]/comps</xpath>
     <value>
       <li Class="RsPandaLibrary.CompProperties_AutoTransform">
         <checkInterval>300</checkInterval>
         <DetectList>
-          <li>PMP_Legionnaire</li>
+          <li>PM_Legionnaire</li>
           <li>PMPH_conclave</li>
         </DetectList>
         <targetDef>PMPH_Kaldalis</targetDef>
@@ -66,12 +66,12 @@
   </Operation>
 
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="PMP_PurifierImmortal"]/comps</xpath>
+    <xpath>Defs/ThingDef[defName="PM_PurifierImmortal"]/comps</xpath>
     <value>
       <li Class="RsPandaLibrary.CompProperties_AutoTransform">
         <checkInterval>300</checkInterval>
         <DetectList>
-          <li>PMP_PurifierImmortal</li>
+          <li>PM_PurifierImmortal</li>
           <li>PMPH_conclave</li>
         </DetectList>
         <targetDef>PMPH_Taldarin</targetDef>
@@ -80,12 +80,12 @@
   </Operation>
 
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="PMP_Umbra"]/comps</xpath>
+    <xpath>Defs/ThingDef[defName="PM_Umbra"]/comps</xpath>
     <value>
       <li Class="RsPandaLibrary.CompProperties_AutoTransform">
         <checkInterval>300</checkInterval>
         <DetectList>
-          <li>PMP_Umbra</li>
+          <li>PM_Umbra</li>
           <li>PMPH_conclave</li>
         </DetectList>
         <targetDef>PMPH_Zeratul</targetDef>

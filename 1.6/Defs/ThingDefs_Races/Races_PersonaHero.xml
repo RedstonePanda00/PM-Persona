@@ -15,7 +15,7 @@
       <FoodPoisonChance>0</FoodPoisonChance>
     </statBases>
     <race>
-      <body>PMP_HumanoidBody</body>
+      <body>PM_HumanoidBody</body>
       <baseBodySize>3.0</baseBodySize>
       <mechEnabledWorkTypes>
         <li>Hauling</li>
@@ -166,7 +166,7 @@
       <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
     </statBases>
     <race>
-      <body>PMP_ImmortalBody</body>
+      <body>PM_ImmortalBody</body>
       <mechWeightClass>Heavy</mechWeightClass>
       <baseBodySize>4</baseBodySize>
       <baseHealthScale>10.0</baseHealthScale>
@@ -228,7 +228,7 @@
     <techHediffsMoney>9999~9999</techHediffsMoney>
     <skipResistant>true</skipResistant>
     <abilities>
-      <li>PMP_RestoreShield</li>
+      <li>PM_RestoreShield</li>
     </abilities>
   </PawnKindDef>
 
@@ -245,7 +245,7 @@
       <ArmorRating_Sharp>2.0</ArmorRating_Sharp>
     </statBases>
     <race>
-      <body>PMP_ColossusBody</body>
+      <body>PM_ColossusBody</body>
       <mechWeightClass>UltraHeavy</mechWeightClass>
       <baseBodySize>5</baseBodySize>
       <baseHealthScale>10.0</baseHealthScale>
@@ -288,6 +288,32 @@
                 </dataWest>
               </drawData>
               <baseLayer>20</baseLayer>
+            </renderNodeProperties>
+          </li>
+          <li>
+            <turretDef>turretgun_WarbringerSweepLaser</turretDef>
+            <warmupTime>0</warmupTime>
+            <cooldownTime>0</cooldownTime>
+            <turretOffsetWest>(-0.8, 0, 0.35)</turretOffsetWest>
+            <turretOffsetEast>(0.8, 0, 0.35)</turretOffsetEast>
+            <renderNodeProperties>
+              <nodeClass>ProtossMech.PawnRenderNode_MultiTurretGun</nodeClass>
+              <workerClass>ProtossMech.PawnRenderNodeWorker_MultiTurretGun</workerClass>
+              <parentTagDef>Body</parentTagDef>
+              <baseLayer>19</baseLayer>
+            </renderNodeProperties>
+          </li>
+          <li>
+            <turretDef>turretgun_WarbringerSweepLaser</turretDef>
+            <warmupTime>0</warmupTime>
+            <cooldownTime>0</cooldownTime>
+            <turretOffsetWest>(0.8, 0, 0.35)</turretOffsetWest>
+            <turretOffsetEast>(-0.8, 0, 0.35)</turretOffsetEast>
+            <renderNodeProperties>
+              <nodeClass>ProtossMech.PawnRenderNode_MultiTurretGun</nodeClass>
+              <workerClass>ProtossMech.PawnRenderNodeWorker_MultiTurretGun</workerClass>
+              <parentTagDef>Body</parentTagDef>
+              <baseLayer>19</baseLayer>
             </renderNodeProperties>
           </li>
         </turrets>
@@ -343,7 +369,7 @@
       <MeleeDodgeChance>95</MeleeDodgeChance>
     </statBases>
     <race>
-      <body>PMP_HumanoidBody</body>
+      <body>PM_HumanoidBody</body>
       <baseBodySize>3.0</baseBodySize>
       <mechEnabledWorkTypes>
         <li>Hunting</li>

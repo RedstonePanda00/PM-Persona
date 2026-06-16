@@ -219,30 +219,63 @@
 
   <ThingDef ParentName="MoteBase">
     <defName>PMPHMote_PurificationBlast</defName>
-    <thingClass>PMP_Persona.MoteDualAttached_HeatRefractionBeam</thingClass>
+    <thingClass>PMP_Persona.MoteDualAttached_LaserBeam</thingClass>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <mote>
-      <fadeInTime>0.1</fadeInTime>
-      <fadeOutTime>0.1</fadeOutTime>
-      <solidTime>0.1</solidTime>
+      <fadeInTime>0.15</fadeInTime>
+      <fadeOutTime>0.25</fadeOutTime>
+      <solidTime>0.20</solidTime>
       <rotateTowardsTarget>True</rotateTowardsTarget>
       <scaleToConnectTargets>True</scaleToConnectTargets>
     </mote>
     <drawOffscreen>true</drawOffscreen>
     <graphicData>
-      <texPath>Things/Weapon/Projectile_PurificationBlast</texPath>
+      <texPath>Things/Weapon/transparent</texPath>
       <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
-      <shaderType>MoteBeam</shaderType>
-      <shaderParameters>
-        <_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA>
-        <_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
-        <!-- Animated scroll gives shimmering/wavy beam edges. -->
-        <_ScrollSpeedA>4.6</_ScrollSpeedA>
-        <_ScrollSpeedB>-7.4</_ScrollSpeedB>
-        <_Intensity>2.6</_Intensity>
-      </shaderParameters>
       <drawSize>(3.6, 1)</drawSize>
     </graphicData>
+  </ThingDef>
+
+  <!-- Warbringer side turret: continuous sweep laser -->
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>turretgun_WarbringerSweepLaser</defName>
+    <label>Warbringer Sweep Laser</label>
+    <description>Side-mounted continuous beam turret for Warbringer.</description>
+    <graphicData>
+      <texPath>Things/Weapon/transparent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <statBases>
+      <AccuracyTouch>2.00</AccuracyTouch>
+      <AccuracyShort>2.00</AccuracyShort>
+      <AccuracyMedium>2.00</AccuracyMedium>
+      <AccuracyLong>2.00</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>10</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li Class="PMP_Persona.VerbProperties_WarbringerSweepLaser">
+        <warmupTime>0</warmupTime>
+        <minRange>1</minRange>
+        <range>45.0</range>
+        <aimRotateSpeedDeg>6</aimRotateSpeedDeg>
+        <damagePerTick>8</damagePerTick>
+        <damageTickInterval>5</damageTickInterval>
+        <armorPenetration>0.5</armorPenetration>
+        <beamDamageDef>Beam</beamDamageDef>
+        <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+        <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
+        <beamGroundFleckChance>0.32</beamGroundFleckChance>
+        <beamMoteDef>PMPMote_ChronoBeam</beamMoteDef>
+        <beamMoteColor>(1.0, 1.0, 0.2, 1.0)</beamMoteColor>
+        <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
+        <beamLineFleckChance>0.35</beamLineFleckChance>
+      </li>
+    </verbs>
   </ThingDef>
 
 </Defs>

@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 2900758264
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6b3fea7391b0174607a81a1296439b7f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5e762ccb57c4caaabbb5a4199ac82c23
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 6b3fea7391b0174607a81a1296439b7f
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Shaders/AtmosphericPlasmaShield/AtmosphericPlasma_MultiQuadShockFront.mat
+- Assets/Shaders/AtmosphericPlasmaShield/AtmosphericPlasma_MultiQuadShockFront.shader
+- Assets/Shaders/AtmosphericPlasmaShield/AtmosphericPlasma_MultiQuadTail.shader
+- Assets/Shaders/AtmosphericPlasmaShield/AtmosphericPlasma_MultiQuadTail.mat
+- Assets/Shaders/AtmosphericPlasmaShield/AtmosphericPlasma_MultiQuadHalo.shader
+- Assets/Shaders/AtmosphericPlasmaShield/AtmosphericPlasma_MultiQuadHalo.mat
+Dependencies: []

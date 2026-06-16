@@ -29,4 +29,7 @@
   <turretgun_PurificationBlast.description>净化轰击炮塔</turretgun_PurificationBlast.description>
   <!-- EN: turretgun Purification Blast -->
   <turretgun_PurificationBlast.verbs.Verb_ApplyDebuff.label>净化轰击炮塔</turretgun_PurificationBlast.verbs.Verb_ApplyDebuff.label>
+
+  <turretgun_WarbringerSweepLaser.label>战争使者副炮激光</turretgun_WarbringerSweepLaser.label>
+  <turretgun_WarbringerSweepLaser.description>战争使者侧舷持续扫射激光炮塔。</turretgun_WarbringerSweepLaser.description>
 </LanguageData>
