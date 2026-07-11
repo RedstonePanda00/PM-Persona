@@ -123,6 +123,7 @@
     </comps>
 
     <modExtensions>
+        <li Class="PMP_Persona.PersonaHeroLifecycleExtension" />
         <li Class="RsPandaLibrary.Compatibility.RimTalk.RimTalkPersonaExtension">
             <personaKeys>
                 <li>Protoss_Persona_Kaldalis</li>
@@ -194,8 +195,17 @@
         <maxDrawSize>3</maxDrawSize>
         <HardenedShields>true</HardenedShields>
       </li>
+      <li Class="PMP_Persona.CompProperties_TaldarinLegRenderer">
+        <drawSize>3</drawSize>
+        <baseLayer>-4</baseLayer>
+        <gaitCycleTicks>80</gaitCycleTicks>
+        <swingRatio>0.22</swingRatio>
+        <strideLength>0.2</strideLength>
+        <swingOutwardOffset>0.03</swingOutwardOffset>
+      </li>
     </comps>
     <modExtensions>
+        <li Class="PMP_Persona.PersonaHeroLifecycleExtension" />
         <li Class="RsPandaLibrary.Compatibility.RimTalk.RimTalkPersonaExtension">
             <personaKeys>
                 <li>Protoss_Persona_Taldarin</li>
@@ -214,7 +224,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Mechanoid/Taldarin</texPath>
+          <texPath>Things/Pawn/Mechanoid/Taldarin/Taldarin</texPath>
           <shaderType>Cutout</shaderType>
           <drawSize>3.0</drawSize>
         </bodyGraphicData>
@@ -272,6 +282,7 @@
         <minDrawSize>0</minDrawSize>
         <maxDrawSize>5</maxDrawSize>
       </li>
+      <li Class="PMP_Persona.CompProperties_WarbringerLegRenderer" />
       <li Class="RsPandaLibrary.CompProperties_MultiTurretGun">
         <turrets>
           <li>
@@ -320,6 +331,7 @@
       </li>
     </comps>
     <modExtensions>
+        <li Class="PMP_Persona.PersonaHeroLifecycleExtension" />
         <li Class="RsPandaLibrary.Compatibility.RimTalk.RimTalkPersonaExtension">
             <personaKeys>
                 <li>Protoss_Persona_Warbringer</li>
@@ -338,7 +350,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Mechanoid/Warbringer</texPath>
+          <texPath>Things/Pawn/Mechanoid/WarBringer/Body/Warbringer</texPath>
           <shaderType>Cutout</shaderType>
           <drawSize>5.0</drawSize>
         </bodyGraphicData>
@@ -456,6 +468,7 @@
     </comps>
 
     <modExtensions>
+        <li Class="PMP_Persona.PersonaHeroLifecycleExtension" />
         <li Class="RsPandaLibrary.Compatibility.RimTalk.RimTalkPersonaExtension">
             <personaKeys>
                 <li>Protoss_Persona_Zeratul</li>

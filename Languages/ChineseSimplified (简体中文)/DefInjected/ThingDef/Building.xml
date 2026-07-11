@@ -39,4 +39,6 @@
   <!-- EN: A warped supernova core. Hostiles within 30 cells take repeated vaporize damage through cover; pain and heat armor debilitation stack while they remain inside. -->
   <PMP_Supernova.description>折跃至目标区的超新星核心。30格内敌对单位将无视掩体持续受到汽化伤害；停留在场内时痛觉不断加剧，热能护甲被逐层瓦解。</PMP_Supernova.description>
 
+  <PMP_RecomposerMarker.label>曙光号:重组机</PMP_RecomposerMarker.label>
+  <PMP_RecomposerMarker.description>对指定区域执行轨道重组，将20格内非玩家阵营的非机械单位转化为玩家的警戒者。</PMP_RecomposerMarker.description>
 </LanguageData>

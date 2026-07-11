@@ -32,4 +32,7 @@
   <PMP.SupernovaCooldown>冷却: {0}</PMP.SupernovaCooldown>
   <PMP.SupportLetter.Supernova.Label>曙光号:超新星</PMP.SupportLetter.Supernova.Label>
   <PMP.SupportLetter.Supernova.Description>请求确认，正在向目标地点折跃超新星。</PMP.SupportLetter.Supernova.Description>
+  <PMP.RecomposerDeploy>部署重组机</PMP.RecomposerDeploy>
+  <PMP.RecomposerDeployFailed>无法在此位置部署重组机。</PMP.RecomposerDeployFailed>
+  <PMP.RecomposerCooldown>冷却: {0}</PMP.RecomposerCooldown>
 </LanguageData>

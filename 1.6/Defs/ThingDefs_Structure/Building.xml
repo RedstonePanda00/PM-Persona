@@ -143,6 +143,41 @@
     </ThingDef>
 
     <ThingDef>
+        <defName>PMP_RecomposerMarker</defName>
+        <category>Building</category>
+        <label>Aurora: Recomposer</label>
+        <thingClass>PMP_Persona.RecomposerSupport.Thing_RecomposerMarker</thingClass>
+        <description>Orbital recomposition support. Converts non-mechanoid non-player pawns within 20 cells into player-controlled Sentinels.</description>
+        <useHitPoints>false</useHitPoints>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+            <texPath>Things/Weapon/transparent</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <altitudeLayer>MetaOverlays</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0</fillPercent>
+        <pathCost>0</pathCost>
+        <rotatable>false</rotatable>
+        <stealable>false</stealable>
+        <selectable>false</selectable>
+        <size>(1,1)</size>
+        <building>
+            <isEdifice>false</isEdifice>
+            <deconstructible>false</deconstructible>
+        </building>
+        <comps>
+            <li Class="CompProperties_OrbitalBeam">
+                <width>0.2</width>
+                <color>(255, 20, 20, 242)</color>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef>
         <defName>PMP_PrismOrbiter</defName>
         <category>Building</category>
         <label>Prism Alpha: Low-Orbit Suppression</label>

@@ -31,4 +31,7 @@
   <PMP.SupernovaCooldown>Cooldown: {0}</PMP.SupernovaCooldown>
   <PMP.SupportLetter.Supernova.Label>Aurora: Supernova</PMP.SupportLetter.Supernova.Label>
   <PMP.SupportLetter.Supernova.Description>Acknowledged. Warping supernova to target coordinates.</PMP.SupportLetter.Supernova.Description>
+  <PMP.RecomposerDeploy>Deploy Recomposer</PMP.RecomposerDeploy>
+  <PMP.RecomposerDeployFailed>Could not deploy the recomposer at this location.</PMP.RecomposerDeployFailed>
+  <PMP.RecomposerCooldown>Cooldown: {0}</PMP.RecomposerCooldown>
 </LanguageData>
