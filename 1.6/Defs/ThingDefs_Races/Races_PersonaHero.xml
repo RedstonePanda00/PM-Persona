@@ -100,7 +100,6 @@
         <boostInDarkness>true</boostInDarkness>
         <darknessBoostMax>3</darknessBoostMax>
         <enableLight>false</enableLight>
-        <lightUpdateIntervalTicks>10</lightUpdateIntervalTicks>
         <glowRadius>3</glowRadius>
         <glowColor>(255,180,80)</glowColor>
       </li>
@@ -203,6 +202,17 @@
         <strideLength>0.2</strideLength>
         <swingOutwardOffset>0.03</swingOutwardOffset>
       </li>
+      <li Class="ProtossMech.CompProperties_PawnLightRender">
+        <texPathBase>Things/Pawn/PersonaHalo/halo</texPathBase>
+        <haloColor>(1,0.65,0.2,1)</haloColor>
+        <drawSizeScale>0.5</drawSizeScale>
+        <breathMinAlpha>0.25</breathMinAlpha>
+        <breathMaxAlpha>0.9</breathMaxAlpha>
+        <breathSpeed>2.5</breathSpeed>
+        <boostInDarkness>true</boostInDarkness>
+        <darknessBoostMax>3</darknessBoostMax>
+        <enableLight>false</enableLight>
+      </li>
     </comps>
     <modExtensions>
         <li Class="PMP_Persona.PersonaHeroLifecycleExtension" />
@@ -283,6 +293,17 @@
         <maxDrawSize>5</maxDrawSize>
       </li>
       <li Class="PMP_Persona.CompProperties_WarbringerLegRenderer" />
+      <li Class="ProtossMech.CompProperties_PawnLightRender">
+        <texPathBase>Things/Pawn/PersonaHalo/halo</texPathBase>
+        <haloColor>(1,0.65,0.2,1)</haloColor>
+        <drawSizeScale>0.5</drawSizeScale>
+        <breathMinAlpha>0.25</breathMinAlpha>
+        <breathMaxAlpha>0.9</breathMaxAlpha>
+        <breathSpeed>2.5</breathSpeed>
+        <boostInDarkness>true</boostInDarkness>
+        <darknessBoostMax>3</darknessBoostMax>
+        <enableLight>false</enableLight>
+      </li>
       <li Class="RsPandaLibrary.CompProperties_MultiTurretGun">
         <turrets>
           <li>
@@ -446,7 +467,6 @@
         <boostInDarkness>true</boostInDarkness>
         <darknessBoostMax>3</darknessBoostMax>
         <enableLight>false</enableLight>
-        <lightUpdateIntervalTicks>10</lightUpdateIntervalTicks>
         <glowRadius>3</glowRadius>
         <glowColor>(255,180,80)</glowColor>
       </li>
