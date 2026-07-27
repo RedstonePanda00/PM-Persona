@@ -4,7 +4,7 @@
     <defName>PMPH_ZeratulCycloneSlash</defName>
     <label>cyclone slash</label>
     <description>Spin the warp blade at your current location. Deal 100 execute damage to hostile pawns in a small radius. Every cell in a circular radius is struck once by vanilla lightning, and a short-lived vanilla-style tornado with the same radius appears for 2 seconds.</description>
-    <iconPath>UI/Abilities/Skip</iconPath>
+    <iconPath>UI/Abilities/ZeratulCycloneSlash</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <groupAbility>true</groupAbility>
     <hostile>false</hostile>

@@ -65,6 +65,7 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1.0, 1.0)</drawSize>
         </graphicData>
+        <uiIconPath>UI/ShipSupport/PurificationBeam</uiIconPath>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <fillPercent>0.5</fillPercent>
@@ -157,6 +158,7 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1,1)</drawSize>
         </graphicData>
+        <uiIconPath>UI/ShipSupport/Recomposer</uiIconPath>
         <altitudeLayer>MetaOverlays</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <fillPercent>0</fillPercent>
@@ -191,6 +193,7 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1.0, 1.0)</drawSize>
         </graphicData>
+        <uiIconPath>UI/ShipSupport/PrismAlpha</uiIconPath>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <fillPercent>0</fillPercent>
@@ -242,6 +245,7 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1.0, 1.0)</drawSize>
         </graphicData>
+        <uiIconPath>UI/ShipSupport/AuroraLegion</uiIconPath>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <fillPercent>0</fillPercent>
@@ -394,6 +398,7 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1.0, 1.0)</drawSize>
         </graphicData>
+        <uiIconPath>UI/ShipSupport/VanguardZeta</uiIconPath>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <fillPercent>0</fillPercent>
@@ -433,6 +438,7 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1.0, 1.0)</drawSize>
         </graphicData>
+        <uiIconPath>UI/ShipSupport/GreatWyrm</uiIconPath>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <fillPercent>0</fillPercent>
@@ -499,8 +505,7 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1,1)</drawSize>
         </graphicData>
-        <uiIconPath>Things/Structure/EnergyField</uiIconPath>
-        <uiIconScale>0.22</uiIconScale>
+        <uiIconPath>UI/ShipSupport/EnergyField</uiIconPath>
         <statBases>
             <Flammability>0</Flammability>
         </statBases>
@@ -532,8 +537,7 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1.0, 1.0)</drawSize>
         </graphicData>
-        <uiIconPath>Things/Structure/EnergyField</uiIconPath>
-        <uiIconScale>0.22</uiIconScale>
+        <uiIconPath>UI/ShipSupport/Supernova</uiIconPath>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <fillPercent>0</fillPercent>

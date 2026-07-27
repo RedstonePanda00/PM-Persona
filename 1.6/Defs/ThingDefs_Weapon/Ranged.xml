@@ -204,7 +204,7 @@
     <label>PurificationBlast Projectile</label>
     <thingClass>Beam</thingClass>
     <graphicData>
-      <texPath>Things/Weapon/Projectile_PurificationBlast</texPath>
+      <texPath>Things/Weapon/transparent</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
