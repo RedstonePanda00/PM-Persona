@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ShaderDef>
+    <defName>PMP17_Vanguard</defName>
+    <shaderProgram>
+      <vertexShaderFileName>PMP17_Vanguard.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>PMP17_Vanguard.frag.glsl</fragmentShaderFileName>
+      <transparent>true</transparent><depthTest>false</depthTest><depthWrite>false</depthWrite>
+      <cullMode>None</cullMode><renderQueue>4000</renderQueue>
+      <blendMode>Custom</blendMode><blendSrcFactor>SrcAlpha</blendSrcFactor><blendDstFactor>OneMinusSrcAlpha</blendDstFactor>
+    </shaderProgram>
+  </ShaderDef>
+  <MaterialDef><defName>PMP17_VanguardMaterial</defName><shader>PMP17_Vanguard</shader></MaterialDef>
+</Defs>

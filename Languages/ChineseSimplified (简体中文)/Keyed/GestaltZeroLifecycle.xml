@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <PMP.GestaltZero.DownLetter.Label>零倒下了</PMP.GestaltZero.DownLetter.Label>
+    <PMP.GestaltZero.DownLetter.Text>零倒下了，他会在300秒后重返战场。</PMP.GestaltZero.DownLetter.Text>
+    <PMP.GestaltZero.ReadyLetter.Label>零已准备就绪</PMP.GestaltZero.ReadyLetter.Label>
+    <PMP.GestaltZero.ReadyLetter.Text>零已经准备好重返战场。</PMP.GestaltZero.ReadyLetter.Text>
+    <PMP.GestaltZero.BeaconInspect>重构完成还需：{0}秒</PMP.GestaltZero.BeaconInspect>
+    <PMP.GestaltZero.DevComplete>立即完成重构</PMP.GestaltZero.DevComplete>
+</LanguageData>

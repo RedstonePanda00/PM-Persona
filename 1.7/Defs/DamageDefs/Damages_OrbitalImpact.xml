@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DamageDef ParentName="Bomb">
+    <defName>PMP_OrbitalImpact</defName>
+    <label>orbital impact</label>
+    <workerClass>PMP_Persona.VanguardSupport.DamageWorker_OrbitalImpact</workerClass>
+    <armorCategory IsNull="True" />
+    <defaultDamage>550</defaultDamage>
+    <defaultArmorPenetration>2</defaultArmorPenetration>
+    <defaultStoppingPower>2</defaultStoppingPower>
+    <deathMessage>{0} has been killed by an orbital impact.</deathMessage>
+  </DamageDef>
+</Defs>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ShaderDef>
+    <defName>PMP17_Flatten</defName>
+    <shaderProgram>
+      <vertexShaderFileName>PMP17_TargetPlasma.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>PMP17_Flatten.frag.glsl</fragmentShaderFileName>
+      <transparent>true</transparent><depthTest>false</depthTest><depthWrite>false</depthWrite>
+      <cullMode>None</cullMode><renderQueue>3500</renderQueue>
+      <blendMode>Custom</blendMode><blendSrcFactor>One</blendSrcFactor><blendDstFactor>OneMinusSrcAlpha</blendDstFactor>
+    </shaderProgram>
+  </ShaderDef>
+  <MaterialDef><defName>PMP17_FlattenMaterial</defName><shader>PMP17_Flatten</shader></MaterialDef>
+</Defs>

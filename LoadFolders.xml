@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <loadFolders>
 
-  <v1.6>
+  <v1.7>
   
     <li>/</li>
-    <li>1.6</li>
+    <li>1.7</li>
 
-    <li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.6/CE</li>
+    <li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.7/CE</li>
 
-    <li IfModActive="cj.rimtalk,cj.rimtalk_steam">1.6/RimTalk</li>
+    <li IfModActive="cj.rimtalk,cj.rimtalk_steam">1.7/RimTalk</li>
 
     <!-- Optional AirPatrol extra targets: add folder with Defs/Misc/*.xml containing AirPatrolExtraTargetsDef, e.g. -->
-    <!-- <li IfModActive="some.package">1.6/OptionalPatches/AirPatrolCompat</li> -->
+    <!-- <li IfModActive="some.package">1.7/OptionalPatches/AirPatrolCompat</li> -->
 
-  </v1.6>
+  </v1.7>
 </loadFolders>

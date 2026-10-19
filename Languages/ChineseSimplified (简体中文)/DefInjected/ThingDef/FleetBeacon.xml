@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_FleetBeacon.label>舰队航标</PMP_FleetBeacon.label>
+  <PMP_FleetBeacon.description>一座战略通信航标，用于验证对净化者舰队的支援请求，并协调跨殖民地轨道支援。任意玩家地图上的一座完整航标即可启用全局舰船支援。</PMP_FleetBeacon.description>
+</LanguageData>

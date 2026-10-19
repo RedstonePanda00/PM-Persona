@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Fireseed.Name>火种：{0}</PMP.Fireseed.Name>
+  <PMP.Fireseed.Description>一枚保存着{0}意识与机体蓝图的火种。只要重新点燃，它便能再次归来。</PMP.Fireseed.Description>
+  <PMP.Fireseed.Inspect>查看个体</PMP.Fireseed.Inspect>
+  <PMP.Fireseed.RestoreFailed>盗火者未能复活，火种和太阳素已保留。</PMP.Fireseed.RestoreFailed>
+</LanguageData>

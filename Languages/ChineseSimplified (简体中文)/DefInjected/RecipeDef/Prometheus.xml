@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_RestorePrometheus.label>复活盗火者</PMP_RestorePrometheus.label>
+  <PMP_RestorePrometheus.description>消耗5个太阳素，重建火种中保存的盗火者。</PMP_RestorePrometheus.description>
+  <PMP_RestorePrometheus.jobString>正在重新点燃盗火者的火种。</PMP_RestorePrometheus.jobString>
+</LanguageData>

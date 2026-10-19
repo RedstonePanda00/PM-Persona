@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_FlattenedPawn.label>二维片</PMP_FlattenedPawn.label>
+  <PMP_FlattenedPawn.description>一块用于封存生命的二维空间片。</PMP_FlattenedPawn.description>
+</LanguageData>

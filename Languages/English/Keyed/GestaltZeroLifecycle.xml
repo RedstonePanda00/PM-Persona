@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <PMP.GestaltZero.DownLetter.Label>Zero has fallen</PMP.GestaltZero.DownLetter.Label>
+    <PMP.GestaltZero.DownLetter.Text>Zero has fallen. He will return to the battlefield in 300 seconds.</PMP.GestaltZero.DownLetter.Text>
+    <PMP.GestaltZero.ReadyLetter.Label>Zero is ready</PMP.GestaltZero.ReadyLetter.Label>
+    <PMP.GestaltZero.ReadyLetter.Text>Zero is ready to return to the battlefield.</PMP.GestaltZero.ReadyLetter.Text>
+    <PMP.GestaltZero.BeaconInspect>Reconstruction complete in: {0} seconds</PMP.GestaltZero.BeaconInspect>
+    <PMP.GestaltZero.DevComplete>Complete reconstruction now</PMP.GestaltZero.DevComplete>
+</LanguageData>

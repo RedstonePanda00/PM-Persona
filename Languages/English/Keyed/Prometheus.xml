@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Fireseed.Name>Fireseed: {0}</PMP.Fireseed.Name>
+  <PMP.Fireseed.Description>A fireseed preserving {0}'s consciousness and the blueprint of their body. Once rekindled, they can return.</PMP.Fireseed.Description>
+  <PMP.Fireseed.Inspect>Inspect individual</PMP.Fireseed.Inspect>
+  <PMP.Fireseed.RestoreFailed>The Prometheus could not be restored. The fireseed and solarite have been retained.</PMP.Fireseed.RestoreFailed>
+</LanguageData>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>PMP_FleetBeacon</defName>
+    <label>fleet beacon</label>
+    <description>A strategic communications beacon that authenticates requests to the Purifier fleet and coordinates orbital support across all colonies.</description>
+    <thingClass>Building</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <graphicData>
+      <texPath>Things/Structure/FleetBeacon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>false</castEdgeShadows>
+    <rotatable>false</rotatable>
+    <stealable>false</stealable>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>3010</uiOrder>
+    <size>(3,3)</size>
+    <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <statBases>
+      <MaxHitPoints>20000</MaxHitPoints>
+      <WorkToBuild>20000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>100</Beauty>
+    </statBases>
+    <costList>
+      <PM_Adanium>300</PM_Adanium>
+      <PM_Solarite>200</PM_Solarite>
+    </costList>
+    <researchPrerequisites>
+      <li>PM_PurifierProjectFinal</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="ProtossMech.CompProperties_AnimatedOverlayRenderer">
+        <frameTexPathPrefix>Things/Structure/Overlays/YellowEnergyOrb/YellowEnergyOrb_</frameTexPathPrefix>
+        <frameCount>4</frameCount>
+        <ticksPerKeyFrame>20</ticksPerKeyFrame>
+        <drawSize>(0.95,0.95)</drawSize>
+        <drawOffset>(0.08,0,0.2)</drawOffset>
+        <altitudeOffset>0.015</altitudeOffset>
+        <scaleMin>0.97</scaleMin>
+        <scaleMax>1.03</scaleMax>
+        <rotationSpeed>12</rotationSpeed>
+        <bobAmplitude>0.01</bobAmplitude>
+        <onlyWhenPowered>false</onlyWhenPowered>
+      </li>
+    </comps>
+    <constructEffect>ConstructMetal</constructEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+  </ThingDef>
+</Defs>

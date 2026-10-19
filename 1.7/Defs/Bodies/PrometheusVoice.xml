@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs><BodyPartDef>
+  <defName>PMP_VoiceSynthesizer</defName><label>voice synthesizer</label><hitPoints>5</hitPoints>
+  <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor><skinCovered>false</skinCovered><solid>true</solid><alive>false</alive><bleedRate>0</bleedRate>
+  <tags><li>TalkingSource</li></tags>
+</BodyPartDef></Defs>

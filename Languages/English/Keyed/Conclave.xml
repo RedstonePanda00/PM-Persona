@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Conclave.Open>Conclave console</PMP.Conclave.Open>
+  <PMP.Conclave.OpenDesc>View hero persona activation and current carriers.</PMP.Conclave.OpenDesc>
+  <PMP.Conclave.Heroes>Hero personas</PMP.Conclave.Heroes>
+  <PMP.Conclave.Title>Purifier conclave · Persona network</PMP.Conclave.Title>
+  <PMP.Conclave.ReadOnly>Live status across your maps and travelling groups. Activation follows the existing rules. Select an active carrier's icon to locate it.</PMP.Conclave.ReadOnly>
+  <PMP.Conclave.Active>Active</PMP.Conclave.Active>
+  <PMP.Conclave.Stored>Stored · awaiting carrier</PMP.Conclave.Stored>
+  <PMP.Conclave.Inactive>Inactive</PMP.Conclave.Inactive>
+  <PMP.Conclave.NoCarrier>No active carrier</PMP.Conclave.NoCarrier>
+  <PMP.Conclave.Traveling>Travelling / off-map</PMP.Conclave.Traveling>
+</LanguageData>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PMP_Persona.ShipSupport.ShipSupportDef>
+    <defName>PMP_Support_Flatten</defName><label>Aurora: Flatten</label>
+    <description>Reduces living beings to two-dimensional sheets that retain their original forms.</description>
+    <effectDescription>Living beings in the area are reduced to two dimensions and sealed in individual fragments of space.</effectDescription>
+    <workerClass>PMP_Persona.FlattenSupport.FlattenShipSupportWorker</workerClass>
+    <order>100</order><iconPath>UI/ShipSupport/Flatten</iconPath>
+    <modExtensions><li Class="PMP_Persona.FlattenSupport.FlattenConfig"><side>16</side><animationTicks>120</animationTicks></li></modExtensions>
+    <costList><li><thingDef>PM_Solarite</thingDef><count>500</count></li></costList>
+  </PMP_Persona.ShipSupport.ShipSupportDef>
+</Defs>

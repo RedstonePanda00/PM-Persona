@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs><AbilityDef>
+  <defName>PMP_PrometheusPhase</defName><label>phase shift</label>
+  <description>Slip to a nearby visible position, leaving danger behind.</description>
+  <iconPath>UI/Abilities/PrometheusPhase</iconPath><cooldownTicksRange>900</cooldownTicksRange>
+  <hostile>false</hostile><casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  <verbProperties><verbClass>Verb_CastAbility</verbClass><range>8</range><warmupTime>0.15</warmupTime><requireLineOfSight>true</requireLineOfSight>
+    <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>false</canTargetPawns><canTargetBuildings>false</canTargetBuildings></targetParams>
+  </verbProperties>
+  <comps><li Class="PMP_Persona.Prometheus.CompProperties_PrometheusPhase" /></comps>
+</AbilityDef></Defs>

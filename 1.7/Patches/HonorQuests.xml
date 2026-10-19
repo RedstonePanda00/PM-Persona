@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Explicit vanilla quest IDs. Auto-accepted rescue offers earn honor only on success. -->
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/QuestScriptDef[defName="WandererJoins" or defName="RefugeePodCrash" or defName="OpportunitySite_DownedRefugee"][not(modExtensions)]</xpath>
+        <value><modExtensions /></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/QuestScriptDef[defName="WandererJoins" or defName="RefugeePodCrash" or defName="OpportunitySite_DownedRefugee"]/modExtensions</xpath>
+        <value><li Class="PMP_Persona.Storyteller.HonorQuestExtension"><successHonor>4</successHonor></li></value>
+      </li>
+      <li Class="PatchOperationFindMod">
+        <mods><li>Royalty</li></mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+            <li Class="PatchOperationAdd">
+              <xpath>Defs/QuestScriptDef[defName="Hospitality_Refugee" or defName="ShuttleCrash_Rescue" or defName="Hospitality_Joiners" or defName="WandererJoinAbasia"][not(modExtensions)]</xpath>
+              <value><modExtensions /></value>
+            </li>
+            <li Class="PatchOperationAdd">
+              <xpath>Defs/QuestScriptDef[defName="Hospitality_Refugee"]/modExtensions</xpath>
+              <value><li Class="PMP_Persona.Storyteller.HonorQuestExtension"><acceptHonor>4</acceptHonor></li></value>
+            </li>
+            <li Class="PatchOperationAdd">
+              <xpath>Defs/QuestScriptDef[defName="ShuttleCrash_Rescue" or defName="Hospitality_Joiners"]/modExtensions</xpath>
+              <value><li Class="PMP_Persona.Storyteller.HonorQuestExtension"><successHonor>10</successHonor></li></value>
+            </li>
+            <li Class="PatchOperationAdd">
+              <xpath>Defs/QuestScriptDef[defName="WandererJoinAbasia"]/modExtensions</xpath>
+              <value><li Class="PMP_Persona.Storyteller.HonorQuestExtension"><successHonor>4</successHonor></li></value>
+            </li>
+          </operations>
+        </match>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

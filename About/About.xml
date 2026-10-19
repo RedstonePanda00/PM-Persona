@@ -5,7 +5,7 @@
 	<name>ProtossMech:Persona</name>
 	<author>Redstone</author>
 	<supportedVersions>
-		<li>1.6</li>
+		<li>1.7</li>
 	</supportedVersions>
 	<modDependencies>
 		<li>
@@ -19,14 +19,18 @@
 		</li>
 		<li>
 			<packageId>RedstonePanda.ProtossMechCore</packageId>
-			<displayName>ProtossMech: Core</displayName>
+			<displayName>Protoss Mech:WildHunt</displayName>
 			<!-- <steamWorkshopUrl>steam://url/CommunityFilePage/3464281098</steamWorkshopUrl> -->
 		</li>
-	</modDependencies>
+	  <li><packageId>rimcampaign.framework</packageId><displayName>RimCampaign</displayName></li>
+    <li><packageId>redstonepanda.redstonepandalibrary</packageId><displayName>PandaLib</displayName></li>
+  </modDependencies>
 	<loadAfter>
 		<li>brrainz.harmony</li>
 		<li>Ludeon.RimWorld.Biotech</li>
 		<li>RedstonePanda.ProtossMechCore</li>
-	</loadAfter>
-	<description>Protoss Mech Persona Hero extention.</description>
+	  <li>rimcampaign.framework</li>
+    <li>redstonepanda.redstonepandalibrary</li>
+  </loadAfter>
+	<description>Persona hero expansion for Protoss Mech:WildHunt.</description>
 </ModMetaData>

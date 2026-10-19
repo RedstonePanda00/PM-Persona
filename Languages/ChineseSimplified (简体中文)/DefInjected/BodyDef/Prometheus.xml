@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_PrometheusBody.label>盗火者</PMP_PrometheusBody.label>
+  <PMP_PrometheusBody.corePart.parts.MechanicalNeck.parts.MechanicalHead.parts.left_sight_sensor.customLabel>左赛博眼</PMP_PrometheusBody.corePart.parts.MechanicalNeck.parts.MechanicalHead.parts.left_sight_sensor.customLabel>
+  <PMP_PrometheusBody.corePart.parts.MechanicalNeck.parts.MechanicalHead.parts.right_sight_sensor.customLabel>右赛博眼</PMP_PrometheusBody.corePart.parts.MechanicalNeck.parts.MechanicalHead.parts.right_sight_sensor.customLabel>
+  <PMP_PrometheusBody.corePart.parts.MechanicalNeck.parts.MechanicalHead.parts.hearing_sensor.customLabel>赛博耳</PMP_PrometheusBody.corePart.parts.MechanicalNeck.parts.MechanicalHead.parts.hearing_sensor.customLabel>
+  <PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.customLabel>左仿生肩</PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.customLabel>
+  <PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.customLabel>左仿生臂</PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.customLabel>
+  <PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.parts.left_hand.customLabel>左仿生手</PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.parts.left_hand.customLabel>
+  <PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.parts.left_hand.parts.left_pinky.customLabel>左机械小指</PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.parts.left_hand.parts.left_pinky.customLabel>
+  <PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.parts.left_hand.parts.left_middle_finger.customLabel>左机械中指</PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.parts.left_hand.parts.left_middle_finger.customLabel>
+  <PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.parts.left_hand.parts.left_index_finger.customLabel>左机械食指</PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.parts.left_hand.parts.left_index_finger.customLabel>
+  <PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.parts.left_hand.parts.left_thumb.customLabel>左机械拇指</PMP_PrometheusBody.corePart.parts.left_mechanical_shoulder.parts.left_arm.parts.left_hand.parts.left_thumb.customLabel>
+  <PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.customLabel>右仿生肩</PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.customLabel>
+  <PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.customLabel>右仿生臂</PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.customLabel>
+  <PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.parts.right_hand.customLabel>右仿生手</PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.parts.right_hand.customLabel>
+  <PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.parts.right_hand.parts.right_pinky.customLabel>右机械小指</PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.parts.right_hand.parts.right_pinky.customLabel>
+  <PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.parts.right_hand.parts.right_middle_finger.customLabel>右机械中指</PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.parts.right_hand.parts.right_middle_finger.customLabel>
+  <PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.parts.right_hand.parts.right_index_finger.customLabel>右机械食指</PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.parts.right_hand.parts.right_index_finger.customLabel>
+  <PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.parts.right_hand.parts.right_thumb.customLabel>右机械拇指</PMP_PrometheusBody.corePart.parts.right_mechanical_shoulder.parts.right_arm.parts.right_hand.parts.right_thumb.customLabel>
+  <PMP_PrometheusBody.corePart.parts.left_leg.customLabel>左赛博腿</PMP_PrometheusBody.corePart.parts.left_leg.customLabel>
+  <PMP_PrometheusBody.corePart.parts.left_leg.parts.left_foot.customLabel>左赛博足</PMP_PrometheusBody.corePart.parts.left_leg.parts.left_foot.customLabel>
+  <PMP_PrometheusBody.corePart.parts.right_leg.customLabel>右赛博腿</PMP_PrometheusBody.corePart.parts.right_leg.customLabel>
+  <PMP_PrometheusBody.corePart.parts.right_leg.parts.right_foot.customLabel>右赛博足</PMP_PrometheusBody.corePart.parts.right_leg.parts.right_foot.customLabel>
+</LanguageData>

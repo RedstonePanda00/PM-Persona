@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ProtossMechanoid">
+    <defName>PMP_Prometheus</defName><label>Prometheus</label>
+    <thingClass>PMP_Persona.Prometheus.Pawn_Prometheus</thingClass>
+    <description>A light mechanical soldier assembled around a preserved spark of consciousness. Floating armor and a strong energy shield protect a delicate frame; when that frame fails, its fireseed remains.</description>
+    <statBases>
+      <BandwidthCost>2</BandwidthCost><MoveSpeed>7</MoveSpeed>
+      <ArmorRating_Sharp>0.45</ArmorRating_Sharp><ArmorRating_Blunt>0.30</ArmorRating_Blunt><ArmorRating_Heat>1</ArmorRating_Heat>
+      <IncomingDamageFactor>1</IncomingDamageFactor><WorkSpeedGlobal>1</WorkSpeedGlobal>
+      <AimingDelayFactor>0.85</AimingDelayFactor><RangedCooldownFactor>0.90</RangedCooldownFactor>
+      <!-- Preserve the original level-10 combat contribution without a human skill tracker. -->
+      <ShootingAccuracyPawn>2</ShootingAccuracyPawn><MeleeHitChance>6</MeleeHitChance>
+      <MeleeDodgeChance>10</MeleeDodgeChance><MortarMissRadiusFactor>0.95</MortarMissRadiusFactor>
+    </statBases>
+    <race>
+      <renderTree>PMP_Prometheus</renderTree>
+      <body>PMP_PrometheusBody</body><baseBodySize>1</baseBodySize><baseHealthScale>1.25</baseHealthScale>
+      <mechFixedSkillLevel>10</mechFixedSkillLevel>
+      <mechEnabledWorkTypes><li>Hauling</li><li>Cleaning</li><li>Firefighter</li></mechEnabledWorkTypes>
+      <lifeStageAges><li><def>MechanoidFullyFormed</def><minAge>0</minAge>
+        <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded><soundDeath>Pawn_Mech_Scyther_Death</soundDeath><soundCall>Pawn_Mech_Scyther_Call</soundCall>
+      </li></lifeStageAges>
+    </race>
+    <tools Inherit="false"><li><label>phase strike</label><capacities><li>Blunt</li></capacities><power>10</power><armorPenetration>0.30</armorPenetration><cooldownTime>1.5</cooldownTime></li></tools>
+    <comps>
+      <li Class="ProtossMech.CompProperties_ProtossMechShield"><energyMax>125</energyMax><energyGainPerTick>0.25</energyGainPerTick><ticksToBeginRecharge>360</ticksToBeginRecharge><minDrawSize>0</minDrawSize><maxDrawSize>1.7</maxDrawSize></li>
+      <li Class="RsPandaLibrary.CompProperties_EquippableMechanoid">
+        <allowWeapons>true</allowWeapons><allowBackpack>true</allowBackpack>
+        <allowUtilityApparel>true</allowUtilityApparel><allowBodyApparel>true</allowBodyApparel><allowHeadgear>true</allowHeadgear>
+      </li>
+      <li Class="PMP_Persona.Prometheus.CompProperties_PrometheusTactics" />
+    </comps>
+  </ThingDef>
+  <PawnKindDef ParentName="ProtossMechanoidKind">
+    <defName>PMP_Prometheus</defName><label>Prometheus</label><race>PMP_Prometheus</race><combatPower>100</combatPower>
+    <weaponTags Inherit="false" /><allowInMechClusters>false</allowInMechClusters>
+    <lifeStages><li><bodyGraphicData><texPath>Things/Pawn/Mechanoid/Prometheus</texPath><shaderType>Cutout</shaderType><drawSize>1.5</drawSize></bodyGraphicData></li></lifeStages>
+    <abilities><li>PMP_PrometheusPhase</li></abilities>
+  </PawnKindDef>
+</Defs>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Honor.RefusedDanger>{0}拒绝继续前往危险区域。</PMP.Honor.RefusedDanger>
+  <PMP.Honor.Recovery>点名鼓励</PMP.Honor.Recovery>
+  <PMP.Honor.RecoveryDesc>鼓励这名殖民者恢复镇定。成功率：{0}。每次尝试都会消耗该殖民者一天的冷却，即使失败也不例外。成功后会短暂地感到心力交瘁。</PMP.Honor.RecoveryDesc>
+  <PMP.Honor.RecoveryCooldown>过去一天内已经鼓励过这名殖民者。</PMP.Honor.RecoveryCooldown>
+  <PMP.Honor.RecoverySuccess>{0}回应了鼓励，恢复了镇定。</PMP.Honor.RecoverySuccess>
+  <PMP.Honor.RecoveryFailed>{0}没能恢复镇定。</PMP.Honor.RecoveryFailed>
+</LanguageData>

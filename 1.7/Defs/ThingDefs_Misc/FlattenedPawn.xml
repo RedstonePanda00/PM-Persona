@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef>
+    <defName>PMP_FlattenedPawn</defName><label>two-dimensional sheet</label>
+    <description>A two-dimensional fragment of space that holds a living being.</description>
+    <thingClass>PMP_Persona.FlattenSupport.Thing_FlattenedPawn</thingClass>
+    <category>Item</category><thingCategories><li>Items</li></thingCategories>
+    <graphicData><texPath>Things/Weapon/transparent</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(1,1)</drawSize></graphicData>
+    <altitudeLayer>Item</altitudeLayer><drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable><tickerType>Never</tickerType><useHitPoints>false</useHitPoints><destroyable>false</destroyable>
+    <stackLimit>1</stackLimit><alwaysHaulable>true</alwaysHaulable><drawGUIOverlay>true</drawGUIOverlay>
+    <tradeability>None</tradeability><rotatable>false</rotatable><pathCost>0</pathCost><fillPercent>0</fillPercent>
+    <statBases><Mass>0.1</Mass><MarketValue>0</MarketValue><Flammability>0</Flammability><Beauty>0</Beauty></statBases>
+    <comps><li Class="CompProperties_Forbiddable" /></comps>
+  </ThingDef>
+  <JobDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>PMP_StudyFlattenedPawn</defName><driverClass>PMP_Persona.FlattenSupport.JobDriver_StudyFlattenedPawn</driverClass>
+    <reportString>Studying TargetA.</reportString><casualInterruptible>true</casualInterruptible>
+  </JobDef>
+  <WorkGiverDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>PMP_StudyFlattenedPawn</defName><label>study sealed entities</label>
+    <giverClass>PMP_Persona.FlattenSupport.WorkGiver_StudyFlattenedPawn</giverClass><workType>DarkStudy</workType>
+    <verb>study</verb><gerund>studying</gerund><priorityInType>110</priorityInType><canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+</Defs>

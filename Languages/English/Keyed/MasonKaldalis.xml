@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Honor.RefusedDanger>{0} refused to continue into danger.</PMP.Honor.RefusedDanger>
+  <PMP.Honor.Recovery>Personal appeal</PMP.Honor.Recovery>
+  <PMP.Honor.RecoveryDesc>Ask this colonist to regain composure. Success chance: {0}. Each attempt uses this colonist's one-day cooldown, even on failure. Success causes brief emotional exhaustion.</PMP.Honor.RecoveryDesc>
+  <PMP.Honor.RecoveryCooldown>This colonist has already received an appeal in the last day.</PMP.Honor.RecoveryCooldown>
+  <PMP.Honor.RecoverySuccess>{0} answered the appeal and regained composure.</PMP.Honor.RecoverySuccess>
+  <PMP.Honor.RecoveryFailed>{0} could not regain composure.</PMP.Honor.RecoveryFailed>
+</LanguageData>

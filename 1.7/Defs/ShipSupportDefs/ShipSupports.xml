@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PMP_Persona.ShipSupport.ShipSupportDef>
+    <defName>PMP_Support_Prism</defName>
+    <label>Prism Alpha: Low-Orbit Suppression</label>
+    <description>A deep-space gunship armed with a low-power Planet-Fracture Cannon, relativistic particle shots and a heavy-particle autocannon.</description>
+    <effectDescription>Bombards surface targets with orbital gunfire.</effectDescription>
+    <workerClass>PMP_Persona.PrismSupport.PrismShipSupportWorker</workerClass>
+    <order>10</order>
+    <iconPath>UI/ShipSupport/PrismAlpha</iconPath>
+    <modExtensions><li Class="PMP_Persona.VanguardSupport.OrbitalSupportConfig">
+      <supportSeconds>60</supportSeconds><entrySeconds>10</entrySeconds>
+      <fractureDamage>400</fractureDamage><fractureRadius>12</fractureRadius><fractureGuidanceTicks>72</fractureGuidanceTicks>
+      <weapons>
+        <li><labelKey>PMP.Prism.Fracture</labelKey><magazine>1</magazine><reloadSeconds>8</reloadSeconds></li>
+        <li><labelKey>PMP.Prism.Light</labelKey><magazine>10</magazine><reloadSeconds>5</reloadSeconds><magazineSeconds>5</magazineSeconds><projectile>PMP_PrismLightParticleIncoming</projectile></li>
+        <li><labelKey>PMP.Prism.Heavy</labelKey><magazine>40</magazine><reloadSeconds>3</reloadSeconds><magazineSeconds>1.5</magazineSeconds><projectile>PMP_PrismHeavyParticleIncoming</projectile></li>
+      </weapons>
+    </li></modExtensions>
+    <costList>
+      <li><thingDef>PM_Solarite</thingDef><count>200</count></li>
+    </costList>
+  </PMP_Persona.ShipSupport.ShipSupportDef>
+
+  <PMP_Persona.ShipSupport.ShipSupportDef>
+    <defName>PMP_Support_Vanguard</defName>
+    <label>Vanguard Zeta: Orbital Bombardment</label>
+    <description>A deep-space warship with powerful ground-attack armament, capable of neutron autocannon fire and kinetic strikes.</description>
+    <effectDescription>Sweeps the battlefield with concentrated ground-attack fire.</effectDescription>
+    <workerClass>PMP_Persona.VanguardSupport.VanguardShipSupportWorker</workerClass>
+    <order>20</order>
+    <iconPath>UI/ShipSupport/VanguardZeta</iconPath>
+    <modExtensions><li Class="PMP_Persona.VanguardSupport.OrbitalSupportConfig">
+      <supportSeconds>60</supportSeconds><entrySeconds>7</entrySeconds>
+    </li></modExtensions>
+    <costList>
+      <li><thingDef>PM_Solarite</thingDef><count>150</count></li>
+    </costList>
+  </PMP_Persona.ShipSupport.ShipSupportDef>
+
+  <PMP_Persona.ShipSupport.ShipSupportDef>
+    <defName>PMP_Support_Carrier</defName>
+    <label>Aurora: Strikecraft Legion</label>
+    <description>Launches a mixed strikecraft legion from the Aurora for a sixty-second attack run.</description>
+    <effectDescription>Swarms of strikecraft descend upon enemy positions in successive bombing runs.</effectDescription>
+    <workerClass>PMP_Persona.CarrierAircraftLegion.CarrierShipSupportWorker</workerClass>
+    <order>30</order>
+    <iconPath>UI/ShipSupport/AuroraLegion</iconPath>
+    <activeThingDef>PMP_CarrierOrbiter</activeThingDef>
+    <costList>
+      <li><thingDef>PM_Solarite</thingDef><count>250</count></li>
+    </costList>
+  </PMP_Persona.ShipSupport.ShipSupportDef>
+
+  <PMP_Persona.ShipSupport.ShipSupportDef>
+    <defName>PMP_Support_GreatWyrm</defName>
+    <label>Great Wyrm: Air-to-Air Sweep</label>
+    <description>Calls a Great Wyrm fighter formation to sweep hostile aircraft from the battlefield.</description>
+    <effectDescription>Fighter formations sweep through the skies, hunting hostile aircraft.</effectDescription>
+    <workerClass>PMP_Persona.AirPatrolLegion.GreatWyrmShipSupportWorker</workerClass>
+    <order>40</order>
+    <iconPath>UI/ShipSupport/GreatWyrm</iconPath>
+    <activeThingDef>PMP_GreatWyrmOrbiter</activeThingDef>
+    <costList>
+      <li><thingDef>PM_Solarite</thingDef><count>75</count></li>
+    </costList>
+  </PMP_Persona.ShipSupport.ShipSupportDef>
+
+  <PMP_Persona.ShipSupport.ShipSupportDef>
+    <defName>PMP_Support_EnergyField</defName>
+    <label>Aurora: Projected Energy Field</label>
+    <description>Projects a persistent Protoss energy field at a chosen location on any current map.</description>
+    <effectDescription>A projected psionic field carries allied forces to a new foothold and anchors further warp-ins.</effectDescription>
+    <workerClass>PMP_Persona.EnergyFieldSupport.EnergyFieldShipSupportWorker</workerClass>
+    <order>50</order>
+    <iconPath>UI/ShipSupport/EnergyField</iconPath>
+    <costList>
+      <li><thingDef>PM_Solarite</thingDef><count>25</count></li>
+    </costList>
+  </PMP_Persona.ShipSupport.ShipSupportDef>
+
+  <PMP_Persona.ShipSupport.ShipSupportDef>
+    <defName>PMP_Support_PurificationBeam</defName>
+    <label>Aurora: Purification Beam</label>
+    <description>A steerable plasma jet fired by the secondary battery of the Aurora.</description>
+    <effectDescription>A plasma jet sweeps across the ground, incinerating everything in its path.</effectDescription>
+    <workerClass>PMP_Persona.ShipSupport.PurificationBeamShipSupportWorker</workerClass>
+    <order>60</order>
+    <iconPath>UI/ShipSupport/PurificationBeam</iconPath>
+    <activeThingDef>PMP_PurificationBeam</activeThingDef>
+    <costList>
+      <li><thingDef>PM_Solarite</thingDef><count>200</count></li>
+    </costList>
+  </PMP_Persona.ShipSupport.ShipSupportDef>
+
+  <PMP_Persona.ShipSupport.ShipSupportDef>
+    <defName>PMP_Support_Supernova</defName>
+    <label>Aurora: Supernova</label>
+    <description>Warps a contained supernova core to the designated location for two minutes.</description>
+    <effectDescription>Intense stellar radiation sears nearby enemies.</effectDescription>
+    <workerClass>PMP_Persona.SupernovaSupport.SupernovaShipSupportWorker</workerClass>
+    <order>70</order>
+    <iconPath>UI/ShipSupport/Supernova</iconPath>
+    <activeThingDef>PMP_Supernova</activeThingDef>
+    <costList>
+      <li><thingDef>PM_Solarite</thingDef><count>300</count></li>
+    </costList>
+  </PMP_Persona.ShipSupport.ShipSupportDef>
+
+  <PMP_Persona.ShipSupport.ShipSupportDef>
+    <defName>PMP_Support_Recomposer</defName>
+    <label>Aurora: Recomposer</label>
+    <description>An orbital field breaks down living bodies and assembles them anew as Prometheus units.</description>
+    <effectDescription>Life outside your colony is remade within a golden field.</effectDescription>
+    <workerClass>PMP_Persona.RecomposerSupport.RecomposerShipSupportWorker</workerClass>
+    <order>80</order>
+    <iconPath>UI/ShipSupport/Recomposer</iconPath>
+    <activeThingDef>PMP_RecomposerMarker</activeThingDef>
+    <costList>
+      <li><thingDef>PM_Solarite</thingDef><count>400</count></li>
+    </costList>
+  </PMP_Persona.ShipSupport.ShipSupportDef>
+</Defs>

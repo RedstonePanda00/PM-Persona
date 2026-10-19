@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Conclave.Open>议会控制台</PMP.Conclave.Open>
+  <PMP.Conclave.OpenDesc>查看英雄人格激活状态与当前载体。</PMP.Conclave.OpenDesc>
+  <PMP.Conclave.Heroes>英雄人格</PMP.Conclave.Heroes>
+  <PMP.Conclave.Title>净化者议会 · 人格网络</PMP.Conclave.Title>
+  <PMP.Conclave.ReadOnly>显示己方各地图及旅行队伍中的实时状态。人格仍按现有规则激活。点击已激活载体的图标可定位。</PMP.Conclave.ReadOnly>
+  <PMP.Conclave.Active>已激活</PMP.Conclave.Active>
+  <PMP.Conclave.Stored>已存储 · 等待载体</PMP.Conclave.Stored>
+  <PMP.Conclave.Inactive>未激活</PMP.Conclave.Inactive>
+  <PMP.Conclave.NoCarrier>暂无活动载体</PMP.Conclave.NoCarrier>
+  <PMP.Conclave.Traveling>旅行中／地图外</PMP.Conclave.Traveling>
+</LanguageData>

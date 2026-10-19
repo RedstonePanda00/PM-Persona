@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_Prometheus.label>盗火者</PMP_Prometheus.label>
+  <PMP_Prometheus.description>围绕一缕留存意识组装而成的轻型机械士兵。悬浮装甲与能量护盾保护着纤细的机体；当机体瓦解，它的火种仍会留下。</PMP_Prometheus.description>
+  <PMP_Prometheus.tools.0.label>相位冲击</PMP_Prometheus.tools.0.label>
+  <PMP_Fireseed.label>火种</PMP_Fireseed.label>
+  <PMP_Fireseed.description>一枚保存着盗火者意识与机体蓝图的火种，能够在锻炉中重新点燃。</PMP_Fireseed.description>
+  <PMP_HardlightRifle.label>硬光步枪</PMP_HardlightRifle.label>
+  <PMP_HardlightRifle.description>将金色光芒凝聚成弹束的轻型步枪。</PMP_HardlightRifle.description>
+  <PMP_HardlightRifle.tools.0.label>枪托</PMP_HardlightRifle.tools.0.label>
+  <PMP_HardlightBolt.label>硬光弹束</PMP_HardlightBolt.label>
+</LanguageData>

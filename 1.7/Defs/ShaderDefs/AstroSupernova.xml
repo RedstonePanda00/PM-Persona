@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ShaderDef>
+    <defName>PMP17_AstroVolume</defName>
+    <shaderProgram>
+      <vertexShaderFileName>PMP17_AstroVolume.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>PMP17_AstroVolume.frag.glsl</fragmentShaderFileName>
+      <!-- The proxy's exit face is not the gas surface. As an overhead effect it must not depth-test against the ground. -->
+      <transparent>true</transparent><depthTest>false</depthTest><depthWrite>false</depthWrite>
+      <cullMode>None</cullMode><renderQueue>3020</renderQueue>
+      <blendMode>Custom</blendMode><blendSrcFactor>One</blendSrcFactor><blendDstFactor>OneMinusSrcAlpha</blendDstFactor>
+    </shaderProgram>
+  </ShaderDef>
+  <MaterialDef><defName>PMP17_AstroSupernova</defName><shader>PMP17_AstroVolume</shader></MaterialDef>
+</Defs>

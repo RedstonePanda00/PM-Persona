@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>PMP_Fireseed</defName><label>fireseed</label>
+    <description>A spark preserving the consciousness and body blueprint of a Prometheus. It can be rekindled at a forge.</description>
+    <thingClass>PMP_Persona.Prometheus.Thing_Fireseed</thingClass>
+    <useHitPoints>false</useHitPoints><stackLimit>1</stackLimit><tradeability>None</tradeability>
+    <tickerType>Never</tickerType><statBases><Mass>0.5</Mass><MarketValue>0</MarketValue><Flammability>0</Flammability></statBases>
+    <graphicData><texPath>Things/Item/Prometheus/Fireseed</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>0.7</drawSize></graphicData>
+    <thingCategories><li>Manufactured</li></thingCategories>
+  </ThingDef>
+  <RecipeDef>
+    <defName>PMP_RestorePrometheus</defName><label>rekindle Prometheus</label>
+    <description>Rebuild the Prometheus preserved in a fireseed using five solarite.</description><jobString>Rekindling a Prometheus.</jobString>
+    <workerClass>PMP_Persona.Prometheus.Recipe_RestorePrometheus</workerClass>
+    <workAmount>3000</workAmount><workSpeedStat>GeneralLaborSpeed</workSpeedStat><workSkill>Crafting</workSkill>
+    <ingredients><li><filter><thingDefs><li>PMP_Fireseed</li></thingDefs></filter><count>1</count></li><li><filter><thingDefs><li>PM_Solarite</li></thingDefs></filter><count>5</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>PMP_Fireseed</li><li>PM_Solarite</li></thingDefs></fixedIngredientFilter>
+    <defaultIngredientFilter><thingDefs><li>PMP_Fireseed</li><li>PM_Solarite</li></thingDefs></defaultIngredientFilter>
+    <products /><recipeUsers><li>ProtossForge</li></recipeUsers>
+  </RecipeDef>
+</Defs>

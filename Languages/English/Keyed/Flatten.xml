@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Flatten.SheetName>{0}'s two-dimensional sheet</PMP.Flatten.SheetName>
+  <PMP.Flatten.NoPawns>No living pawns in the selected area.</PMP.Flatten.NoPawns>
+  <PMP.Flatten.Sealed>A two-dimensional fragment of space containing {0}.</PMP.Flatten.Sealed>
+  <PMP.Flatten.Forming>Dimensional reduction in progress.</PMP.Flatten.Forming>
+  <PMP.Flatten.Release>Release pawn</PMP.Flatten.Release>
+  <PMP.Flatten.ReleaseDesc>Release the original pawn into a nearby free cell. Its original faction is retained, including hostility. The empty sheet is consumed.</PMP.Flatten.ReleaseDesc>
+  <PMP.Flatten.NoReleaseCell>No safe free cell nearby. The pawn remains sealed.</PMP.Flatten.NoReleaseCell>
+  <PMP.Flatten.MustPlace>Place this sheet on the map first.</PMP.Flatten.MustPlace>
+  <PMP.Flatten.InspectPawn>Inspect contained pawn</PMP.Flatten.InspectPawn>
+  <PMP.Flatten.Facing>Facing: {0}</PMP.Flatten.Facing>
+  <PMP.Flatten.FacingDesc>Cycle the displayed view: South → East → North → South. This does not change the pawn's original release facing.</PMP.Flatten.FacingDesc>
+  <PMP.Flatten.Study>Study entity</PMP.Flatten.Study>
+  <PMP.Flatten.StudyDesc>Allow dark study through the sheet. Study uses the original entity's progress, unlocks and cooldown. No holding platform is required.</PMP.Flatten.StudyDesc>
+  <PMP.Flatten.StudyCompleted>Study complete.</PMP.Flatten.StudyCompleted>
+  <PMP.Flatten.StudyDisabled>Study disabled.</PMP.Flatten.StudyDisabled>
+  <PMP.Flatten.StudyReady>Ready for dark study.</PMP.Flatten.StudyReady>
+  <PMP.Flatten.StudyLocked>Study has not been unlocked.</PMP.Flatten.StudyLocked>
+</LanguageData>

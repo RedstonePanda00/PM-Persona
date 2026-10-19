@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_Support_Prism.label>棱镜 Alpha：近轨道压制</PMP_Support_Prism.label>
+  <PMP_Support_Prism.description>装备多种武器的深空炮舰，可以使用低功率的行星碎裂炮、光粒和重粒子机炮。</PMP_Support_Prism.description>
+  <PMP_Support_Prism.effectDescription>以轨道炮火轰击地表目标。</PMP_Support_Prism.effectDescription>
+
+  <PMP_Support_Vanguard.label>尖兵 Zeta：轨道轰炸</PMP_Support_Vanguard.label>
+  <PMP_Support_Vanguard.description>装备强大对地火力的深空战舰，可以使用中子机炮和动能冲击。</PMP_Support_Vanguard.description>
+  <PMP_Support_Vanguard.effectDescription>以密集的对地火力扫荡战场。</PMP_Support_Vanguard.effectDescription>
+
+  <PMP_Support_Carrier.label>曙光号：强击机军团</PMP_Support_Carrier.label>
+  <PMP_Support_Carrier.description>曙光号发射混编强击机军团，执行六十秒攻击任务。</PMP_Support_Carrier.description>
+  <PMP_Support_Carrier.effectDescription>成群的强击机扑向敌阵，发动接连不断的轰炸。</PMP_Support_Carrier.effectDescription>
+
+  <PMP_Support_GreatWyrm.label>巨龙：空对空掠袭</PMP_Support_GreatWyrm.label>
+  <PMP_Support_GreatWyrm.description>呼叫巨龙战机编队扫荡战场上的敌对飞行单位。</PMP_Support_GreatWyrm.description>
+  <PMP_Support_GreatWyrm.effectDescription>战机编队掠过战场上空，猎杀敌对飞行单位。</PMP_Support_GreatWyrm.effectDescription>
+
+  <PMP_Support_EnergyField.label>曙光号：投射能量场</PMP_Support_EnergyField.label>
+  <PMP_Support_EnergyField.description>在当前地图指定位置投射一个永久存在的星灵能量场。</PMP_Support_EnergyField.description>
+  <PMP_Support_EnergyField.effectDescription>投射的灵能场携友军迁往新的落脚点，为后续折跃提供锚定。</PMP_Support_EnergyField.effectDescription>
+
+  <PMP_Support_PurificationBeam.label>曙光号：净化光束</PMP_Support_PurificationBeam.label>
+  <PMP_Support_PurificationBeam.description>来自曙光号副炮的一束可控的等离子喷流。</PMP_Support_PurificationBeam.description>
+  <PMP_Support_PurificationBeam.effectDescription>等离子喷流沿地表扫过，焚毁途经之物。</PMP_Support_PurificationBeam.effectDescription>
+
+  <PMP_Support_Supernova.label>曙光号：超新星</PMP_Support_Supernova.label>
+  <PMP_Support_Supernova.description>将一枚受控超新星核心折跃至指定位置，持续两分钟。</PMP_Support_Supernova.description>
+  <PMP_Support_Supernova.effectDescription>炽热的星体辐射持续灼烧附近的敌人。</PMP_Support_Supernova.effectDescription>
+
+  <PMP_Support_Recomposer.label>曙光号：重组机</PMP_Support_Recomposer.label>
+  <PMP_Support_Recomposer.description>从轨道投下重组场，将范围内的生命分解，重新塑造成盗火者。</PMP_Support_Recomposer.description>
+  <PMP_Support_Recomposer.effectDescription>非己方的生命在金色光幕中重获形体。</PMP_Support_Recomposer.effectDescription>
+</LanguageData>

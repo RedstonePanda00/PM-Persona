@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationInsert">
+    <xpath>Defs/ThinkTreeDef[defName="BurningResponse"]/thinkRoot/subNodes/li/subNodes/li[1]</xpath>
+    <order>Prepend</order>
+    <value><li Class="ThinkNode_SubtreesByTag"><insertTag>PMP_HonorBurningResponse</insertTag></li></value>
+  </Operation>
+</Patch>

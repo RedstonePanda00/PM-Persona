@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Prism.Name>棱镜 ALPHA</PMP.Prism.Name>
+  <PMP.Prism.Fracture>行星碎裂炮</PMP.Prism.Fracture>
+  <PMP.Prism.Light>光粒</PMP.Prism.Light>
+  <PMP.Prism.Heavy>重粒子机炮</PMP.Prism.Heavy>
+  <PMP.Prism.Reload>装填中 {0} 秒</PMP.Prism.Reload>
+  <PMP.Prism.Transit>棱镜 ALPHA · 星际航行</PMP.Prism.Transit>
+  <PMP.Prism.WorldLock>殖民地地格 · 轨道锁定</PMP.Prism.WorldLock>
+  <PMP.Prism.Controls>WASD 移动   左键 射击   右键 轮切武器   R 红外／光学</PMP.Prism.Controls>
+</LanguageData>

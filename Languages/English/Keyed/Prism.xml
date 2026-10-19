@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Prism.Name>PRISM ALPHA</PMP.Prism.Name>
+  <PMP.Prism.Fracture>Planet-Fracture Cannon</PMP.Prism.Fracture>
+  <PMP.Prism.Light>Relativistic Particle Shot</PMP.Prism.Light>
+  <PMP.Prism.Heavy>Heavy-Particle Autocannon</PMP.Prism.Heavy>
+  <PMP.Prism.Reload>RELOADING {0}s</PMP.Prism.Reload>
+  <PMP.Prism.Transit>PRISM ALPHA · TRANSIT</PMP.Prism.Transit>
+  <PMP.Prism.WorldLock>COLONY TILE · ORBITAL LOCK</PMP.Prism.WorldLock>
+  <PMP.Prism.Controls>WASD MOVE   LMB FIRE   RMB CYCLE   R IR / OPTICAL</PMP.Prism.Controls>
+</LanguageData>

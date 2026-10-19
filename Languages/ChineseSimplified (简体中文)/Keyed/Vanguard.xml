@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Vanguard.Name>尖兵 ZETA</PMP.Vanguard.Name>
+  <PMP.Vanguard.Acquiring>建立轨道连接</PMP.Vanguard.Acquiring>
+  <PMP.Vanguard.Arriving>跃迁入场 · 稳定姿态</PMP.Vanguard.Arriving>
+  <PMP.Vanguard.Connecting>接入机载火控</PMP.Vanguard.Connecting>
+  <PMP.Vanguard.SupportRemaining>支援剩余  {0} 秒</PMP.Vanguard.SupportRemaining>
+  <PMP.Vanguard.Missiles>合金棒</PMP.Vanguard.Missiles>
+  <PMP.Vanguard.Ready>就绪</PMP.Vanguard.Ready>
+  <PMP.Vanguard.Recharging>充能中  {0} 秒</PMP.Vanguard.Recharging>
+  <PMP.Vanguard.Controls>WASD 移动   左键 机炮   右键 合金棒   R 切换成像</PMP.Vanguard.Controls>
+  <PMP.Vanguard.Infrared>红外 · 白热成像 [R]</PMP.Vanguard.Infrared>
+  <PMP.Vanguard.Optical>光学成像 [R]</PMP.Vanguard.Optical>
+  <PMP.Vanguard.Pause>暂停 [空格]</PMP.Vanguard.Pause>
+  <PMP.Vanguard.Resume>继续 [空格]</PMP.Vanguard.Resume>
+</LanguageData>

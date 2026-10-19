@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Vanguard.Name>VANGUARD ZETA</PMP.Vanguard.Name>
+  <PMP.Vanguard.Acquiring>ACQUIRING ORBITAL LINK</PMP.Vanguard.Acquiring>
+  <PMP.Vanguard.Arriving>WARP ARRIVAL · STABILIZING</PMP.Vanguard.Arriving>
+  <PMP.Vanguard.Connecting>CONNECTING FIRE CONTROL</PMP.Vanguard.Connecting>
+  <PMP.Vanguard.SupportRemaining>SUPPORT REMAINING  {0}s</PMP.Vanguard.SupportRemaining>
+  <PMP.Vanguard.Missiles>ALLOY RODS</PMP.Vanguard.Missiles>
+  <PMP.Vanguard.Ready>READY</PMP.Vanguard.Ready>
+  <PMP.Vanguard.Recharging>RECHARGING  {0}s</PMP.Vanguard.Recharging>
+  <PMP.Vanguard.Controls>WASD MOVE   LMB AUTOCANNON   RMB ALLOY RODS   R SENSOR</PMP.Vanguard.Controls>
+  <PMP.Vanguard.Infrared>IR · WHITE HOT  [R]</PMP.Vanguard.Infrared>
+  <PMP.Vanguard.Optical>OPTICAL  [R]</PMP.Vanguard.Optical>
+  <PMP.Vanguard.Pause>Pause [Space]</PMP.Vanguard.Pause>
+  <PMP.Vanguard.Resume>Resume [Space]</PMP.Vanguard.Resume>
+</LanguageData>

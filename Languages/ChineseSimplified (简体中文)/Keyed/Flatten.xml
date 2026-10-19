@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP.Flatten.SheetName>{0}的二维片</PMP.Flatten.SheetName>
+  <PMP.Flatten.NoPawns>选中区域内没有存活的 Pawn。</PMP.Flatten.NoPawns>
+  <PMP.Flatten.Sealed>一块封存了{0}的二维空间片。</PMP.Flatten.Sealed>
+  <PMP.Flatten.Forming>正在完成平面化。</PMP.Flatten.Forming>
+  <PMP.Flatten.Release>释放 Pawn</PMP.Flatten.Release>
+  <PMP.Flatten.ReleaseDesc>将原 Pawn 释放到附近的空闲位置。保留原阵营和敌对关系，释放成功后消耗空的二维片。</PMP.Flatten.ReleaseDesc>
+  <PMP.Flatten.NoReleaseCell>附近没有可释放的空闲位置，Pawn 仍保持封存。</PMP.Flatten.NoReleaseCell>
+  <PMP.Flatten.MustPlace>请先将二维片放置在地图上。</PMP.Flatten.MustPlace>
+  <PMP.Flatten.InspectPawn>查看内部 Pawn</PMP.Flatten.InspectPawn>
+  <PMP.Flatten.Facing>显示朝向：{0}</PMP.Flatten.Facing>
+  <PMP.Flatten.FacingDesc>切换显示朝向：South → East → North → South。不改变释放时恢复的原朝向。</PMP.Flatten.FacingDesc>
+  <PMP.Flatten.Study>研究实体</PMP.Flatten.Study>
+  <PMP.Flatten.StudyDesc>允许通过二维片进行暗黑研究，沿用原实体的研究进度、解锁条件和冷却时间，不需要收容平台。</PMP.Flatten.StudyDesc>
+  <PMP.Flatten.StudyCompleted>研究已完成。</PMP.Flatten.StudyCompleted>
+  <PMP.Flatten.StudyDisabled>已关闭研究。</PMP.Flatten.StudyDisabled>
+  <PMP.Flatten.StudyReady>可以进行暗黑研究。</PMP.Flatten.StudyReady>
+  <PMP.Flatten.StudyLocked>尚未解锁对此实体的研究。</PMP.Flatten.StudyLocked>
+</LanguageData>

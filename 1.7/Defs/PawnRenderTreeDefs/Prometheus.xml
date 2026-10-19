@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnRenderTreeDef>
+    <defName>PMP_Prometheus</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <tagDef>Root</tagDef><debugLabel>Root</debugLabel><pawnType>Any</pawnType>
+      <children>
+        <li>
+          <tagDef>Body</tagDef><debugLabel>Prometheus frame</debugLabel><pawnType>Any</pawnType>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass><useRottenColor>true</useRottenColor>
+          <children>
+            <li><debugLabel>Wounds</debugLabel><nodeClass>PawnRenderNode_AnimalPart</nodeClass><pawnType>Any</pawnType>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass><overlayLayer>Body</overlayLayer><useGraphic>false</useGraphic><baseLayer>3</baseLayer>
+            </li>
+            <li Class="PawnRenderNodeProperties_Parent">
+              <debugLabel>Body apparel</debugLabel><tagDef>ApparelBody</tagDef><pawnType>Any</pawnType><baseLayer>20</baseLayer>
+              <workerClass>PMP_Persona.Prometheus.PawnRenderNodeWorker_PrometheusBodyApparelRoot</workerClass>
+            </li>
+            <li><debugLabel>Firefoam</debugLabel><nodeClass>PawnRenderNode_AnimalPart</nodeClass><pawnType>Any</pawnType>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass><overlayLayer>Body</overlayLayer><useGraphic>false</useGraphic><baseLayer>40</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Parent">
+          <debugLabel>Head apparel</debugLabel><tagDef>ApparelHead</tagDef><pawnType>Any</pawnType><baseLayer>70</baseLayer>
+          <workerClass>PMP_Persona.Prometheus.PawnRenderNodeWorker_PrometheusHeadApparelRoot</workerClass>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Weapon/carried thing</debugLabel><workerClass>PawnRenderNodeWorker_Carried</workerClass><pawnType>Any</pawnType>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+</Defs>

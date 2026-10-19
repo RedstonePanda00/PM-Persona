@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_Support_Flatten.label>曙光号：平面化</PMP_Support_Flatten.label>
+  <PMP_Support_Flatten.description>将生物降维并封存在保留其原貌的二维片内。</PMP_Support_Flatten.description>
+  <PMP_Support_Flatten.effectDescription>将区域内的生物降为二维，封存在各自的空间片中。</PMP_Support_Flatten.effectDescription>
+</LanguageData>

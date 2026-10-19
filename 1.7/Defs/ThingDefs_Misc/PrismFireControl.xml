@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>PMP_PrismLightParticleIncoming</defName><label>relativistic particle shot</label><size>(1, 1)</size>
+    <thingClass>PMP_Persona.PMPH_OrbitalIncoming</thingClass>
+    <graphicData><texPath>Things/Weapon/transparent</texPath><graphicClass>Graphic_Single</graphicClass><shaderType>CutoutFlying</shaderType></graphicData>
+    <skyfaller><movementType>Accelerate</movementType><speed>38</speed><ticksToImpactRange>35~45</ticksToImpactRange>
+      <explosionRadius>4.5</explosionRadius><explosionDamage>PMP_OrbitalImpact</explosionDamage><explosionDamageFactor>0.16</explosionDamageFactor>
+      <impactSound>Explosion_GiantBomb</impactSound><motesPerCell>0</motesPerCell>
+    </skyfaller>
+  </ThingDef>
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>PMP_PrismHeavyParticleIncoming</defName><label>heavy particle round</label><size>(1, 1)</size>
+    <thingClass>PMP_Persona.PMPH_OrbitalIncoming</thingClass>
+    <graphicData><texPath>Things/Weapon/transparent</texPath><graphicClass>Graphic_Single</graphicClass><shaderType>CutoutFlying</shaderType></graphicData>
+    <skyfaller><movementType>Accelerate</movementType><speed>38</speed><ticksToImpactRange>8~14</ticksToImpactRange>
+      <explosionRadius>1.5</explosionRadius><explosionDamage>PMP_OrbitalImpact</explosionDamage><explosionDamageFactor>0.06</explosionDamageFactor>
+      <impactSound>Explosion_GiantBomb</impactSound><motesPerCell>0</motesPerCell>
+    </skyfaller>
+  </ThingDef>
+</Defs>

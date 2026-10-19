@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ShaderDef>
+    <defName>PMP17_Singularity</defName>
+    <shaderProgram>
+      <vertexShaderFileName>PMP17_Vanguard.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>PMP17_Singularity.frag.glsl</fragmentShaderFileName>
+      <transparent>true</transparent><depthTest>false</depthTest><depthWrite>false</depthWrite><cullMode>None</cullMode><renderQueue>3505</renderQueue>
+      <blendMode>Custom</blendMode><blendSrcFactor>SrcAlpha</blendSrcFactor><blendDstFactor>OneMinusSrcAlpha</blendDstFactor>
+    </shaderProgram>
+  </ShaderDef>
+  <MaterialDef><defName>PMP17_SingularityMaterial</defName><shader>PMP17_Singularity</shader></MaterialDef>
+</Defs>

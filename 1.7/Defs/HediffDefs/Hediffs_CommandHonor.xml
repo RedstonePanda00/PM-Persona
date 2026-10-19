@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>PMP_CommandHonor</defName>
+    <label>command honor</label>
+    <description>The colony's shared opinion of its commander.</description>
+    <hediffClass>PMP_Persona.Storyteller.Hediff_CommandHonor</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <stages>
+      <li><label>dishonored</label><minSeverity>0</minSeverity><statOffsets><MentalBreakThreshold>0.06</MentalBreakThreshold></statOffsets></li>
+      <li>
+        <label>honored</label><minSeverity>0.5</minSeverity>
+        <statOffsets><MentalBreakThreshold>-0.06</MentalBreakThreshold></statOffsets>
+        <capMods><li><capacity>Sight</capacity><offset>0.03</offset></li><li><capacity>Manipulation</capacity><offset>0.03</offset></li><li><capacity>Moving</capacity><offset>0.03</offset></li></capMods>
+      </li>
+      <li>
+        <label>exalted</label><minSeverity>1</minSeverity>
+        <statOffsets><MentalBreakThreshold>-0.10</MentalBreakThreshold></statOffsets>
+        <capMods><li><capacity>Sight</capacity><offset>0.03</offset></li><li><capacity>Manipulation</capacity><offset>0.03</offset></li><li><capacity>Moving</capacity><offset>0.03</offset></li></capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>PMP_CommandHonorMood</defName>
+    <workerClass>PMP_Persona.Storyteller.ThoughtWorker_CommandHonor</workerClass>
+    <stages>
+      <li><label>deeply dishonored command</label><description>People have become expendable under this command.</description><baseMoodEffect>-12</baseMoodEffect></li>
+      <li><label>dishonored command</label><description>I have little respect for our commander's decisions.</description><baseMoodEffect>-9</baseMoodEffect></li>
+      <li><label>distrusted command</label><description>Our commander's decisions trouble me.</description><baseMoodEffect>-6</baseMoodEffect></li>
+      <li><label>honorable command</label><description>Our commander faces danger and values people.</description><baseMoodEffect>4</baseMoodEffect></li>
+      <li><label>respected command</label><description>I trust our commander's courage and care.</description><baseMoodEffect>8</baseMoodEffect></li>
+      <li><label>exalted command</label><description>We have earned our honor together.</description><baseMoodEffect>10</baseMoodEffect></li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>PMP_RecoveryExhaustion</defName><thoughtClass>Thought_Memory</thoughtClass><durationDays>0.25</durationDays><stackLimit>1</stackLimit>
+    <stages><li><label>regained composure</label><description>Answering the commander's appeal took effort. I need time to recover.</description><baseMoodEffect>-3</baseMoodEffect></li></stages>
+  </ThoughtDef>
+  <MentalStateDef>
+    <defName>PMP_CommandRefusal</defName><label>refusing orders</label>
+    <stateClass>PMP_Persona.Storyteller.MentalState_CommandRefusal</stateClass>
+    <category>Misc</category><maxTicksBeforeRecovery>2147483647</maxTicksBeforeRecovery><minTicksBeforeRecovery>2147483647</minTicksBeforeRecovery>
+    <blockNormalThoughts>false</blockNormalThoughts>
+  </MentalStateDef>
+  <ThinkTreeDef>
+    <defName>PMP_HonorExtinguishSelf</defName><insertTag>PMP_HonorBurningResponse</insertTag><insertPriority>100</insertPriority>
+    <thinkRoot Class="PMP_Persona.Storyteller.JobGiver_HonorableExtinguishSelf" />
+  </ThinkTreeDef>
+  <ThinkTreeDef>
+    <defName>PMP_CommandRefusalBehavior</defName><insertTag>Humanlike_PostMentalState</insertTag><insertPriority>100</insertPriority>
+    <thinkRoot Class="ThinkNode_ConditionalMentalState">
+      <state>PMP_CommandRefusal</state>
+      <subNodes>
+        <li Class="ThinkNode_Subtree"><treeDef>SatisfyBasicNeeds</treeDef></li>
+        <li Class="JobGiver_WanderColony"><wanderRadius>7</wanderRadius><ticksBetweenWandersRange>120~240</ticksBetweenWandersRange></li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>

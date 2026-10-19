@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ShaderDef>
+    <defName>PMP17_TargetPlasma</defName>
+    <shaderProgram>
+      <vertexShaderFileName>PMP17_TargetPlasma.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>PMP17_TargetPlasma.frag.glsl</fragmentShaderFileName>
+      <transparent>true</transparent><depthTest>false</depthTest><depthWrite>false</depthWrite>
+      <cullMode>None</cullMode><renderQueue>3030</renderQueue>
+      <blendMode>Custom</blendMode><blendSrcFactor>One</blendSrcFactor><blendDstFactor>OneMinusSrcAlpha</blendDstFactor>
+    </shaderProgram>
+  </ShaderDef>
+  <MaterialDef><defName>PMP17_TargetPlasmaMaterial</defName><shader>PMP17_TargetPlasma</shader></MaterialDef>
+</Defs>

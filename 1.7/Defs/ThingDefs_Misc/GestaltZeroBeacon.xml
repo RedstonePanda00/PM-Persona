@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef>
+        <defName>PMPH_GestaltZeroBeacon</defName>
+        <label>Gestalt Zero beacon</label>
+        <description>A temporary beacon reconstructing Gestalt Zero.</description>
+        <thingClass>PMP_Persona.GestaltZero.Thing_GestaltZeroBeacon</thingClass>
+        <graphicData>
+            <texPath>Things/Weapon/transparent</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.0, 1.0)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <drawerType>RealtimeOnly</drawerType>
+        <selectable>true</selectable>
+        <tickerType>Never</tickerType>
+        <destroyable>false</destroyable>
+        <useHitPoints>false</useHitPoints>
+        <passability>Standable</passability>
+        <fillPercent>0</fillPercent>
+        <pathCost>0</pathCost>
+        <blockWind>false</blockWind>
+        <size>(1,1)</size>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <statBases>
+            <Flammability>0</Flammability>
+        </statBases>
+        <building>
+            <claimable>false</claimable>
+            <deconstructible>false</deconstructible>
+            <isInert>true</isInert>
+        </building>
+    </ThingDef>
+</Defs>

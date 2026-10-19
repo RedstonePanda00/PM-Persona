@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_CommandHonorMood.stages.0.label>毫无荣耀的指挥</PMP_CommandHonorMood.stages.0.label>
+  <PMP_CommandHonorMood.stages.0.description>在这样的指挥下，人命成了可以随意消耗的资源。</PMP_CommandHonorMood.stages.0.description>
+  <PMP_CommandHonorMood.stages.1.label>失去尊重的指挥</PMP_CommandHonorMood.stages.1.label>
+  <PMP_CommandHonorMood.stages.1.description>我很难尊重指挥官的决定。</PMP_CommandHonorMood.stages.1.description>
+  <PMP_CommandHonorMood.stages.2.label>令人不安的指挥</PMP_CommandHonorMood.stages.2.label>
+  <PMP_CommandHonorMood.stages.2.description>指挥官的决定让我感到不安。</PMP_CommandHonorMood.stages.2.description>
+  <PMP_CommandHonorMood.stages.3.label>值得尊重的指挥</PMP_CommandHonorMood.stages.3.label>
+  <PMP_CommandHonorMood.stages.3.description>我们的指挥官敢于面对危险，也珍惜每一个人。</PMP_CommandHonorMood.stages.3.description>
+  <PMP_CommandHonorMood.stages.4.label>值得信赖的指挥</PMP_CommandHonorMood.stages.4.label>
+  <PMP_CommandHonorMood.stages.4.description>我信赖指挥官的勇气与关怀。</PMP_CommandHonorMood.stages.4.description>
+  <PMP_CommandHonorMood.stages.5.label>荣耀卓著的指挥</PMP_CommandHonorMood.stages.5.label>
+  <PMP_CommandHonorMood.stages.5.description>我们共同赢得了这份荣耀。</PMP_CommandHonorMood.stages.5.description>
+  <PMP_RecoveryExhaustion.stages.0.label>心力交瘁</PMP_RecoveryExhaustion.stages.0.label>
+  <PMP_RecoveryExhaustion.stages.0.description>回应鼓励、恢复镇定耗费了我的心力。我需要缓一缓。</PMP_RecoveryExhaustion.stages.0.description>
+</LanguageData>

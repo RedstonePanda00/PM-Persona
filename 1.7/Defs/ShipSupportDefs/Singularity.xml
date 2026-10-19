@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PMP_Persona.ShipSupport.ShipSupportDef>
+    <defName>PMP_Support_Singularity</defName>
+    <label>Aurora: Singularity</label>
+    <description>Tears open space and draws a frozen region into a collapsing singularity.</description>
+    <effectDescription>Collapsing space swallows nearby creatures and objects, erasing them entirely.</effectDescription>
+    <workerClass>PMP_Persona.SingularitySupport.SingularityShipSupportWorker</workerClass>
+    <order>90</order><iconPath>UI/ShipSupport/Singularity</iconPath>
+    <modExtensions><li Class="PMP_Persona.SingularitySupport.SingularityConfig">
+      <radius>8</radius><ruptureTicks>60</ruptureTicks><absorptionTicks>300</absorptionTicks><closureTicks>60</closureTicks><shakeStrength>0.18</shakeStrength>
+    </li></modExtensions>
+    <costList><li><thingDef>PM_Solarite</thingDef><count>500</count></li></costList>
+  </PMP_Persona.ShipSupport.ShipSupportDef>
+</Defs>

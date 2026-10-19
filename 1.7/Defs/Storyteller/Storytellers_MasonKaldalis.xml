@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <StorytellerDef ParentName="BaseStoryteller">
+    <defName>PMP_MasonAndKaldalis</defName>
+    <label>Mason and Kaldalis</label>
+    <description>Mason brings a steady mix of preparation, opportunities and smaller conflicts. Kaldalis favors challenges, building battle drive during quiet periods and releasing it in bursts of threats.
+
+Honor records how you command: facing enemies and caring for people earn respect; treating people as resources loses it. Honor changes colonists' morale and obedience, never the events they receive. At exceptional honor, burning colonists prioritize extinguishing themselves, and a personal appeal has a small chance to end a mental break. Self-rescue does not make them immune to fire.</description>
+    <portraitLarge>Things/StoryTellers/M&amp;K</portraitLarge>
+    <portraitTiny>Things/StoryTellers/M&amp;K_Tiny</portraitTiny>
+    <listOrder>22</listOrder>
+    <modExtensions>
+      <li Class="PMP_Persona.Storyteller.MasonKaldalisConfig">
+        <draftRefusalChance>0.02</draftRefusalChance>
+        <dangerRefusalChance>0.04</dangerRefusalChance>
+        <idlingChancePerDay>0.01</idlingChancePerDay>
+        <refusalTicks>5000</refusalTicks>
+        <recoveryChance>0.10</recoveryChance>
+        <recoveryCooldownTicks>60000</recoveryCooldownTicks>
+        <pulseIncidents>2</pulseIncidents>
+        <pulseDurationMin>60000</pulseDurationMin>
+        <pulseDurationMax>120000</pulseDurationMax>
+        <rescueGraceTicks>6000</rescueGraceTicks>
+        <inactivityDays>10</inactivityDays>
+      </li>
+    </modExtensions>
+    <comps>
+      <li Class="PMP_Persona.Storyteller.StorytellerCompProperties_MasonKaldalis">
+        <mtbDays>1.1</mtbDays>
+        <categoryWeights>
+          <ThreatBig>0.3</ThreatBig>
+          <ThreatSmall>0.6</ThreatSmall>
+          <Misc>1.0</Misc>
+          <GiveQuest>0.7</GiveQuest>
+          <DiseaseHuman>0.6</DiseaseHuman>
+        </categoryWeights>
+      </li>
+      <li Class="PMP_Persona.Storyteller.StorytellerCompProperties_MasonKaldalis">
+        <kaldalis>true</kaldalis>
+        <mtbDays>1.6</mtbDays>
+        <categoryWeights>
+          <ThreatBig>1.0</ThreatBig>
+          <ThreatSmall>0.7</ThreatSmall>
+          <Misc>0.3</Misc>
+          <GiveQuest>0.7</GiveQuest>
+          <DiseaseHuman>0.3</DiseaseHuman>
+        </categoryWeights>
+      </li>
+      <li Class="StorytellerCompProperties_Triggered"><incident>StrangerInBlackJoin</incident><delayTicks>180</delayTicks></li>
+    </comps>
+  </StorytellerDef>
+</Defs>

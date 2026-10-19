@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_OrbitalImpact.label>轨道冲击</PMP_OrbitalImpact.label>
+  <PMP_OrbitalImpact.deathMessage>{0}死于轨道冲击。</PMP_OrbitalImpact.deathMessage>
+</LanguageData>
