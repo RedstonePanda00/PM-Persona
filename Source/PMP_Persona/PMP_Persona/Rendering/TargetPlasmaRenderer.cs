@@ -94,8 +94,7 @@ namespace PMP_Persona.Rendering
             return capture.CapturedFrame < 0 ? null : capture;
         }
 
-        // RimWorld 1.7 invokes MapComponentDraw before the map's dynamic pawns. Submit surfaces
-        // only after UpdatePlay, so both normal and offscreen submission order put them above pawns.
+        // Submit plasma after UpdatePlay so surfaces draw above pawns.
         internal static void Flush()
         {
             BuildingPlasmaRenderer.Flush();
@@ -126,7 +125,7 @@ namespace PMP_Persona.Rendering
         private static Capture Acquire(Pawn target)
         {
             if (Captures.TryGetValue(target, out var capture)) return capture;
-            // Never churn textures for a crowd larger than the cache. Unused entries expire via Maintain.
+            // Enforce cache capacity; expire unused entries through Maintain.
             if (Captures.Count >= MaxTargets) return null;
             capture = new Capture(); Captures.Add(target, capture); return capture;
         }
@@ -151,8 +150,7 @@ namespace PMP_Persona.Rendering
             try
             {
                 Vector3 origin = pawn.DrawPos;
-                // The same game routine used for a map pawn: laying angle, bed, crawl, swimming,
-                // life-stage offset, animation and equipment. disableCache prevents atlas shortcuts.
+                // Capture the native pawn pose and equipment with atlas caching disabled.
                 object result = Prepare.Invoke(renderer, new object[] { origin, null, false, true });
                 var parms = (PawnDrawParms)PreparedParms.GetValue(result);
                 Matrix4x4 translation = Matrix4x4.Translate(-origin);
@@ -174,7 +172,7 @@ namespace PMP_Persona.Rendering
                         extent = Mathf.Max(extent, Mathf.Abs(p.x), Mathf.Abs(p.z));
                     }
                 }
-                // Keep room for a wake in any direction; sizing comes from meshes, not race BodySize.
+                // Size from mesh bounds with wake padding in every direction.
                 capture.HalfSize = Mathf.Max(.5f, extent * 2.2f);
                 capture.NodeCount = requests.Count;
                 camera.RenderTo(capture.Texture, capture.HalfSize, () => tree.Draw(parms));
@@ -201,7 +199,7 @@ namespace PMP_Persona.Rendering
                 if (!pair.Key.Spawned || pair.Key.Map != currentMap || Time.frameCount - pair.Value.UsedFrame > 90)
                     Remove.Add(pair.Key);
             foreach (var pawn in Remove) { Captures[pawn].Dispose(); Captures.Remove(pawn); }
-            // Oldest-first scheduling prevents early pawns in map order from starving a large crowd.
+            // Schedule captures oldest first.
             Scheduled.Clear();
             foreach (var pair in Captures.Where(p => frame - p.Value.CapturedFrame >= 3 && frame - p.Value.UsedFrame <= 2)
                          .OrderBy(p => p.Value.CapturedFrame).Take(CapturesPerFrame)) Scheduled.Add(pair.Key);

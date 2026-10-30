@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_SummonWarhound.label>军团试炼：战犬</PMP_SummonWarhound.label>
+  <PMP_SummonWarhound.description>执行仪式，召唤一只罗穆卢斯军团战犬，快速接近，能够翻越悬崖的近战机械体，向它证明你的实力以获得它的效忠。
+
+仪式将会进行1轮。</PMP_SummonWarhound.description>
+  <PMP_SummonWarhound.outcomeDescription>向罗穆卢斯军团战犬证明你的实力，以获得它的效忠。仪式将会进行1轮。</PMP_SummonWarhound.outcomeDescription>
+  <PMP_SummonLegionGuard.label>军团试炼：禁军</PMP_SummonLegionGuard.label>
+  <PMP_SummonLegionGuard.description>执行仪式，召唤一台罗穆卢斯军团禁军，手持重盾与矛枪，能够承受惊人伤害的重型机械体，向它证明你的实力以获得它的效忠。
+
+仪式将会进行2轮。</PMP_SummonLegionGuard.description>
+  <PMP_SummonLegionGuard.outcomeDescription>向罗穆卢斯军团禁军证明你的实力，以获得它的效忠。仪式将会进行2轮。</PMP_SummonLegionGuard.outcomeDescription>
+  <PMP_SummonLegionChosen.label>军团试炼：神选者</PMP_SummonLegionChosen.label>
+  <PMP_SummonLegionChosen.description>执行仪式，召唤一台罗穆卢斯军团神选者，兼具重装防护与惊人敏捷，能够撕碎强敌的超重型机械体，向它证明你的实力以获得它的效忠。
+
+仪式将会进行3轮。</PMP_SummonLegionChosen.description>
+  <PMP_SummonLegionChosen.outcomeDescription>向罗穆卢斯军团神选者证明你的实力，以获得它的效忠。仪式将会进行3轮。</PMP_SummonLegionChosen.outcomeDescription>
+</LanguageData>

@@ -24,8 +24,7 @@ namespace PMP_Persona
             {
                 var thing=ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed(name),stuff);
                 GenSpawn.Spawn(thing,origin+offset,map,rot??Rot4.North);spawned.Add(thing);
-                // Random quicktest maps may put this fixture inside mountain fog. This test
-                // exercises visible building eligibility; explicitly reveal only its occupied cells.
+                // Reveal the fixture's occupied cells for visibility checks.
                 foreach (var cell in thing.OccupiedRect()) if (cell.InBounds(map)) map.fogGrid.Unfog(cell);
                 return thing;
             }
@@ -41,7 +40,7 @@ namespace PMP_Persona
                 {
                     surface.Source=origin.ToVector3Shifted()+new Vector3(-8,0,-5);
                     var pixels=Render(surface,folder,"Wall-union");
-                    // A seam in the middle of a straight run is interior, not an individual-tile rim.
+                    // Verify interior seams in a straight wall run.
                     var seam=origin.ToVector3Shifted()+new Vector3(1.5f,0,0);
                     Require(Sample(pixels,surface,seam).a>100,"wall seam has an empty mask/overlay");
                     using(var partial=BuildingPlasmaRenderer.CaptureForAudit(walls.Take(4).ToList()))

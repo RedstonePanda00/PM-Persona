@@ -22,17 +22,14 @@ namespace PMP_Persona
                     var statOffsets = new List<StatModifier>();
                     var statFactors = new List<StatModifier>();
 
-                    // 1. Move Speed (as a Factor)
-                    // Each level adds 30% to the multiplier. (e.g., Lvl 2 = 1 + 0.3*2 = 1.6x multiplier)
+                    // Movement speed multiplier: 1 + 0.3 * level.
                     statFactors.Add(new StatModifier
                     {
                         stat = StatDefOf.MoveSpeed,
                         value = 1f + (Severity * 0.3f)
                     });
 
-                    // 2. Ranged & Melee Speed (as an Offset)
-                    // A 60% speed increase per level. The final cooldown multiplier is 1 / (1 + 0.6 * n).
-                    // The offset is this value minus 1. This prevents stats from becoming absurdly high.
+                    // Ranged and melee cooldown offset: 1 / (1 + 0.6 * level) - 1.
                     float totalSpeedBonus = 1f + (0.6f * Severity);
                     float cooldownMultiplier = 1f / totalSpeedBonus;
                     float cooldownOffset = cooldownMultiplier - 1f;

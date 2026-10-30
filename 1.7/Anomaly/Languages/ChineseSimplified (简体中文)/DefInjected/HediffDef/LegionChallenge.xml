@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_LegionChallenge.label>军团试炼</PMP_LegionChallenge.label>
+  <PMP_LegionChallenge.description>仪式召唤的军团机械体。计数表示还需击败几次，每轮击败后恢复全部伤势。</PMP_LegionChallenge.description>
+</LanguageData>

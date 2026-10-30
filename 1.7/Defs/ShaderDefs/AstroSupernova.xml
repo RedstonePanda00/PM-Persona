@@ -5,7 +5,7 @@
     <shaderProgram>
       <vertexShaderFileName>PMP17_AstroVolume.vert.glsl</vertexShaderFileName>
       <fragmentShaderFileName>PMP17_AstroVolume.frag.glsl</fragmentShaderFileName>
-      <!-- The proxy's exit face is not the gas surface. As an overhead effect it must not depth-test against the ground. -->
+      <!-- Disable ground depth testing for the volume proxy. -->
       <transparent>true</transparent><depthTest>false</depthTest><depthWrite>false</depthWrite>
       <cullMode>None</cullMode><renderQueue>3020</renderQueue>
       <blendMode>Custom</blendMode><blendSrcFactor>One</blendSrcFactor><blendDstFactor>OneMinusSrcAlpha</blendDstFactor>

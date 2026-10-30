@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <GunSmithFramework.GunSmithPlatformDef>
+    <defName>PMP_GunSmith_HardlightRifle</defName>
+    <label>Z-250 hardlight rifle</label>
+    <description>A standard-issue rifle that fires beams to burn its targets. Its high-energy X-rays can burn through light armor and inflict severe damage on complex machinery.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <weaponThingDef>PMP_HardlightRifle</weaponThingDef>
+    <weaponCategory>AssaultRifle</weaponCategory>
+    <bodyTexPath>Things/Weapon/HardlightRifle/Hardlight_Body</bodyTexPath>
+    <bakeTextureSize>512</bakeTextureSize>
+    <bakePadding>0.05</bakePadding>
+    <shadowDilatePixels>3</shadowDilatePixels>
+    <shadowAlpha>1</shadowAlpha>
+    <slotAttachmentOffsets>
+      <li>
+        <slotId>Optic</slotId>
+        <offset>(0.0435,-0.09)</offset>
+        <gizmoOffset>(0.05,-0.18)</gizmoOffset>
+      </li>
+      <li>
+        <slotId>UnderBarrel</slotId>
+        <offset>(-0.1823,0.145)</offset>
+        <gizmoOffset>(-0.18,0.22)</gizmoOffset>
+      </li>
+      <li>
+        <slotId>UnderBarrelMount</slotId>
+        <offset>(0,0)</offset>
+      </li>
+    </slotAttachmentOffsets>
+    <slots>
+      <li>
+        <slotId>Optic</slotId>
+        <slotType>Optic</slotType>
+        <optional>true</optional>
+      </li>
+      <li>
+        <slotId>UnderBarrel</slotId>
+        <slotType>UnderBarrel</slotType>
+        <optional>true</optional>
+      </li>
+      <li>
+        <slotId>UnderBarrelMount</slotId>
+        <slotType>PMP_HardlightMountVisual</slotType>
+        <optional>true</optional>
+      </li>
+    </slots>
+    <defaultParts>
+      <li>
+        <slotId>UnderBarrelMount</slotId>
+        <part>PMP_HardlightRifle_UnderbarrelMount</part>
+        <whenSlotOccupied>UnderBarrel</whenSlotOccupied>
+      </li>
+    </defaultParts>
+    <modExtensions>
+      <li Class="ProtossMech.GunSmith.GunSmithContentExtension">
+        <costList>
+          <li>
+            <thingDef>PM_Solarite</thingDef>
+            <count>30</count>
+          </li>
+        </costList>
+      </li>
+    </modExtensions>
+  </GunSmithFramework.GunSmithPlatformDef>
+  <GunSmithFramework.GunSmithPartDef>
+    <defName>PMP_HardlightRifle_Optic</defName>
+    <label>floating hardlight sight</label>
+    <description>A floating hardlight sight. Adds weight while improving effective range and long-range accuracy.</description>
+    <platformDef>PMP_GunSmith_HardlightRifle</platformDef>
+    <slotType>Optic</slotType>
+    <texPath>Things/Weapon/HardlightRifle/Hardlight_Optic</texPath>
+    <drawOverBody>true</drawOverBody>
+    <rangeOffset>4</rangeOffset>
+    <statOffsets>
+      <Mass>0.2</Mass>
+      <AccuracyLong>0.05</AccuracyLong>
+    </statOffsets>
+    <modExtensions>
+      <li Class="ProtossMech.GunSmith.GunSmithContentExtension">
+        <costList>
+          <li>
+            <thingDef>PM_Solarite</thingDef>
+            <count>5</count>
+          </li>
+        </costList>
+      </li>
+    </modExtensions>
+    <compatiblePlatforms>
+      <li>PMP_GunSmith_Boltshot</li>
+      <li>PMP_GunSmith_BinaryRifle</li>
+    </compatiblePlatforms>
+  </GunSmithFramework.GunSmithPartDef>
+  <GunSmithFramework.GunSmithSlotDef>
+    <defName>PMP_HardlightMountVisual</defName>
+    <label>floating armor mount</label>
+    <hidden>true</hidden>
+  </GunSmithFramework.GunSmithSlotDef>
+  <GunSmithFramework.GunSmithPartDef>
+    <defName>PMP_HardlightRifle_UnderbarrelMount</defName>
+    <label>floating armor mount</label>
+    <description>The visual mount for an installed underbarrel attachment.</description>
+    <platformDef>PMP_GunSmith_HardlightRifle</platformDef>
+    <compatiblePlatforms>
+      <li>PMP_GunSmith_IncinerationCannon</li>
+    </compatiblePlatforms>
+    <slotType>PMP_HardlightMountVisual</slotType>
+    <selectable>false</selectable>
+    <drawOverBody>true</drawOverBody>
+    <drawOrder>100</drawOrder>
+    <texPath>Things/Weapon/HardlightRifle/Hardlight_UnderbarrelMount_Rifle</texPath>
+  </GunSmithFramework.GunSmithPartDef>
+</Defs>

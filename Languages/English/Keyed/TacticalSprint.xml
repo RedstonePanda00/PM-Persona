@@ -1,0 +1,5 @@
+<LanguageData>
+  <PMP.Sprint.Label>Tactical sprint</PMP.Sprint.Label>
+  <PMP.Sprint.Description>Increase movement speed by {0} while drafted. Automatically vault over traversable cover, slide past low obstacles, and occasionally dive. Obstacle collision and movement costs still apply. No stamina or cooldown.</PMP.Sprint.Description>
+  <PMP.Sprint.Stat>Tactical sprint: ×{0}</PMP.Sprint.Stat>
+</LanguageData>

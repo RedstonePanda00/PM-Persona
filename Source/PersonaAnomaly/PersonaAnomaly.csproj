@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><OutputPath>../../1.7/Anomaly/Assemblies/</OutputPath><AssemblyName>PMP.Anomaly</AssemblyName></PropertyGroup>
+ <ItemGroup><Reference Include="ProtossMech"><HintPath>$(RimWorldDir)/Mods/ProtossMechCore/1.7/Assemblies/ProtossMech.dll</HintPath><Private>false</Private></Reference></ItemGroup>
+</Project>

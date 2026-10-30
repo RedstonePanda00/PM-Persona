@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP.LegionRitual.Offerings>仪式完成时消耗：{0}</PMP.LegionRitual.Offerings>
+  <PMP.LegionRitual.MissingOfferings>所需祭品不足或无法抵达，未召唤军团机械体。</PMP.LegionRitual.MissingOfferings>
+  <PMP.LegionRitual.ArrivedLabel>军团试炼</PMP.LegionRitual.ArrivedLabel>
+  <PMP.LegionRitual.Arrived>敌对的{0}回应了仪式。击败它，即可使其归顺。</PMP.LegionRitual.Arrived>
+  <PMP.LegionRitual.Progress>剩余击败次数：{0}\n本轮累计伤害：{1} / {2}</PMP.LegionRitual.Progress>
+  <PMP.LegionRitual.Round>{0}已完全恢复伤势，剩余击败次数：{1}。</PMP.LegionRitual.Round>
+  <PMP.LegionRitual.ControlTitle>谁来操控 {0}？</PMP.LegionRitual.ControlTitle>
+  <PMP.LegionRitual.ControlText>{0}已完成军团试炼并加入殖民地。请选择一名机械师，或让它自主行动。它只能进行搬运工作。</PMP.LegionRitual.ControlText>
+  <PMP.LegionRitual.Autonomous>自主行动（不分配机械师）</PMP.LegionRitual.Autonomous>
+</LanguageData>

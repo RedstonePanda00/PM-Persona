@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs><AbilityDef>
   <defName>PMP_PrometheusPhase</defName><label>phase shift</label>
-  <description>Slip to a nearby visible position, leaving danger behind.</description>
+  <description>Slip to a nearby visible position, leaving danger behind. Restore 50 shield points over the next 5 seconds.</description>
   <iconPath>UI/Abilities/PrometheusPhase</iconPath><cooldownTicksRange>900</cooldownTicksRange>
   <hostile>false</hostile><casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
   <verbProperties><verbClass>Verb_CastAbility</verbClass><range>8</range><warmupTime>0.15</warmupTime><requireLineOfSight>true</requireLineOfSight>

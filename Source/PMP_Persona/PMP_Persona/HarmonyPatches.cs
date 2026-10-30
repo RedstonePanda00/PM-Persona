@@ -50,7 +50,7 @@ namespace PMP_Persona
             try
             {
                 // Restore full shield on revive/activate.
-                ProtossMechShieldPawn shield = pawn.GetComp<ProtossMechShieldPawn>();
+                ProtossMechShield shield = pawn.GetComp<ProtossMechShield>();
                 shield?.RestoreShield();
             }
             catch
@@ -81,9 +81,7 @@ namespace PMP_Persona
         {
             try
             {
-                // Generic defensive patch:
-                // Block "doom-like severity registration" methods from registering Persona hero pawns.
-                // Heuristic: void Method(Pawn, float) whose name contains both "Doom" and "Severity".
+                // Block Persona registration in void (Pawn, float) methods named with Doom and Severity.
 
                 MethodInfo prefix = typeof(HarmonyPatches).GetMethod(
                     nameof(Prefix_BlockPersonaHeroDoomSeverity),
@@ -238,7 +236,7 @@ namespace PMP_Persona
             // Vanilla RimWorld code.
             "Assembly-CSharp",
 
-            // Your mods.
+            // Allowed mod assemblies.
             "PMP_Persona",
             "RsPandaLibrary",
             "ProtossMech",
@@ -288,7 +286,7 @@ namespace PMP_Persona
 
                         string asmName = type.Assembly?.GetName()?.Name;
                         if (string.IsNullOrEmpty(asmName) || AllowedGameComponentAssemblyNames.Contains(asmName))
-                            continue; // Keep vanilla + your mods.
+                            continue; // Allow vanilla and configured mod assemblies.
 
                         // Patch only overridden methods to avoid touching inherited no-op base.
                         MethodInfo tick = type.GetMethod(nameof(GameComponent.GameComponentTick),
@@ -311,7 +309,7 @@ namespace PMP_Persona
 
         private static bool Prefix_BlockThirdPartyGameComponentTickOrUpdate(GameComponent __instance)
         {
-            // Only block when persona heroes exist; otherwise keep the world behavior intact.
+            // Apply the block while Persona heroes exist.
             return !HasAnyPersonaHeroes();
         }
 
@@ -325,7 +323,7 @@ namespace PMP_Persona
                 return _cachedHasPersonaHeroes;
             _lastHeroPresenceCheckTick = tick;
 
-            // Check spawned + container-held pawns on maps (best-effort for "in transit" cases).
+            // Check spawned and container-held pawns on maps.
             if (Find.Maps != null)
             {
                 for (int i = 0; i < Find.Maps.Count; i++)
@@ -424,7 +422,7 @@ namespace PMP_Persona
                 return true;
             if (def?.defName == null)
                 return true;
-            // Always allow injuries/missing parts so persona heroes can take damage normally.
+            // Allow injuries and missing body parts.
             if (def.hediffClass != null && (typeof(Hediff_Injury).IsAssignableFrom(def.hediffClass) || typeof(Hediff_MissingPart).IsAssignableFrom(def.hediffClass)))
                 return true;
             return ProtossMechMain.Settings != null && ProtossMechMain.Settings.IsHediffAllowed(def.defName);
@@ -439,7 +437,7 @@ namespace PMP_Persona
             Pawn pawn = HarmonyPatches.GetPawnFromHealthTracker(__instance);
             if (!HarmonyPatches.IsPersonaHeroPawn(pawn))
                 return true;
-            // Always allow injuries/missing parts so persona heroes can take damage normally.
+            // Allow injuries and missing body parts.
             if (hediff is Hediff_Injury || hediff is Hediff_MissingPart)
                 return true;
             string defName = hediff?.def?.defName;
@@ -475,7 +473,7 @@ namespace PMP_Persona
         {
             if (__instance?.pawn == null || !HarmonyPatches.IsPersonaHeroPawn(__instance.pawn))
                 return true;
-            // Always allow injuries/missing parts so damage can be applied normally.
+            // Allow injuries and missing body parts.
             if (__instance is Hediff_Injury || __instance is Hediff_MissingPart)
                 return true;
             return HarmonyPatches.IsCallerAllowedForPersonaHero();

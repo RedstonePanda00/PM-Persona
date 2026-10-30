@@ -13,7 +13,7 @@ namespace PMP_Persona.CarrierAircraftLegion
         {
             if (ageTicks >= LifeTimeTicks)
             {
-                // No return teleport after retirement. Issued attacks finish their salvos first.
+                // Finish issued salvos before retirement; disable return warp.
                 if (d.flightState == 5 || d.flightState == 7) { d.flightState = 9; return; }
                 if (d.flightState == 4) { d.flightState = 8; return; }
                 int stagger = d.fadeBatch * 12 + Mathf.FloorToInt(d.phase * 1.4f);
@@ -44,7 +44,7 @@ namespace PMP_Persona.CarrierAircraftLegion
             }
             foreach (var d in flockIndex) if (d.flightState == 7) throw new System.Exception("Entry wave stuck");
             if (!entered) throw new System.Exception("No entry warp phase");
-            // An in-flight salvo must finish even when the sixty-second dispatch window expires.
+            // Complete active salvos after the dispatch window expires.
             var head = flockIndex[0]; head.flightState = 2; head.bombardmentEndTick = now + 270;
             head.flightDirXZ = Vector2.right;
             ageTicks = LifeTimeTicks - 1;

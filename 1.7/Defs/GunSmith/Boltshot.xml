@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <GunSmithFramework.GunSmithPlatformDef>
+    <defName>PMP_GunSmith_Boltshot</defName>
+    <label>Z-110 Boltshot</label>
+    <description>A compact hardlight sidearm with an energy chamber enclosed by segmented armor. Its focusing assembly forms narrow bolts for precise fire or releases the accumulated charge in a searing spread at close quarters.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <weaponThingDef>PMP_Boltshot</weaponThingDef>
+    <weaponCategory>Handgun</weaponCategory>
+    <bodyTexPath>Things/Weapon/Boltshot/Boltshot</bodyTexPath>
+    <bakeTextureSize>512</bakeTextureSize>
+    <bakePadding>0.05</bakePadding>
+    <shadowDilatePixels>3</shadowDilatePixels>
+    <shadowAlpha>1</shadowAlpha>
+    <dualWieldSeparation>0.24</dualWieldSeparation>
+    <dualWieldMuzzleOffset>(0.48,0)</dualWieldMuzzleOffset>
+    <slotAttachmentOffsets>
+      <li>
+        <slotId>Ammo</slotId>
+        <offset>(0,0)</offset>
+        <gizmoOffset>(-0.23,0.25)</gizmoOffset>
+      </li>
+      <li>
+        <slotId>Grip</slotId>
+        <offset>(0,0)</offset>
+        <gizmoOffset>(0.34,0.25)</gizmoOffset>
+      </li>
+      <li>
+        <slotId>Optic</slotId>
+        <offset>(0.09,-0.24)</offset>
+        <gizmoOffset>(0.09,-0.34)</gizmoOffset>
+      </li>
+      <li>
+        <slotId>OpticArmor</slotId>
+        <offset>(0.273,-0.278)</offset>
+      </li>
+    </slotAttachmentOffsets>
+    <slots>
+      <li>
+        <slotId>Ammo</slotId>
+        <slotType>Ammo</slotType>
+      </li>
+      <li>
+        <slotId>Grip</slotId>
+        <slotType>Grip</slotType>
+        <optional>true</optional>
+      </li>
+      <li>
+        <slotId>Optic</slotId>
+        <slotType>Optic</slotType>
+        <optional>true</optional>
+      </li>
+      <li>
+        <slotId>OpticArmor</slotId>
+        <slotType>PMP_BoltshotArmorVisual</slotType>
+        <optional>true</optional>
+      </li>
+    </slots>
+    <defaultParts>
+      <li>
+        <slotId>Ammo</slotId>
+        <part>PMP_Boltshot_Single</part>
+      </li>
+      <li>
+        <slotId>OpticArmor</slotId>
+        <part>PMP_Boltshot_OpticArmor</part>
+        <whenSlotOccupied>Optic</whenSlotOccupied>
+      </li>
+    </defaultParts>
+    <modExtensions>
+      <li Class="ProtossMech.GunSmith.GunSmithContentExtension">
+        <costList>
+          <li>
+            <thingDef>PM_Solarite</thingDef>
+            <count>20</count>
+          </li>
+        </costList>
+      </li>
+    </modExtensions>
+  </GunSmithFramework.GunSmithPlatformDef>
+  <GunSmithFramework.GunSmithSlotDef>
+    <defName>PMP_BoltshotArmorVisual</defName>
+    <label>optic armor mount</label>
+    <hidden>true</hidden>
+  </GunSmithFramework.GunSmithSlotDef>
+  <GunSmithFramework.GunSmithPartDef>
+    <defName>PMP_Boltshot_Single</defName>
+    <label>single-shot circuit</label>
+    <description>Quick single shots at up to 24 cells.</description>
+    <platformDef>PMP_GunSmith_Boltshot</platformDef>
+    <slotType>Ammo</slotType>
+    <drawOnWeapon>false</drawOnWeapon>
+    <iconPath>Things/Weapon/Boltshot/Boltshot</iconPath>
+  </GunSmithFramework.GunSmithPartDef>
+  <GunSmithFramework.GunSmithPartDef>
+    <defName>PMP_Boltshot_Charged</defName>
+    <label>charged-scattershot circuit</label>
+    <description>Charge for 1.2 seconds and release five pellets together at up to 14 cells. Moving interrupts the charge.</description>
+    <platformDef>PMP_GunSmith_Boltshot</platformDef>
+    <slotType>Ammo</slotType>
+    <drawOnWeapon>false</drawOnWeapon>
+    <iconPath>Things/Weapon/Boltshot/Boltshot</iconPath>
+    <warmupTimeOffset>0.95</warmupTimeOffset>
+    <rangeOffset>-10</rangeOffset>
+    <projectileOverride>PMP_BoltshotPellet</projectileOverride>
+    <modExtensions>
+      <li Class="ProtossMech.GunSmith.GunSmithContentExtension">
+        <costList>
+          <li>
+            <thingDef>PM_Solarite</thingDef>
+            <count>10</count>
+          </li>
+        </costList>
+      </li>
+      <li Class="PMP_Persona.Prometheus.BoltshotMode">
+        <pelletCount>5</pelletCount>
+      </li>
+    </modExtensions>
+  </GunSmithFramework.GunSmithPartDef>
+  <GunSmithFramework.GunSmithPartDef>
+    <defName>PMP_Boltshot_GripDual</defName>
+    <label>dual-wield grip</label>
+    <description>Carry and fire two Boltshots with the selected firing circuit. Adds the second pistol mass and reduces accuracy.</description>
+    <platformDef>PMP_GunSmith_Boltshot</platformDef>
+    <slotType>Grip</slotType>
+    <drawOnWeapon>false</drawOnWeapon>
+    <iconPath>Things/Weapon/Boltshot/Boltshot_DualGrip_Icon</iconPath>
+    <enablesDualWield>true</enablesDualWield>
+    <ceShotSpreadFactor>1.5</ceShotSpreadFactor>
+    <ceSwayFactor>1.35</ceSwayFactor>
+    <modExtensions>
+      <li Class="ProtossMech.GunSmith.GunSmithContentExtension">
+        <costList>
+          <li>
+            <thingDef>PM_Solarite</thingDef>
+            <count>20</count>
+          </li>
+        </costList>
+      </li>
+    </modExtensions>
+    <statOffsets>
+      <Mass>1.2</Mass>
+      <AccuracyTouch>-0.05</AccuracyTouch>
+      <AccuracyShort>-0.05</AccuracyShort>
+      <AccuracyMedium>-0.15</AccuracyMedium>
+      <AccuracyLong>-0.2</AccuracyLong>
+    </statOffsets>
+  </GunSmithFramework.GunSmithPartDef>
+  <GunSmithFramework.GunSmithPartDef>
+    <defName>PMP_Boltshot_OpticArmor</defName>
+    <label>floating optic armor</label>
+    <description>A floating armor mount present only when an optic is fitted.</description>
+    <platformDef>PMP_GunSmith_Boltshot</platformDef>
+    <slotType>PMP_BoltshotArmorVisual</slotType>
+    <selectable>false</selectable>
+    <drawOverBody>true</drawOverBody>
+    <drawOrder>100</drawOrder>
+    <texPath>Things/Weapon/HardlightRifle/Hardlight_UnderbarrelMount</texPath>
+  </GunSmithFramework.GunSmithPartDef>
+</Defs>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+ <PMP.Stasis.Suspended>In stasis: contained entity cannot escape.</PMP.Stasis.Suspended>
+ <PMP.Stasis.Assigned>Awaiting containment: {0}</PMP.Stasis.Assigned>
+ <PMP.Stasis.Assign>Contain entity</PMP.Stasis.Assign><PMP.Stasis.AssignDesc>Select a downed or dormant entity, or a movable anomalous object. A hauler will bring it here. Holds one entity. Loss of power releases the captive; solar flares do not disable the field.</PMP.Stasis.AssignDesc>
+ <PMP.Stasis.Carry>Contain {0}</PMP.Stasis.Carry>
+ <PMP.Stasis.Release>Release entity</PMP.Stasis.Release><PMP.Stasis.ReleaseDesc>Release the original entity nearby. Its hostility and anomalous activity will resume.</PMP.Stasis.ReleaseDesc>
+ <PMP.Stasis.Study>Study entity</PMP.Stasis.Study><PMP.Stasis.StudyDesc>Study through the field. Retains the entity's original research progress, unlocks and cooldown.</PMP.Stasis.StudyDesc>
+ <PMP.Stasis.StudyComplete>Study complete.</PMP.Stasis.StudyComplete><PMP.Stasis.StudyLocked>Study has not been unlocked.</PMP.Stasis.StudyLocked>
+</LanguageData>

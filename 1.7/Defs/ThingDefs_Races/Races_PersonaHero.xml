@@ -28,7 +28,7 @@
         <Mining>2</Mining>
         <Hauling>3</Hauling>
         <Cooking>1</Cooking>
-        <Cleaning>2</Cleaning> <!-- It is very important for a chef to keep the kitchen clean and tidy -->
+        <Cleaning>2</Cleaning> <!-- Cleaning skill level. -->
       </mechWorkTypePriorities>
       <mechFixedSkillLevel>20</mechFixedSkillLevel>
       <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
@@ -452,7 +452,7 @@
         <minDrawSize>0</minDrawSize>
         <maxDrawSize>2</maxDrawSize>
       </li>
-      <!-- Persona warp blade: change bladeTexPath to Things/Pawn/Mechanoid/Zeratul_blade when you add art under Textures/ (same layout as ProtossMech Umbra_blade). -->
+      <!-- Warp-blade texture path and rendering parameters. -->
       <li Class="ProtossMech.CompProperties_UmbraWarpBladeRenderer">
         <bladeTexPath>Things/Pawn/Mechanoid/MasterBlade</bladeTexPath>
         <drawSize>2.2</drawSize>

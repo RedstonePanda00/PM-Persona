@@ -1,0 +1,14 @@
+<LanguageData>
+  <RC_Text_aeee71ed3833ae4d>冠军勇士</RC_Text_aeee71ed3833ae4d>
+  <RC_Text_49fcf2c78b506b3e>战斗</RC_Text_49fcf2c78b506b3e>
+  <PMP.Champion.Charge>受击回击：{0}</PMP.Champion.Charge>
+  <PMP.Champion.ChargeDesc>记录适应压缩前的伤害。下一次实际造成伤害的命中附加并消耗全部记录值；完全被吸收则保留。</PMP.Champion.ChargeDesc>
+  <PMP.Champion.Passive>自动生效；无须手动释放</PMP.Champion.Passive>
+  <PMP.Champion.Throw>抓取投掷</PMP.Champion.Throw>
+  <PMP.Champion.ThrowDesc>先选择附近敌方或无阵营的建筑／物品，再选择投掷方向。碰撞后，物体自身和范围内的建筑、单位各接受一次原版钝伤，基础伤害为物体最大生命值的一半；允许误伤。</PMP.Champion.ThrowDesc>
+  <PMP.Champion.ThrowRejected>当前无法投掷该目标。</PMP.Champion.ThrowRejected>
+  <PMP.Champion.Unavailable>当前无法行动</PMP.Champion.Unavailable>
+  <PMP.Champion.Cooldown>冷却剩余 {0} 秒</PMP.Champion.Cooldown>
+  <PMP.Champion.AwaitingLanding>等待空地落下</PMP.Champion.AwaitingLanding>
+  <PMP.Champion.InFlight>投掷中</PMP.Champion.InFlight>
+</LanguageData>

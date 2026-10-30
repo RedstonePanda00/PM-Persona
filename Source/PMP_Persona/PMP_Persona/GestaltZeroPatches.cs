@@ -64,11 +64,7 @@ namespace PMP_Persona.GestaltZero
             if (GestaltZeroUtility.IsIntercepting(__instance))
                 return false;
 
-            // DamageWorker_AddInjury can evaluate a lethal result more than once
-            // during one TakeDamage call. The first Kill already pooled Zero;
-            // every later Kill in that same damage chain must also be skipped.
-            // Otherwise Pawn.Kill reaches RemoveComponentsOnKilled even though
-            // its final Destroy is intercepted, leaving health/mindState corrupt.
+            // Skip repeated Kill calls within the same damage chain after pooling Zero.
             if (GestaltZeroUtility.IsPooledZero(__instance))
             {
                 __state = true;
@@ -85,8 +81,7 @@ namespace PMP_Persona.GestaltZero
             {
                 try
                 {
-                    // Finalizers run after every postfix. Repair once more so a
-                    // foreign death postfix cannot leave the pooled pawn Dead.
+                    // Restore pooled health state after all death postfixes.
                     GestaltZeroUtility.RestoreForReturn(__instance);
                 }
                 catch (Exception exception)
@@ -106,13 +101,11 @@ namespace PMP_Persona.GestaltZero
         public static bool Prefix(Pawn __instance, DestroyMode mode, out bool __state)
         {
             __state = false;
-            // Vanish is used by map removal and ordinary container transitions;
-            // only an explicit kill-finalize represents death/destruction here.
+            // Intercept KillFinalize only; allow Vanish container and map transitions.
             if (mode != DestroyMode.KillFinalize || __instance == null)
                 return true;
 
-            // Never allow a nested kill-finalize to turn the recoverable Dead
-            // health state into an irreversible Destroyed Thing.
+            // Block nested KillFinalize destruction of pooled pawns.
             if (GestaltZeroUtility.IsIntercepting(__instance))
                 return false;
 

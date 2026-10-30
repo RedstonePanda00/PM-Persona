@@ -31,11 +31,11 @@ namespace PMP_Persona.AirPatrolLegion
         public float trailWidthFactor = 1.0f;
         public float missileTrailWidthFactor = 0.45f;
 
-        // Missile steering to make trail follow an arc (not just x-axis rectangles).
+        // Missile steering parameters.
         public float missileTurnLerp = 0.18f;
         public float missileInitialForwardBias = 0.65f;
 
-        // Missile trail shaping (to avoid "long rectangle" segments).
+        // Missile trail segment parameters.
         public float missileTrailMaxSegmentCells = 0.6f;
         public int missileTrailMaxSubsteps = 6;
         public float missileTrailTipWidthFactor = 0.18f;

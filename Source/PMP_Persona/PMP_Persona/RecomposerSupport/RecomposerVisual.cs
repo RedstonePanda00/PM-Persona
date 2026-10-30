@@ -84,7 +84,7 @@ namespace PMP_Persona.RecomposerSupport
                 foreach (var pawn in RecomposerPawnUtility.Targets(marker.Map, marker.Position))
                     if (session.bodies.TryGetValue(pawn, out var capture))
                     {
-                        // The scan plane sweeps south to north across the actual map, not all bodies at once.
+                        // Sweep the scan plane south to north across the map.
                         float localScan = age < marker.Config.fieldTicks ? 0 : Mathf.Clamp01(
                             (scan * 2 - 1 - (pawn.Position.z - marker.Position.z) / RecomposerConstants.TargetRadius) * 6 + .5f);
                         Configure(capture.Material, 0, localScan, pawn.thingIDNumber, 0);
@@ -108,7 +108,7 @@ namespace PMP_Persona.RecomposerSupport
                 }
                 else
                 {
-                    // During an amortized crowd capture, keep an actual body visible until its texture is ready.
+                    // Render the body until its queued silhouette capture completes.
                     var parms = Parameters(pawn, entry.facing, phase >= 3 ? PawnPosture.Standing : entry.posture);
                     parms.matrix = Matrix4x4.TRS(entry.cell.ToVector3ShiftedWithAltitude(AltitudeLayer.MoteOverhead), Quaternion.identity, Vector3.one);
                     var tree = pawn.Drawer.renderer.renderTree;

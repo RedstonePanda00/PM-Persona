@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+ <ShaderDef><defName>PMP_StasisFieldShader</defName><shaderProgram>
+  <vertexShaderFileName>PMP17_TargetPlasma.vert.glsl</vertexShaderFileName><fragmentShaderFileName>PMP_StasisField.frag.glsl</fragmentShaderFileName>
+  <transparent>true</transparent><depthTest>false</depthTest><depthWrite>false</depthWrite><cullMode>None</cullMode><renderQueue>3500</renderQueue>
+  <blendMode>Custom</blendMode><blendSrcFactor>One</blendSrcFactor><blendDstFactor>OneMinusSrcAlpha</blendDstFactor>
+ </shaderProgram></ShaderDef>
+ <MaterialDef><defName>PMP_StasisFieldMaterial</defName><shader>PMP_StasisFieldShader</shader></MaterialDef>
+</Defs>

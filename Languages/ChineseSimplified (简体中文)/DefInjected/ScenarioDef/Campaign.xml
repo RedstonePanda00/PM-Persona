@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_MissionOne_Scenario.label>战争之影</PMP_MissionOne_Scenario.label>
+  <PMP_MissionOne_Scenario.description>潜入索菲亚帝国档案站，寻找异常线索。三个终端可以自由探索，发现关键情报后选择收队或继续搜索。</PMP_MissionOne_Scenario.description>
+  <PMP_MissionOne_Scenario.scenario.name>战争之影</PMP_MissionOne_Scenario.scenario.name>
+  <PMP_MissionOne_Scenario.scenario.description>不让入侵情报传出去。物资箱、终端与发电机均可选中后指定操作人员。</PMP_MissionOne_Scenario.scenario.description>
+</LanguageData>

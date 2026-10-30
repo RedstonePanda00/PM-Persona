@@ -8,9 +8,7 @@ using Verse;
 
 namespace PMP_Persona
 {
-    // Vanilla: drawRequests order follows AppendRequests; LayerFor only affects small world-Y in TryGetMatrix, not queue order.
-    // For selected cardinals, move specific Kaldalis blade draw requests before the body mesh, then re-run vanilla's matrix refresh.
-    // North: both blades. East: left (mirrored) only. West: right only.
+    // Reorder blade requests before the body and refresh matrices: North both, East left, West right.
     [HarmonyPatch(typeof(PawnRenderTree), nameof(PawnRenderTree.ParallelPreDraw))]
     public static class Patch_KaldalisBladeDrawOrderUnderBodyNorth
     {

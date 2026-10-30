@@ -32,7 +32,7 @@ namespace PMP_Persona.RecomposerSupport
         }
     }
 
-    // Both bodies are suspended until the visual hand-off is complete; no second gameplay pawn can act early.
+    // Suspend both bodies until the visual hand-off completes.
     public class Thing_RecomposerMarker : ThingWithComps, ISuspendableThingHolder
     {
         private ThingOwner<Pawn> contents;
@@ -64,7 +64,7 @@ namespace PMP_Persona.RecomposerSupport
                     foreach (var entry in Subjects)
                     {
                         if (entry.gearTransferred) continue;
-                        entry.gearTransferred = true; // Rollback also covers a partial third-party equipment transfer.
+                        entry.gearTransferred = true; // Mark partial transfers for rollback.
                         RecomposerPawnUtility.TransferPortableThings(entry.original, entry.replacement, Map, entry.cell);
                         RecomposerVisual.ForgetBody(this, entry.replacement);
                     }
@@ -83,7 +83,7 @@ namespace PMP_Persona.RecomposerSupport
         private void LockTargets()
         {
             locked = true;
-            RecomposerVisual.Release(this); // Sample the exact facing/apparel at lock, not an earlier scan pose.
+            RecomposerVisual.Release(this); // Capture facing and apparel at lock time.
             foreach (var pawn in RecomposerPawnUtility.Targets(Map, Position))
             {
                 var entry = new RecomposerSubject { original = pawn, cell = pawn.Position, facing = pawn.Rotation, posture = pawn.GetPosture() };
@@ -115,7 +115,7 @@ namespace PMP_Persona.RecomposerSupport
         public override void PreApplyDamage(ref DamageInfo dinfo, out bool absorbed) { absorbed = true; }
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
-            // Cancellation/debug deletion rolls back uncommitted targets instead of silently erasing them.
+            // Roll back uncommitted targets on cancellation or deletion.
             if (contents.Count > 0 && Map == null) return;
             foreach (var entry in Subjects)
             {

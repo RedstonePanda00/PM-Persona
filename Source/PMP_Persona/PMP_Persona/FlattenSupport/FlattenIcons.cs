@@ -6,7 +6,7 @@ using Verse;
 
 namespace PMP_Persona.FlattenSupport
 {
-    // Inventory/transport lists must not inherit the transparent occupancy texture.
+    // Visible inventory and transport icons for flattened pawns.
     [HarmonyPatch(typeof(Widgets), nameof(Widgets.ThingIcon), new Type[] {
         typeof(Rect),typeof(Thing),typeof(float),typeof(Rot4?),typeof(bool),typeof(float),typeof(bool) })]
     internal static class FlattenItemIcon

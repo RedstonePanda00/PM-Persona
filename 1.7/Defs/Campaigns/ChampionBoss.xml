@@ -1,0 +1,28 @@
+<Defs>
+  <ThingDef>
+    <defName>PMP_ChampionThrownThing</defName>
+    <label>thrown object</label>
+    <thingClass>PMP.Campaign.BossPlugins.ChampionThrownThing</thingClass>
+    <category>Ethereal</category><tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType><altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>false</useHitPoints><destroyable>true</destroyable><selectable>true</selectable>
+  </ThingDef>
+  <RimCampaign.Runtime.BossTemplateDef>
+    <defName>PMP_RegularChampionBoss</defName><label>regular champion warrior</label>
+    <templateJson><![CDATA[{
+      "Id":"persona.regularChampion","Name":"Champion Warrior","MaxHealth":77777,
+      "InitiallyActive":true,"RegenerationPerSecond":77,"ReviveAfterSeconds":0,"DamageMultiplier":1,
+      "PawnKind":{"Kind":"PawnKindDef","Name":"PMP_SanctuaryChampion","Package":"redstone.pmpersona"},
+      "Components":[
+        {"Id":"adaptation","Module":"boss.adaptation","Enabled":true,"Parameters":{"threshold":"100","ceiling":"500"},"DamageExceptions":[
+          {"Kind":"DamageDef","Name":"PMP_OrbitalImpact"},{"Kind":"DamageDef","Name":"PMP_BombDirectHit"},{"Kind":"DamageDef","Name":"PMP_PurificationBeamDamage"}]},
+        {"Id":"retaliation","Module":"persona.champion.retaliation","Enabled":true},
+        {"Id":"skills","Module":"persona.champion.skills","Enabled":true,"Parameters":{"grabRange":"6","throwRange":"30","cooldownTicks":"600","speed":"18","impactRadius":"1.9","autoUse":"1"}}
+      ],
+      "Phases":[{"Id":"combat","Name":"Combat","HealthFraction":1,"Behaviors":[
+        {"Id":"approach","Module":"boss.approach","Range":1.5,"CooldownTicks":30},
+        {"Id":"weapon","Module":"boss.weapon","Range":30,"CooldownTicks":30}
+      ]}]
+    }]]></templateJson>
+  </RimCampaign.Runtime.BossTemplateDef>
+</Defs>

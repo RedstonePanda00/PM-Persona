@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <GunSmithFramework.GunSmithPlatformDef>
+    <defName>PMP_GunSmith_IncinerationCannon</defName><label>Z-390 incineration cannon</label>
+    <description>A heavy hardlight weapon with a reinforced energy chamber and a clustered emitter assembly. Its projectile ruptures on impact, engulfing the target in heat and scattering unstable fragments that erupt across the surrounding ground. It was built to scour entrenched positions and dense concentrations of enemy troops.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <weaponThingDef>PMP_IncinerationCannon</weaponThingDef><weaponCategory>Launcher</weaponCategory>
+    <bodyTexPath>Things/Weapon/IncinerationCannon/IncinerationCannon</bodyTexPath>
+    <bakeTextureSize>512</bakeTextureSize><bakePadding>0.05</bakePadding><shadowDilatePixels>3</shadowDilatePixels><shadowAlpha>1</shadowAlpha>
+    <slotAttachmentOffsets>
+      <li><slotId>UnderBarrel</slotId><offset>(-0.1823,0.145)</offset><gizmoOffset>(-0.18,0.30)</gizmoOffset></li>
+      <li><slotId>UnderBarrelMount</slotId><offset>(0,0)</offset></li>
+    </slotAttachmentOffsets>
+    <slots>
+      <li><slotId>UnderBarrel</slotId><slotType>UnderBarrel</slotType><optional>true</optional></li>
+      <li><slotId>UnderBarrelMount</slotId><slotType>PMP_HardlightMountVisual</slotType><optional>true</optional></li>
+    </slots>
+    <defaultParts>
+      <li><slotId>UnderBarrelMount</slotId><part>PMP_HardlightRifle_UnderbarrelMount</part><whenSlotOccupied>UnderBarrel</whenSlotOccupied></li>
+    </defaultParts>
+    <modExtensions><li Class="ProtossMech.GunSmith.GunSmithContentExtension"><costList><li><thingDef>PM_Solarite</thingDef><count>150</count></li></costList></li></modExtensions>
+  </GunSmithFramework.GunSmithPlatformDef>
+</Defs>

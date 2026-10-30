@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/GunSmithFramework.GunSmithPartDef[defName="PM_Common_MarksmanOptic"]/compatiblePlatforms</xpath>
+        <value>
+          <li>PMP_GunSmith_HardlightRifle</li>
+          <li>PMP_GunSmith_Boltshot</li>
+          <li>PMP_GunSmith_BinaryRifle</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/GunSmithFramework.GunSmithPartDef[defName="PM_Common_UB_FrontGrip01"]/compatiblePlatforms</xpath>
+        <value>
+          <li>PMP_GunSmith_HardlightRifle</li>
+          <li>PMP_GunSmith_IncinerationCannon</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/GunSmithFramework.GunSmithPartDef[defName="PM_Common_UB_JetGrip"]/compatiblePlatforms</xpath>
+        <value>
+          <li>PMP_GunSmith_HardlightRifle</li>
+          <li>PMP_GunSmith_IncinerationCannon</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/GunSmithFramework.GunSmithPartDef[defName="PM_Common_UB_Launcher_HE"]/compatiblePlatforms</xpath>
+        <value>
+          <li>PMP_GunSmith_HardlightRifle</li>
+          <li>PMP_GunSmith_IncinerationCannon</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/GunSmithFramework.GunSmithPartDef[defName="PM_Common_UB_Launcher_Shotgun"]/compatiblePlatforms</xpath>
+        <value>
+          <li>PMP_GunSmith_HardlightRifle</li>
+          <li>PMP_GunSmith_IncinerationCannon</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/GunSmithFramework.GunSmithPartDef[defName="PM_Common_UB_Launcher_LaserCannon"]/compatiblePlatforms</xpath>
+        <value>
+          <li>PMP_GunSmith_HardlightRifle</li>
+          <li>PMP_GunSmith_IncinerationCannon</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/GunSmithFramework.GunSmithPartDef[defName="PM_Common_ViperSight"]/compatiblePlatforms</xpath>
+        <value>
+          <li>PMP_GunSmith_HardlightRifle</li>
+          <li>PMP_GunSmith_Boltshot</li>
+          <li>PMP_GunSmith_Suppressor</li>
+          <li>PMP_GunSmith_Scattershot</li>
+          <li>PMP_GunSmith_BinaryRifle</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

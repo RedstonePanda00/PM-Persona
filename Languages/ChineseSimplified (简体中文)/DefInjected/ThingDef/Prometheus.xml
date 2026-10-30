@@ -5,8 +5,8 @@
   <PMP_Prometheus.tools.0.label>相位冲击</PMP_Prometheus.tools.0.label>
   <PMP_Fireseed.label>火种</PMP_Fireseed.label>
   <PMP_Fireseed.description>一枚保存着盗火者意识与机体蓝图的火种，能够在锻炉中重新点燃。</PMP_Fireseed.description>
-  <PMP_HardlightRifle.label>硬光步枪</PMP_HardlightRifle.label>
-  <PMP_HardlightRifle.description>将金色光芒凝聚成弹束的轻型步枪。</PMP_HardlightRifle.description>
+  <PMP_HardlightRifle.label>Z-250 硬光步枪</PMP_HardlightRifle.label>
+  <PMP_HardlightRifle.description>发射光束灼烧目标的制式步枪，它的高能X射线能够烧穿轻型装甲，并对复杂的机械设备造成严重损害。\n\n这把武器是在曙光号上的分子打印机内，由能量直接转化为物质整枪打印的。</PMP_HardlightRifle.description>
   <PMP_HardlightRifle.tools.0.label>枪托</PMP_HardlightRifle.tools.0.label>
   <PMP_HardlightBolt.label>硬光弹束</PMP_HardlightBolt.label>
 </LanguageData>

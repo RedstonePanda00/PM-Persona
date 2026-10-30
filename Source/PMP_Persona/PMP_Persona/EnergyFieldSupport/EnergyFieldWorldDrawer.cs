@@ -7,6 +7,7 @@ using Verse;
 
 namespace PMP_Persona.EnergyFieldSupport
 {
+    [StaticConstructorOnStartup]
     public static class EnergyFieldWorldDrawer
     {
         // Owned by PMC: reuse its native shader/material definition, never duplicate GLSL here.

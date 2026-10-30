@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP.LegionRitual.Offerings>Offerings consumed at completion: {0}</PMP.LegionRitual.Offerings>
+  <PMP.LegionRitual.MissingOfferings>The required offerings are missing or unreachable. No legion mech was summoned.</PMP.LegionRitual.MissingOfferings>
+  <PMP.LegionRitual.ArrivedLabel>Legion challenge</PMP.LegionRitual.ArrivedLabel>
+  <PMP.LegionRitual.Arrived>A hostile {0} has answered the ritual. Defeat it to gain its allegiance.</PMP.LegionRitual.Arrived>
+  <PMP.LegionRitual.Progress>Defeats remaining: {0}\nDamage this round: {1} / {2}</PMP.LegionRitual.Progress>
+  <PMP.LegionRitual.Round>{0} has recovered completely. Remaining defeats: {1}.</PMP.LegionRitual.Round>
+  <PMP.LegionRitual.ControlTitle>Who will control {0}?</PMP.LegionRitual.ControlTitle>
+  <PMP.LegionRitual.ControlText>{0} has completed the legion trial and joined your colony. Choose a mechanitor, or let it operate autonomously. It can only perform hauling work.</PMP.LegionRitual.ControlText>
+  <PMP.LegionRitual.Autonomous>Operate autonomously</PMP.LegionRitual.Autonomous>
+</LanguageData>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ResearchTabDef>
+    <defName>PMP_RomulusResearch</defName>
+    <label>Romulus legion</label>
+  </ResearchTabDef>
+</Defs>

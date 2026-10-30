@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_Warhound_MechanicalThorax.label>躯干</PMP_Warhound_MechanicalThorax.label>
+  <PMP_Warhound_MechanicalNeck.label>颈部</PMP_Warhound_MechanicalNeck.label>
+  <PMP_Warhound_MechanicalHead.label>头部</PMP_Warhound_MechanicalHead.label>
+  <PMP_Warhound_ArtificialBrain.label>人工脑</PMP_Warhound_ArtificialBrain.label>
+  <PMP_Warhound_Reactor.label>反应堆</PMP_Warhound_Reactor.label>
+  <PMP_Warhound_SightSensor.label>视觉传感器</PMP_Warhound_SightSensor.label>
+  <PMP_Warhound_HearingSensor.label>听觉传感器</PMP_Warhound_HearingSensor.label>
+  <PMP_Warhound_MechanicalLeg.label>腿</PMP_Warhound_MechanicalLeg.label>
+  <PMP_LegionGuard_MechanicalThorax.label>躯干</PMP_LegionGuard_MechanicalThorax.label>
+  <PMP_LegionGuard_MechanicalNeck.label>颈部</PMP_LegionGuard_MechanicalNeck.label>
+  <PMP_LegionGuard_MechanicalHead.label>头部</PMP_LegionGuard_MechanicalHead.label>
+  <PMP_LegionGuard_ArtificialBrain.label>人工脑</PMP_LegionGuard_ArtificialBrain.label>
+  <PMP_LegionGuard_Reactor.label>反应堆</PMP_LegionGuard_Reactor.label>
+  <PMP_LegionGuard_SightSensor.label>视觉传感器</PMP_LegionGuard_SightSensor.label>
+  <PMP_LegionGuard_HearingSensor.label>听觉传感器</PMP_LegionGuard_HearingSensor.label>
+  <PMP_LegionGuard_MechanicalLeg.label>腿</PMP_LegionGuard_MechanicalLeg.label>
+  <PMP_LegionGuard_MechanicalArm.label>手臂</PMP_LegionGuard_MechanicalArm.label>
+  <PMP_LegionChosen_MechanicalThorax.label>躯干</PMP_LegionChosen_MechanicalThorax.label>
+  <PMP_LegionChosen_MechanicalNeck.label>颈部</PMP_LegionChosen_MechanicalNeck.label>
+  <PMP_LegionChosen_MechanicalHead.label>头部</PMP_LegionChosen_MechanicalHead.label>
+  <PMP_LegionChosen_ArtificialBrain.label>人工脑</PMP_LegionChosen_ArtificialBrain.label>
+  <PMP_LegionChosen_Reactor.label>反应堆</PMP_LegionChosen_Reactor.label>
+  <PMP_LegionChosen_SightSensor.label>视觉传感器</PMP_LegionChosen_SightSensor.label>
+  <PMP_LegionChosen_HearingSensor.label>听觉传感器</PMP_LegionChosen_HearingSensor.label>
+  <PMP_LegionChosen_MechanicalLeg.label>腿</PMP_LegionChosen_MechanicalLeg.label>
+  <PMP_LegionChosen_MechanicalArm.label>手臂</PMP_LegionChosen_MechanicalArm.label>
+</LanguageData>

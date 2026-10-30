@@ -38,7 +38,7 @@ namespace PMP_Persona.FlattenSupport
         {
             if (sheet.Ready || !sheet.Spawned || Captures.ContainsKey(sheet)) return;
             if (frame != Time.frameCount) { frame = Time.frameCount; capturesThisFrame = 0; }
-            // Large crowds still get procedural sheets immediately; silhouette capture is amortized.
+            // Show procedural sheets while silhouette captures are queued.
             if (capturesThisFrame >= 8 || Captures.Count >= 256) return;
             capturesThisFrame++;
             Captures.Add(sheet, CaptureTree(sheet));

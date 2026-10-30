@@ -30,15 +30,14 @@ float noise3(vec3 p) {
 float turbulence(vec3 p) { return .67*noise3(p) + .33*noise3(p*2.03+vec3(13.2,5.9,8.1)); }
 vec3 rotateY(vec3 p, float a) { float s=sin(a),c=cos(a); return vec3(c*p.x+s*p.z,p.y,-s*p.x+c*p.z); }
 
-// One slow, rigid, tilted stellar frame: no latitude-dependent angular shear.
+// Rigid rotation in a tilted stellar frame.
 vec3 stellarFrame(vec3 p, float t) {
     vec3 axis=normalize(vec3(.82,.28,.50));
     float a=t*.006, s=sin(a), c=cos(a);
     return p*c+cross(axis,p)*s+axis*dot(axis,p)*(1.0-c);
 }
 
-// Cells form and dissipate in place. Smooth temporal interpolation is continuous
-// across generations; spatial phase offsets keep neighbouring regions asynchronous.
+// Interpolate cell generations with asynchronous spatial phases.
 float evolvingCells(vec3 p, float age) {
     float generation=floor(age), blend=fract(age);
     blend=blend*blend*(3.0-2.0*blend);
@@ -48,7 +47,7 @@ float evolvingCells(vec3 p, float age) {
 }
 
 // Planck B_lambda = 2hc^2/[lambda^5 (exp(hc/lambda kT)-1)].
-// Three visible wavelength samples, white-normalized at 6500 K; a real-time RGB approximation, not a full spectrum.
+// Approximate RGB from three visible wavelengths, white-normalized at 6500 K.
 vec3 thermal(float kelvin) {
     vec3 lambda = vec3(650e-9,550e-9,450e-9);
     vec3 x = vec3(0.01438776877) / (lambda * max(kelvin, 800.0));
@@ -71,14 +70,14 @@ vec3 photosphere(vec3 point, vec3 ray) {
     vec3 flow=vec3(evolvingCells(p*4.0+vec3(0,0,7),age*.61),
                    evolvingCells(p*4.0+vec3(3,0,0),age*.73),
                    evolvingCells(p*4.0+vec3(0,11,0),age*.67))-.5;
-    // Bounded local tangential displacement, never accumulated into a global swirl.
+    // Bounded local tangential displacement.
     flow-=p*dot(flow,p);
     vec3 cellPosition=normalize(p+flow*.045)*19.0+vec3(u._Clock.y);
     float cells=.67*evolvingCells(cellPosition,age)
                +.33*evolvingCells(cellPosition*2.03+vec3(13.2,5.9,8.1),age*1.31);
     float granules=smoothstep(.18,.83,cells);
     float broad=evolvingCells(p*4.0+vec3(u._Clock.y,0,3),age*.43);
-    // Convective temperature variations are procedural, not a hydrodynamic solution.
+    // Procedural convective temperature variation.
     float breakout=pow(u._Phases.x,4.0)*exp(-u._Phases.y*18.0)*(1.0-u._Phases.w);
     float hot=smoothstep(.64,.83,broad)*smoothstep(.55,.8,granules);
     float temperature=2600.0+2000.0*granules+1800.0*hot+breakout*6500.0;
@@ -124,8 +123,7 @@ void sampleMedium(vec3 p,out float extinction,out vec3 emission) {
     // At coronal T ~ 1e6 K the visible continuum is nearly flat; exposure is normalized for display.
     vec3 photonTemperature=vec3(22135.0,26160.0,31973.0); // h nu/k at 650, 550, 450 nm.
     emission+=exp(-photonTemperature/1e6)*corona*corona/max(star,.005)*.07;
-    // Cooler dense prominences in magnetic loops, visually boosted H-alpha emission.
-    // This line enhancement is art direction, not the broadband colour of million-K gas.
+    // Apply an illustrative H-alpha boost to dense magnetic-loop prominences.
     vec3 prominence=mix(vec3(1.0,.13,.025),thermal(10000.0),.18+.22*loops);
     emission+=prominence*loops/max(star,.005)*5.0;
     // Radial wind density ~ r^-2 with moving packets; angular activity traces the same 3D surface.
@@ -161,8 +159,7 @@ void sampleMedium(vec3 p,out float extinction,out vec3 emission) {
     float shockTemperature=1.4e7*pow(1.0+age*20.0,-1.2); // T_sh ~ v_sh^2, v_sh ~ t^-3/5.
     extinction+=shocked*.18;
     emission+=exp(-photonTemperature/shockTemperature)*shocked*shocked*sqrt(1.4e7/shockTemperature)*.012;
-    // Illustrative radiatively cooling post-shock zone. Cooling length is display-scaled;
-    // H-alpha and [O III] bands are enhanced to reveal filaments (not a full ionization solver).
+    // Illustrative post-shock cooling zone with display-scaled H-alpha and [O III] bands.
     float coolingDepth=max(0.0,wrinkled-r)/max(width,1e-4);
     float coolingTemperature=max(4500.0,shockTemperature*exp(-coolingDepth*2.6));
     float ions=exp(-pow(log(coolingTemperature/12000.0)/.75,2.0));
@@ -176,7 +173,7 @@ void sampleMedium(vec3 p,out float extinction,out vec3 emission) {
 
 void main() {
     vec3 rd = u._CameraLocal.w>.5 ? normalize(u._RayDirection.xyz) : normalize(localPosition-u._CameraLocal.xyz);
-    // Rasterize only exit faces: entry faces can lie behind the near plane when zoomed inside the volume.
+    // Rasterize volume exit faces for near-plane coverage.
     if(dot(faceNormal,rd)<=0.0) discard;
     vec3 ro = u._CameraLocal.w>.5 ? localPosition-rd*4.0 : u._CameraLocal.xyz;
     float activeRadius=u._Clock.z>.001 ? max(u._Evolution.x*1.08,u._Geometry.x*1.8) : u._Geometry.x*1.8;
@@ -195,10 +192,10 @@ void main() {
     vec3 radiance=vec3(0.0);float transmittance=1.0;
     for(int step=0;step<64;step++) {
         if(step>=count || transmittance<.008) break;
-        // Stable subpixel quadrature removes coherent rings from thin-shell undersampling.
+        // Subpixel quadrature for thin-shell sampling.
         float jitter=.25+.5*hash3(vec3(gl_FragCoord.xy,float(step)));
         float sampleT=nearT+(float(step)+jitter)*ds;
-        // Resolve the small star's atmosphere even inside a 60-cell explosion volume.
+        // Increase sampling density in the stellar atmosphere.
         if(resolveCorona) {
             int region=step<16?0:step<48?1:2;
             int index=region==0?step:region==1?step-16:step-48;
@@ -217,8 +214,7 @@ void main() {
     }
     if(hitStar) { radiance+=transmittance*photosphere(ro+rd*surface.x,rd); transmittance=0.0; }
     float opacity=1.0-transmittance;
-    // Emissive thin gas remains visible without an opaque colored disk.
-    // Compress intensity once, preserving spectral ratios instead of bleaching each channel.
+    // Compress emissive intensity while preserving spectral ratios.
     float peak=max(max(radiance.r,radiance.g),radiance.b);
     vec3 mapped=radiance/max(peak,1e-5)*(1.0-exp(-peak*u._Exposure));
     opacity=max(opacity,max(max(mapped.r,mapped.g),mapped.b)*.75);

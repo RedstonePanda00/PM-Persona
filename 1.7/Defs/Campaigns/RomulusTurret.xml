@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <!-- Native turret targeting/rotation. Autonomous core: deliberately no power or fuel component. -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>PMP_RomulusSpearTurret</defName>
+    <label>spear-array ballista</label>
+    <description>A kinetic turret that fires spears made from archotech material and can call down lightning strikes.</description>
+    <thingClass>Building_TurretGun</thingClass><drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData><texPath>Things/Building/Romulus/SpearTurret_Base</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(3.7,3.7)</drawSize></graphicData>
+    <uiIconPath>Things/Building/Romulus/SpearTurret_Top</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer><rotatable>false</rotatable><size>(3,3)</size><tickerType>Normal</tickerType>
+    <drawHighlight>true</drawHighlight><drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+    <passability>Impassable</passability><fillPercent>0.7</fillPercent>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded><stealable>false</stealable>
+    <statBases><MaxHitPoints>3773</MaxHitPoints><Flammability>0</Flammability><Mass>420</Mass><Beauty>4</Beauty><ShootingAccuracyTurret>0.94</ShootingAccuracyTurret></statBases>
+    <comps><li Class="CompProperties_Forbiddable"/><li Class="CompProperties_Stunnable"><affectedDamageDefs><li>Stun</li><li>EMP</li></affectedDamageDefs></li></comps>
+    <building><combatPower>180</combatPower><ai_combatDangerous>true</ai_combatDangerous><turretGunDef>PMP_RomulusSpearEmitter</turretGunDef><turretTopDrawSize>4.2</turretTopDrawSize><turretBurstWarmupTime>2.8</turretBurstWarmupTime><turretBurstCooldownTime>7</turretBurstCooldownTime><claimable>false</claimable><deconstructible>false</deconstructible><repairable>false</repairable><neverBuildable>true</neverBuildable></building>
+    <placeWorkers><li>PlaceWorker_TurretTop</li><li>PlaceWorker_ShowTurretRadius</li></placeWorkers>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>PMP_RomulusSpearEmitter</defName><label>spearwatch emitter</label><description>The turret's independently rotating emitter.</description>
+    <graphicData><texPath>Things/Building/Romulus/SpearTurret_Top</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><AccuracyTouch>0.72</AccuracyTouch><AccuracyShort>0.82</AccuracyShort><AccuracyMedium>0.72</AccuracyMedium><AccuracyLong>0.55</AccuracyLong><RangedWeapon_Cooldown>7</RangedWeapon_Cooldown><Mass>120</Mass><Flammability>0</Flammability><DeteriorationRate>0</DeteriorationRate></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>PMP_RomulusSpearBolt</defaultProjectile><warmupTime>0</warmupTime><range>34</range><burstShotCount>1</burstShotCount><soundCast>ChargeLance_Fire</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>2</muzzleFlashScale></li></verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_RomulusSpearBolt</defName><label>lightning spear</label><thingClass>PMP.Campaign.Projectile_RomulusSpear</thingClass>
+    <graphicData><texPath>Things/Projectile/Bullet_Small</texPath><graphicClass>Graphic_Single</graphicClass><color>(1,0.27,0.13)</color><drawSize>(0.6,2.4)</drawSize></graphicData>
+    <projectile><damageDef>Bullet</damageDef><damageAmountBase>80</damageAmountBase><armorPenetrationBase>1.2</armorPenetrationBase><speed>48</speed></projectile>
+  </ThingDef>
+</Defs>

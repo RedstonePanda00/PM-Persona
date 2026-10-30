@@ -1,0 +1,14 @@
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/StatDef[defName="MoveSpeed"]/parts</xpath>
+    <value><li Class="PMP_Persona.TacticalSprint.StatPart_TacticalSprint" /></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="PMP_CampaignMason" or defName="PMPH_GestaltZero"]/modExtensions</xpath>
+    <value><li Class="PMP_Persona.TacticalSprint.TacticalSprintExtension"><settings><speedMultiplier>1.4</speedMultiplier><diveChance>0.05</diveChance></settings></li></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="PMPH_GestaltZero"]/modExtensions</xpath>
+    <value><li Class="RimCampaign.Runtime.PawnAppearanceExtension"><body>Male</body><head>Male_AverageNormal</head><hair>Snazzy</hair><beard>Boxed</beard><skin>Skin_Melanin1</skin><hairColor>Hair_InkBlack</hairColor><faceTattoo>NoTattoo_Face</faceTattoo><bodyTattoo>NoTattoo_Body</bodyTattoo></li></value>
+  </Operation>
+</Patch>

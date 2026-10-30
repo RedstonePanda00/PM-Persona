@@ -5,19 +5,20 @@
     <label>command honor</label>
     <description>The colony's shared opinion of its commander.</description>
     <hediffClass>PMP_Persona.Storyteller.Hediff_CommandHonor</hediffClass>
+    <comps><li Class="PMP_Persona.Storyteller.HediffCompProperties_HonorResponse" /></comps>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
     <stages>
       <li><label>dishonored</label><minSeverity>0</minSeverity><statOffsets><MentalBreakThreshold>0.06</MentalBreakThreshold></statOffsets></li>
       <li>
         <label>honored</label><minSeverity>0.5</minSeverity>
-        <statOffsets><MentalBreakThreshold>-0.06</MentalBreakThreshold></statOffsets>
-        <capMods><li><capacity>Sight</capacity><offset>0.03</offset></li><li><capacity>Manipulation</capacity><offset>0.03</offset></li><li><capacity>Moving</capacity><offset>0.03</offset></li></capMods>
+        <statOffsets><MentalBreakThreshold>-0.06</MentalBreakThreshold><ShootingAccuracyPawn>0.03</ShootingAccuracyPawn></statOffsets>
+        <statFactors><AimingDelayFactor>0.97</AimingDelayFactor><MoveSpeed>1.03</MoveSpeed></statFactors>
       </li>
       <li>
         <label>exalted</label><minSeverity>1</minSeverity>
-        <statOffsets><MentalBreakThreshold>-0.10</MentalBreakThreshold></statOffsets>
-        <capMods><li><capacity>Sight</capacity><offset>0.03</offset></li><li><capacity>Manipulation</capacity><offset>0.03</offset></li><li><capacity>Moving</capacity><offset>0.03</offset></li></capMods>
+        <statOffsets><MentalBreakThreshold>-0.10</MentalBreakThreshold><ShootingAccuracyPawn>0.03</ShootingAccuracyPawn></statOffsets>
+        <statFactors><AimingDelayFactor>0.97</AimingDelayFactor><MoveSpeed>1.03</MoveSpeed></statFactors>
       </li>
     </stages>
   </HediffDef>
@@ -43,18 +44,9 @@
     <category>Misc</category><maxTicksBeforeRecovery>2147483647</maxTicksBeforeRecovery><minTicksBeforeRecovery>2147483647</minTicksBeforeRecovery>
     <blockNormalThoughts>false</blockNormalThoughts>
   </MentalStateDef>
-  <ThinkTreeDef>
-    <defName>PMP_HonorExtinguishSelf</defName><insertTag>PMP_HonorBurningResponse</insertTag><insertPriority>100</insertPriority>
-    <thinkRoot Class="PMP_Persona.Storyteller.JobGiver_HonorableExtinguishSelf" />
-  </ThinkTreeDef>
-  <ThinkTreeDef>
-    <defName>PMP_CommandRefusalBehavior</defName><insertTag>Humanlike_PostMentalState</insertTag><insertPriority>100</insertPriority>
-    <thinkRoot Class="ThinkNode_ConditionalMentalState">
-      <state>PMP_CommandRefusal</state>
-      <subNodes>
-        <li Class="ThinkNode_Subtree"><treeDef>SatisfyBasicNeeds</treeDef></li>
-        <li Class="JobGiver_WanderColony"><wanderRadius>7</wanderRadius><ticksBetweenWandersRange>120~240</ticksBetweenWandersRange></li>
-      </subNodes>
-    </thinkRoot>
-  </ThinkTreeDef>
+  <HediffDef>
+    <defName>PMP_CommandRefusalTimer</defName><label>refusing draft</label>
+    <description>Temporarily unwilling to be drafted under this command. Ordinary work continues.</description>
+    <hediffClass>PMP_Persona.Storyteller.Hediff_CommandRefusal</hediffClass><isBad>true</isBad>
+  </HediffDef>
 </Defs>

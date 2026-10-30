@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <!-- Shared Romulus champion physiology. -->
+  <HediffDef><defName>PMP_ChampionPhysiology</defName><label>Champion physiology</label><description>Unaffected by psychic powers or injury stagger.</description><hediffClass>Hediff</hediffClass><isBad>false</isBad><stages><li><statFactors><PsychicSensitivity>0</PsychicSensitivity><StaggerDurationFactor>0</StaggerDurationFactor><MoveSpeed>1.2</MoveSpeed></statFactors></li></stages></HediffDef>
+</Defs>

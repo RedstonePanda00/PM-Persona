@@ -1,0 +1,27 @@
+<Defs>
+ <PawnKindDef Name="PMP_M3KnightBase" Abstract="True">
+  <race>Human</race><defaultFactionDef>Empire</defaultFactionDef><isFighter>true</isFighter><requiredWorkTags>Violent</requiredWorkTags>
+  <minGenerationAge>24</minGenerationAge><maxGenerationAge>48</maxGenerationAge><combatPower>240</combatPower><initialResistanceRange>10~20</initialResistanceRange><initialWillRange>1~3</initialWillRange>
+  <apparelMoney>0</apparelMoney><weaponMoney>10000</weaponMoney><apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+  <apparelRequired><li>Apparel_Pants</li><li>Apparel_CollarShirt</li><li>Apparel_ArmorCataphract</li><li>Apparel_ArmorHelmetCataphract</li></apparelRequired>
+  <minApparelQuality>Good</minApparelQuality><maxApparelQuality>Legendary</maxApparelQuality><gearHealthRange>1</gearHealthRange>
+  <invNutrition>0</invNutrition><fixedInventory><GoJuice>3</GoJuice></fixedInventory>
+  <modExtensions><li Class="RimCampaign.Runtime.CombatSupplyLoadout">
+   <drug>GoJuice</drug><drugEffect>GoJuiceHigh</drugEffect>
+   <packs><li>Apparel_FirefoampopPack</li><li>Apparel_PackBroadshield</li></packs>
+  </li></modExtensions>
+  <skills><li><skill>Shooting</skill><range>12~16</range></li><li><skill>Melee</skill><range>8~12</range></li></skills>
+ </PawnKindDef>
+ <PawnKindDef ParentName="PMP_M3KnightBase"><defName>PMP_M3Knight_Minigun_Good</defName><label>Imperial knight (Minigun)</label><itemQuality>Good</itemQuality><weaponTags><li>PMP_M3_Minigun</li></weaponTags></PawnKindDef>
+ <PawnKindDef ParentName="PMP_M3KnightBase"><defName>PMP_M3Knight_Minigun_Excellent</defName><label>Imperial knight (Minigun)</label><itemQuality>Excellent</itemQuality><weaponTags><li>PMP_M3_Minigun</li></weaponTags></PawnKindDef>
+ <PawnKindDef ParentName="PMP_M3KnightBase"><defName>PMP_M3Knight_Minigun_Masterwork</defName><label>Imperial knight (Minigun)</label><itemQuality>Masterwork</itemQuality><weaponTags><li>PMP_M3_Minigun</li></weaponTags></PawnKindDef>
+ <PawnKindDef ParentName="PMP_M3KnightBase"><defName>PMP_M3Knight_ChargeRifle_Good</defName><label>Imperial knight (ChargeRifle)</label><itemQuality>Good</itemQuality><weaponTags><li>PMP_M3_ChargeRifle</li></weaponTags></PawnKindDef>
+ <PawnKindDef ParentName="PMP_M3KnightBase"><defName>PMP_M3Knight_ChargeRifle_Excellent</defName><label>Imperial knight (ChargeRifle)</label><itemQuality>Excellent</itemQuality><weaponTags><li>PMP_M3_ChargeRifle</li></weaponTags></PawnKindDef>
+ <PawnKindDef ParentName="PMP_M3KnightBase"><defName>PMP_M3Knight_ChargeRifle_Masterwork</defName><label>Imperial knight (ChargeRifle)</label><itemQuality>Masterwork</itemQuality><weaponTags><li>PMP_M3_ChargeRifle</li></weaponTags></PawnKindDef>
+ <PawnKindDef ParentName="PMP_M3KnightBase"><defName>PMP_M3Knight_ChargeLance_Good</defName><label>Imperial knight (ChargeLance)</label><itemQuality>Good</itemQuality><weaponTags><li>PMP_M3_ChargeLance</li></weaponTags></PawnKindDef>
+ <PawnKindDef ParentName="PMP_M3KnightBase"><defName>PMP_M3Knight_ChargeLance_Excellent</defName><label>Imperial knight (ChargeLance)</label><itemQuality>Excellent</itemQuality><weaponTags><li>PMP_M3_ChargeLance</li></weaponTags></PawnKindDef>
+ <PawnKindDef ParentName="PMP_M3KnightBase"><defName>PMP_M3Knight_ChargeLance_Masterwork</defName><label>Imperial knight (ChargeLance)</label><itemQuality>Masterwork</itemQuality><weaponTags><li>PMP_M3_ChargeLance</li></weaponTags></PawnKindDef>
+ <PawnKindDef ParentName="PMP_BelieverBase"><defName>PMP_M3Believer</defName><label>Legion believer</label></PawnKindDef>
+ <PawnKindDef ParentName="PMP_OutpostGuardBase"><defName>PMP_SanctuaryChampion</defName><label>Champion Warrior</label><fixedGender>Male</fixedGender><defaultFactionDef>PMP_RomulusLegion</defaultFactionDef><combatPower>1200</combatPower><weaponMoney>10000</weaponMoney><weaponTags><li>PMP_M3_LongSword</li></weaponTags><apparelAllowHeadgearChance>1</apparelAllowHeadgearChance><apparelRequired Inherit="false"><li>PMP_ChampionArmor</li><li>PMP_ChampionHelmet</li></apparelRequired><forcedTraits><Tough>0</Tough></forcedTraits><startingHediffs><li><def>PMP_ChampionPhysiology</def></li></startingHediffs><modExtensions><li Class="PMP_Persona.Romulus.ChampionIdentityExtension" /><li Class="PMP_Persona.Romulus.LegionSalvageExtension"><armorFragments>8</armorFragments></li></modExtensions></PawnKindDef>
+ <PawnKindDef ParentName="PMP_M3KnightBase"><defName>PMP_M3Engineer</defName><label>Imperial combat engineer</label><requiredWorkTags>Violent,ManualDumb,ManualSkilled,Constructing,Hauling,Firefighting</requiredWorkTags><itemQuality>Excellent</itemQuality><weaponTags><li>PMP_M3_ChargeRifle</li></weaponTags><skills><li><skill>Construction</skill><range>12~16</range></li></skills></PawnKindDef>
+</Defs>

@@ -43,7 +43,7 @@ namespace PMP_Persona.Prometheus
                             if (!(t is Pawn))
                             {
                                 if (t.def.destroyable) t.Destroy();
-                                else t.DeSpawn(); // Quicktest may place a non-destroyable geyser here.
+                                else t.DeSpawn(); // Despawn indestructible fixture obstacles.
                             }
                         map.terrainGrid.SetTerrain(c, TerrainDefOf.Soil);
                         map.fogGrid.Unfog(c);
@@ -182,8 +182,7 @@ namespace PMP_Persona.Prometheus
         {
             Check(human.GetInspectTabs().Any(t => t is ITab_Pawn_Character), "Human character tab was removed");
             Check(new SkillRequirement { skill = SkillDefOf.Crafting, minLevel = 19 }.PawnSatisfies(human), "Human skill gate regressed");
-            // Quicktest backstories may disable research. Choose an actually trainable
-            // human skill so the fixture does not mistake native incapability for a regression.
+            // Select a trainable human skill for the learning fixture.
             var record = human.skills.skills.First(s => !s.TotallyDisabled && s.Level < 19);
             // XpTotalEarned counts completed levels only in 1.7.
             float before = record.XpTotalEarned + record.xpSinceLastLevel;

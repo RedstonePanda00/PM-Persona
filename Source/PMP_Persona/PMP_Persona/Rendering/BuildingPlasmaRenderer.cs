@@ -16,6 +16,7 @@ namespace PMP_Persona.Rendering
 {
     // Connected affected walls share one alpha union, one flowing surface and one wake.
     // Static map printing preserves linked atlases/corners; native capture preserves moving parts.
+    [StaticConstructorOnStartup]
     internal static class BuildingPlasmaRenderer
     {
         private static readonly System.Reflection.FieldInfo Immediate = AccessTools.Field(typeof(Graphics), "ImmediateCapture");
@@ -90,7 +91,7 @@ namespace PMP_Persona.Rendering
             if (fields.Count == 0 && Surfaces.Count == 0) return;
             float dt = Find.TickManager.Paused ? 0f : Mathf.Clamp(Time.deltaTime, 0f, .1f);
             var groups = Group(current.listerThings.AllThings.Where(t => Eligible(t, fields)));
-            // Release obsolete topology immediately: never draw old wall unions over a destroyed gap.
+            // Release obsolete wall topology before drawing.
             var keys = new HashSet<int>(groups.Select(g => g[0].thingIDNumber));
             foreach (int key in Surfaces.Keys.ToArray())
                 if (Surfaces[key].Members.Any(t => !t.Spawned || t.Map != current) ||
@@ -141,7 +142,7 @@ namespace PMP_Persona.Rendering
             var previous = Immediate.GetValue(null);
             try
             {
-                // Capture both queued DrawMesh and immediate custom draw calls without polluting the map queue.
+                // Capture queued and immediate draws in an isolated queue.
                 Immediate.SetValue(null, commands);
                 using (MeshDrawSubmission.BeginCapture(commands))
                 {
@@ -178,7 +179,7 @@ namespace PMP_Persona.Rendering
                     }
                 }
                 surface.Center = new Vector3((min.X+max.X)*.5f, 0, (min.Z+max.Z)*.5f);
-                // Constant world-space wake margin, never a fraction of a whole long wall.
+                // Fixed world-space wake margin.
                 surface.HalfSize = Mathf.Max(.5f, Mathf.Max(max.X-min.X, max.Z-min.Z)*.5f + 1.5f);
                 int resolution = Mathf.Clamp(Mathf.NextPowerOfTwo(Mathf.CeilToInt(surface.HalfSize*2*32)), 256, 1024);
                 int used = Surfaces.Values.Where(s => s != surface && s.Texture != null).Sum(s => s.Resolution*s.Resolution);

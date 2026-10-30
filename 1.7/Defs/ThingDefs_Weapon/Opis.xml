@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Preserve the vanilla sniper rifle's handling and artwork until legion art is ready. -->
+  <ThingDef ParentName="Gun_SniperRifle">
+    <defName>PMP_Opis</defName>
+    <label>Opis</label>
+    <description>A legion precision weapon with devastating armor-piercing power. It retains the range, accuracy and deliberate firing cycle of its sniper-rifle pattern.</description>
+    <techLevel>Archotech</techLevel>
+    <graphicData><texPath>Things/Item/Equipment/WeaponRanged/SniperRifle</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MaxHitPoints>400</MaxHitPoints><Flammability>0</Flammability></statBases>
+    <generateCommonality>1</generateCommonality>
+    <thingSetMakerTags Inherit="false"/>
+    <tradeTags Inherit="false"/>
+    <weaponTags Inherit="false"><li>PMP_Opis</li></weaponTags>
+    <recipeMaker IsNull="True"/>
+    <verbs Inherit="false"><li>
+      <verbClass>Verb_Shoot</verbClass><hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PMP_OpisShot</defaultProjectile>
+      <warmupTime>3.5</warmupTime><range>44.9</range><burstShotCount>1</burstShotCount>
+      <soundCast>Shot_SniperRifle</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>9</muzzleFlashScale>
+    </li></verbs>
+    <modExtensions><li Class="PMP_Persona.Romulus.LegionExtension"><advanced>true</advanced></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_OpisShot</defName><label>Opis round</label>
+    <graphicData><texPath>Things/Projectile/Bullet_Small</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <projectile><damageDef>Bullet</damageDef><damageAmountBase>137</damageAmountBase><armorPenetrationBase>1.70</armorPenetrationBase><stoppingPower>1.5</stoppingPower><speed>100</speed></projectile>
+  </ThingDef>
+</Defs>

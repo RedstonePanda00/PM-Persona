@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><AssemblyName>PMP.LandscapeAudit</AssemblyName><OutputPath>../../../artifacts/landscape-bin/</OutputPath></PropertyGroup>
+ <ItemGroup>
+  <Reference Include="RimCampaign.Core"><HintPath>../../../.work/RimCampaign-stealth/1.7/Assemblies/RimCampaign.Core.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="RimCampaign.Runtime"><HintPath>../../../.work/RimCampaign-stealth/1.7/Assemblies/RimCampaign.Runtime.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="RimCampaign.SDK"><HintPath>../../../.work/RimCampaign-stealth/1.7/Assemblies/RimCampaign.SDK.dll</HintPath><Private>false</Private></Reference>
+ </ItemGroup>
+</Project>

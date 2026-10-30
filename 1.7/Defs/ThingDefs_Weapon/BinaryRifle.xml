@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseGun">
+    <defName>PMP_BinaryRifle</defName>
+    <label>Z-750 binary rifle</label>
+    <description>A heavy precision weapon that concentrates hardlight into an intensely energetic beam. Its elongated focusing assembly requires time to stabilize before releasing the charge, burning through distant targets in a brief flash. A narrow targeting beam marks the path of the impending discharge.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <thingClass>GunSmithFramework.Thing_ModularGun</thingClass>
+    <techLevel>Spacer</techLevel><smeltable>false</smeltable><relicChance>0</relicChance>
+    <graphicData><texPath>Things/Weapon/BinaryRifle/BinaryRifle</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(1.8,1.8)</drawSize></graphicData>
+    <comps><li Class="GunSmithFramework.CompProperties_ModularGun"><platformDef>PMP_GunSmith_BinaryRifle</platformDef></li></comps>
+    <statBases>
+      <Mass>4.5</Mass><MarketValue>650</MarketValue>
+      <AccuracyTouch>0.45</AccuracyTouch><AccuracyShort>0.70</AccuracyShort><AccuracyMedium>0.90</AccuracyMedium><AccuracyLong>0.98</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs><li>
+      <verbClass>Verb_Shoot</verbClass><hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PMP_BinaryBeam</defaultProjectile>
+      <warmupTime>2.4</warmupTime><range>55</range><burstShotCount>1</burstShotCount>
+      <aimingLineMote>PMP_Mote_BinaryAim</aimingLineMote>
+      <soundCast>ChargeLance_Fire</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>3</muzzleFlashScale>
+    </li></verbs>
+    <tools><li><label>stock</label><capacities><li>Blunt</li></capacities><power>9</power><cooldownTime>2</cooldownTime></li></tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_BinaryBeam</defName><label>binary rifle hardlight beam</label><thingClass>Beam</thingClass>
+    <graphicData><texPath>Things/Projectile/Charge_Small</texPath><graphicClass>Graphic_Single</graphicClass><shaderType>Transparent</shaderType><color>(1,0.65,0.1)</color></graphicData>
+    <projectile>
+      <damageDef>Burn</damageDef><damageAmountBase>90</damageAmountBase><armorPenetrationBase>2</armorPenetrationBase>
+      <speed>200</speed><beamStartOffset>0.9</beamStartOffset><beamMoteDef>PMP_Mote_BinaryShot</beamMoteDef>
+    </projectile>
+  </ThingDef>
+  <ThingDef Name="PMP_BinaryBeamMoteBase" ParentName="MoteBase" Abstract="True">
+    <thingClass>MoteDualAttached</thingClass><altitudeLayer>MoteOverhead</altitudeLayer><drawOffscreen>true</drawOffscreen>
+    <mote><rotateTowardsTarget>true</rotateTowardsTarget><scaleToConnectTargets>true</scaleToConnectTargets></mote>
+    <graphicData>
+      <texPath>Things/Mote/GraserBeam</texPath><borderMipMaps>true</borderMipMaps>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass><shaderType>MoteBeam</shaderType><color>(1,0.55,0.08)</color>
+      <shaderParameters>
+        <_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA><_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
+        <_ScrollSpeedA>0</_ScrollSpeedA><_ScrollSpeedB>0</_ScrollSpeedB><_Intensity>2</_Intensity>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+  <ThingDef ParentName="PMP_BinaryBeamMoteBase">
+    <defName>PMP_Mote_BinaryAim</defName>
+    <mote><fadeInTime>0.15</fadeInTime><fadeOutTime>0.12</fadeOutTime><solidTime>999999</solidTime><needsMaintenance>true</needsMaintenance><fadeOutUnmaintained>true</fadeOutUnmaintained></mote>
+    <graphicData><drawSize>(0.12,1)</drawSize><color>(1,0.55,0.08,0.8)</color></graphicData>
+  </ThingDef>
+  <ThingDef ParentName="PMP_BinaryBeamMoteBase">
+    <defName>PMP_Mote_BinaryShot</defName>
+    <mote><fadeInTime>0</fadeInTime><fadeOutTime>0.14</fadeOutTime><solidTime>0.04</solidTime></mote>
+    <graphicData><drawSize>(0.25,1)</drawSize></graphicData>
+  </ThingDef>
+</Defs>

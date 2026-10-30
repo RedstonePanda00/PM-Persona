@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <PMP.Anomaly.PsychicRitualDef_LegionChallenge>
+    <defName>PMP_SummonWarhound</defName>
+    <label>legion challenge: Warhound</label>
+    <description>Perform the ritual to summon a Romulus legion warhound, a fast-closing melee mech capable of vaulting over cliffs. Prove your strength to earn its allegiance.
+
+The ritual will consist of 1 round.</description>
+    <outcomeDescription>Prove your strength to earn the allegiance of a Romulus legion warhound. The ritual will consist of 1 round.</outcomeDescription>
+    <researchPrerequisite>PMP_WarhoundResearch</researchPrerequisite>
+    <challenger>PMP_Warhound</challenger>
+    <hoursUntilHoraxEffect>0.5</hoursUntilHoraxEffect>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <cooldownHours>24</cooldownHours>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <iconPath>UI/PsychicRituals/PsychicRitual_SummonShamblers</iconPath>
+    <offerings>
+      <Shard>1</Shard>
+      <Bioferrite>30</Bioferrite>
+      <PMP_ArchotechArmorFragment>1</PMP_ArchotechArmorFragment>
+    </offerings>
+    <defeatsRequired>1</defeatsRequired>
+    <damagePerDefeat>100</damagePerDefeat>
+  </PMP.Anomaly.PsychicRitualDef_LegionChallenge>
+  <PMP.Anomaly.PsychicRitualDef_LegionChallenge>
+    <defName>PMP_SummonLegionGuard</defName>
+    <label>legion challenge: Legion guard</label>
+    <description>Perform the ritual to summon a Romulus legion guard, a heavy mech armed with a massive shield and spear-gun, capable of withstanding astonishing punishment. Prove your strength to earn its allegiance.
+
+The ritual will consist of 2 rounds.</description>
+    <outcomeDescription>Prove your strength to earn the allegiance of a Romulus legion guard. The ritual will consist of 2 rounds.</outcomeDescription>
+    <researchPrerequisite>PMP_LegionGuardResearch</researchPrerequisite>
+    <challenger>PMP_LegionGuard</challenger>
+    <hoursUntilHoraxEffect>0.5</hoursUntilHoraxEffect>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <cooldownHours>24</cooldownHours>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <iconPath>UI/PsychicRituals/PsychicRitual_SummonShamblers</iconPath>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <offerings>
+      <Shard>2</Shard>
+      <Bioferrite>100</Bioferrite>
+      <PMP_ArchotechArmorFragment>3</PMP_ArchotechArmorFragment>
+    </offerings>
+    <defeatsRequired>2</defeatsRequired>
+    <damagePerDefeat>500</damagePerDefeat>
+  </PMP.Anomaly.PsychicRitualDef_LegionChallenge>
+  <PMP.Anomaly.PsychicRitualDef_LegionChallenge>
+    <defName>PMP_SummonLegionChosen</defName>
+    <label>legion challenge: Legion chosen</label>
+    <description>Perform the ritual to summon a Romulus legion chosen, an ultraheavy mech combining heavy protection with astonishing agility, capable of tearing apart formidable enemies. Prove your strength to earn its allegiance.
+
+The ritual will consist of 3 rounds.</description>
+    <outcomeDescription>Prove your strength to earn the allegiance of a Romulus legion chosen. The ritual will consist of 3 rounds.</outcomeDescription>
+    <researchPrerequisite>PMP_LegionChosenResearch</researchPrerequisite>
+    <challenger>PMP_LegionChosen</challenger>
+    <hoursUntilHoraxEffect>0.5</hoursUntilHoraxEffect>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <cooldownHours>24</cooldownHours>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <iconPath>UI/PsychicRituals/PsychicRitual_SummonShamblers</iconPath>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <offerings>
+      <Shard>3</Shard>
+      <Bioferrite>200</Bioferrite>
+      <PMP_ArchotechArmorFragment>5</PMP_ArchotechArmorFragment>
+    </offerings>
+    <defeatsRequired>3</defeatsRequired>
+    <damagePerDefeat>1000</damagePerDefeat>
+  </PMP.Anomaly.PsychicRitualDef_LegionChallenge>
+</Defs>

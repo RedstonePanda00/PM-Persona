@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_WarhoundBody.label>罗穆卢斯战犬</PMP_WarhoundBody.label>
+  <PMP_WarhoundBody.corePart.parts.0.parts.0.parts.1.customLabel>左视觉传感器</PMP_WarhoundBody.corePart.parts.0.parts.0.parts.1.customLabel>
+  <PMP_WarhoundBody.corePart.parts.0.parts.0.parts.2.customLabel>右视觉传感器</PMP_WarhoundBody.corePart.parts.0.parts.0.parts.2.customLabel>
+  <PMP_WarhoundBody.corePart.parts.2.customLabel>左前腿</PMP_WarhoundBody.corePart.parts.2.customLabel>
+  <PMP_WarhoundBody.corePart.parts.3.customLabel>右前腿</PMP_WarhoundBody.corePart.parts.3.customLabel>
+  <PMP_WarhoundBody.corePart.parts.4.customLabel>左后腿</PMP_WarhoundBody.corePart.parts.4.customLabel>
+  <PMP_WarhoundBody.corePart.parts.5.customLabel>右后腿</PMP_WarhoundBody.corePart.parts.5.customLabel>
+  <PMP_LegionGuardBody.label>军团禁军</PMP_LegionGuardBody.label>
+  <PMP_LegionGuardBody.corePart.parts.0.parts.0.parts.1.customLabel>左视觉传感器</PMP_LegionGuardBody.corePart.parts.0.parts.0.parts.1.customLabel>
+  <PMP_LegionGuardBody.corePart.parts.0.parts.0.parts.2.customLabel>右视觉传感器</PMP_LegionGuardBody.corePart.parts.0.parts.0.parts.2.customLabel>
+  <PMP_LegionGuardBody.corePart.parts.2.customLabel>左腿</PMP_LegionGuardBody.corePart.parts.2.customLabel>
+  <PMP_LegionGuardBody.corePart.parts.3.customLabel>右腿</PMP_LegionGuardBody.corePart.parts.3.customLabel>
+  <PMP_LegionGuardBody.corePart.parts.4.customLabel>左臂</PMP_LegionGuardBody.corePart.parts.4.customLabel>
+  <PMP_LegionGuardBody.corePart.parts.5.customLabel>右臂</PMP_LegionGuardBody.corePart.parts.5.customLabel>
+  <PMP_LegionChosenBody.label>军团神选者</PMP_LegionChosenBody.label>
+  <PMP_LegionChosenBody.corePart.parts.0.parts.0.parts.1.customLabel>左视觉传感器</PMP_LegionChosenBody.corePart.parts.0.parts.0.parts.1.customLabel>
+  <PMP_LegionChosenBody.corePart.parts.0.parts.0.parts.2.customLabel>右视觉传感器</PMP_LegionChosenBody.corePart.parts.0.parts.0.parts.2.customLabel>
+  <PMP_LegionChosenBody.corePart.parts.2.customLabel>左腿</PMP_LegionChosenBody.corePart.parts.2.customLabel>
+  <PMP_LegionChosenBody.corePart.parts.3.customLabel>右腿</PMP_LegionChosenBody.corePart.parts.3.customLabel>
+  <PMP_LegionChosenBody.corePart.parts.4.customLabel>左臂</PMP_LegionChosenBody.corePart.parts.4.customLabel>
+  <PMP_LegionChosenBody.corePart.parts.5.customLabel>右臂</PMP_LegionChosenBody.corePart.parts.5.customLabel>
+</LanguageData>

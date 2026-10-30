@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Core's A.R.C. weapon references an Odyssey-only charge mote. The beam itself is DLC-independent. -->
+  <!-- Remove the Odyssey charge-mote reference when the DLC is unavailable. -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[defName="Mote_BeamRepeater_Charge"]</xpath>
     <nomatch Class="PatchOperationConditional">

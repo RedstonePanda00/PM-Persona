@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+ <ThingDef ParentName="PMP_RomulusObeliskBase">
+  <defName>PMP_RomulusDome</defName><label>dome barrier node</label><description>A massive void-shield projector, almost indestructible, that teleports incoming projectiles far away.</description>
+  <graphicData><texPath>Things/Building/Romulus/Dome</texPath><drawSize>(3,3)</drawSize><drawOffset>(0,0,0.8)</drawOffset></graphicData>
+  <useHitPoints>false</useHitPoints><comps><li Class="CompProperties_ProjectileInterceptor"><radius>40</radius><interceptGroundProjectiles>true</interceptGroundProjectiles><interceptAirProjectiles>true</interceptAirProjectiles><drawWithNoSelection>true</drawWithNoSelection><color>(1,0.18,0.14)</color></li></comps>
+ </ThingDef>
+</Defs>

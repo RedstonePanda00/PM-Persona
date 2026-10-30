@@ -1,12 +1,16 @@
-using PMP_Persona.AirPatrolLegion;
+﻿using PMP_Persona.AirPatrolLegion;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 
 namespace PMP_Persona
 {
-    public class PMPH_OrbitalIncoming : Skyfaller
+    public class PMPH_OrbitalIncoming : ThingWithComps
     {
+        public int ticksToImpact;
+        public static PMPH_OrbitalIncoming Spawn(ThingDef def, IntVec3 cell, Map map) => (PMPH_OrbitalIncoming)GenSpawn.Spawn(ThingMaker.MakeThing(def),cell,map);
+        public override void PostMake(){base.PostMake();ticksToImpact=def.skyfaller.ticksToImpactRange.RandomInRange;}
         private const float MaxAngleDeviation = 10f;
         // Extra cells beyond the map north edge (or view north edge) so the spawn sits off-screen.
         private const int OffscreenMarginCells = 10;
@@ -40,8 +44,7 @@ namespace PMP_Persona
                 return;
             }
 
-            if (!BeingTransportedOnGravship)
-                InitializeTrajectory(map);
+            InitializeTrajectory(map);
         }
 
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
@@ -53,6 +56,7 @@ namespace PMP_Persona
         protected override void Tick()
         {
             base.Tick();
+            if (--ticksToImpact <= 0) { Impact(); return; }
             if (!trajectoryInitialized || Map == null)
                 return;
 
@@ -77,29 +81,10 @@ namespace PMP_Persona
                 missileFx.Draw();
         }
 
-        protected override void GetDrawPositionAndRotation(ref Vector3 drawLoc, out float extraRotation)
-        {
-            if (!trajectoryInitialized)
-            {
-                base.GetDrawPositionAndRotation(ref drawLoc, out extraRotation);
-                return;
-            }
-
-            drawLoc = ComputeDrawPos(GetFlightProgress());
-            extraRotation = ComputeFlightRotation(drawLoc);
-            angle = extraRotation;
-        }
-
-        public override float DrawAngle()
-        {
-            if (!trajectoryInitialized || !def.skyfaller.rotateGraphicTowardsDirection)
-                return base.DrawAngle();
-            return angle;
-        }
-
         public override void ExposeData()
         {
             base.ExposeData();
+            Scribe_Values.Look(ref ticksToImpact,"ticksToImpact");
             Scribe_Values.Look(ref startX, "pmpStartX", 0f);
             Scribe_Values.Look(ref startZ, "pmpStartZ", 0f);
             Scribe_Values.Look(ref impactY, "pmpImpactY", 0f);
@@ -108,11 +93,15 @@ namespace PMP_Persona
             Scribe_Values.Look(ref VanguardWeapon, "vanguardWeapon");
         }
 
-        protected override void Impact()
+        protected void Impact()
         {
             if (VanguardWeapon != 0)
                 Map.GetComponent<VanguardSupport.VanguardImpactEffects>().Add(Position, VanguardWeapon == 2, thingIDNumber);
-            base.Impact();
+            var spec=def.skyfaller;
+            if(spec.CausesExplosion) GenExplosion.DoExplosion(Position,Map,spec.explosionRadius,spec.explosionDamage,null,GenMath.RoundRandom(spec.explosionDamage.defaultDamage*spec.explosionDamageFactor),-1f);
+            if(spec.cameraShake>0&&Map==Find.CurrentMap)Find.CameraDriver.shaker.DoShake(spec.cameraShake);
+            spec.impactSound?.PlayOneShot(SoundInfo.InMap(new TargetInfo(Position,Map)));
+            Destroy();
         }
 
         private void InitializeTrajectory(Map map)

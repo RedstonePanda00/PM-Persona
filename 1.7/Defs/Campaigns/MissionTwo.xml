@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <!-- Mission-two character and mission-local protection effects. -->
+  <PawnKindDef ParentName="PMP_OutpostGuardBase">
+    <defName>PMP_ImperialKnight</defName><label>Imperial knight</label><fixedGender>Female</fixedGender><combatPower>300</combatPower>
+    <apparelRequired Inherit="false"><li>Apparel_PowerArmor</li><li>Apparel_PowerArmorHelmet</li></apparelRequired>
+  </PawnKindDef>
+  <HediffDef><defName>PMP_KnightProtection</defName><label>knightly protection</label><description>Immune to damage and injury stagger while guiding the withdrawal.</description><hediffClass>PMP.Campaign.Hediff_MissionLocal</hediffClass><isBad>false</isBad><stages><li><statFactors><IncomingDamageFactor>0</IncomingDamageFactor><StaggerDurationFactor>0</StaggerDurationFactor><MoveSpeed>1.35</MoveSpeed></statFactors></li></stages></HediffDef>
+  <HediffDef><defName>PMP_SceneProtection</defName><label>cinematic protection</label><description>Immune to damage and stagger during a scripted scene.</description><hediffClass>PMP.Campaign.Hediff_MissionLocal</hediffClass><isBad>false</isBad><stages><li><statFactors><IncomingDamageFactor>0</IncomingDamageFactor><StaggerDurationFactor>0</StaggerDurationFactor></statFactors></li></stages></HediffDef>
+</Defs>

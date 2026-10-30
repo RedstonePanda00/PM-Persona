@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ResearchProjectDef MayRequire="ludeon.rimworld.biotech">
+    <defName>PMP_WarhoundResearch</defName>
+    <label>Warhound engineering</label>
+    <description>Perform a legion challenge psychic ritual. Defeat the summoned hostile mech to recruit it. Requires Anomaly.</description>
+    <baseCost>1600</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>6</researchViewY>
+    <prerequisites>
+      <li>PMP_RomulusAnalysis</li>
+      <li>BasicMechtech</li>
+      <li>BasicPsychicRituals</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef MayRequire="ludeon.rimworld.biotech">
+    <defName>PMP_LegionGuardResearch</defName>
+    <label>Legion guard engineering</label>
+    <description>Perform a legion challenge psychic ritual. Defeat the summoned hostile mech to recruit it. Requires Anomaly.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>6</researchViewY>
+    <prerequisites>
+      <li>PMP_WarhoundResearch</li>
+      <li>StandardMechtech</li>
+      <li>AdvancedPsychicRituals</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef MayRequire="ludeon.rimworld.biotech">
+    <defName>PMP_LegionChosenResearch</defName>
+    <label>Legion chosen engineering</label>
+    <description>Perform a legion challenge psychic ritual. Defeat the summoned hostile mech to recruit it. Requires Anomaly.</description>
+    <baseCost>4500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>6</researchViewY>
+    <prerequisites>
+      <li>PMP_LegionGuardResearch</li>
+      <li>HighMechtech</li>
+      <li>AdvancedPsychicRituals</li>
+    </prerequisites>
+  </ResearchProjectDef>
+</Defs>

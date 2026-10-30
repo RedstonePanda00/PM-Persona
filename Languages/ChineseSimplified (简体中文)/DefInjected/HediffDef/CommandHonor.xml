@@ -5,4 +5,6 @@
   <PMP_CommandHonor.stages.0.label>失去信任</PMP_CommandHonor.stages.0.label>
   <PMP_CommandHonor.stages.1.label>备受尊敬</PMP_CommandHonor.stages.1.label>
   <PMP_CommandHonor.stages.2.label>荣耀卓著</PMP_CommandHonor.stages.2.label>
+  <PMP_CommandRefusalTimer.label>拒绝征召</PMP_CommandRefusalTimer.label>
+  <PMP_CommandRefusalTimer.description>因对指挥缺乏信任，暂时拒绝被征召。日常工作照常进行。</PMP_CommandRefusalTimer.description>
 </LanguageData>

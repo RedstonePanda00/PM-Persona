@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Explicit vanilla quest IDs. Auto-accepted rescue offers earn honor only on success. -->
+  <!-- Vanilla quest IDs; grant rescue honor on success. -->
   <Operation Class="PatchOperationSequence">
     <operations>
       <li Class="PatchOperationAdd">
@@ -21,7 +21,7 @@
             </li>
             <li Class="PatchOperationAdd">
               <xpath>Defs/QuestScriptDef[defName="Hospitality_Refugee"]/modExtensions</xpath>
-              <value><li Class="PMP_Persona.Storyteller.HonorQuestExtension"><acceptHonor>4</acceptHonor></li></value>
+              <value><li Class="PMP_Persona.Storyteller.HonorQuestExtension"><successHonor>4</successHonor></li></value>
             </li>
             <li Class="PatchOperationAdd">
               <xpath>Defs/QuestScriptDef[defName="ShuttleCrash_Rescue" or defName="Hospitality_Joiners"]/modExtensions</xpath>

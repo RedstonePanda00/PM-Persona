@@ -13,7 +13,7 @@ using Verse;
 
 namespace PMP_Persona
 {
-    // Opt-in isolated validation. Never runs without the explicit command-line switch.
+    // Command-line-enabled integration audit.
     public class PersonaAudit17 : GameComponent
     {
         private int stage, frames;
@@ -23,7 +23,7 @@ namespace PMP_Persona
         public override void LoadedGame()
         {
             if (!GenCommandLine.CommandLineArgPassed("pmp17audit") || stage != 1) return;
-            // Verify before gameplay resumes: a 30-tick intro can finish during the 90-frame screenshot warmup.
+            // Verify the 30-tick intro before the 90-frame screenshot warmup.
             Check("pending warp clock survives save/reload", () => {
                 var deploy = MapComponent_SupernovaWarpDeploy.Get(Find.CurrentMap);
                 var pending = Traverse.Create(deploy).Field("pending").GetValue<System.Collections.IList>();
@@ -94,51 +94,34 @@ namespace PMP_Persona
                 Assert(field.Instances.Count(t => t.Position == cell) == 1, "duplicate deployment");
                 star.Destroy(DestroyMode.Vanish);
             });
-            Check("two-channel storyteller and honor rules", () => {
+            Check("single-schedule storyteller and honor rules", () => {
                 var def = DefDatabase<StorytellerDef>.GetNamed(MasonKaldalisState.DefName);
                 Assert(def != null, "missing storyteller definition");
                 File.WriteAllLines(Path.Combine(Folder, "storyteller-comps.txt"), def.comps.Select(c => c == null ? "NULL" : c.GetType().FullName + " -> " + c.compClass));
                 Current.Game.storyteller = new RimWorld.Storyteller(def, DifficultyDefOf.Rough);
-                Assert(Find.Storyteller.storytellerComps.OfType<StorytellerComp_MasonKaldalis>().Count() == 2, "channel count");
+                Assert(Find.Storyteller.storytellerComps.OfType<StorytellerComp_MasonKaldalis>().Count() == 1, "scheduler count");
                 var state = MasonKaldalisState.Current;
                 state.Honor = 0;
                 state.Award("audit", 8); state.Award("audit", 8); state.Award("audit", 8); state.Award("audit", 8);
                 Assert(state.Honor == 14, "diminishing returns");
                 state.Award("audit-other", 8); Assert(state.Honor == 15, "daily cap");
                 state.Award("audit-penalty", -400); Assert(state.Honor == -200, "penalties bypass positive cap and respect floor");
-                state.Award("audit-restoration", 400); Assert(state.Honor == 15, "daily net gain or floor accounting incorrect");
+                state.Award("audit-restoration", 400); Assert(state.Honor == -200, "penalties restored daily reward allowance");
                 state.Honor = 600;
                 var pawn = Find.CurrentMap.mapPawns.FreeColonistsSpawned.First();
-                var config = MasonKaldalisState.Config; float chance = config.recoveryChance; config.recoveryChance = 0;
-                try {
-                    Assert(pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Wander_Sad, forceWake: true), "create mental state");
+                {
+                    Assert(pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Wander_Sad, forceWake: true, causedByMood: true), "create mental state");
                     state.AttemptRecovery(pawn);
-                    Assert(pawn.InMentalState && !state.RecoveryAvailable(pawn), "failed appeal must use cooldown");
-                    pawn.MentalState.RecoverFromState();
-                } finally { config.recoveryChance = chance; }
+                    Assert(!pawn.InMentalState && !state.RecoveryAvailable, "appeal must recover and use global cooldown");
+                }
                 state.Honor = 15; state.Once("audit-once");
             });
-            Check("global schedules, pulse and pause", () => {
+            Check("shared scheduling and pause", () => {
                 var state = MasonKaldalisState.Current;
                 var fields = Traverse.Create(state);
-                fields.Field("masonNext").SetValue(GenTicks.TicksGame - 1);
-                fields.Field("masonChecked").SetValue(-1);
-                Assert(state.ChannelDue(false, 1.1f) && !state.ChannelDue(false, 1.1f), "multiple targets duplicate a channel");
-                state.BattleDrive = 80;
-                fields.Field("kaldalisChecked").SetValue(-1);
-                Assert(state.ChannelDue(true, 1.6f) && state.PulseActive, "pulse did not start");
-                state.ChannelFired(true, 1.6f);
-                Assert(state.PulseActive, "pulse ended after only one success");
-                state.ChannelFired(true, 1.6f);
-                Assert(!state.PulseActive && state.BattleDrive == 0, "pulse did not settle");
-                bool threats = Find.Storyteller.difficulty.allowBigThreats;
-                try {
-                    Find.Storyteller.difficulty.allowBigThreats = false;
-                    state.BattleDrive = 80;
-                    fields.Field("kaldalisChecked").SetValue(-1);
-                    state.ChannelDue(true, 1.6f);
-                    Assert(!state.PulseActive, "peaceful difficulty started pulse");
-                } finally { Find.Storyteller.difficulty.allowBigThreats = threats; }
+                state.Budget.nextTick = GenTicks.TicksGame - 1;
+                fields.Field("scheduleChecked").SetValue(-1);
+                Assert(state.ScheduleDue(.65185185f) && !state.ScheduleDue(.65185185f), "multiple targets duplicate an event");
                 state.Paused = true;
                 float honor = state.Honor;
                 state.Award("pause", -20);
@@ -155,12 +138,12 @@ namespace PMP_Persona
                 var config = MasonKaldalisState.Config; float chance = config.draftRefusalChance;
                 try {
                     config.draftRefusalChance = 1;
+                    state.Honor = -100;
                     pawn.drafter.Drafted = true;
-                    Assert(!pawn.Drafted && pawn.MentalState is MentalState_CommandRefusal, "draft was not refused");
-                    pawn.MentalState.RecoverFromState();
+                    Assert(!pawn.Drafted && !pawn.InMentalState && pawn.health.hediffSet.HasHediff(DefDatabase<HediffDef>.GetNamed("PMP_CommandRefusalTimer")), "draft was not refused");
                 } finally { config.draftRefusalChance = chance; }
                 state.Honor = 600; Traverse.Create(state).Method("SyncEffects").GetValue();
-                Assert(hediff.CurStage.statOffsets.Single().value < 0 && hediff.CurStage.capMods.Count == 3, "high tier effects missing");
+                Assert(hediff.CurStage.statOffsets.Single(s => s.stat == StatDefOf.MentalBreakThreshold).value < 0 && hediff.CurStage.statFactors.Count == 2, "high tier effects missing");
                 state.Honor = 0; Traverse.Create(state).Method("SyncEffects").GetValue();
                 Assert(!pawn.health.hediffSet.HasHediff(hediffDef), "normal honor retains modifier");
                 Assert(HonorRules.Decay(-.25f) == 0 && HonorRules.Decay(.5f) == 0, "decay crossed zero");
@@ -178,7 +161,7 @@ namespace PMP_Persona
             Check("save and reload", () => {
                 MasonKaldalisState.Current.BattleDrive = 83;
                 MasonKaldalisState.Current.Paused = true;
-                // Pause world time and save midway through a real deployment; the next stage checks the exact clock.
+                // Save a paused deployment for exact-clock verification.
                 Find.TickManager.Pause();
                 var deploy = MapComponent_SupernovaWarpDeploy.Get(Find.CurrentMap);
                 var cell = Find.CurrentMap.AllCells.First(c => c.Standable(Find.CurrentMap) && !c.Fogged(Find.CurrentMap) && c.GetFirstBuilding(Find.CurrentMap) == null);
@@ -285,10 +268,10 @@ namespace PMP_Persona
                     var block = new MaterialPropertyBlock();
                     AstroSupernovaRenderer.Configure(block,Matrix4x4.identity,camera,1,.55f,state,27,false);
                     block.SetFloat("_Appearance",1);
-                    // Same queued DrawMesh/MPB path as gameplay. Separate layers isolate samples in this frame.
+                    // Verify queued DrawMesh/MPB submissions on separate layers.
                     int layer=23+i; camera.cullingMask=1<<layer;
                     Graphics.DrawMesh(AstroSupernovaRenderer.BoundsMesh,Matrix4x4.identity,material,layer,null,0,block);
-                    block.Clear(); // Submission must own its property values after the caller reuses its block.
+                    block.Clear(); // Verify submission retains values after block reuse.
                     capture.RenderTo(target,1.08f,()=>{});
                     RenderTexture.active=target; pixels.ReadPixels(new Rect(0,0,384,384),0,0); pixels.Apply();
                     var colors=pixels.GetPixels32();
@@ -298,7 +281,7 @@ namespace PMP_Persona
                     File.WriteAllBytes(Path.Combine(Folder,"Star-motion-"+i+".png"),pixels.EncodeToPNG());
                 }
                 camera.cullingMask=0;
-                // Smooth preview sequence; queued-path independence was verified above.
+                // Render the preview sequence.
                 for(int i=0;i<48;i++)
                 {
                     var state=new SupernovaShellStageState {localTime=13+i*.1f,totalDuration=1,visibility=0};
@@ -354,7 +337,7 @@ namespace PMP_Persona
                             });
                             RenderTexture.active=target; pixels.ReadPixels(new Rect(0,0,384,384),0,0);pixels.Apply();
                             Assert(pixels.GetPixels32().Count(c=>c.r+c.g+c.b>40)>150,"empty plasma "+kind);
-                            // Regression: a luminous outline alone must not pass as a surface overlay.
+                            // Verify surface coverage independently of the luminous outline.
                             var plasmaColors=pixels.GetPixels32();
                             int interior=0, covered=0;
                             for(int y=4;y<252;y++) for(int x=4;x<252;x++) {
@@ -406,7 +389,7 @@ namespace PMP_Persona
                 RenderTexture.active = target; pixels.ReadPixels(new Rect(0,0,384,384),0,0); pixels.Apply();
                 Assert(pixels.GetPixels32().Count(c => c.r+c.g+c.b>20)>5000, "stellar surface blank");
                 File.WriteAllBytes(Path.Combine(Folder,"Astro-star.png"),pixels.EncodeToPNG());
-                // Exercise exit-face rendering with a perspective eye both outside and inside the cube.
+                // Verify exit-face rendering from outside and inside the cube.
                 camera.orthographic = false; camera.fieldOfView = 55;
                 foreach (float distance in new[] { 2.5f, .8f })
                 {

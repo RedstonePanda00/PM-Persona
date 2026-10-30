@@ -51,9 +51,7 @@ namespace PMP_Persona.GestaltZero
 
         public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
         {
-            // EnsureInitialized and Draw run on the main thread. Cache the pawn
-            // there so the parallel phase never touches GameComponents or their
-            // persistence dictionaries from a worker thread.
+            // Cache the pawn on the main thread for parallel rendering.
             Pawn pawn = preparedPawn;
             GameComponent_GestaltZeroReturn component = null;
             if (phase != DrawPhase.ParallelPreDraw)
@@ -117,7 +115,8 @@ namespace PMP_Persona.GestaltZero
                     }
 
                     bool drew = GestaltZeroReconstructionRenderer.DrawPrepared(
-                        pawn, preparedParms, out int requestCount, out int drawnCount,
+                        pawn, preparedParms, component?.ReconstructionPhase(lifecycleToken) ?? preparedScanPhase,
+                        out int requestCount, out int drawnCount,
                         out string shaderName, out string drawError);
                     if (!drew)
                     {
@@ -192,10 +191,7 @@ namespace PMP_Persona.GestaltZero
 
         private static PawnDrawParms BuildDrawParms(Pawn pawn, Vector3 drawLoc)
         {
-            // This is ordinary map drawing, not portrait/cache rendering.
-            // DrawNow uses Graphics.DrawMeshNow and drops the supplied
-            // MaterialPropertyBlock, which is exactly where PMC writes every
-            // reconstruction scan parameter.
+            // Use queued map drawing to preserve reconstruction MaterialPropertyBlock values.
             PawnRenderFlags flags = PawnRenderFlags.Headgear |
                                     PawnRenderFlags.Clothes | PawnRenderFlags.NeverAimWeapon;
             PawnDrawParms parms = PawnDrawParms.Default;
@@ -259,7 +255,7 @@ namespace PMP_Persona.GestaltZero
             }
         }
 
-        public static bool DrawPrepared(Pawn pawn, PawnDrawParms parms, out int requestCount,
+        public static bool DrawPrepared(Pawn pawn, PawnDrawParms parms, float phase, out int requestCount,
             out int drawnCount, out string shaderName, out string error)
         {
             requestCount = 0;
@@ -301,11 +297,58 @@ namespace PMP_Persona.GestaltZero
                     return false;
                 }
 
-                // Use PMC's unmodified PawnRenderTree.Draw path. Its
-                // GetFinalizedMaterial and GetMaterialPropertyBlock Harmony
-                // patches now see Hediff_Reconstruct and own the entire shader
-                // remap/property pipeline, exactly as they do for PMC pawns.
-                tree.Draw(parms);
+                // The print shader uses each mesh's UVs. Convert one whole-pawn scan
+                // plane into each node's UV space so head and body join continuously.
+                float min = float.PositiveInfinity, max = float.NegativeInfinity;
+                foreach (var request in requests)
+                    if (request.mesh != null && request.material?.shader?.name == ShaderName)
+                        foreach (var vertex in request.mesh.vertices) {
+                            float z = request.preDrawnComputedMatrix.MultiplyPoint3x4(vertex).z;
+                            min = Mathf.Min(min, z); max = Mathf.Max(max, z);
+                        }
+                float height = Mathf.Max(.001f, max - min);
+                float plane = Mathf.Lerp(min, max, Mathf.Clamp01(phase));
+                foreach (var request in requests) {
+                    var node = request.node;
+                    var material = request.material;
+                    if (material != null && request.mesh != null) {
+                        node.Worker.PreDraw(node, material, parms);
+                        var block = node.Worker.GetMaterialPropertyBlock(node, material, parms);
+                        foreach (var worker in node.Props.SubWorkers)
+                            worker.EditMaterialPropertyBlock(node, material, parms, ref block);
+                        if (material.shader.name == ShaderName) {
+                            var vertices = request.mesh.vertices; var uv = request.mesh.uv;
+                            int low = 0, high = 0;
+                            for (int j = 1; j < uv.Length; j++) {
+                                if (uv[j].y < uv[low].y) low = j;
+                                if (uv[j].y > uv[high].y) high = j;
+                            }
+                            if (uv.Length == vertices.Length && uv.Length > 0 && uv[high].y > uv[low].y) {
+                                float lo = request.preDrawnComputedMatrix.MultiplyPoint3x4(vertices[low]).z;
+                                float hi = request.preDrawnComputedMatrix.MultiplyPoint3x4(vertices[high]).z;
+                                float span = (hi - lo) / (uv[high].y - uv[low].y);
+                                if (Mathf.Abs(span) > .0001f) {
+                                    float scan = uv[low].y + (plane - lo) / span;
+                                    block.SetFloat("_PM_AboveAlpha", span > 0 ? 1 : 0);
+                                    block.SetFloat("_PM_BelowAlpha", span > 0 ? 0 : 1);
+                                    block.SetFloat("_PM_ScanV", Mathf.Clamp01(scan));
+                                    block.SetFloat("_PM_ScanThickness", .018f * height / Mathf.Abs(span));
+                                    block.SetFloat("_PM_ScanSoftness", .035f * height / Mathf.Abs(span));
+                                    if (scan <= 0 || scan >= 1) {
+                                        float alpha = scan <= 0 ? 0 : 1;
+                                        if (span < 0) alpha = 1 - alpha;
+                                        block.SetFloat("_PM_AboveAlpha", alpha);
+                                        block.SetFloat("_PM_BelowAlpha", alpha);
+                                        block.SetFloat("_PM_ScanIntensity", 0);
+                                    }
+                                }
+                            }
+                        }
+                        GenDraw.DrawMeshNowOrLater(request.mesh, request.preDrawnComputedMatrix, material, parms.DrawNow, block);
+                        block.Clear();
+                    }
+                    node.Worker.PostDraw(node, parms, request.mesh, request.preDrawnComputedMatrix);
+                }
                 shaderName = reconstructedMaterialCount > 0
                     ? ShaderName + " (PMC, " + reconstructedMaterialCount + " materials)"
                     : "PMC material remap pending";
@@ -336,9 +379,7 @@ namespace PMP_Persona.GestaltZero
                 pawn.Drawer?.renderer?.SetAllGraphicsDirty();
             }
 
-            // PMC maps ageTicks across the Hediff's 90-tick duration. The pawn
-            // is pooled and therefore does not tick, so the lifecycle component
-            // drives a one-way epoch and the final fully-visible hold here.
+            // Advance the pooled pawn's 90-tick reconstruction epoch and final visible hold.
             hediff.ageTicks = Mathf.RoundToInt(Mathf.Clamp01(scanPhase) * 90f);
         }
 

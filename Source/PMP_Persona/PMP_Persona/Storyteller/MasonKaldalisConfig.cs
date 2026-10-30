@@ -6,14 +6,15 @@ namespace PMP_Persona.Storyteller
     {
         public float draftRefusalChance = .02f;
         public float dangerRefusalChance = .04f;
-        public float idlingChancePerDay = .01f;
-        public int refusalTicks = 5000;
-        public float recoveryChance = .1f;
+        public int refusalTicks = 2500;
         public int recoveryCooldownTicks = 60000;
         public int pulseIncidents = 2;
-        public int pulseDurationMin = 60000;
+        public int pulseDurationMin = 90000;
         public int pulseDurationMax = 120000;
-        public int rescueGraceTicks = 6000;
-        public int inactivityDays = 10;
+        public int pulseGapTicks = 15000;
+        public int restTicks = 120000;
+        public int bigThreatGapTicks = 90000;
+        public int retryTicks = 5000;
+        public float battleDrivePerDay = 10f;
     }
 }

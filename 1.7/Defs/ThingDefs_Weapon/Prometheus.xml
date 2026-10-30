@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="BaseGun">
-    <defName>PMP_HardlightRifle</defName><label>hardlight rifle</label><description>A compact rifle that forms coherent bolts of golden light.</description>
-    <techLevel>Spacer</techLevel><smeltable>false</smeltable><graphicData><texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath><graphicClass>Graphic_Single</graphicClass><color>(1,0.85,0.5)</color></graphicData>
-    <statBases><Mass>2</Mass><MarketValue>350</MarketValue><AccuracyTouch>0.75</AccuracyTouch><AccuracyShort>0.85</AccuracyShort><AccuracyMedium>0.80</AccuracyMedium><AccuracyLong>0.65</AccuracyLong><RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown></statBases>
-    <verbs><li><verbClass>Verb_Shoot</verbClass><hasStandardCommand>true</hasStandardCommand><defaultProjectile>PMP_HardlightBolt</defaultProjectile><warmupTime>0.6</warmupTime><range>30</range><burstShotCount>3</burstShotCount><ticksBetweenBurstShots>7</ticksBetweenBurstShots><soundCast>Shot_ChargeRifle</soundCast><soundCastTail>GunTail_Medium</soundCastTail><muzzleFlashScale>5</muzzleFlashScale></li></verbs>
+    <defName>PMP_HardlightRifle</defName><label>Z-250 hardlight rifle</label><description>A standard-issue rifle that fires beams to burn its targets. Its high-energy X-rays can burn through light armor and inflict severe damage on complex machinery.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <relicChance>0</relicChance>
+    <thingClass>PMP_Persona.Prometheus.Thing_HardlightRifle</thingClass>
+    <techLevel>Spacer</techLevel><smeltable>false</smeltable><graphicData><texPath>Things/Weapon/HardlightRifle/Hardlight_Body</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(1.6,1.6)</drawSize></graphicData>
+    <comps><li Class="GunSmithFramework.CompProperties_ModularGun"><platformDef>PMP_GunSmith_HardlightRifle</platformDef></li></comps>
+    <statBases><Mass>2</Mass><MarketValue>350</MarketValue><AccuracyTouch>0.85</AccuracyTouch><AccuracyShort>0.95</AccuracyShort><AccuracyMedium>0.95</AccuracyMedium><AccuracyLong>0.90</AccuracyLong><RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><hasStandardCommand>true</hasStandardCommand><defaultProjectile>PMP_HardlightBolt</defaultProjectile><warmupTime>0.6</warmupTime><range>40</range><burstShotCount>3</burstShotCount><ticksBetweenBurstShots>7</ticksBetweenBurstShots><soundCast>Shot_ChargeRifle</soundCast><soundCastTail>GunTail_Medium</soundCastTail><muzzleFlashScale>5</muzzleFlashScale></li></verbs>
     <tools><li><label>stock</label><capacities><li>Blunt</li></capacities><power>10</power><armorPenetration>0.3</armorPenetration><cooldownTime>1.5</cooldownTime></li></tools>
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
     <defName>PMP_HardlightBolt</defName><label>hardlight bolt</label><graphicData><texPath>Things/Projectile/Charge_Small</texPath><graphicClass>Graphic_Single</graphicClass><shaderType>Transparent</shaderType><color>(1,0.8,0.2)</color></graphicData>
-    <projectile><damageDef>Bullet</damageDef><damageAmountBase>12</damageAmountBase><armorPenetrationBase>0.35</armorPenetrationBase><speed>85</speed></projectile>
+    <projectile><damageDef>Burn</damageDef><damageAmountBase>12</damageAmountBase><armorPenetrationBase>2</armorPenetrationBase><speed>85</speed></projectile>
   </ThingDef>
 </Defs>

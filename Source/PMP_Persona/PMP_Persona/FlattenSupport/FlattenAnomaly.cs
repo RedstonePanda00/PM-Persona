@@ -9,14 +9,13 @@ namespace PMP_Persona.FlattenSupport
 {
     internal static class FlattenAnomaly
     {
-        // Every entry point gates DLC logic before looking up an anomaly component or Def.
+        // Check DLC availability before accessing anomaly components or Defs.
         internal static CompStudiable StudyComp(Thing_FlattenedPawn sheet)
         {
             if (!ModsConfig.AnomalyActive || sheet?.HeldPawn == null) return null;
             var pawn = sheet.HeldPawn;
             var comp = pawn.TryGetComp<CompStudiable>();
-            // Ordinary pawns also inherit a study comp. Keep vanilla's entity eligibility;
-            // sealing replaces custody requirements, not the requirement to be anomalous.
+            // Require vanilla anomaly eligibility.
             return comp?.KnowledgeCategory != null && comp.AnomalyKnowledge > 0f
                 && (pawn.IsMutant || comp.RequiresHoldingPlatform
                     || (comp.RequiresImprisonment && (pawn.Inhumanized() || pawn.kindDef.studiableAsPrisoner)))
@@ -27,8 +26,7 @@ namespace PMP_Persona.FlattenSupport
             if (!ModsConfig.AnomalyActive || pawn == null) return;
             var comp = pawn.TryGetComp<CompStudiable>();
             if (comp == null) return;
-            // Vanilla fills this unsaved reference on Pawn.SpawnSetup. A loaded held pawn
-            // never spawns, but must still use its existing study unlocks/knowledge amount.
+            // Restore the held pawn's unsaved study reference.
             AccessTools.Field(typeof(CompStudiable), "compStudyUnlocks")?.SetValue(comp, pawn.TryGetComp<CompStudyUnlocks>());
         }
         internal static bool CanStudy(Thing_FlattenedPawn sheet)
@@ -37,8 +35,7 @@ namespace PMP_Persona.FlattenSupport
             return comp != null && sheet.Spawned && sheet.Ready && !sheet.HeldPawn.Dead
                 && comp.studyEnabled && !comp.Completed && comp.StudyUnlocked()
                 && (comp.Props.frequencyTicks <= 0 || comp.TicksTilNextStudy <= 0);
-            // A sealed, suspended sheet replaces the holding platform / prisoner requirement.
-            // All progress, unlocks, frequency and difficulty multipliers remain native.
+            // Use sealed-sheet custody with vanilla study progress and multipliers.
         }
         internal static bool CanResearch(Pawn pawn) => ModsConfig.AnomalyActive && pawn != null
             && pawn.skills != null && !pawn.WorkTypeIsDisabled(WorkTypeDefOf.DarkStudy)
@@ -67,8 +64,7 @@ namespace PMP_Persona.FlattenSupport
             if (!CanStudy(sheet) || !CanResearch(studier)) return;
             var comp = StudyComp(sheet);
             comp.Study(studier, .87f, comp.AdjustedAnomalyKnowledgePerStudy * studier.GetStatValue(StatDefOf.StudyEfficiency));
-            // Save each completed interaction on the original pawn immediately, so an
-            // interrupted job / save-load / release-recapture cannot grant it a second time.
+            // Persist completed interactions immediately to prevent duplicate rewards.
             comp.studyInteractions++;
             if (comp.studyInteractions >= 5)
             {

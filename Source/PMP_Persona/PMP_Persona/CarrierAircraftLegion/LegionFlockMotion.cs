@@ -134,7 +134,7 @@ namespace PMP_Persona.CarrierAircraftLegion
         }
         private Vector2 HomeTarget(ClusterState c, DroneState d)
         {
-            // The pulse reaches distant members later. Size remains constant; only spacing changes.
+            // Delay the spacing pulse by member distance.
             float t = (ageTicks - d.slotRadius * 3) * .009f + c.phase;
             float spread = .85f + .28f * Mathf.Sin(t);
             float angle = d.slotAngle + .3f * Mathf.Sin(ageTicks * .004f + d.phase);
@@ -165,7 +165,7 @@ namespace PMP_Persona.CarrierAircraftLegion
                 c.velocity = Vector2.MoveTowards(c.velocity, desired, .006f);
                 c.position = KeepInside(c.position + c.velocity, 8);
             }
-            // Snapshot before steering so the update order cannot drag following members.
+            // Snapshot positions before steering.
             Array.Fill(bucketHeads, -1);
             for (int i = 0; i < flockIndex.Length; i++)
             {
@@ -206,7 +206,7 @@ namespace PMP_Persona.CarrierAircraftLegion
         {
             alignment = separation = cohesion = Vector2.zero;
             int bucket = Bucket(positions[index]), bx = bucket % bucketWidth, by = bucket / bucketWidth, checkedCount = 0, neighbors = 0;
-            // Start in the member's own bucket; cap work even in a densely collapsed swarm.
+            // Search the member's bucket first with a bounded neighbor count.
             for (int ring = 0; ring < 2 && checkedCount < NeighborBudget; ring++)
                 for (int y = -ring; y <= ring && checkedCount < NeighborBudget; y++)
                     for (int x = -ring; x <= ring && checkedCount < NeighborBudget; x++)
@@ -263,7 +263,7 @@ namespace PMP_Persona.CarrierAircraftLegion
             }
             else if (d.flightState == 5 && age >= WarpTransitTicks)
             {
-                // Resolve the current formation slot, never the position at dispatch time.
+                // Resolve the current formation slot.
                 d.flightDirXZ = c.velocity.sqrMagnitude > .001f ? c.velocity.normalized : Vector2.right;
                 d.position = KeepInside(HomeTarget(c, d) - d.flightDirXZ * 4);
                 d.velocity = c.velocity + d.flightDirXZ * .25f;
@@ -289,7 +289,7 @@ namespace PMP_Persona.CarrierAircraftLegion
 
         internal string AuditFlockMotion()
         {
-            // Settle the real initial warp before measuring ordinary flock movement.
+            // Complete initial warp before measuring flock motion.
             int warmup = Verse.Find.TickManager.TicksGame;
             for (int t = 1; t <= 240; t++) { ageTicks++; TickFlock(warmup + t); }
             int baseline = Find.TickManager.TicksGame, count = FlockCount;

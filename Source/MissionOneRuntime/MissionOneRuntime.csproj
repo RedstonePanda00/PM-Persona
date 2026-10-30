@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><OutputPath>../../1.7/Assemblies/</OutputPath><AssemblyName>PMP.Campaign</AssemblyName></PropertyGroup>
+ <ItemGroup><Reference Include="ProtossMech"><HintPath>$(RimWorldDir)\Mods\ProtossMechCore\1.7\Assemblies\ProtossMech.dll</HintPath><Private>false</Private></Reference><Reference Include="GunSmithFramework"><HintPath>$(RimWorldDir)\Mods\ProtossMechCore\1.7\Assemblies\GunSmithFramework.dll</HintPath><Private>false</Private></Reference></ItemGroup>
+ <ItemGroup><ProjectReference Include="../../.work/RimCampaign-stealth/Source/RimCampaign.Core/RimCampaign.Core.csproj"><Private>false</Private></ProjectReference></ItemGroup>
+ <ItemGroup><ProjectReference Include="../../.work/RimCampaign-stealth/Source/RimCampaign.Runtime/RimCampaign.Runtime.csproj"><Private>false</Private></ProjectReference><ProjectReference Include="../../.work/RimCampaign-stealth/Source/RimCampaign.SDK/RimCampaign.SDK.csproj"><Private>false</Private></ProjectReference></ItemGroup>
+ <Target Name="KeepFrameworkAssembliesInFrameworkMod" BeforeTargets="_CopyFilesMarkedCopyLocal">
+  <ItemGroup><ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" Condition="'%(ReferenceCopyLocalPaths.Filename)' == 'RimCampaign.Core' Or '%(ReferenceCopyLocalPaths.Filename)' == 'RimCampaign.SDK' Or '%(ReferenceCopyLocalPaths.Filename)' == 'RimCampaign.Runtime'" /></ItemGroup>
+ </Target>
+<ItemGroup><ProjectReference Include="../PMP_Persona/PMP_Persona/PMP_Persona.csproj"><Private>false</Private></ProjectReference></ItemGroup>
+<Target Name="BuildOptionalCampaignIdeology" AfterTargets="Build">
+ <MSBuild Projects="../CampaignIdeology/CampaignIdeology.csproj" Targets="Restore;Build" />
+</Target>
+</Project>

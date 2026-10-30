@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RimCampaign.Runtime.CommunicationPortraitDef>
+    <defName>PMP_Comms_Mason</defName>
+    <label>Mason — communication portrait</label>
+    <texturePath>UI/Communications/Mason</texturePath>
+  </RimCampaign.Runtime.CommunicationPortraitDef>
+  <RimCampaign.Runtime.CommunicationPortraitDef>
+    <defName>PMP_Comms_Kaldalis</defName>
+    <label>Kaldalis — communication portrait</label>
+    <texturePath>UI/Communications/Kaldalis</texturePath>
+  </RimCampaign.Runtime.CommunicationPortraitDef>
+  <RimCampaign.Runtime.CommunicationPortraitDef>
+    <defName>PMP_Comms_Price</defName>
+    <label>Price — communication portrait</label>
+    <texturePath>UI/Communications/Price</texturePath>
+  </RimCampaign.Runtime.CommunicationPortraitDef>
+  <RimCampaign.Runtime.CommunicationPortraitDef>
+    <defName>PMP_Comms_Ghost</defName>
+    <label>Ghost — communication portrait</label>
+    <texturePath>UI/Communications/Ghost</texturePath>
+  </RimCampaign.Runtime.CommunicationPortraitDef>
+  <RimCampaign.Runtime.CommunicationPortraitDef>
+    <defName>PMP_Comms_Zimo</defName>
+    <label>Zimo — communication portrait</label>
+    <texturePath>UI/Communications/Zimo</texturePath>
+  </RimCampaign.Runtime.CommunicationPortraitDef>
+</Defs>

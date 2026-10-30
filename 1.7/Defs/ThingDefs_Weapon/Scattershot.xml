@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="BaseGun">
+    <defName>PMP_Scattershot</defName>
+    <label>Z-180 Scattershot</label>
+    <description>A hardlight shotgun whose broad emitter releases a fan of energized fragments. The fragments briefly retain their cohesion after striking hard surfaces, throwing lethal ricochets through corridors and enclosed rooms.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <thingClass>GunSmithFramework.Thing_ModularGun</thingClass>
+    <techLevel>Spacer</techLevel>
+    <smeltable>false</smeltable>
+    <relicChance>0</relicChance>
+    <graphicData>
+      <texPath>Things/Weapon/Scattershot/Scattershot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.4,1.4)</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="GunSmithFramework.CompProperties_ModularGun">
+        <platformDef>PMP_GunSmith_Scattershot</platformDef>
+      </li>
+    </comps>
+    <statBases>
+      <Mass>3</Mass>
+      <MarketValue>400</MarketValue>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.5</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="ProtossMech.VerbProperties_Shotgun">
+        <verbClass>ProtossMech.Verb_ShootShotgun</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>PMP_ScattershotPellet</defaultProjectile>
+        <warmupTime>0.35</warmupTime>
+        <range>12</range>
+        <burstShotCount>1</burstShotCount>
+        <pelletCount>8</pelletCount>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>3</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_ScattershotPellet</defName>
+    <label>ricocheting hardlight pellet</label>
+    <thingClass>PMP_Persona.Prometheus.Bullet_Scattershot</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <color>(1,0.75,0.15)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>Burn</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <armorPenetrationBase>2</armorPenetrationBase>
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

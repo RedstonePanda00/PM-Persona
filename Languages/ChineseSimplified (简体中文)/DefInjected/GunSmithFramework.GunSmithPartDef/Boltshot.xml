@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_Boltshot_Single.label>单发回路</PMP_Boltshot_Single.label>
+  <PMP_Boltshot_Single.description>快速发射单发硬光弹束，射程24格。</PMP_Boltshot_Single.description>
+  <PMP_Boltshot_Charged.label>蓄力散射回路</PMP_Boltshot_Charged.label>
+  <PMP_Boltshot_Charged.description>蓄力1.2秒后同时发射5枚硬光弹丸，射程14格。移动可中断蓄力。</PMP_Boltshot_Charged.description>
+  <PMP_Boltshot_GripDual.label>双持握把</PMP_Boltshot_GripDual.label>
+  <PMP_Boltshot_GripDual.description>同时持用并发射两把Z-110，两把均使用所选射击回路。增加另一把手枪的重量，并降低精度。</PMP_Boltshot_GripDual.description>
+  <PMP_Boltshot_OpticArmor.label>瞄具悬浮护甲片</PMP_Boltshot_OpticArmor.label>
+  <PMP_Boltshot_OpticArmor.description>只有装上瞄具时才会出现的悬浮护甲片。</PMP_Boltshot_OpticArmor.description>
+</LanguageData>

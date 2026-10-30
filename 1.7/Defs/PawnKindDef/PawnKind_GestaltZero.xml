@@ -86,9 +86,6 @@
             <PsychicSensitivity>-1</PsychicSensitivity>
             <PsychicSensitivity>-2</PsychicSensitivity>
         </disallowedTraitsWithDegree>
-        <abilities>
-            <li>PMPH_GestaltZeroInvisibility</li>
-        </abilities>
         <skipResistant>true</skipResistant>
         <modExtensions>
             <li Class="PMP_Persona.GestaltZero.GestaltZeroLifecycleExtension">

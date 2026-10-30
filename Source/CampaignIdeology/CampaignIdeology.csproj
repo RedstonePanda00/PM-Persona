@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><OutputPath>../../1.7/Ideology/Assemblies/</OutputPath><AssemblyName>PMP.Campaign.Ideology</AssemblyName></PropertyGroup>
+ <ItemGroup>
+  <Reference Include="PMP.Campaign"><HintPath>../../1.7/Assemblies/PMP.Campaign.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="RimCampaign.Runtime"><HintPath>../../.work/RimCampaign-stealth/1.7/Assemblies/RimCampaign.Runtime.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="RimCampaign.Core"><HintPath>../../.work/RimCampaign-stealth/1.7/Assemblies/RimCampaign.Core.dll</HintPath><Private>false</Private></Reference>
+ </ItemGroup>
+</Project>

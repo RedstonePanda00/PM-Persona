@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
@@ -40,6 +40,13 @@ namespace PMP_Persona.VanguardSupport
         internal bool FireHeld;
         internal IntVec3 AimCell;
         private int combatTicks, durationTicks = 3600;
+        public bool Unlimited;
+        private int weaponMask = 14;
+        public bool WeaponAvailable(int weapon) => (weaponMask & (1 << weapon)) != 0;
+        public bool FireControlReady => Ready;
+        public void ConfigureWeapons(int mask) { weaponMask = mask; if (!WeaponAvailable(SelectedWeapon)) CycleWeapon(); }
+        public static OrbitalSupportSession Start(Map map, bool unlimited = false, int weapons = 14) { var session = Attach(map, DefDatabase<ShipSupportDef>.GetNamed("PMP_Support_Prism")); session.Unlimited = unlimited; session.ConfigureWeapons(weapons); VanguardFireControl.CurrentController.Begin(session); return session; }
+        public void Close() { if (VanguardFireControl.CurrentController?.Ship == this) VanguardFireControl.CurrentController.End(); map.components.Remove(this); }
         private int lastFireTick1 = -999999, lastFireTick2 = -999999;
         private List<int> ammunition = new List<int>(), reloadUntil = new List<int>();
         private List<float> nextShot = new List<float>();
@@ -53,8 +60,8 @@ namespace PMP_Persona.VanguardSupport
         internal int CombatTicks => combatTicks;
         internal float EntryDuration => Mathf.Max(1, Config?.entrySeconds ?? 7);
         internal float EntryEnd => IsPrism ? EntryDuration : EntryDuration * VanguardPresentation.EntryEnd / 7;
-        public int RemainingLifeTicks => Mathf.Max(0, durationTicks - combatTicks);
-        internal float RemainingFraction => (float)RemainingLifeTicks / durationTicks;
+        public int RemainingLifeTicks => Unlimited ? int.MaxValue : Mathf.Max(0, durationTicks - combatTicks);
+        internal float RemainingFraction => Unlimited ? 1 : (float)RemainingLifeTicks / durationTicks;
 
         public OrbitalSupportSession(Map map) : base(map) { }
         internal static OrbitalSupportSession Attach(Map map, ShipSupportDef def)
@@ -81,7 +88,7 @@ namespace PMP_Persona.VanguardSupport
         {
             RefreshReloads();
             if (Ready && IsPrism && FireHeld) TryFire(SelectedWeapon, AimCell);
-            if (Ready && ++combatTicks >= durationTicks) Phase = SupportPhase.Departure;
+            if (Ready && !Unlimited && ++combatTicks >= durationTicks) Phase = SupportPhase.Departure;
         }
         private void RefreshReloads()
         {
@@ -99,10 +106,10 @@ namespace PMP_Persona.VanguardSupport
             : Mathf.Max(0, (weapon == 1 ? lastFireTick1 + 15 : lastFireTick2 + 300) - Find.TickManager.TicksGame);
         internal float CooldownFraction(int weapon) => IsPrism ? ReloadFraction(weapon)
             : (float)CooldownTicks(weapon) / (weapon == 1 ? 15 : 300);
-        internal void CycleWeapon() { if (IsPrism && Ready) SelectedWeapon = SelectedWeapon % 3 + 1; }
+        internal void CycleWeapon() { if (!IsPrism) return; for(int i=0;i<3;i++){ SelectedWeapon = SelectedWeapon % 3 + 1; if(WeaponAvailable(SelectedWeapon))return; } }
         internal bool TryFire(int weapon, IntVec3 target)
         {
-            if (!Ready || Find.TickManager.Paused || Find.CurrentMap != map || !target.InBounds(map)) return false;
+            if (!WeaponAvailable(weapon) || !Ready || Find.TickManager.Paused || Find.CurrentMap != map || !target.InBounds(map)) return false;
             if (IsPrism) return TryFirePrism(weapon, target);
             if ((weapon != 1 && weapon != 2) || CooldownTicks(weapon) > 0) return false;
             var incoming = DefDatabase<ThingDef>.GetNamed(weapon == 1 ? "PMP_VanguardNeutronIncoming" : "PMP_AntiparticleShellIncoming");
@@ -113,7 +120,7 @@ namespace PMP_Persona.VanguardSupport
             {
                 IntVec3 cell = target + new IntVec3(Rand.RangeInclusive(-spread, spread), 0, Rand.RangeInclusive(-spread, spread));
                 if (!cell.InBounds(map)) cell = target;
-                var sky = SkyfallerMaker.SpawnSkyfaller(incoming, cell, map);
+                var sky = PMPH_OrbitalIncoming.Spawn(incoming, cell, map);
                 if (weapon == 2) sky.ticksToImpact += i * 15;
                 if (sky is PMPH_OrbitalIncoming orbital) orbital.VanguardWeapon = weapon;
             }
@@ -130,7 +137,7 @@ namespace PMP_Persona.VanguardSupport
             if (weapon == 1) PrismFractureEffects.Get(map).Add(target, Config);
             else
             {
-                var round = (PMPH_OrbitalIncoming)SkyfallerMaker.SpawnSkyfaller(spec.projectile, target, map);
+                var round = (PMPH_OrbitalIncoming)PMPH_OrbitalIncoming.Spawn(spec.projectile, target, map);
                 round.VanguardWeapon = weapon == 2 ? 2 : 1;
             }
             // Carry fractional tick spacing: 40 rounds can span 90 ticks without rounding drift.
@@ -149,6 +156,7 @@ namespace PMP_Persona.VanguardSupport
         public override void ExposeData()
         {
             Scribe_Defs.Look(ref SupportDef, "supportDef");
+            Scribe_Values.Look(ref Unlimited,"unlimited"); Scribe_Values.Look(ref weaponMask,"weaponMask",14);
             Scribe_Values.Look(ref Phase, "supportPhase");
             Scribe_Values.Look(ref EntryElapsed, "entryElapsed");
             Scribe_Values.Look(ref ExitElapsed, "exitElapsed");

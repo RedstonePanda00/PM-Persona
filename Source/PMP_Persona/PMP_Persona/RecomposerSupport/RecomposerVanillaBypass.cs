@@ -71,8 +71,7 @@ namespace PMP_Persona.RecomposerSupport
                 if (ThingStateField == null)
                     throw new MissingFieldException(typeof(Thing).FullName, "mapIndexOrState");
 
-                // Thing.Discard only transitions the internal state from unspawned (-2)
-                // to discarded (-3). Pawn-specific reference cleanup is performed above.
+                // Transition the cleaned pawn from unspawned (-2) to discarded (-3).
                 ThingStateField.SetValue(pawn, (sbyte)-3);
             }
             catch (Exception e)

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <ThingDef ParentName="ApparelArmorPowerBase">
+    <defName>PMP_BelieverArmor</defName>
+    <label>believer armor</label>
+    <description>The standard armor of a legion believer. Merely looking at it stirs a strange impulse within us. The technology used in this armor is a complete mystery to us.</description>
+    <techLevel>Archotech</techLevel>
+    <graphicData><texPath>Things/Apparel/Romulus/BelieverArmor/BelieverArmor</texPath><graphicClass>Graphic_Single</graphicClass><color>(1,1,1)</color></graphicData>
+    <colorGenerator IsNull="True"/>
+    <generateCommonality>1</generateCommonality>
+    <recipeMaker IsNull="True"/>
+    <thingSetMakerTags Inherit="false"/>
+    <tradeTags Inherit="false"/>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints><Mass>10</Mass><MarketValue>4800</MarketValue><Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.35</ArmorRating_Sharp><ArmorRating_Blunt>0.65</ArmorRating_Blunt><ArmorRating_Heat>1</ArmorRating_Heat>
+      <Insulation_Cold>60</Insulation_Cold><Insulation_Heat>30</Insulation_Heat><EquipDelay>12</EquipDelay>
+    </statBases>
+    <equippedStatOffsets Inherit="false"/>
+    <apparel>
+      <wornGraphicPath>Things/Apparel/Romulus/BelieverArmor/BelieverArmor</wornGraphicPath>
+      <tags Inherit="false"><li>PMP_BelieverArmor</li></tags>
+      <layers Inherit="false"><li>OnSkin</li><li>Middle</li><li>Shell</li></layers>
+    </apparel>
+    <modExtensions>
+      <li Class="PMP_Persona.Romulus.LegionExtension"><advanced>true</advanced></li>
+      <li Class="PMP_Persona.Romulus.SharedApparelBodyGraphic"><bodyType>Male</bodyType></li>
+    </modExtensions>
+    <smeltProducts><Plasteel>30</Plasteel><Steel>20</Steel></smeltProducts>
+  </ThingDef>
+  <ThingDef ParentName="ApparelArmorHelmetPowerBase">
+    <defName>PMP_BelieverHelmet</defName>
+    <label>believer helmet</label>
+    <description>The standard helmet of a legion believer. Merely looking at it stirs a strange impulse within us. The technology used in this helmet is a complete mystery to us.</description>
+    <techLevel>Archotech</techLevel>
+    <graphicData><texPath>Things/Apparel/Romulus/BelieverHelmet/BelieverHelmet</texPath><graphicClass>Graphic_Single</graphicClass><color>(1,1,1)</color></graphicData>
+    <colorGenerator IsNull="True"/>
+    <generateCommonality>1</generateCommonality>
+    <recipeMaker IsNull="True"/>
+    <thingSetMakerTags Inherit="false"/>
+    <tradeTags Inherit="false"/>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints><Mass>2</Mass><MarketValue>1800</MarketValue><Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.35</ArmorRating_Sharp><ArmorRating_Blunt>0.65</ArmorRating_Blunt><ArmorRating_Heat>1</ArmorRating_Heat>
+      <Insulation_Cold>8</Insulation_Cold><Insulation_Heat>6</Insulation_Heat><EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets Inherit="false"/>
+    <apparel>
+      <wornGraphicPath>Things/Apparel/Romulus/BelieverHelmet/BelieverHelmet</wornGraphicPath>
+      <tags Inherit="false"><li>PMP_BelieverHelmet</li></tags>
+      <forceEyesVisibleForRotations Inherit="false"/>
+    </apparel>
+    <modExtensions><li Class="PMP_Persona.Romulus.LegionExtension"><advanced>true</advanced></li></modExtensions>
+    <smeltProducts><Plasteel>12</Plasteel><Steel>8</Steel></smeltProducts>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>PMP_BelieverSpearRifle</defName>
+    <label>Spearpoint</label>
+    <description>A red-and-ivory archotech spindle carried by legion believers. Its inlaid channels project three narrow armor-piercing pulses, while the integral point can deliver a penetrating melee thrust. It uses ordinary projectile and melee damage; training bonuses come from the legion merit system.</description>
+    <techLevel>Archotech</techLevel>
+    <graphicData><texPath>Things/Equipment/Romulus/BelieverSpearRifle</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(1.5,1.5)</drawSize></graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints><Mass>2.5</Mass><MarketValue>3200</MarketValue><Flammability>0</Flammability>
+      <AccuracyTouch>0.95</AccuracyTouch><AccuracyShort>0.80</AccuracyShort><AccuracyMedium>0.50</AccuracyMedium><AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags><li>PMP_BelieverSpearRifle</li></weaponTags>
+    <weaponClasses><li>RangedLight</li></weaponClasses>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><hasStandardCommand>true</hasStandardCommand><defaultProjectile>PMP_BelieverSpearShot</defaultProjectile><warmupTime>0.5</warmupTime><range>19.9</range><burstShotCount>3</burstShotCount><ticksBetweenBurstShots>7</ticksBetweenBurstShots><soundCast>Shot_ChargeRifle</soundCast><soundCastTail>GunTail_Medium</soundCastTail><muzzleFlashScale>1</muzzleFlashScale></li></verbs>
+    <tools><li><label>spear point</label><capacities><li>Stab</li></capacities><power>18</power><armorPenetration>1</armorPenetration><cooldownTime>1.8</cooldownTime></li></tools>
+    <modExtensions><li Class="PMP_Persona.Romulus.LegionExtension"><advanced>true</advanced></li></modExtensions>
+    <recipeMaker IsNull="True"/>
+    <smeltProducts><Plasteel>15</Plasteel><Steel>15</Steel></smeltProducts>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_BelieverSpearShot</defName><label>spear pulse</label>
+    <graphicData><texPath>Things/Projectile/Charge_Small</texPath><graphicClass>Graphic_Single</graphicClass><color>(1,0.15,0.12)</color></graphicData>
+    <projectile><damageDef>Bullet</damageDef><damageAmountBase>25</damageAmountBase><armorPenetrationBase>1.30</armorPenetrationBase><speed>55</speed></projectile>
+  </ThingDef>
+</Defs>

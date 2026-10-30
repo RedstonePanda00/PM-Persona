@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <FactionDef ParentName="FactionBase">
+    <defName>PMP_RomulusLegion</defName>
+    <label>Romulus legion</label>
+    <description>The red and ivory legion of Romulus.</description>
+    <pawnSingular>legionary</pawnSingular>
+    <pawnsPlural>legionaries</pawnsPlural>
+    <humanlikeFaction>true</humanlikeFaction>
+    <backstoryFilters><li><categories><li>Pirate</li></categories></li></backstoryFilters>
+    <hidden>true</hidden>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <canStageAttacks>true</canStageAttacks>
+    <canSiege>false</canSiege>
+    <autoFlee>false</autoFlee>
+    <techLevel>Ultra</techLevel>
+    <permanentEnemy>true</permanentEnemy>
+    <factionIconPath>UI/Campaign/RomulusInsignia</factionIconPath>
+    <basicMemberKind>PMP_Warhound</basicMemberKind>
+    <modExtensions>
+      <li Class="PMP_Persona.Romulus.LegionExtension"/>
+      <li Class="PMP_Persona.Romulus.LegionRaidRules">
+        <champion>PMP_ChampionWarrior</champion>
+        <championMinPoints>40000</championMinPoints>
+      </li>
+    </modExtensions>
+    <fixedName>Romulus legion</fixedName>
+    <canMakeRandomly>false</canMakeRandomly>
+    <canGenerateQuestSites>false</canGenerateQuestSites>
+    <displayInFactionSelection>false</displayInFactionSelection>
+    <raidsForbidden>false</raidsForbidden>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,90)</li>
+        <li>(1000,220)</li>
+        <li>(4000,550)</li>
+        <li>(10000,1200)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <PMP_Warhound>35</PMP_Warhound>
+          <PMP_OutpostGuard>30</PMP_OutpostGuard>
+          <PMP_BelieverCerberus>12</PMP_BelieverCerberus>
+          <PMP_BelieverOpis>8</PMP_BelieverOpis>
+          <PMP_LegionCenturion>8</PMP_LegionCenturion>
+          <PMP_LegionGuard>4</PMP_LegionGuard>
+          <PMP_LegionChosen>1</PMP_LegionChosen>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+  <HediffDef>
+    <defName>PMP_LegionRecord</defName>
+    <label>legion doctrine</label>
+    <description>The war god’s fury flows through {0}. The more perilous their condition, the stronger their body becomes.</description>
+    <hediffClass>PMP_Persona.Romulus.Hediff_LegionRecord</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <stages>
+      <li>
+        <painFactor>0</painFactor>
+      </li>
+    </stages>
+  <renderNodeProperties>
+    <li Class="PMP_Persona.Romulus.LegionEyeProperties"><parentTagDef>Head</parentTagDef></li>
+  </renderNodeProperties></HediffDef>
+</Defs>

@@ -17,7 +17,7 @@ namespace PMP_Persona.CarrierAircraftLegion
             float p = Mathf.Clamp01((Find.TickManager.TicksGame - d.warpStartTick) / (float)(entering ? WarpInTicks : WarpOutTicks));
             float visibility = entering ? Mathf.SmoothStep(0, 1, p / .35f)
                 : 1 - Mathf.SmoothStep(0, 1, (p - .55f) / .45f);
-            // Local Z is the aircraft's flight axis. The distortion is directional, not an idle size pulse.
+            // Apply flight distortion along the aircraft's local Z axis.
             scale.x *= entering ? Mathf.Lerp(.12f, 1, Mathf.SmoothStep(0, 1, p)) : Mathf.Lerp(1, .08f, p);
             scale.z *= entering ? Mathf.Lerp(3, 1, Mathf.SmoothStep(0, 1, p)) : Mathf.Lerp(1, 3, p);
             scale.x *= visibility; scale.z *= visibility;
@@ -26,7 +26,7 @@ namespace PMP_Persona.CarrierAircraftLegion
 
             if (warpStreakMaterial == null)
             {
-                // Reuse Zeta's native GLSL FTL streak; no permanent duplicate ship overlay.
+                // Render the native Zeta GLSL FTL streak.
                 warpStreakMaterial = PersonaMaterials.Create("PMP17_VanguardMaterial");
                 warpStreakMaterial.SetTexture("_MainTex", BaseContent.WhiteTex);
                 warpQuad = new Mesh { name = "Legion warp streak" };

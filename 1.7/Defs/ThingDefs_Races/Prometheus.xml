@@ -9,7 +9,7 @@
       <ArmorRating_Sharp>0.45</ArmorRating_Sharp><ArmorRating_Blunt>0.30</ArmorRating_Blunt><ArmorRating_Heat>1</ArmorRating_Heat>
       <IncomingDamageFactor>1</IncomingDamageFactor><WorkSpeedGlobal>1</WorkSpeedGlobal>
       <AimingDelayFactor>0.85</AimingDelayFactor><RangedCooldownFactor>0.90</RangedCooldownFactor>
-      <!-- Preserve the original level-10 combat contribution without a human skill tracker. -->
+      <!-- Fixed mechanical combat skill level. -->
       <ShootingAccuracyPawn>2</ShootingAccuracyPawn><MeleeHitChance>6</MeleeHitChance>
       <MeleeDodgeChance>10</MeleeDodgeChance><MortarMissRadiusFactor>0.95</MortarMissRadiusFactor>
     </statBases>

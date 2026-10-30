@@ -111,7 +111,7 @@ namespace PMP_Persona
                 .Where(p => p != currentTarget.Thing && p.HostileTo(Caster))
                 .ToList();
 
-            // Step 2 (AoE) MUST run before Step 3 (pull): damaging pawns inside PawnFlyer can empty the container and crash DestinationPos on draw/tick (vanilla PawnFlyer).
+            // Apply area damage before creating PawnFlyers to preserve their contained pawns.
             float secondaryDamageAmount = 100f;
 
             HashSet<Pawn> pawnsToDamageSet = new HashSet<Pawn>(
@@ -157,7 +157,7 @@ namespace PMP_Persona
                 }
             }
 
-            // Step 3: pull survivors to target (after AoE so flyers are not damaged mid-flight — avoids empty PawnFlyer / DestinationPos NRE).
+            // Pull surviving pawns after area damage.
             foreach (Pawn p in pawnsToPull)
             {
                 if (p.Position == targetOriginalPos) continue;

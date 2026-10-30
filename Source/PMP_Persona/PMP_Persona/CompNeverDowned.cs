@@ -15,7 +15,11 @@ namespace PMP_Persona
 
     public class CompNeverDowned : ThingComp
     {
-
+        [System.ThreadStatic] internal static bool scriptedStun;
+        public static void ApplyScriptedStun(Pawn pawn,int ticks,Thing instigator) {
+            bool previous=scriptedStun;scriptedStun=true;
+            try{pawn.stances.stunner.StunFor(ticks,instigator);}finally{scriptedStun=previous;}
+        }
     }
 
     
@@ -45,7 +49,7 @@ namespace PMP_Persona
         {
             Pawn pawn = __instance.parent as Pawn;
 
-            if (pawn != null && pawn.GetComp<CompNeverDowned>() != null)
+            if (!CompNeverDowned.scriptedStun && pawn != null && pawn.GetComp<CompNeverDowned>() != null)
             {
                 MoteMaker.ThrowText(pawn.DrawPos, pawn.Map, "StunResisted".Translate(), -1f);
                 return false;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Defs>
     <!-- Protoss Heart-->
     <HediffDef ParentName="AddedBodyPartBase">
@@ -6,6 +6,7 @@
         <label>Protoss Heart</label>
         <labelNoun>a Protoss heart</labelNoun>
         <description>An installed Protoss heart.</description>
+        <stages><li><statFactors><StaggerDurationFactor>0</StaggerDurationFactor></statFactors></li></stages>
         <descriptionHyperlinks>
             <ThingDef>PMPH_ProtossHeart</ThingDef>
         </descriptionHyperlinks>
@@ -16,7 +17,7 @@
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
         <comps>
-            <li Class="RsPandaLibrary.HediffCompProperties_IgnorePathCost" />
+            <li Class="RsPandaLibrary.HediffCompProperties_IgnorePathCost"/>
             <li Class="RsPandaLibrary.HediffCompProperties_Regeneration">
                 <regenerationRate>1</regenerationRate>
                 <tickInterval>240</tickInterval>

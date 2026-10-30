@@ -37,7 +37,7 @@ namespace PMP_Persona.Prometheus
                 if (GenPlace.TryPlaceThing(seed, cell, map, ThingPlaceMode.Near)) return seed;
             }
             else if (owner != null && owner.TryAdd(seed, false)) return seed;
-            // Do not lose an individual if a carrier/container refuses the replacement.
+            // Restore ownership if the container rejects replacement.
             if (owner != null)
             {
                 seed.contents.Remove(corpse);
@@ -59,7 +59,7 @@ namespace PMP_Persona.Prometheus
             {
                 if (pawn.Dead && !ResurrectionUtility.TryResurrect(pawn,
                     new ResurrectionParams { dontSpawn = true, restoreMissingParts = true })) return false;
-                // Keep ownership until placement, including after a recoverable failed placement.
+                // Retain ownership until placement succeeds.
                 if (pawn.holdingOwner != null) pawn.holdingOwner.Remove(pawn);
                 GenSpawn.Spawn(pawn, cell, map);
                 pawn.EnsureApparel();
@@ -106,7 +106,7 @@ namespace PMP_Persona.Prometheus
 
     public sealed class Recipe_RestorePrometheus : RecipeWorker
     {
-        // DoBill consumes first, then notifies completion. Defer ALL consumption until revival succeeds.
+        // Defer DoBill consumption until revival succeeds.
         public override void ConsumeIngredient(Thing ingredient, RecipeDef recipe, Map map) { }
         public override void Notify_IterationCompleted(Pawn billDoer, List<Thing> ingredients)
         {

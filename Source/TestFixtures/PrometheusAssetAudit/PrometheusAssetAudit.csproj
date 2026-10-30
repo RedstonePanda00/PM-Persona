@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>PMP.PrometheusAssetAudit</AssemblyName>
+    <OutputPath>../../../artifacts/prometheus-release/audit-bin/</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GunSmithFramework"><HintPath>$(RimWorldDir)/Mods/ProtossMechCore/1.7/Assemblies/GunSmithFramework.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

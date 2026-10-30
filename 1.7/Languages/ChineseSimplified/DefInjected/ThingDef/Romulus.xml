@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LanguageData>
+  <PMP_Warhound.label>军团战犬</PMP_Warhound.label>
+  <PMP_LegionGuard.label>军团禁卫</PMP_LegionGuard.label>
+  <PMP_LegionChosen.label>军团神选者</PMP_LegionChosen.label>
+  <PMP_LegionSpear.label>军团矛枪</PMP_LegionSpear.label>
+  <PMP_LegionShield.label>军团重盾</PMP_LegionShield.label>
+  <PMP_Warhound.description>成群结队，行动迅猛的超凡科技机械犬，它们能够翻越墙壁，如潮水般淹没军团的敌人。</PMP_Warhound.description>
+  <PMP_LegionGuard.description>持有重盾和矛枪的重型机械体，能够承受惊人的伤害，仿佛一座移动的堡垒。</PMP_LegionGuard.description>
+  <PMP_LegionChosen.description>超重型机械体，拥有和体型不符的敏捷，这些灵巧的杀手是战场上的死神，能够轻而易举地撕碎任何挡在他们面前的敌人。</PMP_LegionChosen.description>
+  <PMP_LegionSpear.description>超凡科技打造的长矛，无坚不摧的同时，还能发射高能炮弹。光是看着就会感觉一股冲动自心中升起。这件武器使用的科技对我们来说完全是个谜。</PMP_LegionSpear.description>
+  <PMP_LegionShield.description>超凡科技打造的重盾，上面有罗穆卢斯军团的纹路，能够投射护盾。光是看着就会感觉一股冲动自心中升起。这块护盾使用的科技对我们来说完全是个谜。</PMP_LegionShield.description>
+</LanguageData>

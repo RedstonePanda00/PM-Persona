@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_RomulusLegion.label>罗穆卢斯军团</PMP_RomulusLegion.label>
+  <PMP_RomulusLegion.fixedName>罗穆卢斯军团</PMP_RomulusLegion.fixedName>
+  <PMP_RomulusLegion.description>使用红白装甲、遵循军功与血战传统的罗穆卢斯军团。</PMP_RomulusLegion.description>
+  <PMP_RomulusLegion.pawnSingular>军团士兵</PMP_RomulusLegion.pawnSingular>
+  <PMP_RomulusLegion.pawnsPlural>军团士兵</PMP_RomulusLegion.pawnsPlural>
+</LanguageData>

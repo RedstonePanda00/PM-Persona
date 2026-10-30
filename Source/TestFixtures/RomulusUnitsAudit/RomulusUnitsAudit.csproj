@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><AssemblyName>PMP.RomulusUnitsAudit</AssemblyName><OutputPath>../../../artifacts/romulus-units-release/audit-bin/</OutputPath></PropertyGroup>
+ <ItemGroup><Reference Include="PMP_Persona"><HintPath>../../../1.7/Assemblies/PMP_Persona.dll</HintPath><Private>false</Private></Reference></ItemGroup>
+</Project>

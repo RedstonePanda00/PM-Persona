@@ -1,0 +1,12 @@
+<LanguageData>
+  <PMP.Champion.Charge>Retaliation: {0}</PMP.Champion.Charge>
+  <PMP.Champion.ChargeDesc>Records incoming damage before adaptation. The next hit that actually deals damage adds and consumes the entire charge. Fully absorbed hits preserve it.</PMP.Champion.ChargeDesc>
+  <PMP.Champion.Passive>Passive effect; no manual activation required</PMP.Champion.Passive>
+  <PMP.Champion.Throw>Grab and throw</PMP.Champion.Throw>
+  <PMP.Champion.ThrowDesc>Select a nearby hostile or factionless building/item, then a direction. On collision, the object and nearby buildings/pawns each receive vanilla blunt damage with base damage equal to half the object's maximum hit points. Friendly fire is possible.</PMP.Champion.ThrowDesc>
+  <PMP.Champion.ThrowRejected>Cannot throw this target now.</PMP.Champion.ThrowRejected>
+  <PMP.Champion.Unavailable>Cannot act right now</PMP.Champion.Unavailable>
+  <PMP.Champion.Cooldown>Cooldown: {0} seconds</PMP.Champion.Cooldown>
+  <PMP.Champion.AwaitingLanding>Waiting for space to land</PMP.Champion.AwaitingLanding>
+  <PMP.Champion.InFlight>In flight</PMP.Champion.InFlight>
+</LanguageData>

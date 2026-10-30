@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><AssemblyName>PMP.KaldalisJumpAudit</AssemblyName><OutputPath>../../../artifacts/kaldalis-jump/audit-bin/</OutputPath></PropertyGroup>
+ <ItemGroup><Reference Include="ProtossMech"><HintPath>$(ProtossCorePath)</HintPath><Private>false</Private></Reference></ItemGroup>
+</Project>

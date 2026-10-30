@@ -654,10 +654,7 @@ namespace PMP_Persona.CarrierAircraftLegion
 
             Material overlay = new Material(baseMat);
             overlay.SetInt("_ZTest", (int)CompareFunction.Always);
-            // 1.7 Mote/MoteGlow INSTANCED reads _Color as an SSBO indexed by
-            // gl_InstanceIndex. DrawMeshInstanced supplies transforms only; a scalar
-            // material color does not populate that array (undefined/random tints).
-            // Cache a full batch once per material, preserving the XML body tint.
+            // Cache each material's _Color SSBO batch for gl_InstanceIndex-based Mote rendering.
             var colors = new Vector4[MaxInstancingBatch];
             Vector4 tint = overlay.color;
             for (int i = 0; i < colors.Length; i++) colors[i] = tint;

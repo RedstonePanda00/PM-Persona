@@ -1,0 +1,5 @@
+<LanguageData>
+  <PMP.Sprint.Label>战术冲刺</PMP.Sprint.Label>
+  <PMP.Sprint.Description>征召时移动速度增加 {0}。自动翻越可通行的掩体，经过低矮障碍时滑铲，偶尔飞扑。障碍碰撞与通行耗时仍按原有规则处理。无体力消耗或冷却。</PMP.Sprint.Description>
+  <PMP.Sprint.Stat>战术冲刺：×{0}</PMP.Sprint.Stat>
+</LanguageData>

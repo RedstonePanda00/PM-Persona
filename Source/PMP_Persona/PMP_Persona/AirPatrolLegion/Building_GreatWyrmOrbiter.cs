@@ -52,15 +52,15 @@ namespace PMP_Persona.AirPatrolLegion
         private int nextShooterIndex;
         private int missileLaunchSerial;
 
-        // Missile trail: use flecks instead of ribbon quads to avoid "long rectangle" artifacts.
+        // Fleck-based missile trail.
         private const int MissileTrailFleckBudgetPerTick = 220;
         private const int MissileTrailFleckEmitEveryPoints = 2;
         private const float MissileTrailSmokeSizeMin = 1.0f;
-        // Brighter electric-cyan for better readability.
+        // Electric-cyan trail color.
         private static readonly Color MissileTrailColor = new Color(0.15f, 1f, 1f);
         private const float MissileImpactSmokeSizeMin = 1.0f;
 
-        // Debug: make the trail visibility obvious.
+        // Trail visibility parameters.
         private const float MissileTrailSolidTimeOverride = 1.0f;
         private const bool MissileTrailDebugForceEmit = true;
 
@@ -83,7 +83,7 @@ namespace PMP_Persona.AirPatrolLegion
             LeftToRight,
             RightToLeft,
             Done,
-            // Appended last so older save ordinals (0–2) stay valid.
+            // Serialized values 0-2 are reserved for existing states.
             PausingBetweenPasses
         }
 
@@ -188,14 +188,14 @@ namespace PMP_Persona.AirPatrolLegion
                 }
 
                 pass = AirPatrolPass.RightToLeft;
-                // RightToLeft pass: leaderX is the leftmost craft, so push whole formation off-map.
+                // Place the right-to-left formation fully off-map.
                 leaderX = w + margin + 2f * fwd + halfWidth;
             }
 
             if (pass == AirPatrolPass.LeftToRight)
             {
                 leaderX += speed;
-                // LeftToRight pass: leaderX is the rightmost craft, so wait until even the tail is off-map.
+                // Wait for the left-to-right formation's tail to exit.
                 if (leaderX > w + margin + 2f * fwd + halfWidth)
                 {
                     leaderX = w + margin + 2f * fwd + halfWidth;
@@ -206,7 +206,7 @@ namespace PMP_Persona.AirPatrolLegion
             else if (pass == AirPatrolPass.RightToLeft)
             {
                 leaderX -= speed;
-                // RightToLeft pass: leaderX is the leftmost craft, so wait until even the rightmost craft is off-map.
+                // Wait for the right-to-left formation's tail to exit.
                 if (leaderX < -margin - 2f * fwd - halfWidth)
                 {
                     pass = AirPatrolPass.Done;
@@ -371,10 +371,10 @@ namespace PMP_Persona.AirPatrolLegion
                 activeMissiles.Add(missile);
                 lockedTargetIds.Add(targetId);
 
-                // Keep legacy smoke burst only when orbandtail materials are unavailable.
+                // Smoke fallback when orbandtail materials are unavailable.
                 if (MissileTrailDebugForceEmit && !AirPatrolOrbAndTailFx.TryGetMaterials(out _, out _))
                 {
-                    // Spawn multiple puffs around wing tip so they remain visible even at high missile speed.
+                    // Emit smoke puffs around the wing tip.
                     int n = 4;
                     float wingSmokeScale = Mathf.Max(1.6f, Ext.planeDrawScale * 0.2f);
                     for (int k = 0; k < n; k++)
@@ -518,7 +518,7 @@ namespace PMP_Persona.AirPatrolLegion
                         TryEmitMissileTrailFleck(m.pos, ref flecksEmitted);
                 }
 
-                // If we moved close enough due to steering, eliminate immediately for tighter impact.
+                // Resolve impacts within the steering hit threshold.
                 Vector3 deltaEnd = targetPos - m.pos;
                 deltaEnd.y = 0f;
                 if (deltaEnd.magnitude <= speed || deltaEnd.magnitude < 0.15f)
@@ -550,12 +550,12 @@ namespace PMP_Persona.AirPatrolLegion
             if (flecksEmitted >= MissileTrailFleckBudgetPerTick)
                 return;
 
-            // Keep emission density reasonable even when many missiles exist.
+            // Limit missile trail emission density.
             if (!MissileTrailDebugForceEmit && (flecksEmitted & 1) == 1)
                 return;
 
             float size = Mathf.Max(MissileTrailSmokeSizeMin, Ext.planeDrawScale * 0.08f);
-            // Use smoke for visibility testing; keep it near the missile sample point.
+            // Emit smoke near the missile sample point.
             float scale = Rand.Range(0.9f, 1.3f) * size;
             FleckCreationData dataStatic = FleckMaker.GetDataStatic(p, Map, FleckDefOf.Smoke, scale);
             dataStatic.rotationRate = Rand.Range(-20f, 20f);

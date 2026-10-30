@@ -8,8 +8,7 @@ using Verse;
 
 namespace PMP_Persona.VanguardSupport
 {
-    // Effect-specific state only. Uses the game's existing ParticleSystem implementation and
-    // the same explicit game-clock simulation as PMC R42Vfx; no duplicate Unity compatibility layer.
+    // Impact particles using native ParticleSystem and explicit game-clock simulation.
     public sealed class VanguardImpactEffects : MapComponent
     {
         private const int MaxBursts = 24, MaxScars = 96;
@@ -86,7 +85,7 @@ namespace PMP_Persona.VanguardSupport
             if (map != Find.CurrentMap || !cell.InBounds(map) || cell.Fogged(map)) return;
             Materials();
             point.y = AltitudeLayer.MoteLow.AltitudeFor();
-            // Refresh stationary footprints instead of stacking dozens of opaque decals.
+            // Refresh existing stationary footprint decals.
             for (int i = 0; i < scars.Count; i++)
                 if (scars[i].ScorchOnly && scars[i].Seed == seed && (scars[i].Point - point).sqrMagnitude < 2.25f)
                 { var s = scars[i]; s.Tick = Find.TickManager.TicksGame; scars[i] = s; return; }
@@ -126,7 +125,7 @@ namespace PMP_Persona.VanguardSupport
                 main.gravityModifier = 1.5f;
                 var emission = ps.emission; emission.enabled = false;
                 var shape = ps.shape; shape.enabled = false;
-                // The engine collision module is still a stub. Only our particles get a ground-plane bounce below.
+                // Apply custom ground-plane bounce; engine collision is unavailable.
                 var collision = ps.collision; collision.enabled = false;
                 var color = ps.colorOverLifetime; color.enabled = true;
                 var gradient = new Gradient();
@@ -182,8 +181,7 @@ namespace PMP_Persona.VanguardSupport
             burst.System.Simulate(.0001f, false, false, false);
             if (fracture)
             {
-                // A continuous expanding dust wall starts at the visible scar perimeter.
-                // This branch emits no center-origin radial fingers or spokes.
+                // Emit an expanding dust wall from the scar perimeter.
                 float radius = 13 * scale * .36f;
                 for (int i = 0; i < 112; i++)
                 {
@@ -203,8 +201,7 @@ namespace PMP_Persona.VanguardSupport
             }
             else if (missile)
             {
-                // Fast radial fingers followed by expanding puffs, based on the supplied LOKI stills.
-                // Cosmetic only: no extra projectiles, explosion radius or damage.
+                // Emit cosmetic radial streaks and expanding dust puffs.
                 float phase = Next(0, Mathf.PI * 2);
                 float[] gaps = new float[10];
                 float gapSum = 0;
@@ -279,10 +276,9 @@ namespace PMP_Persona.VanguardSupport
             {
                 if (scar.Point.ToIntVec3().Fogged(map)) continue;
                 float age = (Find.TickManager.TicksGame - scar.Tick) / 60f;
-                if (scar.ScorchOnly) age += .25f; // No repeated impact flash while a continuous beam refreshes its trail.
+                if (scar.ScorchOnly) age += .25f; // Skip impact flashes on refreshed beam trails.
                 float span = (scar.Missile ? 13 : 3.6f) * scar.Scale;
-                // The sensor's offscreen camera must also see the per-impact uniforms.
-                // Keep bounded, reusable materials rather than relying on copied draw-property arenas.
+                // Cache per-impact materials shared by map and sensor rendering.
                 scar.Material.SetVector("_Params", new Vector4(age, 6, scar.Seed % 997, scar.Water ? 3 : 0));
                 scar.Material.SetVector("_Tint", new Vector4(1, 1, 1, scar.Fracture || scar.ScorchOnly ? 0 : 1));
                 Draw(scar.Point, Quaternion.AngleAxis(scar.Seed % 360, Vector3.up), new Vector3(span, 1, span), scar.Material, 3005);

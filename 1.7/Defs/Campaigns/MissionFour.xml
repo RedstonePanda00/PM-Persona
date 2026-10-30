@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>PMP_RomulusSubnode</defName>
+    <label>Romulus hub</label>
+    <description>A towering archotech structure that hums with energy. Conventional weapons cannot harm it. This structure is a subnode of the archointelligence [Romulus].</description>
+    <thingClass>PMP.Campaign.RomulusSubnode</thingClass>
+    <category>Building</category><drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Building</altitudeLayer><passability>Impassable</passability>
+    <fillPercent>1</fillPercent><selectable>true</selectable><rotatable>false</rotatable>
+    <size>(1,1)</size><useHitPoints>false</useHitPoints>
+    <graphicData><texPath>Things/Building/Romulus/Hub</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(4,5)</drawSize><drawOffset>(0,0,1.75)</drawOffset></graphicData>
+    <statBases><Flammability>0</Flammability><Beauty>5</Beauty></statBases>
+    <building><isEdifice>true</isEdifice><claimable>false</claimable><deconstructible>false</deconstructible><repairable>false</repairable><neverBuildable>true</neverBuildable></building>
+  </ThingDef>
+</Defs>

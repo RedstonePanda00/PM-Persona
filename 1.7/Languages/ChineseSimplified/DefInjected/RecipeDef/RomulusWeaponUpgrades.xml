@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_UpgradeSpearpoint.label>升级为刺矛</PMP_UpgradeSpearpoint.label>
+  <PMP_UpgradeSpearpoint.description>消耗一件对应原型武器及1片超凡科技护甲片，升级为刺矛。产物品质不低于实际消耗的原型武器品质。</PMP_UpgradeSpearpoint.description>
+  <PMP_UpgradeSpearpoint.jobString>正在升级武器。</PMP_UpgradeSpearpoint.jobString>
+  <PMP_UpgradeCerberus.label>升级为刻耳柏洛斯</PMP_UpgradeCerberus.label>
+  <PMP_UpgradeCerberus.description>消耗一件对应原型武器及1片超凡科技护甲片，升级为刻耳柏洛斯。产物品质不低于实际消耗的原型武器品质。</PMP_UpgradeCerberus.description>
+  <PMP_UpgradeCerberus.jobString>正在升级武器。</PMP_UpgradeCerberus.jobString>
+  <PMP_UpgradeOpis.label>升级为奥庇斯</PMP_UpgradeOpis.label>
+  <PMP_UpgradeOpis.description>消耗一件对应原型武器及1片超凡科技护甲片，升级为奥庇斯。产物品质不低于实际消耗的原型武器品质。</PMP_UpgradeOpis.description>
+  <PMP_UpgradeOpis.jobString>正在升级武器。</PMP_UpgradeOpis.jobString>
+  <PMP_UpgradeAbsolution.label>升级为赦令</PMP_UpgradeAbsolution.label>
+  <PMP_UpgradeAbsolution.description>消耗一件对应原型武器及1片超凡科技护甲片，升级为赦令。产物品质不低于实际消耗的原型武器品质。</PMP_UpgradeAbsolution.description>
+  <PMP_UpgradeAbsolution.jobString>正在升级武器。</PMP_UpgradeAbsolution.jobString>
+  <PMP_UpgradeLegionSpear.label>升级为军团矛枪</PMP_UpgradeLegionSpear.label>
+  <PMP_UpgradeLegionSpear.description>消耗一件对应原型武器及1片超凡科技护甲片，升级为军团矛枪。产物品质不低于实际消耗的原型武器品质。</PMP_UpgradeLegionSpear.description>
+  <PMP_UpgradeLegionSpear.jobString>正在升级武器。</PMP_UpgradeLegionSpear.jobString>
+</LanguageData>

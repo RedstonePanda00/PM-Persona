@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Deep drills occupy one cell; reuse PMC's building warp for this footprint. -->
+  <ThingDef ParentName="PM_WarpConstructionBeaconBase">
+    <defName>PM_WarpConstructionBeacon_1x1_Size</defName>
+    <size>(1,1)</size>
+    <graphicData>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+  </ThingDef>
+</Defs>

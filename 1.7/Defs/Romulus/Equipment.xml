@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>PMP_LegionSpear</defName>
+    <label>legion spear-gun</label>
+    <description>An archotech spear that can pierce any defense and fire high-energy shells. Merely looking at it stirs a strange impulse within us. The technology used in this weapon is a complete mystery to us.</description>
+    <graphicData>
+      <texPath>Things/Equipment/Romulus/LegionSpear</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>12</Mass>
+      <MarketValue>3000</MarketValue>
+      <MaxHitPoints>600</MaxHitPoints>
+      <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+      <AccuracyTouch>.9</AccuracyTouch>
+      <AccuracyShort>.95</AccuracyShort>
+      <AccuracyMedium>.9</AccuracyMedium>
+      <AccuracyLong>.8</AccuracyLong>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>PMP_LegionSpearShot</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>34</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>1</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>spear point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>45</power>
+        <armorPenetration>1.5</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="PMP_Persona.Romulus.LegionExtension">
+        <advanced>true</advanced>
+      </li>
+    </modExtensions>
+    <recipeMaker IsNull="True"/>
+    <smeltProducts>
+      <Steel>20</Steel>
+      <Plasteel>10</Plasteel>
+    </smeltProducts>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_LegionSpearShot</defName>
+    <label>legion pulse</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>48</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="ApparelBase">
+    <defName>PMP_LegionShield</defName>
+    <label>legion heavy shield</label>
+    <description>A heavy archotech shield inscribed with the patterns of the Romulus legion, capable of projecting a protective barrier. Merely looking at it stirs a strange impulse within us. The technology used in this shield is a complete mystery to us.</description>
+    <thingClass>Apparel</thingClass>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Things/Equipment/Romulus/LegionShield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.05,1.25)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <Mass>15</Mass>
+      <MarketValue>4000</MarketValue>
+      <Flammability>0</Flammability>
+      <EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
+      <EnergyShieldRechargeRate>.01</EnergyShieldRechargeRate>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+        <li>Utility</li>
+      </tags>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <wearPerDay>0</wearPerDay>
+    </apparel>
+    <comps>
+      <li Class="PMP_Persona.Romulus.CompProperties_LegionShield">
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+        <energyLossPerDamage>.001</energyLossPerDamage>
+        <startingTicksToReset>1200</startingTicksToReset>
+        <energyOnReset>.2</energyOnReset>
+        <minDrawSize>1.5</minDrawSize>
+        <maxDrawSize>2.1</maxDrawSize>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="PMP_Persona.Romulus.LegionExtension">
+        <advanced>true</advanced>
+      </li>
+    </modExtensions>
+    <smeltProducts>
+      <Steel>25</Steel>
+      <Plasteel>15</Plasteel>
+    </smeltProducts>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+</Defs>

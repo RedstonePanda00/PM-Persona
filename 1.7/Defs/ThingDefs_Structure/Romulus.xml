@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <!-- Shared Romulus outpost structures; no mission-specific triggers. -->
+  <ThingDef ParentName="Wall">
+    <defName>PMP_RomulusRedWall</defName><label>Romulus structural wall</label>
+    <description>A load-bearing structure found throughout Romulus outposts. Warm ivory armor encloses crimson archotech channels.</description>
+    <stuffCategories Inherit="false"/>
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+    <building><isStuffableAirtight>false</isStuffableAirtight><isAirtight>true</isAirtight><claimable>false</claimable><deconstructible>true</deconstructible><repairable>true</repairable><neverBuildable>false</neverBuildable></building>
+    <designationCategory>Structure</designationCategory>
+    <researchPrerequisites Inherit="false"><li>PMP_RomulusAnalysis</li></researchPrerequisites>
+    <costStuffCount>0</costStuffCount><costList Inherit="false"><PMP_ArchotechArmorFragment>1</PMP_ArchotechArmorFragment></costList>
+    <statBases><MaxHitPoints>77777</MaxHitPoints><Flammability>0</Flammability></statBases>
+    <graphicData>
+      <texPath>Things/Building/Linked/RomulusWall_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <color>(1,1,1)</color>
+    </graphicData>
+    <modExtensions><li Class="RimCampaign.Runtime.HullLinkExtension">
+      <linkGroup>RomulusStructure</linkGroup>
+      <!-- Cover the atlas's filtered square-corner pixels along diagonal runs. -->
+      <inset>0.1</inset>
+      <surfaceColor>(0.6352941,0.2,0.1803922)</surfaceColor>
+      <rimColor>(0.9333333,0.9215686,0.8627451)</rimColor>
+      <edgeColor>(0,0,0)</edgeColor>
+    </li></modExtensions>
+    <uiIconPath>Things/Building/Linked/RomulusWall_MenuIcon</uiIconPath>
+    <uiIconPathsStuff Inherit="false"/>
+  </ThingDef>
+  <ThingDef Name="PMP_RomulusObeliskBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>PMP.Campaign.RomulusObelisk</thingClass><drawerType>RealtimeOnly</drawerType><category>Building</category><altitudeLayer>Building</altitudeLayer><passability>Impassable</passability><fillPercent>1</fillPercent><selectable>true</selectable><rotatable>false</rotatable><size>(1,1)</size>
+    <graphicData><texPath>Things/Building/Romulus/Obelisk</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(2,4)</drawSize><drawOffset>(0,0,1.2)</drawOffset></graphicData>
+    <statBases><MaxHitPoints>3000</MaxHitPoints><Flammability>0</Flammability><Beauty>5</Beauty></statBases><building><isEdifice>true</isEdifice><claimable>false</claimable><deconstructible>false</deconstructible><repairable>false</repairable><neverBuildable>true</neverBuildable></building>
+  </ThingDef>
+  <ThingDef ParentName="PMP_RomulusObeliskBase"><defName>PMP_RomulusObelisk</defName><label>ritual obelisk</label><description>A towering, spear-shaped archotech structure. Energy hums through the patterns etched across its surface.</description></ThingDef>
+  <ThingDef ParentName="PMP_RomulusObeliskBase"><defName>PMP_RomulusHub</defName><label>Romulus hub</label><description>A towering archotech structure that hums with energy. Conventional weapons cannot harm it. This structure is a subnode of the archointelligence [Romulus].</description><graphicData><texPath>Things/Building/Romulus/Hub</texPath><drawSize>(4,5)</drawSize><drawOffset>(0,0,1.75)</drawOffset></graphicData></ThingDef>
+</Defs>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LanguageData>
+  <PMP.Legion.Summary>血战 {0} · 军衔 {1} · 振奋 {2}</PMP.Legion.Summary>
+  <PMP.Legion.Details>军功：{0}/700
+振奋来源：{1}
+晋升门槛：100 / 300 / 700；范围：10 / 14 / 18 格。</PMP.Legion.Details>
+  <PMP.Legion.Stat>军团战法：×{0}</PMP.Legion.Stat>
+<PMP.Legion.Total>当前总增益（血战 × 振奋）：
+移动速度：{0}
+近战伤害：{1}
+瞄准时间：{2}
+远程冷却：{3}</PMP.Legion.Total></LanguageData>

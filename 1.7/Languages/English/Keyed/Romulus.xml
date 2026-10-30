@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LanguageData>
+  <PMP.Legion.Summary>Bloodbattle {0} · Rank {1} · Inspiration {2}</PMP.Legion.Summary>
+  <PMP.Legion.Details>Merit: {0}/700
+Inspiration source: {1}
+Rank thresholds: 100 / 300 / 700; radii: 10 / 14 / 18 tiles.</PMP.Legion.Details>
+  <PMP.Legion.Stat>Legion doctrine: ×{0}</PMP.Legion.Stat>
+<PMP.Legion.Total>Current combined bonuses (bloodbattle × inspiration):
+Move speed: {0}
+Melee damage: {1}
+Aim time: {2}
+Ranged cooldown: {3}</PMP.Legion.Total></LanguageData>

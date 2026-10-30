@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LanguageData>
+  <PMP_BelieverArmor.label>信徒战甲</PMP_BelieverArmor.label>
+  <PMP_BelieverArmor.description>军团信徒的制式战甲，光是看着就会感觉一股冲动自心中升起。这件盔甲使用的科技对我们来说完全是个谜。</PMP_BelieverArmor.description>
+  <PMP_BelieverHelmet.label>信徒头盔</PMP_BelieverHelmet.label>
+  <PMP_BelieverHelmet.description>军团信徒的制式头盔，光是看着就会感觉一股冲动自心中升起。这顶头盔使用的科技对我们来说完全是个谜。</PMP_BelieverHelmet.description>
+  <PMP_BelieverSpearRifle.label>刺矛</PMP_BelieverSpearRifle.label>
+  <PMP_BelieverSpearRifle.description>信徒使用的红白超凡科技尖梭。嵌入枪体的纹路投射三发高穿甲脉冲，一体式尖端也可进行穿甲刺击。使用通用弹丸与近战伤害规则，训练增益由军团军衔系统提供。</PMP_BelieverSpearRifle.description>
+  <PMP_BelieverSpearRifle.tools.0.label>矛尖</PMP_BelieverSpearRifle.tools.0.label>
+  <PMP_BelieverSpearShot.label>刺矛脉冲</PMP_BelieverSpearShot.label>
+</LanguageData>

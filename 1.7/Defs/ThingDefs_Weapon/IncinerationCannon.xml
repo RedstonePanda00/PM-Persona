@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseGun">
+    <defName>PMP_IncinerationCannon</defName><label>Z-390 incineration cannon</label>
+    <description>A heavy hardlight weapon with a reinforced energy chamber and a clustered emitter assembly. Its projectile ruptures on impact, engulfing the target in heat and scattering unstable fragments that erupt across the surrounding ground. It was built to scour entrenched positions and dense concentrations of enemy troops.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <thingClass>GunSmithFramework.Thing_ModularGun</thingClass>
+    <techLevel>Spacer</techLevel><smeltable>false</smeltable><relicChance>0</relicChance>
+    <graphicData><texPath>Things/Weapon/IncinerationCannon/IncinerationCannon</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(1.7,1.7)</drawSize></graphicData>
+    <comps><li Class="GunSmithFramework.CompProperties_ModularGun"><platformDef>PMP_GunSmith_IncinerationCannon</platformDef></li></comps>
+    <statBases>
+      <Mass>7</Mass><MarketValue>900</MarketValue>
+      <AccuracyTouch>0.60</AccuracyTouch><AccuracyShort>0.85</AccuracyShort><AccuracyMedium>0.80</AccuracyMedium><AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>3.8</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs><li>
+      <verbClass>Verb_Shoot</verbClass><hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PMP_IncinerationRound</defaultProjectile><warmupTime>1.7</warmupTime>
+      <range>36</range><minRange>5.9</minRange><burstShotCount>1</burstShotCount><forcedMissRadius>1.5</forcedMissRadius>
+      <soundCast>ChargeLance_Fire</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>4</muzzleFlashScale>
+    </li></verbs>
+    <tools><li><label>stock</label><capacities><li>Blunt</li></capacities><power>10</power><cooldownTime>2.4</cooldownTime></li></tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_IncinerationRound</defName><label>incineration cannon round</label>
+    <thingClass>PMP_Persona.Prometheus.Projectile_Incineration</thingClass>
+    <graphicData><texPath>Things/Projectile/ChargeLanceShot</texPath><graphicClass>Graphic_Single</graphicClass><shaderType>Transparent</shaderType><color>(1,0.65,0.1)</color><drawSize>(1.5,1.5)</drawSize></graphicData>
+    <projectile>
+      <damageDef>Burn</damageDef><damageAmountBase>80</damageAmountBase><armorPenetrationBase>2</armorPenetrationBase><speed>45</speed>
+      <explosionRadius>2.9</explosionRadius><explosionDamageFalloff>true</explosionDamageFalloff>
+      <soundExplode>Explosion_Bomb</soundExplode><explosionChanceToStartFire>0.15</explosionChanceToStartFire>
+    </projectile>
+    <modExtensions><li Class="PMP_Persona.Prometheus.IncinerationCluster"><submunition>PMP_IncinerationSubmunition</submunition><count>4</count><scatterRadius>2.5~4</scatterRadius></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_IncinerationSubmunition</defName><label>incineration submunition</label><thingClass>Projectile_Explosive</thingClass>
+    <graphicData><texPath>Things/Projectile/Charge_Small</texPath><graphicClass>Graphic_Single</graphicClass><shaderType>Transparent</shaderType><color>(1,0.75,0.15)</color><drawSize>(0.9,0.9)</drawSize></graphicData>
+    <projectile>
+      <damageDef>Burn</damageDef><damageAmountBase>28</damageAmountBase><armorPenetrationBase>2</armorPenetrationBase><speed>14</speed>
+      <arcHeightFactor>0.65</arcHeightFactor><explosionDelay>18</explosionDelay>
+      <explosionRadius>1.6</explosionRadius><explosionDamageFalloff>true</explosionDamageFalloff>
+      <soundExplode>Explosion_Bomb</soundExplode><explosionChanceToStartFire>0.1</explosionChanceToStartFire><screenShakeFactor>0.25</screenShakeFactor>
+    </projectile>
+  </ThingDef>
+</Defs>

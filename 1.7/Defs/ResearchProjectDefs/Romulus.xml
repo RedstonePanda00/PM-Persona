@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>PMP_RomulusAnalysis</defName>
+    <label>Romulus material analysis</label>
+    <description>Study salvaged Romulus material and establish a foundation for legion equipment and mechanical engineering. Build Romulus structural walls using one archotech armor fragment per wall.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>3</researchViewY>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>PMP_BelieverArmaments</defName>
+    <label>Believer armor</label>
+    <description>Study the adaptation of recon armor and helmets into believer equipment.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+    <prerequisites>
+      <li>PMP_RomulusAnalysis</li>
+      <li>ReconArmor</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>PMP_CenturionArmaments</defName>
+    <label>Centurion armor</label>
+    <description>Study the adaptation of marine armor and helmets into centurion equipment.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0</researchViewY>
+    <prerequisites>
+      <li>PMP_BelieverArmaments</li>
+      <li>PoweredArmor</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>PMP_ChampionArmaments</defName>
+    <label>Champion armor</label>
+    <description>Study the further refinement of centurion armor into champion equipment. This does not create champion warriors or grant their boss abilities.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>0</researchViewY>
+    <prerequisites>
+      <li>PMP_CenturionArmaments</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>PMP_SpearpointResearch</defName>
+    <label>Spearpoint</label>
+    <description>Study the conversion of a machine pistol into Spearpoint. Requires the original weapon technology.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>2</researchViewY>
+    <prerequisites>
+      <li>PMP_RomulusAnalysis</li>
+      <li>BlowbackOperation</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>PMP_CerberusResearch</defName>
+    <label>Cerberus</label>
+    <description>Study the conversion of a chain shotgun into Cerberus. Requires the original weapon technology.</description>
+    <baseCost>1400</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>3</researchViewY>
+    <prerequisites>
+      <li>PMP_RomulusAnalysis</li>
+      <li>GasOperation</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>PMP_OpisResearch</defName>
+    <label>Opis</label>
+    <description>Study the conversion of a sniper rifle into Opis. Requires the original weapon technology.</description>
+    <baseCost>1800</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>4</researchViewY>
+    <prerequisites>
+      <li>PMP_RomulusAnalysis</li>
+      <li>PrecisionRifling</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>PMP_AbsolutionResearch</defName>
+    <label>Absolution</label>
+    <description>Study the conversion of a minigun into Absolution for centurion formations. Requires the original weapon technology.</description>
+    <baseCost>2200</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>2</researchViewY>
+    <prerequisites>
+      <li>PMP_CenturionArmaments</li>
+      <li>MultibarrelWeapons</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>PMP_LegionSpearResearch</defName>
+    <label>Legion spear-gun</label>
+    <description>Study the conversion of an ordinary spear into a legion spear-gun.</description>
+    <baseCost>1800</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>3</researchViewY>
+    <prerequisites>
+      <li>PMP_RomulusAnalysis</li>
+      <li>LongBlades</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>PMP_LegionShieldResearch</defName>
+    <label>Legion heavy shield</label>
+    <description>Study the conversion of a simple helmet into a legion heavy shield.</description>
+    <baseCost>1800</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>PMP_RomulusResearch</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>4</researchViewY>
+    <prerequisites>
+      <li>PMP_RomulusAnalysis</li>
+      <li>Smithing</li>
+    </prerequisites>
+  </ResearchProjectDef>
+</Defs>

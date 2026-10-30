@@ -11,8 +11,7 @@ namespace PMP_Persona.VanguardSupport
         internal static DamageDef Blast => DefDatabase<DamageDef>.GetNamed("BombSuper");
         internal static DamageDef Vaporize => DefDatabase<DamageDef>.GetNamed("Vaporize");
 
-        // Each channel receives the full original amount. Use ordinary TakeDamage calls
-        // so shields, damage factors, combat logs and death handling retain their normal hooks.
+        // Apply full damage per channel through TakeDamage.
         internal static void Apply(Thing target, float amount, Thing instigator = null,
             float angle = -1, ThingDef weapon = null, ThingDef projectile = null, Thing intendedTarget = null,
             bool explosion = false)
@@ -38,9 +37,7 @@ namespace PMP_Persona.VanguardSupport
         }
     }
 
-    // One native explosion selects/occludes/deduplicates targets once, then deals all
-    // three channels. Calling Vaporize's explosion worker separately would incorrectly
-    // cap its damage at 2.9 cells and add a second set of flames/visuals.
+    // Apply three damage channels to one native explosion's deduplicated target set.
     public sealed class DamageWorker_OrbitalImpact : DamageWorker_AddInjury
     {
         public override void ExplosionStart(Explosion explosion, List<IntVec3> cellsToAffect)

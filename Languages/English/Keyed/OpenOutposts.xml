@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP.Open.OutpostName>Romulus outpost {0}</PMP.Open.OutpostName>
+  <PMP.Open.OutpostsReplenished>The Romulus legion has established {0} new outposts. Planetary settlements: {1}/{2}.</PMP.Open.OutpostsReplenished>
+</LanguageData>

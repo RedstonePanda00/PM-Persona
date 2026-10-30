@@ -73,7 +73,7 @@ namespace PMP_Persona.SupernovaSupport
             Camera camera = Find.Camera;
             if (camera == null) return;
             material ??= PersonaMaterials.Create(MaterialName);
-            // A volume proxy, not a textured billboard. Rays are transformed into the object's 3D coordinates.
+            // Transform volume rays into object-local coordinates.
             center.y = centerHeight >= 0f ? centerHeight : AltitudeLayer.MoteOverhead.AltitudeFor() + stellarRadius;
             var matrix = Matrix4x4.TRS(center, Quaternion.identity, Vector3.one * radius);
             Configure(block, matrix, camera, radius, stellarRadius, stage, seed % 997, true);

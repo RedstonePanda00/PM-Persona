@@ -174,15 +174,11 @@ namespace PMP_Persona.GestaltZero
             recoveringPawn = pawn;
             try
             {
-                // A direct Pawn.Kill path can leave the private state at Dead even
-                // though Harmony skipped the body. Make the repair explicit before
-                // any Hediff notification is allowed to evaluate the pawn again.
+                // Restore the pooled pawn's health state before Hediff notifications.
                 pawn.health.isBeingKilled = false;
                 HealthStateField(pawn.health) = PawnHealthState.Mobile;
 
-                // A previously leaked second Pawn.Kill may have executed
-                // RemoveComponentsOnKilled. Recreate only missing trackers so
-                // old saves and already-corrupted pooled Zero instances recover.
+                // Recreate missing trackers on pooled pawns.
                 PawnComponentsUtility.CreateInitialComponents(pawn);
 
                 HediffSet set = pawn.health.hediffSet;
@@ -262,11 +258,11 @@ namespace PMP_Persona.GestaltZero
 
                 try
                 {
-                    pawn.GetComp<ProtossMechShieldPawn>()?.RestoreShield();
+                    pawn.GetComp<ProtossMechShield>()?.RestoreShield();
                 }
                 catch
                 {
-                    // A broken optional shield comp must never strand Zero in the pool.
+                    // Continue recovery after optional shield-comp failures.
                 }
 
                 pawn.Drawer?.renderer?.SetAllGraphicsDirty();
@@ -326,7 +322,7 @@ namespace PMP_Persona.GestaltZero
                 Find.LetterStack?.ReceiveLetter(
                     "PMP.GestaltZero.DownLetter.Label".Translate(),
                     "PMP.GestaltZero.DownLetter.Text".Translate(),
-                    LetterDefOf.ThreatBig,
+                    LetterDefOf.ThreatSmall,
                     target);
             }
             catch (Exception exception)
@@ -457,6 +453,21 @@ namespace PMP_Persona.GestaltZero
             if (epochTick < 0)
                 epochTick += ReconstructionEpochTicks;
             return (float)epochTick / ReconstructionEpochTicks;
+        }
+
+        // A campaign chapter boundary restores its inherited actor before deployment.
+        // The controller has already detached him from any holding owner at this point.
+        public void PrepareCampaignArrival(Pawn pawn)
+        {
+            if (!GestaltZeroUtility.IsZero(pawn)) return;
+            var persistence = Current.Game?.GetComponent<GameComponent_PersonaHeroPersistence>();
+            var pooled = persistence?.PeekPooledPawn(GestaltZeroUtility.LifecycleKey, true);
+            if (pooled != null && pooled != pawn)
+                throw new InvalidOperationException("Campaign Mason differs from the pooled Zero.");
+            if (pooled != null) persistence.TakePooledPawn(GestaltZeroUtility.LifecycleKey, true);
+            ClearState(true);
+            GestaltZeroUtility.RestoreForReturn(pawn);
+            GestaltZeroReconstructionRenderer.RemoveCoreReconstructionVisual(pawn);
         }
 
         public void DevCompleteNow(int token)

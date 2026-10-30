@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LanguageData><PMP_PrometheusPhase.label>相位移位</PMP_PrometheusPhase.label><PMP_PrometheusPhase.description>跃迁至附近可见的位置，脱离危险。</PMP_PrometheusPhase.description></LanguageData>
+<LanguageData><PMP_PrometheusPhase.label>相位移位</PMP_PrometheusPhase.label><PMP_PrometheusPhase.description>跃迁至附近可见的位置，脱离危险，并在传送后的5秒内逐渐恢复50点星灵护盾。</PMP_PrometheusPhase.description></LanguageData>

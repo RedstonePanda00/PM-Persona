@@ -8,7 +8,7 @@ using ProtossMech;
 
 namespace PMP_Persona
 {
-    // Reuses Umbra blade XML tuning fields from ProtossMech; adds dual-blade layout and two swings per melee.
+    // Umbra blade parameters with dual-blade layout and two swings per melee.
     public class CompProperties_KaldalisDualBladeRenderer : CompProperties_UmbraWarpBladeRenderer
     {
         // Pawn-local lateral offset magnitude (along right of facing); left = -, right = +.
@@ -23,7 +23,7 @@ namespace PMP_Persona
         // Degrees from pure lateral (x±) toward backward (+y in pawn frame: facing = -y, so back = -forward world).
         public float attackDiagonalBackSlideAngleDeg = 60f;
 
-        // North/South only: added to base combo yaw; right blade +this, mirrored left blade -this (90° relative between hands vs same-sign).
+        // North/South yaw offset: positive for the right blade, negative for the left.
         public float bladeComboExtraNorthSouthYawDeg = 45f;
 
         // East/West: final offset for both blades along -bodyForward (behind the pawn in facing space).
@@ -96,7 +96,7 @@ namespace PMP_Persona
             Mesh mesh = base.GetMesh(parms);
             if (mesh == null)
                 return null;
-            // Mirror via flipped grid mesh (negative scale inverts winding and can cull one blade).
+            // Mirror with a flipped grid mesh to preserve winding.
             if (PawnRenderNodeWorker_KaldalisBlade.EffectiveMirrorGraphicX(this, parms))
                 mesh = MeshPool.GridPlaneFlip(mesh);
             return mesh;
@@ -117,7 +117,7 @@ namespace PMP_Persona
 
     public class PawnRenderNodeWorker_KaldalisBlade : PawnRenderNodeWorker
     {
-        // West: center the left (mirrored) blade; East: center the right blade. Lateral offset suppressed only for that hand.
+        // Suppress lateral offset for the West left blade and East right blade.
         internal static bool EastWestBladeUsesBodyCenter(PawnRenderNode_KaldalisBlade blade, Rot4 bodyRot)
         {
             if (!bodyRot.IsHorizontal || blade == null)
@@ -129,8 +129,7 @@ namespace PMP_Persona
             return false;
         }
 
-        // East: centered (right) hand flips mesh once. West: only the right hand flips once; west left stays mirrored
-        // (centering cancels lateral only — do not XOR left mirror or the mesh matches the right asset and reads "facing right").
+        // Flip the East centered blade and West right blade; preserve the West left mirror.
         internal static bool EffectiveMirrorGraphicX(PawnRenderNode_KaldalisBlade blade, PawnDrawParms parms)
         {
             if (blade == null)
@@ -152,8 +151,7 @@ namespace PMP_Persona
             return node is PawnRenderNode_KaldalisBlade;
         }
 
-        // Body mesh uses ~0; tuck blades behind torso via small negative layer (see PawnRenderer cached North path).
-        // North: both blades; East: left only; West: right only (paired with draw-order patch).
+        // Place blades behind the torso: both for North, left for East, right for West.
         public override float LayerFor(PawnRenderNode node, PawnDrawParms parms)
         {
             if (node is PawnRenderNode_KaldalisBlade blade)
@@ -179,8 +177,7 @@ namespace PMP_Persona
 
             result += blade.bladeLocalOffset;
 
-            // Body rotation for attack / vertical logic; East/West idle lateral + twin facing offset use South-fixed axes
-            // so both blades share the same map Z as when facing South (lateral along map X, depth along map Z).
+            // Use body axes for attacks and South-fixed X/Z axes for East/West idle offsets.
             Vector3 bodyFwd = BodyRotationForwardFlat(parms.pawn);
             Vector3 bodyRight = FlatRight(bodyFwd);
             float side = blade.isRightSide ? 1f : -1f;
@@ -199,7 +196,7 @@ namespace PMP_Persona
 
                 if (bodyRot.IsHorizontal)
                 {
-                    // East/West: windup opposite facing axis, strike along facing; no diagonal slide / no facing-dir lunge here.
+                    // East/West swing: wind up against facing, then strike along facing.
                     if (comp != null)
                     {
                         float windF = comp.DiagonalBackSlideFactorForBlade(blade.isRightSide);
@@ -252,7 +249,7 @@ namespace PMP_Persona
             if (parms.pawn == null)
                 return rotation;
 
-            // Per-hand yaw from map facing: only North/South so East/West blades share the same map Z height (no orbit around pawn).
+            // Apply per-hand yaw only when facing North/South.
             if (parms.pawn != null && parms.pawn.Rotation.IsVertical)
             {
                 CompKaldalisDualBladeRenderer comboComp = parms.pawn.TryGetComp<CompKaldalisDualBladeRenderer>();
@@ -268,8 +265,7 @@ namespace PMP_Persona
                 {
                     CompKaldalisDualBladeRenderer comp = parms.pawn.TryGetComp<CompKaldalisDualBladeRenderer>();
                     float f = comp != null ? comp.SignedSwingFactorForBlade(blade.isRightSide) : pose.swingFactor;
-                    // Body-relative only: no attackDir / mapNorth / cross-target sign (avoids stale LastAttackDir flipping EW vs NS).
-                    // Use -f for yaw so the blade arcs read as slash (outward) not elbow-in; slide still uses raw f<0 in DiagonalBackSlideFactorForBlade.
+                    // Use body-relative yaw with -f for outward swings; slide uses f < 0.
                     float handSign = blade.isRightSide ? 1f : -1f;
                     float angle = blade.impactYawAngle * (-f) * handSign;
                     rotation *= Quaternion.AngleAxis(angle, Vector3.up);
@@ -305,8 +301,7 @@ namespace PMP_Persona
             return f.normalized;
         }
 
-        // Fixed world axes as if the pawn faced South: used for East/West lateral + idle forward offset so both blades
-        // stay on the same map Z as in the South-facing layout (offsets no longer rotate with East/West body forward).
+        // South-fixed world axes for East/West lateral and idle forward offsets.
         private static Vector3 SouthForwardFlat()
         {
             Vector3 f = Rot4.South.AsIntVec3.ToVector3();

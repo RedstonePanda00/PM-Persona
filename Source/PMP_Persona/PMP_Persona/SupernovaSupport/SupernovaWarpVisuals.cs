@@ -9,7 +9,7 @@ namespace PMP_Persona.SupernovaSupport
     {
         private static readonly MaterialPropertyBlock ruptureBlock = new MaterialPropertyBlock();
         internal const float RevealStart = .6f;
-        // PMC starts its black hole strictly AFTER 0.099. Never enter that phase.
+        // Maximum intro phase before PMC's black-hole branch (> 0.099).
         internal const float RuptureEnd = .099f;
         internal static int StarSeed(IntVec3 cell) => unchecked((cell.x * 73856093 ^ cell.z * 19349663) & int.MaxValue) % 997;
         internal static float RuptureProgress(float progress) => RuptureEnd * Mathf.Clamp01(progress / RevealStart);

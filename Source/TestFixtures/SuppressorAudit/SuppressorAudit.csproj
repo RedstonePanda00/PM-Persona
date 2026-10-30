@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><AssemblyName>PMP.SuppressorAudit</AssemblyName><OutputPath>../../../artifacts/suppressor/audit-bin/</OutputPath></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GunSmithFramework"><HintPath>$(RimWorldDir)/Mods/ProtossMechCore/1.7/Assemblies/GunSmithFramework.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="ProtossMech"><HintPath>$(ProtossCorePath)</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

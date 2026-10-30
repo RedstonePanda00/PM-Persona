@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <GunSmithFramework.GunSmithPlatformDef>
+    <defName>PMP_GunSmith_BinaryRifle</defName><label>Z-750 binary rifle</label>
+    <description>A heavy precision weapon that concentrates hardlight into an intensely energetic beam. Its elongated focusing assembly requires time to stabilize before releasing the charge, burning through distant targets in a brief flash. A narrow targeting beam marks the path of the impending discharge.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <weaponThingDef>PMP_BinaryRifle</weaponThingDef><weaponCategory>SniperRifle</weaponCategory>
+    <bodyTexPath>Things/Weapon/BinaryRifle/BinaryRifle</bodyTexPath>
+    <bakeTextureSize>512</bakeTextureSize><bakePadding>0.05</bakePadding><shadowDilatePixels>3</shadowDilatePixels><shadowAlpha>1</shadowAlpha>
+    <slotAttachmentOffsets><li><slotId>Optic</slotId><offset>(0.20,-0.095)</offset><gizmoOffset>(0.20,-0.30)</gizmoOffset></li></slotAttachmentOffsets>
+    <slots><li><slotId>Optic</slotId><slotType>Optic</slotType><optional>true</optional></li></slots>
+    <modExtensions><li Class="ProtossMech.GunSmith.GunSmithContentExtension"><costList><li><thingDef>PM_Solarite</thingDef><count>100</count></li></costList></li></modExtensions>
+  </GunSmithFramework.GunSmithPlatformDef>
+</Defs>

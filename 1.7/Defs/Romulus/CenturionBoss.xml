@@ -1,0 +1,60 @@
+<Defs>
+  <RimCampaign.Runtime.BossTemplateDef>
+    <defName>PMP_RegularCenturionBoss</defName>
+    <label>legion centurion boss</label>
+    <templateJson><![CDATA[{
+  "Name": "军团百夫长",
+  "MaxHealth": 5000,
+  "RegenerationPerSecond": 0,
+  "ReviveAfterSeconds": 0,
+  "DamageMultiplier": 1,
+  "PawnKind": {
+    "Kind": "PawnKindDef",
+    "Name": "PMP_LegionCenturion",
+    "Package": "redstone.pmpersona"
+  },
+  "Components": [],
+  "Phases": [
+    {
+      "Id": "m2-centurion-boss-phase",
+      "Name": "交战",
+      "Notes": "",
+      "RelatedObjects": [],
+      "AutoUnlock": true,
+      "Behaviors": [
+        {
+          "Id": "m2-centurion-boss-move",
+          "Name": "",
+          "Notes": "",
+          "RelatedObjects": [],
+          "Ability": null,
+          "CooldownTicks": 60,
+          "Module": "boss.approach",
+          "Parameters": {},
+          "Power": 0,
+          "Range": 24
+        },
+        {
+          "Id": "m2-centurion-boss-attack",
+          "Name": "",
+          "Notes": "",
+          "RelatedObjects": [],
+          "Ability": null,
+          "CooldownTicks": 30,
+          "Module": "boss.weapon",
+          "Parameters": {},
+          "Power": 0,
+          "Range": 26
+        }
+      ],
+      "HealthFraction": 1,
+      "LockHealth": false,
+      "OnEnter": []
+    }
+  ],
+  "Id": "persona.regularCenturion",
+  "InitiallyActive": false,
+  "TargetRole": ""
+}]]></templateJson>
+  </RimCampaign.Runtime.BossTemplateDef>
+</Defs>

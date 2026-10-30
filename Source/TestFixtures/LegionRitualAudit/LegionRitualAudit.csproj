@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><AssemblyName>PMP.LegionRitualAudit</AssemblyName><OutputPath>../../../artifacts/legion-rituals/audit-bin/</OutputPath></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PMP.Anomaly"><HintPath>../../../1.7/Anomaly/Assemblies/PMP.Anomaly.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="ProtossMech"><HintPath>$(RimWorldDir)/Mods/ProtossMechCore/1.7/Assemblies/ProtossMech.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

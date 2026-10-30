@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using Verse;
 
@@ -62,7 +62,7 @@ namespace PMP_Persona.VanguardSupport
                 Text.Anchor = TextAnchor.MiddleLeft;
                 int cooldown = ship.CooldownTicks(ship.IsPrism ? weapon : 2);
                 if (!ship.IsPrism) Draw(new Rect(x + 18, card.y + 37, width - 36, 30), 4, cooldown == 0 ? 1 : 0, 0, solar);
-                string status = cooldown > 0 ? "PMP.Prism.Reload".Translate((cooldown / 60f).ToString("F1")) : "PMP.Vanguard.Ready".Translate();
+                string status = !ship.WeaponAvailable(weapon) ? "PMP.Prism.Locked".Translate() : cooldown > 0 ? "PMP.Prism.Reload".Translate((cooldown / 60f).ToString("F1")) : "PMP.Vanguard.Ready".Translate();
                 Widgets.Label(new Rect(x + 18, card.y + (ship.IsPrism ? 38 : 73), width - 36, 24), status);
                 float fraction = 1 - ship.CooldownFraction(ship.IsPrism ? weapon : 2);
                 Bar(new Rect(x + 18, card.yMax - 15, width - 36, 4), fraction, solar);

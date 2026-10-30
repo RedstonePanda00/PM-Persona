@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><AssemblyName>PMP.ChampionBehaviorAudit</AssemblyName><OutputPath>../../../artifacts/champion-behavior/audit-bin/</OutputPath></PropertyGroup>
+ <ItemGroup>
+  <Reference Include="PMP.Campaign"><HintPath>../../../1.7/Assemblies/PMP.Campaign.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="PMP_Persona"><HintPath>../../../1.7/Assemblies/PMP_Persona.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="RimCampaign.Runtime"><HintPath>../../../.work/RimCampaign-stealth/1.7/Assemblies/RimCampaign.Runtime.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="RimCampaign.Core"><HintPath>../../../.work/RimCampaign-stealth/1.7/Assemblies/RimCampaign.Core.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="RimCampaign.SDK"><HintPath>../../../.work/RimCampaign-stealth/1.7/Assemblies/RimCampaign.SDK.dll</HintPath><Private>false</Private></Reference>
+ </ItemGroup>
+</Project>

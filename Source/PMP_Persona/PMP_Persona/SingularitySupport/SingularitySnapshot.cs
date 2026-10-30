@@ -32,8 +32,7 @@ namespace PMP_Persona.SingularitySupport
                         // Waylith's WorldToScreenPoint already returns top-down pixel Y.
                         int sx = Mathf.FloorToInt(point.x), sy = Mathf.FloorToInt(point.y);
                         int at = (sy * width + sx) * 4;
-                        // Main toolbar and colonist bar never belong to the map sample.
-                        // Off-screen pixels stay transparent rather than reconstructing unseen imagery.
+                        // Exclude UI pixels and leave off-screen samples transparent.
                         if (sx < 0 || sx >= width || sy < 80 * Prefs.UIScale || sy >= height - 40 * Prefs.UIScale) continue;
                         pixels[y * size + x] = new Color32(rgba[at], rgba[at+1], rgba[at+2], 255);
                     }

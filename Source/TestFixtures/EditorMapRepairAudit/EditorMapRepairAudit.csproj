@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><AssemblyName>PMP.EditorMapRepairAudit</AssemblyName><OutputPath>../../../artifacts/editor-map-repair/audit-bin/</OutputPath></PropertyGroup>
+ <ItemGroup>
+  <Reference Include="ProtossMech"><HintPath>$(RimWorldDir)/Mods/ProtossMechCore/1.7/Assemblies/ProtossMech.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="GunSmithFramework"><HintPath>$(RimWorldDir)/Mods/ProtossMechCore/1.7/Assemblies/GunSmithFramework.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="PMP.Campaign"><HintPath>../../../1.7/Assemblies/PMP.Campaign.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="PMP_Persona"><HintPath>../../../1.7/Assemblies/PMP_Persona.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="RimCampaign.Core"><HintPath>../../../.work/RimCampaign-stealth/1.7/Assemblies/RimCampaign.Core.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="RimCampaign.Editor"><HintPath>../../../.work/RimCampaign-stealth/1.7/Assemblies/RimCampaign.Editor.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="RimCampaign.Runtime"><HintPath>../../../.work/RimCampaign-stealth/1.7/Assemblies/RimCampaign.Runtime.dll</HintPath><Private>false</Private></Reference>
+ </ItemGroup>
+</Project>

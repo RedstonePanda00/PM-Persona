@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <RC_Text_d6a5666e942be14c>Click anywhere to open the mission report</RC_Text_d6a5666e942be14c>
+  <RC_Text_1a545e208b5681a6>Stealth performance</RC_Text_1a545e208b5681a6>
+  <RC_Text_b5ccfe78afc35acc>Mission report</RC_Text_b5ccfe78afc35acc>
+  <RC_Text_a30db96518916998>Detection sources</RC_Text_a30db96518916998>
+  <RC_Text_7ba69ef54bf4df88>Reports initiated</RC_Text_7ba69ef54bf4df88>
+  <RC_Text_844c2a85a0fbb9f8>Enemies killed</RC_Text_844c2a85a0fbb9f8>
+  <RC_Text_380e43c883ce43ad>Non-lethal takedowns</RC_Text_380e43c883ce43ad>
+  <RC_Text_daa352e5cf5599fc>Detection: Counts each guard or camera once on full detection. Yellow suspicion does not count.
+Reports: Counts each guard once when they first intend to report.
+Kills: Deaths of managed guards in this mission, including deaths after takedown.
+Non-lethal takedowns: Successfully subdued guards still alive at debrief.
+Starts at 100; each detection source costs </RC_Text_daa352e5cf5599fc>
+  <RC_Text_d35a30279e12bfeb>, each reporting guard costs </RC_Text_d35a30279e12bfeb>
+  <RC_Text_1e351618ac84f920>, each enemy killed costs </RC_Text_1e351618ac84f920>
+  <RC_Text_6d072f3214a78872>. Takedowns and time do not affect the score.
+S: 100; A: 85–99; B: 65–84; C: 40–64; D: 0–39.</RC_Text_6d072f3214a78872>
+  <RC_Text_1236413160136087>Time elapsed  </RC_Text_1236413160136087>
+  <RC_Text_8961cfe7a2ec3f2d>Measured in simulation time</RC_Text_8961cfe7a2ec3f2d>
+  <RC_Text_27ccd5b71b9ad177>Mission outcomes</RC_Text_27ccd5b71b9ad177>
+  <RC_Text_fcc994b99a3a87b5>Carried supplies</RC_Text_fcc994b99a3a87b5>
+  <RC_Text_5eb0e1aad4810d40>Operation complete. Investigation results saved.</RC_Text_5eb0e1aad4810d40>
+  <RC_Text_4b271f53f6f07a2e>Physical inventory items carry into the next mission in their current state.</RC_Text_4b271f53f6f07a2e>
+</LanguageData>

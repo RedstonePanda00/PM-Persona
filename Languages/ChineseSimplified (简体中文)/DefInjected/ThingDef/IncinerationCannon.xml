@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_IncinerationCannon.label>Z-390焚灭炮</PMP_IncinerationCannon.label>
+  <PMP_IncinerationCannon.description>一种配备强化储能腔与簇状发射组件的重型硬光武器。弹体撞击后崩解，以高热吞没目标，并将不稳定的能量碎片抛向四周，在地面上接连引发爆炸。它被用于清除坚固阵地与密集的敌军。\n\n这把武器是在曙光号上的分子打印机内，由能量直接转化为物质整枪打印的。</PMP_IncinerationCannon.description>
+  <PMP_IncinerationCannon.tools.stock.label>枪托</PMP_IncinerationCannon.tools.stock.label>
+  <PMP_IncinerationRound.label>焚灭炮主弹</PMP_IncinerationRound.label>
+  <PMP_IncinerationSubmunition.label>焚灭炮子弹药</PMP_IncinerationSubmunition.label>
+</LanguageData>

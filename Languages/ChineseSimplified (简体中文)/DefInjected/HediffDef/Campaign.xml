@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_KnightProtection.label>骑士护持</PMP_KnightProtection.label>
+  <PMP_KnightProtection.description>免疫伤害与受击减速，保持撤离行动。</PMP_KnightProtection.description>
+  <PMP_ChampionPhysiology.label>冠军勇士</PMP_ChampionPhysiology.label>
+  <PMP_ChampionPhysiology.description>不受心灵能力干扰，受击不会阻滞其追击。</PMP_ChampionPhysiology.description>
+  <PMP_SceneProtection.label>演出保护</PMP_SceneProtection.label>
+  <PMP_SceneProtection.description>剧情演出期间免疫伤害和受击减速。</PMP_SceneProtection.description>
+</LanguageData>

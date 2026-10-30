@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -6,12 +6,12 @@ using PMP_Persona.Rendering;
 
 namespace PMP_Persona.VanguardSupport
 {
-    // Fixed side/above sprite presentation. The support state and weapon logic do not depend on its geometry.
+    // Side/above sprite presentation for orbital support.
     internal sealed class VanguardPresentation : IDisposable
     {
         private Texture2D hull, cannons;
         private Material hullMaterial, clouds, portal, warpRibbon, sensor, plasmaMaterial, thermalBody;
-        private Camera captureCamera;
+        private readonly OrbitalSensorCapture worldCapture = new OrbitalSensorCapture();
         private RenderTexture feed;
         private int captureFrame = -1, captureCacheFailures;
         private bool hasSensorFrame;
@@ -34,9 +34,7 @@ namespace PMP_Persona.VanguardSupport
         }
         internal void MoveCannons(Vector2 movement, float dt)
         {
-            // A damped spring lags movement, overshoots slightly on stopping, then settles.
-            // X is roll in degrees, Y remains vertical translation in UI pixels.
-            // Positive GUI rotation is clockwise: right banks right, left banks left.
+            // Damped spring: X = roll in clockwise degrees, Y = vertical offset in UI pixels.
             Vector2 target = new Vector2(movement.x * 5, movement.y * 7);
             float remaining = Mathf.Min(dt, .1f);
             while (remaining > 0)
@@ -54,10 +52,9 @@ namespace PMP_Persona.VanguardSupport
         internal static float ArrivalBlack(float t) => Ease((t - (EntryEnd - .20f)) / .15f);
         internal static Vector2 ArrivalPosition(float t)
         {
-            // a: brief high-speed arrival; b: recover the silhouette at the arrival point.
-            // B: one shared progress for translation, pitch recovery and camera approach.
+            // Arrival transit followed by shared descent and camera approach.
             float transit = Mathf.Clamp01((t - WarpStart) / (WarpArrival - WarpStart));
-            // Arrive fast and brake sharply, then let the heavy hull descend under thrust.
+            // Ease arrival braking and descent.
             transit = 1 - Mathf.Pow(1 - transit, 3);
             float approach = ApproachProgress(t);
             var warpStart = new Vector2(WarpStartX, -.04f);
@@ -91,8 +88,7 @@ namespace PMP_Persona.VanguardSupport
         }
         internal static Rect ProjectHull(Vector3 center, float width, float height)
         {
-            // Derive positive screen extents independently of the projected corner order.
-            // Crossing the camera plane must never mirror the hull texture for a frame.
+            // Compute positive screen extents across the camera plane.
             Vector2 at = UI.MapToUIPosition(center);
             Vector2 left = UI.MapToUIPosition(center - Vector3.right * width * .5f);
             Vector2 right = UI.MapToUIPosition(center + Vector3.right * width * .5f);
@@ -136,34 +132,22 @@ namespace PMP_Persona.VanguardSupport
                 feed = RenderTexture.GetTemporary(width, height, 24, RenderTextureFormat.ARGB32);
                 feed.filterMode = FilterMode.Bilinear; hasSensorFrame = false;
             }
-            if (captureCamera == null)
-            {
-                var obj = new GameObject("PMP Vanguard sensor", typeof(Camera));
-                captureCamera = obj.GetComponent<Camera>(); captureCamera.enabled = false;
-            }
             Camera source = Find.CameraDriver.MyCamera;
             var previous = RenderTexture.active;
             try
             {
-                captureCamera.worldToCameraMatrix = source.worldToCameraMatrix;
-                captureCamera.projectionMatrix = source.projectionMatrix;
-                captureCamera.cullingMask = source.cullingMask;
-                captureCamera.clearFlags = CameraClearFlags.Color;
-                captureCamera.backgroundColor = new Color(.025f, .03f, .035f);
-                captureCamera.targetTexture = feed;
-                // Native 1.7 Render copies queued world draws without consuming the main view queue.
-                captureCamera.Render(); captureFrame = Time.frameCount;
+                if (!worldCapture.Render(source, feed, new Color(.025f, .03f, .035f))) return;
+                captureFrame = Time.frameCount;
                 hasSensorFrame = true; captureCacheFailures = 0;
             }
             catch (ArgumentException ex) when (captureCacheFailures < 2 &&
                 ex.Message.Contains("Waylith.Rendering.VulkanShaderLayoutCache+PipelineLayoutKey"))
             {
-                // A cold native pipeline can race the main-view worker. Keep the last completed
-                // sensor image and retry next frame; do not terminate the support for one failed capture.
+                // Retain the last sensor frame and retry failed captures.
                 captureCacheFailures++; captureFrame = Time.frameCount;
                 if (captureCacheFailures == 1) Log.Warning("[PMP] Native sensor pipeline cache raced initialization; retrying next frame.");
             }
-            finally { captureCamera.targetTexture = null; RenderTexture.active = previous; }
+            finally { RenderTexture.active = previous; }
         }
 
         private static void Effect(Rect rect, Texture texture, Material material, int mode, float time, float amount, float opacity = 1)
@@ -221,8 +205,7 @@ namespace PMP_Persona.VanguardSupport
             if (Event.current.type == EventType.Repaint)
             {
                 Effect(full, BaseContent.WhiteTex, clouds, 1, t, fog);
-                // Fixed world dimensions, half the previous settled size. Camera projection, not
-                // sprite enlargement, drives the final approach into the ship's sensor position.
+                // Project the fixed-size hull during the approach to the sensor position.
                 Vector3 center = ArrivalWorld(ship, t);
                 Vector2 warp = ArrivalWarp(t);
                 float worldWidth = VanguardFireControl.OverviewSize(ship) * 2 * w / h * .195f;
@@ -233,7 +216,7 @@ namespace PMP_Persona.VanguardSupport
                 float warpLight = WarpLight(t);
                 if (warpLight > 0)
                 {
-                    // A fast directional light streak and brief exit flare, not a slow approach.
+                    // Render the directional departure streak and exit flare.
                     var ribbon = new Rect(rect.center.x - w * .09f, rect.center.y - h * .10f, w * .9f, h * .20f);
                     Effect(ribbon, BaseContent.WhiteTex, warpRibbon, 7, t - WarpStart, warpLight);
                 }
@@ -292,8 +275,7 @@ namespace PMP_Persona.VanguardSupport
             // Preserve the asset aspect and bottom anchoring on ultrawide and 4:3 displays.
             float foreHeight = w * cannons.height / cannons.width;
             foreHeight = Mathf.Min(foreHeight, h);
-            // Leave enough artwork below/alongside the viewport for the five-degree bank.
-            // Keep its top at the same height; the extra texture extends offscreen.
+            // Pad below and beside the viewport for five-degree banking; retain top alignment.
             float bankMargin = w * .055f + 10;
             float foreWidth = w * (1 + bankMargin / foreHeight);
             foreHeight += bankMargin;
@@ -311,7 +293,7 @@ namespace PMP_Persona.VanguardSupport
             }
             Text.Font = GameFont.Small; Text.Anchor = TextAnchor.MiddleLeft; GUI.color = White;
             Label(w * .065f, h * .79f, 260, 28, (ship.IsPrism ? "PMP.Prism.Name" : "PMP.Vanguard.Name").Translate());
-            Label(w * .065f, h * .83f, 260, 28, "PMP.Vanguard.SupportRemaining".Translate(Mathf.CeilToInt(ship.RemainingLifeTicks / 60f)));
+            Label(w * .065f, h * .83f, 260, 28, ship.Unlimited ? "PMP.Prism.Unlimited".Translate() : "PMP.Vanguard.SupportRemaining".Translate(Mathf.CeilToInt(ship.RemainingLifeTicks / 60f)));
             hud.Bar(new Rect(w * .065f, h * .875f, w * .2f, 4), ship.RemainingFraction, White);
 
             hud.Weapons(ship, full);
@@ -320,7 +302,7 @@ namespace PMP_Persona.VanguardSupport
             Label(w * .33f, 92, w * .34f, 24, (ship.Infrared ? "PMP.Vanguard.Infrared" : "PMP.Vanguard.Optical").Translate());
             hud.Compass(w, ship.Bearing);
 
-            // Marks only visible, spawned pawns; never reveal fogged enemies or confer auto-lock.
+            // Mark visible spawned pawns without changing targeting.
             foreach (var pawn in ship.Map.mapPawns.AllPawnsSpawned)
             {
                 if (pawn.Dead || pawn.Position.Fogged(ship.Map) || pawn.IsHiddenFromPlayer()) continue;
@@ -387,7 +369,6 @@ namespace PMP_Persona.VanguardSupport
         {
             hud.Dispose();
             if (feed != null) RenderTexture.ReleaseTemporary(feed); feed = null;
-            if (captureCamera != null) UnityEngine.Object.Destroy(captureCamera.gameObject);
             foreach (var mat in new[] { hullMaterial, clouds, portal, warpRibbon, sensor, plasmaMaterial, thermalBody })
                 if (mat != null) UnityEngine.Object.Destroy(mat);
             hullMaterial = clouds = portal = warpRibbon = sensor = plasmaMaterial = thermalBody = null;

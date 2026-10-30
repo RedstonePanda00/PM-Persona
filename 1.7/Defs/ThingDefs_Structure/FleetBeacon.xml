@@ -25,7 +25,7 @@
     <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <statBases>
-      <MaxHitPoints>20000</MaxHitPoints>
+      <MaxHitPoints>400</MaxHitPoints>
       <WorkToBuild>20000</WorkToBuild>
       <Flammability>0</Flammability>
       <Beauty>100</Beauty>
@@ -38,6 +38,14 @@
       <li>PM_PurifierProjectFinal</li>
     </researchPrerequisites>
     <comps>
+            <li Class="ProtossMech.CompProperties_ProtossBuilding"/>
+      <li Class="ProtossMech.CompProperties_ProtossMechShield">
+        <energyMax>400</energyMax>
+        <energyGainPerTick>0.2</energyGainPerTick>
+        <ticksToBeginRecharge>600</ticksToBeginRecharge>
+        <minDrawSize>3.0</minDrawSize>
+        <maxDrawSize>3.5</maxDrawSize>
+      </li>
       <li Class="ProtossMech.CompProperties_AnimatedOverlayRenderer">
         <frameTexPathPrefix>Things/Structure/Overlays/YellowEnergyOrb/YellowEnergyOrb_</frameTexPathPrefix>
         <frameCount>4</frameCount>

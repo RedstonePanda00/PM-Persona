@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_BinaryRifle.label>Z-750二元步枪</PMP_BinaryRifle.label>
+  <PMP_BinaryRifle.description>一种将硬光压缩为高能光束的重型精确射击武器。修长的聚焦组件需要时间稳定内部能量，随后在短促的闪光中烧穿远处的目标。一束细窄的指示光标示着即将释放的能量路径。\n\n这把武器是在曙光号上的分子打印机内，由能量直接转化为物质整枪打印的。</PMP_BinaryRifle.description>
+  <PMP_BinaryRifle.tools.stock.label>枪托</PMP_BinaryRifle.tools.stock.label>
+  <PMP_BinaryBeam.label>二元步枪硬光束</PMP_BinaryBeam.label>
+</LanguageData>

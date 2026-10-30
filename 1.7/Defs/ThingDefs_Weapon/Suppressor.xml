@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseGun">
+    <defName>PMP_Suppressor</defName>
+    <label>Z-130 Suppressor</label>
+    <description>An automatic hardlight weapon built around a rapid-cycling emitter. Dense streams of incandescent bolts sweep across the space ahead, scorching armor and machinery. Its compact frame is suited to the confined passages of ships and fortifications.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <thingClass>GunSmithFramework.Thing_ModularGun</thingClass>
+    <techLevel>Spacer</techLevel>
+    <smeltable>false</smeltable>
+    <relicChance>0</relicChance>
+    <graphicData><texPath>Things/Weapon/Suppressor/Suppressor</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(1.2,1.2)</drawSize></graphicData>
+    <comps><li Class="GunSmithFramework.CompProperties_ModularGun"><platformDef>PMP_GunSmith_Suppressor</platformDef></li></comps>
+    <statBases>
+      <Mass>2.4</Mass><MarketValue>300</MarketValue>
+      <AccuracyTouch>0.90</AccuracyTouch><AccuracyShort>0.78</AccuracyShort><AccuracyMedium>0.45</AccuracyMedium><AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs><li>
+      <verbClass>Verb_Shoot</verbClass><hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PMP_SuppressorBolt</defaultProjectile>
+      <warmupTime>0.35</warmupTime><range>22</range>
+      <burstShotCount>9</burstShotCount><ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+      <soundCast>Shot_ChargeRifle</soundCast><soundCastTail>GunTail_Light</soundCastTail><muzzleFlashScale>2</muzzleFlashScale>
+    </li></verbs>
+    <tools><li><label>stock</label><capacities><li>Blunt</li></capacities><power>7</power><cooldownTime>1.5</cooldownTime></li></tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_SuppressorBolt</defName><label>suppressor hardlight bolt</label>
+    <graphicData><texPath>Things/Projectile/Charge_Small</texPath><graphicClass>Graphic_Single</graphicClass><shaderType>Transparent</shaderType><color>(1,0.75,0.15)</color></graphicData>
+    <projectile><damageDef>Burn</damageDef><damageAmountBase>7</damageAmountBase><armorPenetrationBase>2</armorPenetrationBase><speed>80</speed></projectile>
+  </ThingDef>
+</Defs>

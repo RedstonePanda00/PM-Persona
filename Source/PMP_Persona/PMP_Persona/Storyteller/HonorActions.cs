@@ -22,6 +22,13 @@ namespace PMP_Persona.Storyteller
                     if (race.race.meatDef != null) { humanMeat.Add(race.race.meatDef); humanProducts.Add(race.race.meatDef); }
                     if (race.race.leatherDef != null) humanProducts.Add(race.race.leatherDef);
                 }
+                // Exclude meat and leather shared with non-humanlike races.
+                foreach (ThingDef race in DefDatabase<ThingDef>.AllDefsListForReading.Where(d => d.race != null && !d.race.Humanlike))
+                {
+                    humanMeat.Remove(race.race.meatDef);
+                    humanProducts.Remove(race.race.meatDef);
+                    humanProducts.Remove(race.race.leatherDef);
+                }
             }
             return def != null && (meatOnly ? humanMeat : humanProducts).Contains(def);
         }
@@ -47,17 +54,22 @@ namespace PMP_Persona.Storyteller
     {
         static IEnumerable<Thing> Postfix(IEnumerable<Thing> __result, Pawn worker, List<Thing> ingredients)
         {
+            if (HonorActions.State == null || worker?.Faction != Faction.OfPlayer)
+            {
+                foreach (Thing product in __result) yield return product;
+                yield break;
+            }
             bool humanCorpse = ingredients.Any(t => t is Corpse c && c.InnerPawn.RaceProps.Humanlike);
-            bool humanMeat = ingredients.Any(t => HonorActions.ContainsHuman(t, true));
+            bool humanMeat = humanCorpse || ingredients.Any(t => HonorActions.ContainsHuman(t, true));
             bool producedHuman = false, producedFood = false;
             foreach (Thing product in __result)
             {
-                producedHuman |= HonorActions.HumanProduct(product.def);
+                producedHuman |= HonorActions.HumanProduct(product.def) || ingredients.OfType<Corpse>().Any(c => c.InnerPawn.RaceProps.Humanlike &&
+                    (c.InnerPawn.RaceProps.meatDef == product.def || c.InnerPawn.RaceProps.leatherDef == product.def));
                 producedFood |= product.def.ingestible != null;
                 yield return product;
             }
-            // Iterator completion is the actual production point, not constructing the enumerable.
-            if (worker?.Faction != Faction.OfPlayer || !worker.RaceProps.Humanlike) yield break;
+            // Settle production penalties after product enumeration.
             if (humanCorpse && producedHuman) HonorActions.State?.Award("Butchery", -10, worker, "Cannibalism");
             else if (humanMeat && producedFood) HonorActions.State?.Award("HumanFood", -10, worker, "Cannibalism");
         }
@@ -67,8 +79,9 @@ namespace PMP_Persona.Storyteller
     {
         static void Prefix(Thing __instance, Pawn ingester, out bool __state)
         {
-            // Animals exit before any ingredient inspection.
-            __state = HonorActions.State != null && MasonKaldalisState.Applies(ingester) && HonorActions.ContainsHuman(__instance, true);
+            // Skip ingredient checks for animals.
+            __state = HonorActions.State != null && MasonKaldalisState.Applies(ingester) &&
+                (__instance is Corpse corpse && corpse.InnerPawn.RaceProps.Humanlike || HonorActions.ContainsHuman(__instance, true));
         }
         static void Postfix(Pawn ingester, float __result, bool __state)
         {
@@ -85,7 +98,7 @@ namespace PMP_Persona.Storyteller
         static void Postfix(Pawn p, bool __state)
         {
             var state = HonorActions.State;
-            if (__state && state != null && !p.IsPrisonerOfColony && state.Once("released:" + p.thingIDNumber)) state.Award("Release", state.WasTended(p) ? 6 : 4);
+            if (__state && state != null && !p.IsPrisonerOfColony && state.CanRewardRelease(p)) state.Award("Release", state.WasTended(p) ? 6 : 4);
         }
     }
     [HarmonyPatch(typeof(Pawn), nameof(Pawn.ExitMap))]
@@ -100,8 +113,8 @@ namespace PMP_Persona.Storyteller
         {
             var state = HonorActions.State;
             if (__state == 0 || state == null || __instance.Spawned || __instance.Dead) return;
-            if (__state == 2 && state.Once("freed:" + __instance.thingIDNumber)) state.Award("Emancipation", 6);
-            if (__state == 1 && state.Once("released:" + __instance.thingIDNumber)) state.Award("Release", state.WasTended(__instance) ? 6 : 4);
+            if (!state.CanRewardRelease(__instance)) return;
+            state.Award("Release", __state == 2 || state.WasTended(__instance) ? 6 : 4);
         }
     }
     [HarmonyPatch(typeof(GenGuest), nameof(GenGuest.SlaveRelease))]
@@ -111,7 +124,7 @@ namespace PMP_Persona.Storyteller
         static void Postfix(Pawn p, bool __state)
         {
             var state = HonorActions.State;
-            if (__state && state != null && !p.IsSlaveOfColony && state.Once("freed:" + p.thingIDNumber)) state.Award("Emancipation", 6);
+            if (__state && state != null && !p.IsSlaveOfColony && state.CanRewardRelease(p)) state.Award("Release", 6);
         }
     }
     [HarmonyPatch(typeof(TendUtility), nameof(TendUtility.DoTend))]
@@ -124,6 +137,17 @@ namespace PMP_Persona.Storyteller
             if (!__state || state == null || doctor?.Faction != Faction.OfPlayer || patient == null || !patient.RaceProps.Humanlike) return;
             state.NotifyTendedEnemy(patient);
             if (MasonKaldalisState.Applies(patient) && state.OncePerDay("tended:" + patient.thingIDNumber)) state.Award("Treatment", 2);
+        }
+    }
+    [HarmonyPatch(typeof(Pawn_GuestTracker), nameof(Pawn_GuestTracker.SetGuestStatus))]
+    internal static class HonorEnslave
+    {
+        static void Prefix(Pawn ___pawn, out bool __state) => __state = ___pawn.IsSlaveOfColony;
+        static void Postfix(Pawn ___pawn, bool __state)
+        {
+            var state = HonorActions.State;
+            if (state != null && !__state && ___pawn.IsSlaveOfColony && ___pawn.RaceProps.Humanlike && state.Once("enslaved:" + ___pawn.thingIDNumber))
+                state.Award("Enslavement", -6, null, "Slavery");
         }
     }
     [HarmonyPatch(typeof(Recipe_RemoveBodyPart), nameof(Recipe_RemoveBodyPart.ApplyThoughts))]
@@ -140,7 +164,7 @@ namespace PMP_Persona.Storyteller
         static void Prefix(Pawn victim, Pawn executioner, PawnExecutionKind kind)
         {
             if (kind != PawnExecutionKind.OrganHarvesting && victim.RaceProps.Humanlike && victim.IsPrisonerOfColony && executioner?.Faction == Faction.OfPlayer)
-                HonorActions.State?.Award("Execution", -8, executioner, "Execution");
+                HonorActions.State?.Award("Execution", -8, executioner, "Execution", victim.guilt?.IsGuilty == true);
         }
     }
     [HarmonyPatch(typeof(Tradeable), nameof(Tradeable.ResolveTrade))]
@@ -153,7 +177,7 @@ namespace PMP_Persona.Storyteller
             Thing thing = __instance.AnyThing;
             if (thing is Pawn pawn && pawn.RaceProps.Humanlike && __instance.ActionToDo == TradeAction.PlayerSells) __state = "Slavery";
             else if (thing is Corpse corpse && corpse.InnerPawn.RaceProps.Humanlike || HonorActions.ContainsHuman(thing)) __state = "Cannibalism";
-            else if (thing?.def.thingCategories?.Any(c => c.defName == "BodyPartsNatural" || c.Parents.Any(p => p.defName == "BodyPartsNatural")) == true) __state = "OrganUse";
+            else if (__instance.ActionToDo == TradeAction.PlayerSells && thing?.def.thingCategories?.Any(c => c.defName == "BodyPartsNatural" || c.Parents.Any(p => p.defName == "BodyPartsNatural")) == true) __state = "OrganUse";
         }
         static void Postfix(string __state)
         {
@@ -170,11 +194,10 @@ namespace PMP_Persona.Storyteller
             if (__state && factionBase.Destroyed && state != null && state.Once("settlement:" + factionBase.ID)) state.Award("Conquest", 30);
         }
     }
-    // Explicit metadata for genuine aid/refugee quests, independent of quest titles.
+    // Aid and refugee quest metadata.
     public class HonorQuestExtension : DefModExtension
     {
         public float successHonor;
-        public float acceptHonor;
     }
     [HarmonyPatch(typeof(Quest), nameof(Quest.End))]
     internal static class HonorQuestComplete
@@ -184,16 +207,6 @@ namespace PMP_Persona.Storyteller
             var state = HonorActions.State;
             float value = __instance.root?.GetModExtension<HonorQuestExtension>()?.successHonor ?? 0;
             if (state != null && value > 0 && outcome == QuestEndOutcome.Success && __instance.EverAccepted && state.Once("quest:" + __instance.id)) state.Award("AidQuest", value);
-        }
-    }
-    [HarmonyPatch(typeof(Quest), nameof(Quest.Accept))]
-    internal static class HonorQuestAccept
-    {
-        static void Postfix(Quest __instance)
-        {
-            var state = HonorActions.State;
-            float value = __instance.root?.GetModExtension<HonorQuestExtension>()?.acceptHonor ?? 0;
-            if (state != null && value > 0 && __instance.EverAccepted && state.Once("accepted:" + __instance.id)) state.Award("Refugees", value);
         }
     }
     [HarmonyPatch(typeof(Pawn_JobTracker), nameof(Pawn_JobTracker.EndCurrentJob))]

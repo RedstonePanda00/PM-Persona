@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_RomulusAnalysis.label>罗穆卢斯材料解析</PMP_RomulusAnalysis.label>
+  <PMP_RomulusAnalysis.description>解析罗穆卢斯回收材料，为军团装备改造与机械构造研究建立基础。解锁罗穆卢斯结构墙，每段消耗1片超凡科技护甲片。</PMP_RomulusAnalysis.description>
+  <PMP_BelieverArmaments.label>信徒武装</PMP_BelieverArmaments.label>
+  <PMP_BelieverArmaments.description>研究将斥候装甲及头盔改造为信徒装备的工艺。</PMP_BelieverArmaments.description>
+  <PMP_CenturionArmaments.label>百夫长武装</PMP_CenturionArmaments.label>
+  <PMP_CenturionArmaments.description>研究将海军装甲及头盔改造为百夫长装备的工艺。</PMP_CenturionArmaments.description>
+  <PMP_ChampionArmaments.label>冠军武装</PMP_ChampionArmaments.label>
+  <PMP_ChampionArmaments.description>研究将百夫长装备进一步改造为冠军装备的工艺。穿戴装备不会获得冠军勇士的首领身份与专属能力。</PMP_ChampionArmaments.description>
+  <PMP_SpearpointResearch.label>刺矛</PMP_SpearpointResearch.label>
+  <PMP_SpearpointResearch.description>研究将冲锋手枪改造为刺矛的工艺，需要先掌握原型武器科技。</PMP_SpearpointResearch.description>
+  <PMP_CerberusResearch.label>刻耳柏洛斯</PMP_CerberusResearch.label>
+  <PMP_CerberusResearch.description>研究将链式霰弹枪改造为刻耳柏洛斯的工艺，需要先掌握原型武器科技。</PMP_CerberusResearch.description>
+  <PMP_OpisResearch.label>奥庇斯</PMP_OpisResearch.label>
+  <PMP_OpisResearch.description>研究将狙击步枪改造为奥庇斯的工艺，需要先掌握原型武器科技。</PMP_OpisResearch.description>
+  <PMP_AbsolutionResearch.label>赦令</PMP_AbsolutionResearch.label>
+  <PMP_AbsolutionResearch.description>研究将速射机枪改造为百夫长使用的赦令，需要先掌握原型武器科技。</PMP_AbsolutionResearch.description>
+  <PMP_LegionSpearResearch.label>军团矛枪</PMP_LegionSpearResearch.label>
+  <PMP_LegionSpearResearch.description>研究将普通长矛改造为军团矛枪的工艺。</PMP_LegionSpearResearch.description>
+  <PMP_LegionShieldResearch.label>军团重盾</PMP_LegionShieldResearch.label>
+  <PMP_LegionShieldResearch.description>研究将防弹头盔改造为军团重盾的工艺。</PMP_LegionShieldResearch.description>
+</LanguageData>

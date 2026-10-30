@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <!-- Absolution and its independent projectile; upgraded from the minigun. -->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>PMP_CenturionMinigun</defName><costList><Steel>160</Steel><ComponentIndustrial>20</ComponentIndustrial></costList><label>Absolution</label><description>A heavy rotary cannon that denies frontal approaches. Use cover and its firing pauses.</description>
+    <!-- Disable the inherited steel/component recipe until the prototype-upgrade bill is defined. -->
+    <recipeMaker IsNull="True"/>
+    <generateCommonality>1</generateCommonality>
+    <weaponTags Inherit="false"><li>PMP_Absolution</li></weaponTags>
+    <graphicData><texPath>Things/Item/Equipment/WeaponRanged/Minigun</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><Mass>10</Mass><RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown><AccuracyTouch>0.30</AccuracyTouch><AccuracyShort>0.40</AccuracyShort><AccuracyMedium>0.40</AccuracyMedium><AccuracyLong>0.30</AccuracyLong></statBases>
+    <verbs><li><verbClass>Verb_Shoot</verbClass><hasStandardCommand>true</hasStandardCommand><defaultProjectile>PMP_AbsolutionBullet</defaultProjectile><warmupTime>2.5</warmupTime><range>30.9</range><burstShotCount>25</burstShotCount><ticksBetweenBurstShots>5</ticksBetweenBurstShots><soundCast>Shot_Minigun</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>9</muzzleFlashScale></li></verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_AbsolutionBullet</defName><label>Absolution round</label>
+    <graphicData><texPath>Things/Projectile/Bullet_Small</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <projectile><damageDef>Bullet</damageDef><damageAmountBase>33</damageAmountBase><armorPenetrationBase>1.30</armorPenetrationBase><speed>70</speed></projectile>
+  </ThingDef>
+</Defs>

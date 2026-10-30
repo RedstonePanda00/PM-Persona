@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <RC_Text_d6a5666e942be14c>点击任意位置展开任务报告</RC_Text_d6a5666e942be14c>
+  <RC_Text_1a545e208b5681a6>潜行表现</RC_Text_1a545e208b5681a6>
+  <RC_Text_b5ccfe78afc35acc>任务报告</RC_Text_b5ccfe78afc35acc>
+  <RC_Text_a30db96518916998>识破来源</RC_Text_a30db96518916998>
+  <RC_Text_7ba69ef54bf4df88>发起汇报</RC_Text_7ba69ef54bf4df88>
+  <RC_Text_844c2a85a0fbb9f8>敌方死亡</RC_Text_844c2a85a0fbb9f8>
+  <RC_Text_380e43c883ce43ad>非致命制伏</RC_Text_380e43c883ce43ad>
+  <RC_Text_daa352e5cf5599fc>识破：每名守卫／摄像头首次完全识破计一次，黄色怀疑不计。
+汇报：每名守卫首次打算汇报计一次。
+敌方死亡：本关受管理守卫的死亡，含制伏后死亡。
+非致命制伏：成功制伏且结算时仍存活的守卫。
+满分 100；每个识破来源 −</RC_Text_daa352e5cf5599fc>
+  <RC_Text_d35a30279e12bfeb>，每名汇报者 −</RC_Text_d35a30279e12bfeb>
+  <RC_Text_1e351618ac84f920>，每名死亡敌人 −</RC_Text_1e351618ac84f920>
+  <RC_Text_6d072f3214a78872>。制伏和用时不加减分。
+S：100；A：85–99；B：65–84；C：40–64；D：0–39。</RC_Text_6d072f3214a78872>
+  <RC_Text_1236413160136087>行动用时  </RC_Text_1236413160136087>
+  <RC_Text_8961cfe7a2ec3f2d>按游戏推进时间统计</RC_Text_8961cfe7a2ec3f2d>
+  <RC_Text_27ccd5b71b9ad177>行动成果</RC_Text_27ccd5b71b9ad177>
+  <RC_Text_fcc994b99a3a87b5>随身物资</RC_Text_fcc994b99a3a87b5>
+  <RC_Text_5eb0e1aad4810d40>行动完成，调查结果已保存。</RC_Text_5eb0e1aad4810d40>
+  <RC_Text_4b271f53f6f07a2e>背包中的实物；进入后续关卡时按实际状态继承。</RC_Text_4b271f53f6f07a2e>
+</LanguageData>

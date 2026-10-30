@@ -5,6 +5,8 @@
   
     <li>/</li>
     <li>1.7</li>
+    <li IfModActive="ludeon.rimworld.ideology">1.7/Ideology</li>
+    <li IfModActive="ludeon.rimworld.anomaly">1.7/Anomaly</li>
 
     <li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.7/CE</li>
 

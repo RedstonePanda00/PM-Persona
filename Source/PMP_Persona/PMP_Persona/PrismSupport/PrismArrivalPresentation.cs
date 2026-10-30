@@ -105,19 +105,17 @@ namespace PMP_Persona.PrismSupport
                 float visibility = 1 - VanguardPresentation.Ease((t - 3.8f) / 1.7f);
                 space.SetVector("_Clock", new Vector4(t, 0, visibility, w / h));
                 space.SetVector("_Planet", planetDisc);
-                // The hull is a stable alpha sprite. All motion, jets and scenery are procedural.
+                // Render the hull as an alpha sprite.
                 Vector2 tremor = new Vector2(Mathf.Sin(t * 47) + .4f * Mathf.Sin(t * 79), Mathf.Sin(t * 61)) * 1.5f;
                 Rect shipRect = BaseHull(w, h);
                 Vector2 focus = TransitFocus(w, h);
                 float approach = VanguardPresentation.Ease((t - 3.8f) / 1.7f);
                 float zoom = Mathf.Lerp(1, 4, approach);
-                // Advancing towards the planet naturally carries the foreground hull out of
-                // frame. No transparency or blur is applied to the ship at any point.
+                // Move the foreground hull out of frame during approach.
                 shipRect.position = focus + (shipRect.position - focus) * zoom + tremor;
                 shipRect.size *= zoom;
                 Vector2[] nozzles = { new Vector2(.686f, .903f), new Vector2(.810f, .824f), new Vector2(.897f, .730f) };
-                // Project the sprite's longitudinal axis, including its aspect ratio. The wake
-                // remains parallel to the hull on every screen aspect and shares its tremor.
+                // Align the wake with the projected hull axis, aspect ratio and tremor.
                 Vector2 direction = Vector2.Scale(new Vector2(.67f, .78f), shipRect.size).normalized;
                 space.SetVector("_Jet", new Vector4(focus.x / w, focus.y / h, 0, 0));
                 Graphics.DrawTexture(full, BaseContent.WhiteTex, space);

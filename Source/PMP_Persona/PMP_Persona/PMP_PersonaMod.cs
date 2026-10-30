@@ -79,14 +79,14 @@ namespace PMP_Persona
             return target;
         }
 
-        // Base Mod.modSettings is private; required so WriteSettings() saves correctly when we bypass GetSettings().
+        // Set private Mod.modSettings for WriteSettings().
         private void AssignBaseModSettingsField(PMP_PersonaModSettings s)
         {
             FieldInfo f = typeof(Mod).GetField("modSettings", BindingFlags.Instance | BindingFlags.NonPublic);
             f?.SetValue(this, s);
         }
 
-        // ModSettings.Mod has internal set; vanilla GetSettings sets it from Assembly-CSharp only.
+        // Set the owning Mod reference on ModSettings.
         private void BindModSettingsOwner(PMP_PersonaModSettings s)
         {
             PropertyInfo p = typeof(ModSettings).GetProperty("Mod", BindingFlags.Public | BindingFlags.Instance);

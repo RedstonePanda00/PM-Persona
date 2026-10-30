@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>PMP_Warhound</defName>
+    <label>legion warhound</label>
+    <description>Swift archotech mechanical hounds that hunt in packs. They vault over walls and overwhelm the legion’s enemies like a rising tide.</description>
+    <butcherProducts>
+      <Steel>35</Steel>
+    </butcherProducts>
+    <modExtensions>
+      <li Class="PMP_Persona.Romulus.LegionExtension">
+        <advanced>false</advanced>
+      </li>
+      <li Class="PMP_Persona.Romulus.LegionSalvageExtension">
+        <armorFragments>0</armorFragments>
+      </li>
+      <li Class="PMP_Persona.Romulus.LegionVisualExtension">
+        <southScale>0.5033223</southScale>
+        <northScale>0.4759136</northScale>
+        <eyeSize>0.15</eyeSize>
+        <eyeAnchors>
+          <li>
+            <tag>LeftSensor</tag>
+            <rotation>South</rotation>
+            <canMirror>false</canMirror>
+            <offset>(0.083,0,-0.178)</offset>
+          </li>
+          <li>
+            <tag>LeftSensor</tag>
+            <rotation>East</rotation>
+            <canMirror>false</canMirror>
+            <offset>(0.569,0,0.0625)</offset>
+          </li>
+          <li>
+            <tag>RightSensor</tag>
+            <rotation>South</rotation>
+            <canMirror>false</canMirror>
+            <offset>(-0.083,0,-0.178)</offset>
+          </li>
+          <li>
+            <tag>RightSensor</tag>
+            <rotation>West</rotation>
+            <canMirror>false</canMirror>
+            <offset>(-0.569,0,0.0625)</offset>
+          </li>
+        </eyeAnchors>
+      </li>
+    </modExtensions>
+    <statBases>
+      <MoveSpeed>6.5</MoveSpeed>
+      <IncomingDamageFactor>1</IncomingDamageFactor>
+      <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.8</ArmorRating_Heat>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <MechEnergyUsageFactor>0</MechEnergyUsageFactor>
+      <EMPResistance>0</EMPResistance>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <Flammability>0</Flammability>
+      <BandwidthCost>1</BandwidthCost>
+      <MarketValue>1500</MarketValue>
+    </statBases>
+    <race>
+      <body>PMP_WarhoundBody</body>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>PM_Mechanoid</thinkTreeMain>
+      <baseHealthScale>2.5</baseHealthScale>
+      <baseBodySize>0.7</baseBodySize>
+      <mechFixedSkillLevel>10</mechFixedSkillLevel>
+      <mechWeightClass>Light</mechWeightClass>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <mechEnabledWorkTypes Inherit="false">
+        <li>Hauling</li>
+      </mechEnabledWorkTypes>
+      <mechWorkTypePriorities Inherit="false">
+        <Hauling>3</Hauling>
+      </mechWorkTypePriorities>
+    </race>
+    <comps>
+      <li Class="PMP_Persona.Romulus.CompProperties_WallVault" />
+      <li Class="PMP_Persona.Romulus.CompProperties_PackMember" />
+      <li Class="ProtossMech.CompProperties_OfflineWorking" />
+    </comps>
+    <tools>
+      <li>
+        <label>bite</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>26</power>
+        <armorPenetration>0.85</armorPenetration>
+        <cooldownTime>0.9</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>PMP_Warhound</defName>
+    <label>legion warhound</label>
+    <race>PMP_Warhound</race>
+    <allowOldAgeInjuries>false</allowOldAgeInjuries>
+    <defaultFactionDef>PMP_RomulusLegion</defaultFactionDef>
+    <combatPower>90</combatPower>
+    <allowInMechClusters>false</allowInMechClusters>
+    <destroyGearOnDrop>false</destroyGearOnDrop>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Romulus/Warhound</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>Cutout</shaderType>
+          <drawSize>1.6</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>PMP_LegionGuard</defName>
+    <label>legion guard</label>
+    <description>A heavy mech armed with a massive shield and spear-gun. It can withstand astonishing punishment, like a moving fortress.</description>
+    <thingClass>PMP_Persona.Romulus.Pawn_Legion</thingClass>
+    <butcherProducts>
+      <Steel>100</Steel>
+      <Plasteel>25</Plasteel>
+    </butcherProducts>
+    <modExtensions>
+      <li Class="PMP_Persona.Romulus.LegionExtension">
+        <advanced>true</advanced>
+      </li>
+      <li Class="PMP_Persona.Romulus.LegionSalvageExtension">
+        <armorFragments>3</armorFragments>
+      </li>
+      <li Class="PMP_Persona.Romulus.LegionVisualExtension">
+        <eyeSize>0.17</eyeSize>
+        <eyeAnchors>
+          <li>
+            <tag>LeftSensor</tag>
+            <rotation>South</rotation>
+            <canMirror>false</canMirror>
+            <offset>(0.12,0,0.371)</offset>
+          </li>
+          <li>
+            <tag>LeftSensor</tag>
+            <rotation>East</rotation>
+            <canMirror>false</canMirror>
+            <offset>(0.28,0,0.4)</offset>
+          </li>
+          <li>
+            <tag>RightSensor</tag>
+            <rotation>South</rotation>
+            <canMirror>false</canMirror>
+            <offset>(-0.12,0,0.371)</offset>
+          </li>
+          <li>
+            <tag>RightSensor</tag>
+            <rotation>West</rotation>
+            <canMirror>false</canMirror>
+            <offset>(-0.28,0,0.4)</offset>
+          </li>
+        </eyeAnchors>
+      </li>
+    </modExtensions>
+    <statBases>
+      <MoveSpeed>4.6</MoveSpeed>
+      <IncomingDamageFactor>0.5</IncomingDamageFactor>
+      <ArmorRating_Sharp>2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.6</ArmorRating_Blunt>
+      <ArmorRating_Heat>2</ArmorRating_Heat>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <MechEnergyUsageFactor>0</MechEnergyUsageFactor>
+      <EMPResistance>0</EMPResistance>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <Flammability>0</Flammability>
+      <BandwidthCost>4</BandwidthCost>
+      <MarketValue>10000</MarketValue>
+    </statBases>
+    <race>
+      <body>PMP_LegionGuardBody</body>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>PM_Mechanoid</thinkTreeMain>
+      <baseHealthScale>8</baseHealthScale>
+      <baseBodySize>2</baseBodySize>
+      <mechFixedSkillLevel>16</mechFixedSkillLevel>
+      <mechWeightClass>Heavy</mechWeightClass>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <mechEnabledWorkTypes Inherit="false">
+        <li>Hauling</li>
+      </mechEnabledWorkTypes>
+      <mechWorkTypePriorities Inherit="false">
+        <Hauling>3</Hauling>
+      </mechWorkTypePriorities>
+    </race>
+    <comps>
+      <li Class="PMP_Persona.CompProperties_NeverDowned" />
+      <li Class="RsPandaLibrary.CompProperties_EquippableMechanoid">
+        <allowWeapons>true</allowWeapons>
+        <allowUtilityApparel>true</allowUtilityApparel>
+      </li>
+      <li Class="ProtossMech.CompProperties_OfflineWorking" />
+    </comps>
+    <tools>
+      <li>
+        <label>armored impact</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>24</power>
+        <armorPenetration>1</armorPenetration>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>PMP_LegionGuard</defName>
+    <label>legion guard</label>
+    <race>PMP_LegionGuard</race>
+    <allowOldAgeInjuries>false</allowOldAgeInjuries>
+    <defaultFactionDef>PMP_RomulusLegion</defaultFactionDef>
+    <combatPower>550</combatPower>
+    <allowInMechClusters>false</allowInMechClusters>
+    <destroyGearOnDrop>false</destroyGearOnDrop>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Romulus/LegionGuard</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>Cutout</shaderType>
+          <drawSize>1.9</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>PMP_LegionChosen</defName>
+    <label>legion chosen</label>
+    <description>Ultraheavy mechs with agility that belies their size. These nimble killers are death incarnate on the battlefield, effortlessly tearing apart any enemy in their path.</description>
+    <thingClass>PMP_Persona.Romulus.Pawn_Legion</thingClass>
+    <butcherProducts>
+      <Steel>180</Steel>
+      <Plasteel>60</Plasteel>
+    </butcherProducts>
+    <modExtensions>
+      <li Class="PMP_Persona.Romulus.LegionExtension">
+        <advanced>true</advanced>
+      </li>
+      <li Class="PMP_Persona.Romulus.LegionSalvageExtension">
+        <armorFragments>5</armorFragments>
+      </li>
+      <li Class="PMP_Persona.Romulus.LegionVisualExtension">
+        <eyeSize>0.14</eyeSize>
+        <eyeAnchors>
+          <li>
+            <tag>LeftSensor</tag>
+            <rotation>South</rotation>
+            <canMirror>false</canMirror>
+            <offset>(0.2,0,0.7)</offset>
+          </li>
+          <li>
+            <tag>LeftSensor</tag>
+            <rotation>East</rotation>
+            <canMirror>false</canMirror>
+            <offset>(0.3,0,0.75)</offset>
+          </li>
+          <li>
+            <tag>RightSensor</tag>
+            <rotation>South</rotation>
+            <canMirror>false</canMirror>
+            <offset>(-0.2,0,0.7)</offset>
+          </li>
+          <li>
+            <tag>RightSensor</tag>
+            <rotation>West</rotation>
+            <canMirror>false</canMirror>
+            <offset>(-0.3,0,0.75)</offset>
+          </li>
+        </eyeAnchors>
+      </li>
+    </modExtensions>
+    <statBases>
+      <MoveSpeed>3.9</MoveSpeed>
+      <IncomingDamageFactor>0.35</IncomingDamageFactor>
+      <ArmorRating_Sharp>2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.8</ArmorRating_Blunt>
+      <ArmorRating_Heat>2</ArmorRating_Heat>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <MechEnergyUsageFactor>0</MechEnergyUsageFactor>
+      <EMPResistance>0</EMPResistance>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <Flammability>0</Flammability>
+      <BandwidthCost>8</BandwidthCost>
+      <MarketValue>25000</MarketValue>
+    </statBases>
+    <race>
+      <body>PMP_LegionChosenBody</body>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>PM_Mechanoid</thinkTreeMain>
+      <baseHealthScale>12</baseHealthScale>
+      <baseBodySize>3.2</baseBodySize>
+      <mechFixedSkillLevel>20</mechFixedSkillLevel>
+      <mechWeightClass>Heavy</mechWeightClass>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <mechEnabledWorkTypes Inherit="false">
+        <li>Hauling</li>
+      </mechEnabledWorkTypes>
+      <mechWorkTypePriorities Inherit="false">
+        <Hauling>3</Hauling>
+      </mechWorkTypePriorities>
+    </race>
+    <comps>
+      <li Class="PMP_Persona.CompProperties_NeverDowned" />
+      <li Class="RsPandaLibrary.CompProperties_EquippableMechanoid">
+        <allowWeapons>true</allowWeapons>
+        <allowUtilityApparel>true</allowUtilityApparel>
+      </li>
+      <li Class="ProtossMech.CompProperties_OfflineWorking" />
+    </comps>
+    <tools>
+      <li>
+        <label>armored impact</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>30</power>
+        <armorPenetration>1</armorPenetration>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>PMP_LegionChosen</defName>
+    <label>legion chosen</label>
+    <race>PMP_LegionChosen</race>
+    <allowOldAgeInjuries>false</allowOldAgeInjuries>
+    <defaultFactionDef>PMP_RomulusLegion</defaultFactionDef>
+    <combatPower>1200</combatPower>
+    <allowInMechClusters>false</allowInMechClusters>
+    <destroyGearOnDrop>false</destroyGearOnDrop>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Romulus/LegionChosen</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>Cutout</shaderType>
+          <drawSize>2.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

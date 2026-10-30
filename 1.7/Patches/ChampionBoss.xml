@@ -1,0 +1,6 @@
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="PMP_SanctuaryChampion" or defName="PMP_ChampionWarrior"]/modExtensions</xpath>
+    <value><li Class="RimCampaign.Runtime.BossPawnExtension"><template>PMP_RegularChampionBoss</template></li></value>
+  </Operation>
+</Patch>

@@ -147,7 +147,7 @@ namespace PMP_Persona.FlattenSupport
                     var enemy=Sheet(map,enemyId);var enemyPawn=enemy.HeldPawn;
                     Check(enemy.TryRelease()&&enemyPawn.Faction==Faction.OfAncientsHostile,"Enemy converted on release");
                     var resealedEnemy=(Thing_FlattenedPawn)ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed("PMP_FlattenedPawn"));
-                    resealedEnemy.Capture(enemyPawn,0); // Keep the later research fixture out of combat.
+                    resealedEnemy.Capture(enemyPawn,0); // Isolate the research fixture from combat.
                     // Hauling/transport nesting must preserve the suspension contract.
                     var animalSheet=Sheet(map,animalId);animalSheet.DeSpawn();researcher.inventory.innerContainer.TryAdd(animalSheet,false);
                     Check(animalSheet.HeldPawn.Suspended&&!animalSheet.TryRelease(),"Nested sheet can escape/release while carried");
@@ -157,7 +157,7 @@ namespace PMP_Persona.FlattenSupport
                     if(!ModsConfig.AnomalyActive){stage=4;frames=0;return;}
                     var entitySheet=Sheet(map,entityId);var study=FlattenAnomaly.StudyComp(entitySheet);
                     Check(study!=null&&Mathf.Abs(study.studyPoints-1.25f)<.0001f&&study.studyInteractions==2,"Study progress lost on load");
-                    study.Props.minMonolithLevelForStudy=0; // Isolated fixture unlock; no production Def changes.
+                    study.Props.minMonolithLevelForStudy=0; // Unlock study in the isolated fixture.
                     study.studyEnabled=true;
                     Check(FlattenAnomaly.CanStudy(entitySheet),"Sealed entity is not study eligible");
                     var work=DefDatabase<WorkGiverDef>.GetNamed("PMP_StudyFlattenedPawn").Worker as WorkGiver_StudyFlattenedPawn;

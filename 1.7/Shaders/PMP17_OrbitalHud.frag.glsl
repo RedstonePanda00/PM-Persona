@@ -14,7 +14,7 @@ void main() {
     vec2 px=vUv*u._Layout.xy;
     float a=0.; vec3 c=u._Tint.rgb;
     if(u._State.y<.5) {
-        // Solar-yellow energy glass. Interior remains almost completely transparent.
+        // Solar-yellow energy glass with a transparent interior.
         vec2 p=abs(px-u._Layout.xy*.5), b=u._Layout.xy*.5-2.;
         float d=max(max(p.x-b.x,p.y-b.y),(p.x+p.y-b.x-b.y+10.)*.7071);
         float inside=1.-smoothstep(-1.,0.,d);
@@ -28,7 +28,7 @@ void main() {
         float pulse=exp(-pow((px.x-mod(u._State.x*95.,u._Layout.x+100.)+50.)/22.,2.));
         a+=edge*pulse*.14;
     } else if(u._State.y<1.5) {
-        // Continuous wrap-safe bearing tape. CPU supplies heading, never a frame counter.
+        // Wrap-safe bearing tape driven by heading.
         float degrees=(px.x-u._Layout.x*.5)/4.+u._State.w;
         float tick=abs(fract(degrees/5.+.5)-.5)*20.;
         float major=step(abs(fract(degrees/15.+.5)-.5)*15.,.5);
@@ -45,7 +45,7 @@ void main() {
         float filled=step(vUv.x,u._Layout.z);
         a=(.16+filled*.64)*(1.-smoothstep(.22,.50,abs(vUv.y-.5)));
     } else {
-        // Five discrete reserve rods, retained inside Zeta's new energy screen.
+        // Five discrete energy reserve indicators.
         vec2 p=vec2((fract(vUv.x*5.)-.5)*u._Layout.x/5.,u._Layout.y-px.y);
         float d=min(segment(p,vec2(0.,2.),vec2(-3.,8.)),segment(p,vec2(0.,2.),vec2(3.,8.)));
         d=min(d,segment(p,vec2(-3.,8.),vec2(-3.,27.)));

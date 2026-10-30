@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LanguageData>
+  <PMP_ChampionArmor.label>冠军勇士战甲</PMP_ChampionArmor.label>
+  <PMP_ChampionArmor.description>以厚重象牙白装甲、赤红肩带与金边绶带构成的军团重甲。穿戴此甲不会成为冠军勇士，也不会获得冠军的 Boss 能力。</PMP_ChampionArmor.description>
+  <PMP_ChampionHelmet.label>冠军勇士头盔</PMP_ChampionHelmet.label>
+  <PMP_ChampionHelmet.description>饰以金色桂冠的封闭头盔，额头三角眼与一对斜半圆目镜组成三眼布局。头盔本身不赋予 Boss 能力。</PMP_ChampionHelmet.description>
+  <PMP_ArchotechArmorFragment.label>超凡科技护甲片</PMP_ArchotechArmorFragment.label>
+  <PMP_ArchotechArmorFragment.description>散发着柔和的光芒，还温热着的护甲碎片。可以用来制造军团的护甲。</PMP_ArchotechArmorFragment.description>
+</LanguageData>

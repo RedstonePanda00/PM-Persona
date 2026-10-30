@@ -7,8 +7,7 @@ using UnityEngine;
 
 namespace PMP_Persona.Prometheus
 {
-    // Reuse vanilla per-item apparel building, including modded apparel nodes, for this mech only.
-    // Equipment admission, float menu, jobs and gear tab remain owned by RsPandaLibrary.
+    // Build Prometheus apparel nodes through the vanilla per-item renderer.
     public sealed class DynamicPawnRenderNodeSetup_PrometheusApparel : DynamicPawnRenderNodeSetup
     {
         private delegate IEnumerable<(PawnRenderNode node, PawnRenderNode parent)> ProcessDelegate(
@@ -52,7 +51,7 @@ namespace PMP_Persona.Prometheus
         public override Vector3 OffsetFor(PawnRenderNode node, PawnDrawParms parms, out Vector3 pivot)
         {
             var offset = base.OffsetFor(node, parms, out pivot);
-            // The compact full-body sprite's face is lower than a separate human head sprite.
+            // Adjust headgear height for the full-body sprite.
             return offset - parms.pawn.Drawer.renderer.BaseHeadOffsetAt(parms.facing) * .5f;
         }
     }
@@ -67,8 +66,7 @@ namespace PMP_Persona.Prometheus
     {
         static void Postfix(PawnRenderTree __instance, PawnRenderNodeProperties props, ref bool __result)
         {
-            // Vanilla creates ordinary apparel nodes as HumanlikeOnly. Exempt only the scoped
-            // Prometheus apparel build; never mutate shared apparel Def properties or other races.
+            // Bypass HumanlikeOnly during the scoped Prometheus apparel build.
             if (!__result && props != null && __instance == DynamicPawnRenderNodeSetup_PrometheusApparel.BuildingFor
                 && props.pawnType == PawnRenderNodeProperties.RenderNodePawnType.HumanlikeOnly)
                 __result = true;

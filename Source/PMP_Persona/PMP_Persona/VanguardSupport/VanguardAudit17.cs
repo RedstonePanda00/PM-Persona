@@ -151,6 +151,7 @@ namespace PMP_Persona.VanguardSupport
                     ship.EntryElapsed = VanguardPresentation.EntryEnd - .01f; controller.Advance(.02f);
                     Require(ship.Ready && Find.TickManager.CurTimeSpeed == TimeSpeed.Fast, "readiness did not restore previous speed");
                     Require(ship.CombatTicks == 0 && ship.RemainingLifeTicks == 3600, "support timer started early");
+                    OrbitalCameraShakeAudit.Run(Folder);
                     Vector3 view = ship.ViewPosition;
                     controller.MoveView(Vector3.right, .25f);
                     Require(Mathf.Abs(ship.ViewPosition.x - view.x - 16) < .001f, "fire-control speed is not 64 cells/second");
@@ -161,13 +162,13 @@ namespace PMP_Persona.VanguardSupport
                     controller.MoveView(new Vector3(1, 0, 1), .25f);
                     Require(ship.ViewPosition.x == ship.Map.Size.x && ship.ViewPosition.z == ship.Map.Size.z, "view escaped map bounds");
                     ship.ViewPosition = view;
-                    int before = ship.Map.listerThings.AllThings.OfType<Skyfaller>().Count();
+                    int before = ship.Map.listerThings.AllThings.OfType<PMPH_OrbitalIncoming>().Count();
                     var target = new IntVec3(20, 0, 20);
                     Require(ship.TryFire(1, target) && ship.TryFire(2, target), "independent weapons did not both fire");
                     Require(!ship.TryFire(1, target) && !ship.TryFire(2, target), "weapon cooldown bypass");
                     Require(controller.Presentation.CannonKick(0) == 1 && controller.Presentation.CannonKick(1) == 0,
                         "actual shot/cooldown rejection did not produce exactly one barrel kick");
-                    var rounds = ship.Map.listerThings.AllThings.OfType<Skyfaller>().ToList();
+                    var rounds = ship.Map.listerThings.AllThings.OfType<PMPH_OrbitalIncoming>().ToList();
                     Require(rounds.Count == before + 6, "autocannon/missile volley counts changed");
                     foreach (var round in rounds.ToArray())
                         if (round.def.defName == "PMP_VanguardNeutronIncoming" || round.def.defName == "PMP_AntiparticleShellIncoming")
@@ -215,7 +216,7 @@ namespace PMP_Persona.VanguardSupport
                     Require(effects.ParticleCount > 73 && effects.ActiveBursts == 3, "ParticleSystem land/water debris and radial plume bursts");
                     var isolatedCell = new IntVec3(20, 0, 20);
                     ship.Map.fogGrid.Unfog(isolatedCell);
-                    var round = (PMPH_OrbitalIncoming)SkyfallerMaker.SpawnSkyfaller(DefDatabase<ThingDef>.GetNamed("PMP_VanguardNeutronIncoming"), isolatedCell, ship.Map);
+                    var round = (PMPH_OrbitalIncoming)PMPH_OrbitalIncoming.Spawn(DefDatabase<ThingDef>.GetNamed("PMP_VanguardNeutronIncoming"), isolatedCell, ship.Map);
                     round.VanguardWeapon = 1; round.ticksToImpact = 1;
                     Traverse.Create(round).Method("Tick").GetValue();
                     Require(round.Destroyed && effects.ScarCount == 4, "real projectile impact did not create effects");

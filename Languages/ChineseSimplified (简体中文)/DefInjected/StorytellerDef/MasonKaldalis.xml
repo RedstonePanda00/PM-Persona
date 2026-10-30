@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <PMP_MasonAndKaldalis.label>梅森与卡尔达利斯</PMP_MasonAndKaldalis.label>
-  <PMP_MasonAndKaldalis.description>梅森倾向于准备、机会与小规模冲突，节奏较为平稳；卡尔达利斯偏爱挑战，战意会在平静中积蓄，随后化作接连而来的威胁。
+  <PMP_MasonAndKaldalis.description>梅森与卡尔达利斯共用一套事件节奏。梅森偏好准备与机会，卡尔达利斯偏好挑战。挑战脉冲会提前使用未来的事件机会，之后通过延长等待偿还；大型威胁始终遵守统一间隔。
 
-荣耀记录你的指挥方式：迎战与善待他人赢得尊重，把人当作资源则失去尊重。荣耀只影响殖民者的心情与服从，不改变事件投放。极高荣耀下，着火的殖民者会优先就地自救灭火；点名鼓励有较低概率帮助他们克服精神崩溃。自救不会让他们免疫火焰。</PMP_MasonAndKaldalis.description>
+迎战与善待他人积累荣耀，将人作为资源会损失荣耀。荣耀影响人形殖民者的心情、战斗表现与服从，不改变事件投放。意识形态能减轻部分处罚，不能完全免除。极高荣耀使符合条件的殖民者主动自救灭火，并允许每天一次点名帮助一名殖民者克服自然心情崩溃。选择殖民者可查看指挥记录。</PMP_MasonAndKaldalis.description>
 </LanguageData>

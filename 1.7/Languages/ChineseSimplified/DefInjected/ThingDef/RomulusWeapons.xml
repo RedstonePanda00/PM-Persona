@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_Cerberus.label>刻耳柏洛斯</PMP_Cerberus.label>
+  <PMP_Cerberus.description>军团使用的霰弹武器。弹丸拥有惊人的威力与穿甲能力，但其链式霰弹枪原型的短射程和精度限制了远距离作战能力。</PMP_Cerberus.description>
+  <PMP_Cerberus.tools.0.label>枪托</PMP_Cerberus.tools.0.label>
+  <PMP_Cerberus.tools.1.label>枪管</PMP_Cerberus.tools.1.label>
+  <PMP_CerberusShot.label>刻耳柏洛斯弹丸</PMP_CerberusShot.label>
+  <PMP_Opis.label>奥庇斯</PMP_Opis.label>
+  <PMP_Opis.description>军团使用的精确射击武器，拥有惊人的威力与穿甲能力。它保留了狙击步枪原型的射程、精度与缓慢的射击节奏。</PMP_Opis.description>
+  <PMP_Opis.tools.0.label>枪托</PMP_Opis.tools.0.label>
+  <PMP_Opis.tools.1.label>枪管</PMP_Opis.tools.1.label>
+  <PMP_OpisShot.label>奥庇斯弹丸</PMP_OpisShot.label>
+</LanguageData>

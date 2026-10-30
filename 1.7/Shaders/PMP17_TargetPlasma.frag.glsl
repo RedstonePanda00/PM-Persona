@@ -46,8 +46,7 @@ void main() {
     rim=max(0.0,rim-center); halo=max(0.0,halo-center);
     float turbulence=noise((vUv-flow*t*.25)*36.0+seed);
     float wake=0.0;
-    // Advect the actual silhouette downstream. Every strand has a captured body/node as its source.
-    // No ellipse, bow cap, body-size proxy or fixed sprite is used.
+    // Advect captured silhouette strands downstream.
     int steps=u._MaskUV.y>1.1?40:14;
     float maxDistance=u._WorldSpace>.5?1.2/(2.0*u._Clock.w):.26;
     if(u._WakeLength>0.0) maxDistance=u._WakeLength/max(length(flow*u._MaskUV.xy),.001);
@@ -64,8 +63,7 @@ void main() {
     float strength=mix(.35,1.0,u._Flow.z)*u._Flow.w;
     vec3 light=vec3(1.0,.16,.025)*wake*1.15+vec3(1.0,.065,.012)*halo*.16;
     light+=mix(vec3(1.0,.36,.045),vec3(.57,.78,1.0),front)*rim*(.4+front*.8)*(.7+.3*turbulence);
-    // A filled, moving plasma sheet over the whole rendered body. The RenderTree alpha
-    // clips the sheet; its interior must not depend on the silhouette gradient/outline.
+    // Clip the filled plasma sheet to RenderTree alpha.
     vec2 stream=vec2(dot(world,side)*5.5,dot(world,flow)*3.0-t*2.3);
     // Shared world coordinates keep joined walls continuous, even when the union changes size.
     if(u._WorldSpace>.5) stream=(world-flow*t*.5)*4.0;

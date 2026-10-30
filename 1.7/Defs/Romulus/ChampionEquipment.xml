@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <!-- Visual replacement: retain the former marine equipment's combat stats this iteration. -->
+  <ThingDef ParentName="ApparelArmorPowerBase">
+    <defName>PMP_ChampionArmor</defName><label>champion power armor</label>
+    <description>Heavy ivory legion armor with crimson shoulder ribbons and a gold-edged ceremonial sash. Wearing this armor does not confer a champion's identity or boss powers.</description>
+    <techLevel>Archotech</techLevel><colorGenerator IsNull="True"/><generateCommonality>1</generateCommonality>
+    <graphicData><texPath>Things/Apparel/Romulus/ChampionArmor/ChampionArmor</texPath><graphicClass>Graphic_Single</graphicClass><color>(1,1,1)</color></graphicData>
+    <recipeMaker IsNull="True"/><thingSetMakerTags Inherit="false"/><tradeTags Inherit="false"/>
+    <statBases><MaxHitPoints>340</MaxHitPoints><Mass>12</Mass><Flammability>0.4</Flammability><WorkToMake>60000</WorkToMake><ArmorRating_Sharp>1.06</ArmorRating_Sharp><ArmorRating_Blunt>0.45</ArmorRating_Blunt><ArmorRating_Heat>0.54</ArmorRating_Heat><Insulation_Cold>68</Insulation_Cold><Insulation_Heat>10</Insulation_Heat><EquipDelay>14</EquipDelay></statBases>
+    <costList><ComponentSpacer>4</ComponentSpacer><Plasteel>100</Plasteel><Uranium>20</Uranium></costList>
+    <equippedStatOffsets><MoveSpeed>-0.25</MoveSpeed></equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Apparel/Romulus/ChampionArmor/ChampionArmor</wornGraphicPath>
+      <tags Inherit="false"><li>PMP_ChampionArmor</li></tags>
+      <layers Inherit="false"><li>OnSkin</li><li>Middle</li><li>Shell</li></layers>
+      <!-- Keep the helmet above the shell in every direction, including north. -->
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
+      <drawData>
+        <scale>1.5</scale>
+        <!-- Re-seat the enlarged collar below the helmet; side views also move back. -->
+        <defaultData><offset>(0, 0, -0.15)</offset></defaultData>
+        <dataEast><offset>(-0.14, 0, -0.15)</offset></dataEast>
+        <dataWest><offset>(0.14, 0, -0.15)</offset></dataWest>
+      </drawData>
+    </apparel>
+    <modExtensions><li Class="PMP_Persona.Romulus.LegionExtension"><advanced>true</advanced></li><li Class="PMP_Persona.Romulus.SharedApparelBodyGraphic"><bodyType>Male</bodyType></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="ApparelArmorHelmetPowerBase">
+    <defName>PMP_ChampionHelmet</defName><label>champion helmet</label>
+    <description>An ivory helmet crowned with a golden laurel. Its triangular forehead optic and paired slanted semicircular lenses form a three-eye arrangement. The helmet itself grants no boss powers.</description>
+    <techLevel>Archotech</techLevel><colorGenerator IsNull="True"/><generateCommonality>1</generateCommonality>
+    <graphicData><texPath>Things/Apparel/Romulus/ChampionHelmet/ChampionHelmet</texPath><graphicClass>Graphic_Single</graphicClass><color>(1,1,1)</color></graphicData>
+    <recipeMaker IsNull="True"/><thingSetMakerTags Inherit="false"/><tradeTags Inherit="false"/>
+    <statBases><MaxHitPoints>150</MaxHitPoints><Mass>1.5</Mass><Flammability>0.4</Flammability><WorkToMake>21000</WorkToMake><ArmorRating_Sharp>1.06</ArmorRating_Sharp><ArmorRating_Blunt>0.45</ArmorRating_Blunt><ArmorRating_Heat>0.54</ArmorRating_Heat><Insulation_Cold>4</Insulation_Cold><Insulation_Heat>2</Insulation_Heat><EquipDelay>4</EquipDelay></statBases>
+    <costList><ComponentSpacer>1</ComponentSpacer><Plasteel>40</Plasteel></costList>
+    <apparel><wornGraphicPath>Things/Apparel/Romulus/ChampionHelmet/ChampionHelmet</wornGraphicPath><tags Inherit="false"><li>PMP_ChampionHelmet</li></tags><forceEyesVisibleForRotations Inherit="false"/></apparel>
+    <modExtensions><li Class="PMP_Persona.Romulus.LegionExtension"><advanced>true</advanced></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>PMP_ArchotechArmorFragment</defName><label>archotech armor fragment</label>
+    <description>An armor fragment that glows softly and is still warm to the touch. It can be used to craft legion armor.</description>
+    <techLevel>Archotech</techLevel><thingClass>ThingWithComps</thingClass><stackLimit>75</stackLimit><tradeability>None</tradeability>
+    <graphicData><texPath>Things/Item/Romulus/ArchotechArmorFragment</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MaxHitPoints>200</MaxHitPoints><Mass>0.5</Mass><MarketValue>1000</MarketValue><Flammability>0</Flammability><DeteriorationRate>0</DeteriorationRate></statBases>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+  </ThingDef>
+</Defs>

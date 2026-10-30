@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LanguageData>
+  <PMP_CampaignNote.label>值班纸条</PMP_CampaignNote.label>
+  <PMP_CampaignNote.description>放在台面上的手写记录。选中后可指定角色阅读。</PMP_CampaignNote.description>
+  <PMP_RomulusDome.label>穹顶屏障节点</PMP_RomulusDome.label>
+  <PMP_RomulusDome.description>一处大型虚空盾投射器，几乎无坚不摧，它能够把来袭的投射物传送到很远的地方。</PMP_RomulusDome.description>
+  <PMP_RomulusRedWall.label>罗慕路斯结构墙</PMP_RomulusRedWall.label>
+  <PMP_RomulusRedWall.description>构成罗慕路斯据点的红白承重结构。暖白外壳包覆着朱红色的超凡科技结构槽。</PMP_RomulusRedWall.description>
+  <PMP_CenturionMinigun.label>赦令</PMP_CenturionMinigun.label>
+  <PMP_CenturionMinigun.description>用于封锁正面的重型转轮机枪。离开其火线，利用掩体和射击间隙反击。</PMP_CenturionMinigun.description>
+  <PMP_RomulusObelisk.label>仪式碑</PMP_RomulusObelisk.label>
+  <PMP_RomulusObelisk.description>长矛状，屹立着的超凡科技结构，上面的纹路带着嗡鸣的能量。</PMP_RomulusObelisk.description>
+  <PMP_RomulusHub.label>罗穆卢斯枢纽</PMP_RomulusHub.label>
+  <PMP_RomulusHub.description>一座高耸，嗡鸣着的超凡科技结构，常规武器无法对其造成伤害。这座结构是超凡智能 [罗穆卢斯] 的一个子节点。</PMP_RomulusHub.description>
+  <PMP_RomulusSpearTurret.label>矛阵弩炮</PMP_RomulusSpearTurret.label>
+  <PMP_RomulusSpearTurret.description>发射超凡科技材质长矛的动能炮台，能够引发雷击。</PMP_RomulusSpearTurret.description>
+  <PMP_RomulusSpearEmitter.label>矛阵发射器</PMP_RomulusSpearEmitter.label>
+  <PMP_RomulusSpearEmitter.description>哨炮的独立旋转发射器。</PMP_RomulusSpearEmitter.description>
+  <PMP_RomulusSpearBolt.label>引雷长矛</PMP_RomulusSpearBolt.label>
+</LanguageData>

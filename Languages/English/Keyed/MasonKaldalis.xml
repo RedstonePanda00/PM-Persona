@@ -2,8 +2,43 @@
 <LanguageData>
   <PMP.Honor.RefusedDanger>{0} refused to continue into danger.</PMP.Honor.RefusedDanger>
   <PMP.Honor.Recovery>Personal appeal</PMP.Honor.Recovery>
-  <PMP.Honor.RecoveryDesc>Ask this colonist to regain composure. Success chance: {0}. Each attempt uses this colonist's one-day cooldown, even on failure. Success causes brief emotional exhaustion.</PMP.Honor.RecoveryDesc>
-  <PMP.Honor.RecoveryCooldown>This colonist has already received an appeal in the last day.</PMP.Honor.RecoveryCooldown>
+  <PMP.Honor.RecoveryDesc>End a natural mood-caused mental break. One successful appeal per day across the whole colony, followed by brief emotional exhaustion. Does not remove damage- or psycast-induced states.</PMP.Honor.RecoveryDesc>
+  <PMP.Honor.RecoveryCooldown>Appeals are paused, or the colony has already used its daily appeal.</PMP.Honor.RecoveryCooldown>
   <PMP.Honor.RecoverySuccess>{0} answered the appeal and regained composure.</PMP.Honor.RecoverySuccess>
   <PMP.Honor.RecoveryFailed>{0} could not regain composure.</PMP.Honor.RecoveryFailed>
+  <PMP.Honor.RefusedDraft>{0} temporarily refuses to be drafted.</PMP.Honor.RefusedDraft>
+  <PMP.Honor.Status>Command record</PMP.Honor.Status>
+  <PMP.Honor.StatusDesc>View shared honor, battle drive, remaining daily rewards and recent changes.</PMP.Honor.StatusDesc>
+  <PMP.Honor.Summary>Honor: {0} ({1})\nBattle drive: {2}/100 — {3}    Reward allowance today: {4}/15\nNext regular event budget available in: {5} days</PMP.Honor.Summary>
+  <PMP.Honor.Rules>Honor never changes incident selection. Daily positive rewards are capped at 15; penalties do not restore that allowance. The same reward category earns 100%, 50%, 25%, then 0% within 24 hours.</PMP.Honor.Rules>
+  <PMP.Honor.Empty>No honor changes recorded yet.</PMP.Honor.Empty>
+  <PMP.Honor.Entry>{0} days ago · {1}: {2} (balance {3})</PMP.Honor.Entry>
+  <PMP.Honor.Tier-1>Dishonored</PMP.Honor.Tier-1>
+  <PMP.Honor.Tier0>Ordinary</PMP.Honor.Tier0>
+  <PMP.Honor.Tier1>Honored</PMP.Honor.Tier1>
+  <PMP.Honor.Tier2>Exalted</PMP.Honor.Tier2>
+  <PMP.Honor.Phase.Paused>Inactive</PMP.Honor.Phase.Paused>
+  <PMP.Honor.Phase.Pulse>Challenge pulse</PMP.Honor.Phase.Pulse>
+  <PMP.Honor.Phase.Rest>Recovery period</PMP.Honor.Phase.Rest>
+  <PMP.Honor.Phase.Probing>Probing</PMP.Honor.Phase.Probing>
+  <PMP.Honor.Phase.Building>Building drive</PMP.Honor.Phase.Building>
+  <PMP.Honor.Reason.Decay>Daily return toward zero</PMP.Honor.Reason.Decay>
+  <PMP.Honor.Reason.Raid>Repelled raid</PMP.Honor.Reason.Raid>
+  <PMP.Honor.Reason.Conquest>Defeated settlement</PMP.Honor.Reason.Conquest>
+  <PMP.Honor.Reason.Burial>Burial</PMP.Honor.Reason.Burial>
+  <PMP.Honor.Reason.Release>Release</PMP.Honor.Reason.Release>
+  <PMP.Honor.Reason.Treatment>Treatment</PMP.Honor.Reason.Treatment>
+  <PMP.Honor.Reason.Rescue>Rescue</PMP.Honor.Reason.Rescue>
+  <PMP.Honor.Reason.ProtectVisitors>Protected visitors</PMP.Honor.Reason.ProtectVisitors>
+  <PMP.Honor.Reason.AidQuest>Completed aid quest</PMP.Honor.Reason.AidQuest>
+  <PMP.Honor.Reason.Funeral>Funeral</PMP.Honor.Reason.Funeral>
+  <PMP.Honor.Reason.Butchery>Humanlike butchery</PMP.Honor.Reason.Butchery>
+  <PMP.Honor.Reason.HumanFood>Processed human meat</PMP.Honor.Reason.HumanFood>
+  <PMP.Honor.Reason.HumanMeatEaten>Consumed humanlike remains</PMP.Honor.Reason.HumanMeatEaten>
+  <PMP.Honor.Reason.TradeHuman>Traded human resources</PMP.Honor.Reason.TradeHuman>
+  <PMP.Honor.Reason.Enslavement>Enslavement</PMP.Honor.Reason.Enslavement>
+  <PMP.Honor.Reason.Slavery>Slave ownership</PMP.Honor.Reason.Slavery>
+  <PMP.Honor.Reason.OrganHarvest>Harvested healthy body part</PMP.Honor.Reason.OrganHarvest>
+  <PMP.Honor.Reason.Execution>Executed prisoner</PMP.Honor.Reason.Execution>
+  <PMP.Honor.Reason.Neglect>Death from neglect</PMP.Honor.Reason.Neglect>
 </LanguageData>

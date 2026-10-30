@@ -10,7 +10,7 @@ namespace PMP_Persona.PrismSupport
     // Orbital laser (Weapon 3): two-step targeting (start, then end on ring). Draws ring and thick line while choosing end.
     public static class OrbitalLaserTargeter
     {
-        // Laser travel length (cells): distance from start to end. Change this to adjust beam length.
+        // Laser travel length in cells.
         private const int RingRadius = 24;
         private const int RingRadiusSqMin = (RingRadius - 1) * (RingRadius - 1);
         private const int RingRadiusSqMax = (RingRadius + 1) * (RingRadius + 1);

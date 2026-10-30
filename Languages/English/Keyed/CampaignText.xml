@@ -1,0 +1,1034 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <RC_Text_6da705f76bae1eab>01 Barracks</RC_Text_6da705f76bae1eab>
+  <RC_Text_45a5eee2c1102ac5>02 Mess hall</RC_Text_45a5eee2c1102ac5>
+  <RC_Text_33221b48c0556867>03 Infirmary</RC_Text_33221b48c0556867>
+  <RC_Text_c0928524c944688f>04 Laundry and changing room</RC_Text_c0928524c944688f>
+  <RC_Text_1407101dc2f953ab>05 Forgotten warehouse — Outer wall breach</RC_Text_1407101dc2f953ab>
+  <RC_Text_d2c61969992d4cb3>06 General storage</RC_Text_d2c61969992d4cb3>
+  <RC_Text_63265dad0a4e8a3d>07 Reception</RC_Text_63265dad0a4e8a3d>
+  <RC_Text_0a9e6a760af53061>08 Clerks' office</RC_Text_0a9e6a760af53061>
+  <RC_Text_373e4977f0edcf88>09 Duty office</RC_Text_373e4977f0edcf88>
+  <RC_Text_9afae29f5a29eace>10 General records room</RC_Text_9afae29f5a29eace>
+  <RC_Text_ab51309122170abb>11 Briefing room</RC_Text_ab51309122170abb>
+  <RC_Text_e1b23e9357e28b0e>12 Supervisor's office</RC_Text_e1b23e9357e28b0e>
+  <RC_Text_c82b141380a39e53>13 Maintenance workshop</RC_Text_c82b141380a39e53>
+  <RC_Text_661eaf2364d3f115>14 Code vault</RC_Text_661eaf2364d3f115>
+  <RC_Text_f1f1f2dca936d172>15 Turret control room</RC_Text_f1f1f2dca936d172>
+  <RC_Text_fcd1fff1d570b5b9>16 Tool room</RC_Text_fcd1fff1d570b5b9>
+  <RC_Text_0401f85745d53dfd>17 East gate duty office</RC_Text_0401f85745d53dfd>
+  <RC_Text_547bf19c3a8862c1>18 Electrical maintenance room</RC_Text_547bf19c3a8862c1>
+  <RC_Text_f722d16ed7901801>19 Communications room</RC_Text_f722d16ed7901801>
+  <RC_Text_e098013a23e128b2>20 Border intelligence archives A03</RC_Text_e098013a23e128b2>
+  <RC_Text_d424731f0d3ca915>21 Noble personal archives A01</RC_Text_d424731f0d3ca915>
+  <RC_Text_3eaed62ce6cbeedd>22 Air route sighting archives A02</RC_Text_3eaed62ce6cbeedd>
+  <RC_Text_3a4b6415ac18e7a6>23 Reading room</RC_Text_3a4b6415ac18e7a6>
+  <RC_Text_d3ed8e60983e8983>24 Sorting room</RC_Text_d3ed8e60983e8983>
+  <RC_Text_1c817342f7c17415>25 Gatehouse</RC_Text_1c817342f7c17415>
+  <RC_Text_7832124e651721c0>26 Relay equipment room</RC_Text_7832124e651721c0>
+  <RC_Text_23c3fe1201533a68>A Monument puzzle: Muster — Oath — March</RC_Text_23c3fe1201533a68>
+  <RC_Text_d7906580fa250ef5>A01 · Personal Observations on Pit Lord Protection</RC_Text_d7906580fa250ef5>
+  <RC_Text_5459de605f5a43c2>A01 Section archive shelf</RC_Text_5459de605f5a43c2>
+  <RC_Text_ca12b74423bf9e77>A01 Archive bookcase 1</RC_Text_ca12b74423bf9e77>
+  <RC_Text_5b342486fbe811fe>A01 Archive bookcase 2</RC_Text_5b342486fbe811fe>
+  <RC_Text_c3caa0ad50e95559>A01 Light</RC_Text_c3caa0ad50e95559>
+  <RC_Text_a43c4bbeaec9140b>A01 Reading desk</RC_Text_a43c4bbeaec9140b>
+  <RC_Text_bf9adec9ecd425ef>A01 Reading chair</RC_Text_bf9adec9ecd425ef>
+  <RC_Text_a12533bf74298c38>A02 · Northern Air Route: Unidentified Flying Humanoid Sightings</RC_Text_a12533bf74298c38>
+  <RC_Text_c7e90f8766bbba1c>A02 Section archive shelf</RC_Text_c7e90f8766bbba1c>
+  <RC_Text_4185e76de85a1281>A02 Archive bookcase 1</RC_Text_4185e76de85a1281>
+  <RC_Text_22b46ad132028ca6>A02 Archive bookcase 2</RC_Text_22b46ad132028ca6>
+  <RC_Text_620dfbf8214a95b4>A02 Light</RC_Text_620dfbf8214a95b4>
+  <RC_Text_6b97e16ce1e823b7>A02 Reading desk</RC_Text_6b97e16ce1e823b7>
+  <RC_Text_a6f82bb1d0060dcc>A02 Reading chair</RC_Text_a6f82bb1d0060dcc>
+  <RC_Text_60abf1b697663e50>A03 · Border Engagement Report: Unidentified Armored Combatant</RC_Text_60abf1b697663e50>
+  <RC_Text_97b75004d9a17231>A03 Section archive shelf</RC_Text_97b75004d9a17231>
+  <RC_Text_6b99a0a2710ead7b>A03 Archive bookcase 1</RC_Text_6b99a0a2710ead7b>
+  <RC_Text_dd7f9650adcb3502>A03 Archive bookcase 2</RC_Text_dd7f9650adcb3502>
+  <RC_Text_32a3c35624644ba9>A03 Light</RC_Text_32a3c35624644ba9>
+  <RC_Text_eec3be997b9d1f59>A03 Reading desk</RC_Text_eec3be997b9d1f59>
+  <RC_Text_9b700670ba2d67c1>A03 Reading chair</RC_Text_9b700670ba2d67c1>
+  <RC_Text_57781847826e0579>B Power puzzle: Disable the three eastern turrets</RC_Text_57781847826e0579>
+  <RC_Text_82a1c0113befe958>C Infirmary: Protection records and medical supplies</RC_Text_82a1c0113befe958>
+  <RC_Text_c51548ca109da3bd>S0 Tutorial Solarite 15</RC_Text_c51548ca109da3bd>
+  <RC_Text_db229a2d5a4384a1>S1 Western Solarite 10</RC_Text_db229a2d5a4384a1>
+  <RC_Text_32a90eff636972d4>S2 Power station Solarite 10</RC_Text_32a90eff636972d4>
+  <RC_Text_c84510625fa94294>archives guard 1</RC_Text_c84510625fa94294>
+  <RC_Text_ba8cb68b3ddbef12>archives guard 2</RC_Text_ba8cb68b3ddbef12>
+  <RC_Text_1518062a94dd9179>barracks guard 1</RC_Text_1518062a94dd9179>
+  <RC_Text_4a18049639861cd4>barracks guard 2</RC_Text_4a18049639861cd4>
+  <RC_Text_c727667feb09064d>east guard 1</RC_Text_c727667feb09064d>
+  <RC_Text_81c784fc9555b93f>east guard 2</RC_Text_81c784fc9555b93f>
+  <RC_Text_609aaeaa3ad7f293>loading guard 1</RC_Text_609aaeaa3ad7f293>
+  <RC_Text_2831996700f22dc4>loading guard 2</RC_Text_2831996700f22dc4>
+  <RC_Text_755a8389dab976a9>office guard 1</RC_Text_755a8389dab976a9>
+  <RC_Text_1ff3dc1f01480720>office guard 2</RC_Text_1ff3dc1f01480720>
+  <RC_Text_2c4fe3cf459db9f6>records Archive bookcase 1</RC_Text_2c4fe3cf459db9f6>
+  <RC_Text_411cd3e6f11d8c27>records Archive bookcase 2</RC_Text_411cd3e6f11d8c27>
+  <RC_Text_ed5249350e80affb>south guard 1</RC_Text_ed5249350e80affb>
+  <RC_Text_d9f79f89e7b76fd0>south guard 2</RC_Text_d9f79f89e7b76fd0>
+  <RC_Text_02f05504a815971c>vault Light</RC_Text_02f05504a815971c>
+  <RC_Text_0a1e8aaf990a8465>vault guard 1</RC_Text_0a1e8aaf990a8465>
+  <RC_Text_8c03ea7f081dd7c2>vault guard 2</RC_Text_8c03ea7f081dd7c2>
+  <RC_Text_94579c9a5beae64a>"We get dirty, and the world stays clean."</RC_Text_94579c9a5beae64a>
+  <RC_Text_e32a5094da08ce89>...I wouldn't know.</RC_Text_e32a5094da08ce89>
+  <RC_Text_e71fa75672d0cfb5>Just a blur. Sounds like a UFO sighting.</RC_Text_e71fa75672d0cfb5>
+  <RC_Text_c09956a540898f87>What if it isn't?</RC_Text_c09956a540898f87>
+  <RC_Text_625863305ad93776>We used the second one last week, right?</RC_Text_625863305ad93776>
+  <RC_Text_83474bd592212cdc>Last time they shrank. My toes were fighting for space. Never again.</RC_Text_83474bd592212cdc>
+  <RC_Text_219690e71ebfbc7a>No, turned out to be cockroaches. See? Explain the supernatural with science and there's nothing to fear.</RC_Text_219690e71ebfbc7a>
+  <RC_Text_91031f475008c02d>Eastern logistics passage</RC_Text_91031f475008c02d>
+  <RC_Text_6822401ce3e796ba>The three eastern firing positions share one isolation group. Do not open the maintenance passage until the load has been disconnected.</RC_Text_6822401ce3e796ba>
+  <RC_Text_148a25a34945a0ac>East gate office television</RC_Text_148a25a34945a0ac>
+  <RC_Text_e4b12a684804d830>Central combat zone</RC_Text_e4b12a684804d830>
+  <RC_Text_a0d4d7e8dec6aa7d>Relay spare parts shelf</RC_Text_a0d4d7e8dec6aa7d>
+  <RC_Text_bd2fef952fa9d893>Relay service tool cabinet</RC_Text_bd2fef952fa9d893>
+  <RC_Text_629f4d6541e561b8>Relay service bench</RC_Text_629f4d6541e561b8>
+  <RC_Text_f332570d14b267c4>Supervisor's office bookcase</RC_Text_f332570d14b267c4>
+  <RC_Text_7bae9fa3ae5f9940>Supervisor's office carpet</RC_Text_7bae9fa3ae5f9940>
+  <RC_Text_79cacf79962b7e9c>Supervisor's marble sculpture</RC_Text_79cacf79962b7e9c>
+  <RC_Text_a2ee6a9d34581d32>Supervisor's desk</RC_Text_a2ee6a9d34581d32>
+  <RC_Text_a80ed9010066e456>Supervisor's armchair</RC_Text_a80ed9010066e456>
+  <RC_Text_04d9c4c3f5a7c3f5>George. He was at the outpost.</RC_Text_04d9c4c3f5a7c3f5>
+  <RC_Text_6a2c1601963ada46>Bookcase</RC_Text_6a2c1601963ada46>
+  <RC_Text_d3040650c8e065d9>What kind of meat?</RC_Text_d3040650c8e065d9>
+  <RC_Text_5d8efb8437fbbea6>Keep looking. Aurora's terrain scan shows several usable terminals nearby.</RC_Text_5d8efb8437fbbea6>
+  <RC_Text_6e7f0956e3c2346b>He's sending a report. Stop him.</RC_Text_6e7f0956e3c2346b>
+  <RC_Text_358dfc817070a2a7>Even by the standards of barons we've met, he's useless.</RC_Text_358dfc817070a2a7>
+  <RC_Text_c09e67d99d04afe9>Said she looked at him. Thinks he's in love. Now he spends every day searching online for gifts an angel girl would like.</RC_Text_c09e67d99d04afe9>
+  <RC_Text_6dabe03018b39732>Copy of the ritual sequence</RC_Text_6dabe03018b39732>
+  <RC_Text_a8b234367ff9d503>Mission failed: Mason has been exposed.</RC_Text_a8b234367ff9d503>
+  <RC_Text_c8a7241697e5db8a>Mission failed: Mason has been killed.</RC_Text_c8a7241697e5db8a>
+  <RC_Text_324225eef1d76994>Mission complete</RC_Text_324225eef1d76994>
+  <RC_Text_887d9c75f0f0402f>You... no way, right?</RC_Text_887d9c75f0f0402f>
+  <RC_Text_f61ef7d1a760495e>Ever hear typing when you pass the old office at night?</RC_Text_f61ef7d1a760495e>
+  <RC_Text_562943b19746093f>Go ahead. The courtyard turrets are still hooked up to it. You can take their post afterward.</RC_Text_562943b19746093f>
+  <RC_Text_562508c2805463e7>You know this operation violates Daelaam law, right?</RC_Text_562508c2805463e7>
+  <RC_Text_a2ce1693e0f5d03e>Seriously? That's worse than a ghost!</RC_Text_a2ce1693e0f5d03e>
+  <RC_Text_9392a34b79895650>What's that squelching? Your boots still wet?</RC_Text_9392a34b79895650>
+  <RC_Text_065cefd35c966c8f>They finally approve your shift-change request?</RC_Text_065cefd35c966c8f>
+  <RC_Text_1a39aef950b10aa8>Do you have to ask? Those bastard settlers sold us human meat last time! Sometimes you're better off not knowing.</RC_Text_1a39aef950b10aa8>
+  <RC_Text_7e90ce6ea5275e98>Security pistol rack</RC_Text_7e90ce6ea5275e98>
+  <RC_Text_aea813846effce5a>Security rifle rack</RC_Text_aea813846effce5a>
+  <RC_Text_1ed64ba792e151d6>Stay alert. You never know.</RC_Text_1ed64ba792e151d6>
+  <RC_Text_bb9ff3e02981411a>The vault code rotates weekly through the first, second and third copies, in that order.</RC_Text_bb9ff3e02981411a>
+  <RC_Text_bccc4c412d147fee>Vault code 1</RC_Text_bccc4c412d147fee>
+  <RC_Text_38bc1a4dbafd2548>Vault code 2</RC_Text_38bc1a4dbafd2548>
+  <RC_Text_f2d1314aa8745945>Vault code 3</RC_Text_f2d1314aa8745945>
+  <RC_Text_21fd29ddb6c9dfae>The vault code changed again?</RC_Text_21fd29ddb6c9dfae>
+  <RC_Text_cc21b69b9452d7d4>Rotating vault code: 1080.</RC_Text_cc21b69b9452d7d4>
+  <RC_Text_75bc476690d30254>Rotating vault code: 1440.</RC_Text_75bc476690d30254>
+  <RC_Text_98b7789f6735cb6a>Rotating vault code: 2560.</RC_Text_98b7789f6735cb6a>
+  <RC_Text_42c274f7d4df2ea1>Waiting room chair</RC_Text_42c274f7d4df2ea1>
+  <RC_Text_6b1d642fe65500b8>Duty lounge chair</RC_Text_6b1d642fe65500b8>
+  <RC_Text_3a68a5438afb16dd>Duty office spare weapon</RC_Text_3a68a5438afb16dd>
+  <RC_Text_acc38b5384f140cf>Duty office / Supervisor's office / Briefing room</RC_Text_acc38b5384f140cf>
+  <RC_Text_39bcc1fee351fdea>Duty office / Supervisor's office / Briefing room / 1</RC_Text_39bcc1fee351fdea>
+  <RC_Text_cad5c6b858fd10cb>Duty office / Supervisor's office / Briefing room / 10</RC_Text_cad5c6b858fd10cb>
+  <RC_Text_89ebbcc8cd57ff50>Duty office / Supervisor's office / Briefing room / 11</RC_Text_89ebbcc8cd57ff50>
+  <RC_Text_2e42864b48a0539b>Duty office / Supervisor's office / Briefing room / 12</RC_Text_2e42864b48a0539b>
+  <RC_Text_253543c4ee7f9a0f>Duty office / Supervisor's office / Briefing room / 13</RC_Text_253543c4ee7f9a0f>
+  <RC_Text_f1357505b9099da1>Duty office / Supervisor's office / Briefing room / 14</RC_Text_f1357505b9099da1>
+  <RC_Text_4ab70487206e45ed>Duty office / Supervisor's office / Briefing room / 2</RC_Text_4ab70487206e45ed>
+  <RC_Text_fe5a256ee40fbf2e>Duty office / Supervisor's office / Briefing room / 3</RC_Text_fe5a256ee40fbf2e>
+  <RC_Text_06633585b23d7cf4>Duty office / Supervisor's office / Briefing room / 4</RC_Text_06633585b23d7cf4>
+  <RC_Text_5e2e816e31bde7ae>Duty office / Supervisor's office / Briefing room / 5</RC_Text_5e2e816e31bde7ae>
+  <RC_Text_c605e1679dd99f33>Duty office / Supervisor's office / Briefing room / 6</RC_Text_c605e1679dd99f33>
+  <RC_Text_3ddc9a2630602627>Duty office / Supervisor's office / Briefing room / 7</RC_Text_3ddc9a2630602627>
+  <RC_Text_9cc8104939047031>Duty office / Supervisor's office / Briefing room / 8</RC_Text_9cc8104939047031>
+  <RC_Text_b2d4e45a2768b9d5>Duty office / Supervisor's office / Briefing room / 9</RC_Text_b2d4e45a2768b9d5>
+  <RC_Text_668cc63e6a3effe6>Good work. Extract.</RC_Text_668cc63e6a3effe6>
+  <RC_Text_afae56fc19188e38>Good work. Take it. It'll come in handy before you're back aboard Aurora.</RC_Text_afae56fc19188e38>
+  <RC_Text_ac2e20456b3e3e84>Intake verification desk</RC_Text_ac2e20456b3e3e84>
+  <RC_Text_ff5f5311cf4c7ba3>Personal Observations on Pit Lord Protection</RC_Text_ff5f5311cf4c7ba3>
+  <RC_Text_207b99bdd943de82>Barracks bedside table</RC_Text_207b99bdd943de82>
+  <RC_Text_7a66508713a510de>Barracks chair</RC_Text_7a66508713a510de>
+  <RC_Text_506e2575f90ea697>Barracks utility table</RC_Text_506e2575f90ea697>
+  <RC_Text_69bd2e050ea0b9cc>Barracks wardrobe</RC_Text_69bd2e050ea0b9cc>
+  <RC_Text_5bce5bf529b0bf02>Barracks / Infirmary</RC_Text_5bce5bf529b0bf02>
+  <RC_Text_02cbbecea2a43f22>Barracks / Infirmary / 1</RC_Text_02cbbecea2a43f22>
+  <RC_Text_263f8aee846fb79e>Barracks / Infirmary / 2</RC_Text_263f8aee846fb79e>
+  <RC_Text_74747ea8285313d9>Barracks / Infirmary / 3</RC_Text_74747ea8285313d9>
+  <RC_Text_6d17420c5862e39c>Barracks / Infirmary / 4</RC_Text_6d17420c5862e39c>
+  <RC_Text_410d58466fd411e8>Barracks / Infirmary / 5</RC_Text_410d58466fd411e8>
+  <RC_Text_6afd8364d6e9c068>Barracks / Infirmary / 6</RC_Text_6afd8364d6e9c068>
+  <RC_Text_08d55d71dffaa083>Barracks / Infirmary / 7</RC_Text_08d55d71dffaa083>
+  <RC_Text_f6aac47d6693cb65>Barracks / Infirmary / 8</RC_Text_f6aac47d6693cb65>
+  <RC_Text_21813c4d3410a61e>Barracks / Infirmary / 9</RC_Text_21813c4d3410a61e>
+  <RC_Text_afd1c194f91c1096>There's actually a crawlspace in the outer wall.</RC_Text_afd1c194f91c1096>
+  <RC_Text_20b6f195af74f7a3>Legion Centurion</RC_Text_20b6f195af74f7a3>
+  <RC_Text_383c4423b781eb2c>Legion Centurion · Central combat zone</RC_Text_383c4423b781eb2c>
+  <RC_Text_0bbd2dc8a45c7ff5>Legion Centurion · Central combat zone / Waypoint 1</RC_Text_0bbd2dc8a45c7ff5>
+  <RC_Text_c8c9a4e11e5045ee>Legion Centurion · Central combat zone / Waypoint 2</RC_Text_c8c9a4e11e5045ee>
+  <RC_Text_e2289ca5506f8d4c>Legion Centurion · Central combat zone / Waypoint 3</RC_Text_e2289ca5506f8d4c>
+  <RC_Text_5702d2ac85dd5215>Legion Centurion · Central combat zone / Waypoint 4</RC_Text_5702d2ac85dd5215>
+  <RC_Text_342b01fb9c9fb67a>Sorting desk</RC_Text_342b01fb9c9fb67a>
+  <RC_Text_a9acd8573b1f1486>Empty sorting shelf 1</RC_Text_a9acd8573b1f1486>
+  <RC_Text_fc037797d802e676>Empty sorting shelf 2</RC_Text_fc037797d802e676>
+  <RC_Text_02f289025cda843e>Cut eastern external communications</RC_Text_02f289025cda843e>
+  <RC_Text_0c363ed97821fd81>Cut western external communications</RC_Text_0c363ed97821fd81>
+  <RC_Text_2d3f5fd67440285f>Draft supplies — Puzzle gating not yet wired</RC_Text_2d3f5fd67440285f>
+  <RC_Text_33c26e5ff7b4af28>Shut the fuck up!</RC_Text_33c26e5ff7b4af28>
+  <RC_Text_874a8612e5179df6>Don't ask. The coward hid behind a tank the whole time.</RC_Text_874a8612e5179df6>
+  <RC_Text_0f1366ab7e977626>Your turn.</RC_Text_0f1366ab7e977626>
+  <RC_Text_05a0fa13613ddcda>At the main entrance.</RC_Text_05a0fa13613ddcda>
+  <RC_Text_bdee1bf874038701>Outpost guard</RC_Text_bdee1bf874038701>
+  <RC_Text_d739ee11593a4afa>Two people ahead.</RC_Text_d739ee11593a4afa>
+  <RC_Text_eaab0612d8670705>Service courtyard</RC_Text_eaab0612d8670705>
+  <RC_Text_1a49ceee588d8182>North wall conduit</RC_Text_1a49ceee588d8182>
+  <RC_Text_4dd09fd38436f354>Northern escape route</RC_Text_4dd09fd38436f354>
+  <RC_Text_4d5536482d12aa1b>That village up north says someone in the well mimics their voices.</RC_Text_4d5536482d12aa1b>
+  <RC_Text_a9f3d8a976ec9ab4>Northern Air Route: Unidentified Flying Humanoid Sightings</RC_Text_a9f3d8a976ec9ab4>
+  <RC_Text_c97497d21e831321>Infirmary first aid cabinet (3 medicine)</RC_Text_c97497d21e831321>
+  <RC_Text_afb946d249534456>Infirmary medicine shelf</RC_Text_afb946d249534456>
+  <RC_Text_34631f6c6d85799b>Hospital bed</RC_Text_34631f6c6d85799b>
+  <RC_Text_4a45a7d0ab3ae684>Southern approach and extraction</RC_Text_4a45a7d0ab3ae684>
+  <RC_Text_3ac5c66d0d05be0e>South gate / Southeast outer ring</RC_Text_3ac5c66d0d05be0e>
+  <RC_Text_f7939b9af128ea4c>South gate / Southeast outer ring / 1</RC_Text_f7939b9af128ea4c>
+  <RC_Text_eff1aa76d2f00bc3>South gate / Southeast outer ring / 2</RC_Text_eff1aa76d2f00bc3>
+  <RC_Text_32efb1e3e9541f23>South gate / Southeast outer ring / 3</RC_Text_32efb1e3e9541f23>
+  <RC_Text_17e625ff965ca97c>South gate / Southeast outer ring / 4</RC_Text_17e625ff965ca97c>
+  <RC_Text_fc61b3449c896cdf>South gate / Southeast outer ring / 5</RC_Text_fc61b3449c896cdf>
+  <RC_Text_16c57be94027af31>South gate / Southeast outer ring / 6</RC_Text_16c57be94027af31>
+  <RC_Text_9eb8744948ec9379>South gate / Southeast outer ring / 7</RC_Text_9eb8744948ec9379>
+  <RC_Text_c2985c223639f6d6>South gate / Southeast outer ring / 8</RC_Text_c2985c223639f6d6>
+  <RC_Text_57ba0d4652bacd57>South gate / Southwest outer ring</RC_Text_57ba0d4652bacd57>
+  <RC_Text_a1e7499496edba29>South gate / Southwest outer ring / 1</RC_Text_a1e7499496edba29>
+  <RC_Text_d0d9f399957f3b58>South gate / Southwest outer ring / 10</RC_Text_d0d9f399957f3b58>
+  <RC_Text_23f1f86546f22f2e>South gate / Southwest outer ring / 11</RC_Text_23f1f86546f22f2e>
+  <RC_Text_ca4ef5ae934b0ef1>South gate / Southwest outer ring / 12</RC_Text_ca4ef5ae934b0ef1>
+  <RC_Text_c43cabac8921941e>South gate / Southwest outer ring / 2</RC_Text_c43cabac8921941e>
+  <RC_Text_6b19ba5b0a9d72f4>South gate / Southwest outer ring / 3</RC_Text_6b19ba5b0a9d72f4>
+  <RC_Text_b300660ad9ce95a6>South gate / Southwest outer ring / 4</RC_Text_b300660ad9ce95a6>
+  <RC_Text_701f3f8a23cc3fd6>South gate / Southwest outer ring / 5</RC_Text_701f3f8a23cc3fd6>
+  <RC_Text_e21a442e272f0381>South gate / Southwest outer ring / 6</RC_Text_e21a442e272f0381>
+  <RC_Text_ea1a8726cfc2d58c>South gate / Southwest outer ring / 7</RC_Text_ea1a8726cfc2d58c>
+  <RC_Text_3025927efeacd87a>South gate / Southwest outer ring / 8</RC_Text_3025927efeacd87a>
+  <RC_Text_b5750905af978ec7>South gate / Southwest outer ring / 9</RC_Text_b5750905af978ec7>
+  <RC_Text_16116d162aa07674>Guard B</RC_Text_16116d162aa07674>
+  <RC_Text_91609d55947416a2>Guard A</RC_Text_91609d55947416a2>
+  <RC_Text_80fc2999ad091995>What's the kitchen making today?</RC_Text_80fc2999ad091995>
+  <RC_Text_40e0c462dcdb7365>I wasn't the one firing.</RC_Text_40e0c462dcdb7365>
+  <RC_Text_d13635c51ba35a68>Heading north again? The kitchen isn't serving yet.</RC_Text_d13635c51ba35a68>
+  <RC_Text_7fdbaa6d9b647efd>Code Rotation Rules</RC_Text_7fdbaa6d9b647efd>
+  <RC_Text_f7101ee4fef0404a>Exactly.</RC_Text_f7101ee4fef0404a>
+  <RC_Text_e1f1eaa34bfc4515>Sounds like our kind of thing.</RC_Text_e1f1eaa34bfc4515>
+  <RC_Text_50e607c68ae4955c>Hear about the idiot who showed up at the outpost and took a dozen cannon rounds?</RC_Text_50e607c68ae4955c>
+  <RC_Text_16421d1c7a81490f>Heard a recruit in your Second Battalion saw a girl with wings flying overhead.</RC_Text_16421d1c7a81490f>
+  <RC_Text_eec5dd7f98d111ae>I heard the red-and-white armor was still intact.</RC_Text_eec5dd7f98d111ae>
+  <RC_Text_a6b71ee7e12429dd>Who told you that?</RC_Text_a6b71ee7e12429dd>
+  <RC_Text_2a7a52224afeca03>Oh, him? Go on. I haven't heard this one.</RC_Text_2a7a52224afeca03>
+  <RC_Text_bf83f93fe71c8395>Right, right. A ghost. Feel anything?</RC_Text_bf83f93fe71c8395>
+  <RC_Text_6402de5c6bbff7d5>How long has it been since our battalion saw a woman? Poor kid's desperate.</RC_Text_6402de5c6bbff7d5>
+  <RC_Text_0fc5f58999ff8d4c>Mm-hmm.</RC_Text_0fc5f58999ff8d4c>
+  <RC_Text_dd62a811ebdf1a97>STAR EATERS</RC_Text_dd62a811ebdf1a97>
+  <RC_Text_05a39cf42d83055a>Star Eaters Campaign</RC_Text_05a39cf42d83055a>
+  <RC_Text_2fbaa170d79208cd>Star Eaters Campaign — Archive Station</RC_Text_2fbaa170d79208cd>
+  <RC_Text_c53a907d3cd7313d>An echo?</RC_Text_c53a907d3cd7313d>
+  <RC_Text_799ff2118974a35a>Sentry post 01</RC_Text_799ff2118974a35a>
+  <RC_Text_093cf63f0193154d>Sentry post 01 / Waypoint 1</RC_Text_093cf63f0193154d>
+  <RC_Text_6ad5a2434624dae8>Sentry post 02</RC_Text_6ad5a2434624dae8>
+  <RC_Text_84e6487555889678>Sentry post 02 / Waypoint 1</RC_Text_84e6487555889678>
+  <RC_Text_4106a616e6aac7ed>Sentry post 03</RC_Text_4106a616e6aac7ed>
+  <RC_Text_24c9771ac333202b>Sentry post 03 / Waypoint 1</RC_Text_24c9771ac333202b>
+  <RC_Text_1f84741592a4c3c8>Sentry post 04</RC_Text_1f84741592a4c3c8>
+  <RC_Text_dbd811634cab6194>Sentry post 04 / Waypoint 1</RC_Text_dbd811634cab6194>
+  <RC_Text_91321975cde9c75d>Sentry post 05</RC_Text_91321975cde9c75d>
+  <RC_Text_731545671f1d31b9>Sentry post 05 / Waypoint 1</RC_Text_731545671f1d31b9>
+  <RC_Text_2e1687faad2e0fe8>Sentry post 06</RC_Text_2e1687faad2e0fe8>
+  <RC_Text_6af78849aae0b598>Sentry post 06 / Waypoint 1</RC_Text_6af78849aae0b598>
+  <RC_Text_c76f482d660c48d9>Sentry post 07</RC_Text_c76f482d660c48d9>
+  <RC_Text_76e50e19f6a9205a>Sentry post 07 / Waypoint 1</RC_Text_76e50e19f6a9205a>
+  <RC_Text_0a07a89d140fb225>Sentry post 08</RC_Text_0a07a89d140fb225>
+  <RC_Text_26b155a30396361b>Sentry post 08 / Waypoint 1</RC_Text_26b155a30396361b>
+  <RC_Text_2553ab5c1e01e089>Sentry post 09</RC_Text_2553ab5c1e01e089>
+  <RC_Text_fcb17aa9a20870ce>Sentry post 09 / Waypoint 1</RC_Text_fcb17aa9a20870ce>
+  <RC_Text_06bef0725c37c44a>Sentry post 10</RC_Text_06bef0725c37c44a>
+  <RC_Text_1e992a8249b0ee62>Sentry post 10 / Waypoint 1</RC_Text_1e992a8249b0ee62>
+  <RC_Text_8508f279d11275fb>Coordinates received. Get out of there first.</RC_Text_8508f279d11275fb>
+  <RC_Text_2b60195d50d5e99e>Gene modification could achieve something similar easily enough.</RC_Text_2b60195d50d5e99e>
+  <RC_Text_5a61fdbcd72fdf85>Base construction site</RC_Text_5a61fdbcd72fdf85>
+  <RC_Text_cd0acb527f8fa75d>Under-wall maintenance conduit</RC_Text_cd0acb527f8fa75d>
+  <RC_Text_5f40c6b01a9dee57>Outer extraction point</RC_Text_5f40c6b01a9dee57>
+  <RC_Text_b1a9b9633d9557fd>Dry outside. Could still keep fish inside.</RC_Text_b1a9b9633d9557fd>
+  <RC_Text_29984d60ee6ec9cf>Make good use of them.</RC_Text_29984d60ee6ec9cf>
+  <RC_Text_458490810e9c9cfc>Put it to work. Teach their electronics a lesson.</RC_Text_458490810e9c9cfc>
+  <RC_Text_2ff3084bf38e7555>Zimo</RC_Text_2ff3084bf38e7555>
+  <RC_Text_4b6c4e8f97ada1b6>Security terminal: Disable turrets after hacking</RC_Text_4b6c4e8f97ada1b6>
+  <RC_Text_ce76ebd34b7297b4>Throne</RC_Text_ce76ebd34b7297b4>
+  <RC_Text_07f972e865b43843>Indoor light</RC_Text_07f972e865b43843>
+  <RC_Text_275e92f2389d3db3>Outdoor observer</RC_Text_275e92f2389d3db3>
+  <RC_Text_d770f92450b865a8>Vault storage shelf</RC_Text_d770f92450b865a8>
+  <RC_Text_2a9eedda92fef1ba>Code vault / Guard lounge / Electrical maintenance</RC_Text_2a9eedda92fef1ba>
+  <RC_Text_8d4e28aa928dece5>Code vault / Guard lounge / Electrical maintenance / 1</RC_Text_8d4e28aa928dece5>
+  <RC_Text_e7c0eb42d57f907c>Code vault / Guard lounge / Electrical maintenance / 10</RC_Text_e7c0eb42d57f907c>
+  <RC_Text_d1819ff9365ded93>Code vault / Guard lounge / Electrical maintenance / 11</RC_Text_d1819ff9365ded93>
+  <RC_Text_8a87f08d22a33817>Code vault / Guard lounge / Electrical maintenance / 12</RC_Text_8a87f08d22a33817>
+  <RC_Text_beb71981a5fe8191>Code vault / Guard lounge / Electrical maintenance / 13</RC_Text_beb71981a5fe8191>
+  <RC_Text_f0fdb313fc4fea45>Code vault / Guard lounge / Electrical maintenance / 14</RC_Text_f0fdb313fc4fea45>
+  <RC_Text_bc28fb03a6acf1bd>Code vault / Guard lounge / Electrical maintenance / 2</RC_Text_bc28fb03a6acf1bd>
+  <RC_Text_3d43a59ed67450b6>Code vault / Guard lounge / Electrical maintenance / 3</RC_Text_3d43a59ed67450b6>
+  <RC_Text_de129e4d372b5a63>Code vault / Guard lounge / Electrical maintenance / 4</RC_Text_de129e4d372b5a63>
+  <RC_Text_ac033f74dade8162>Code vault / Guard lounge / Electrical maintenance / 5</RC_Text_ac033f74dade8162>
+  <RC_Text_40f6e272e46e130b>Code vault / Guard lounge / Electrical maintenance / 6</RC_Text_40f6e272e46e130b>
+  <RC_Text_81bbd4cea46d97f3>Code vault / Guard lounge / Electrical maintenance / 7</RC_Text_81bbd4cea46d97f3>
+  <RC_Text_370f92b865461a95>Code vault / Guard lounge / Electrical maintenance / 8</RC_Text_370f92b865461a95>
+  <RC_Text_89b6ec99c9c7dd32>Code vault / Guard lounge / Electrical maintenance / 9</RC_Text_89b6ec99c9c7dd32>
+  <RC_Text_d18d9bbdeeb3597f>Code-locked vault door</RC_Text_d18d9bbdeeb3597f>
+  <RC_Text_d87a031ed6aaf7b2>Right. Stop trying the old one.</RC_Text_d87a031ed6aaf7b2>
+  <RC_Text_651afa16561d4e62>Find a route to the anomaly center</RC_Text_651afa16561d4e62>
+  <RC_Text_890a28af17151d1e>His own! Time to write three lines rejecting it, no time to sign.</RC_Text_890a28af17151d1e>
+  <RC_Text_1f58d82069a26edd>Patrol 01</RC_Text_1f58d82069a26edd>
+  <RC_Text_021c9086ccb9fc2d>Patrol 01 / Waypoint 1</RC_Text_021c9086ccb9fc2d>
+  <RC_Text_6a29e6b619245dce>Patrol 01 / Waypoint 2</RC_Text_6a29e6b619245dce>
+  <RC_Text_29a26c2929d7dee5>Patrol 01 / Waypoint 3</RC_Text_29a26c2929d7dee5>
+  <RC_Text_604a08145c806d33>Patrol 01 / Waypoint 4</RC_Text_604a08145c806d33>
+  <RC_Text_8fffa24d015be1de>Patrol 02</RC_Text_8fffa24d015be1de>
+  <RC_Text_181d3cf870a5cc64>Patrol 02 / Waypoint 1</RC_Text_181d3cf870a5cc64>
+  <RC_Text_72cef1aa75e2f4f9>Patrol 02 / Waypoint 2</RC_Text_72cef1aa75e2f4f9>
+  <RC_Text_79e2f446bc06b7e4>Patrol 02 / Waypoint 3</RC_Text_79e2f446bc06b7e4>
+  <RC_Text_38aae87387d276a6>Patrol 02 / Waypoint 4</RC_Text_38aae87387d276a6>
+  <RC_Text_daca26f7c4042a55>Patrol 03</RC_Text_daca26f7c4042a55>
+  <RC_Text_fb81b10db21717bd>Patrol 03 / Waypoint 1</RC_Text_fb81b10db21717bd>
+  <RC_Text_08a8955cef7a2db0>Patrol 03 / Waypoint 2</RC_Text_08a8955cef7a2db0>
+  <RC_Text_3a1e76b4e8f45d07>Patrol 03 / Waypoint 3</RC_Text_3a1e76b4e8f45d07>
+  <RC_Text_b280085bd2535e71>Patrol 03 / Waypoint 4</RC_Text_b280085bd2535e71>
+  <RC_Text_0c272469e808a8da>Patrol 04</RC_Text_0c272469e808a8da>
+  <RC_Text_924685adb126bc47>Patrol 04 / Waypoint 1</RC_Text_924685adb126bc47>
+  <RC_Text_5a2e458f4f8cf35a>Patrol 04 / Waypoint 2</RC_Text_5a2e458f4f8cf35a>
+  <RC_Text_9c333fef664f50d3>Patrol 04 / Waypoint 3</RC_Text_9c333fef664f50d3>
+  <RC_Text_9ee28d70d48dbaea>Patrol 04 / Waypoint 4</RC_Text_9ee28d70d48dbaea>
+  <RC_Text_389543d41222cfd9>Patrol 05</RC_Text_389543d41222cfd9>
+  <RC_Text_82e9883628922b36>Patrol 05 / Waypoint 1</RC_Text_82e9883628922b36>
+  <RC_Text_9a7f823124d87e15>Patrol 05 / Waypoint 2</RC_Text_9a7f823124d87e15>
+  <RC_Text_f5e76a69fdd1c45d>Patrol 05 / Waypoint 3</RC_Text_f5e76a69fdd1c45d>
+  <RC_Text_88a44b43307c158f>Patrol 05 / Waypoint 4</RC_Text_88a44b43307c158f>
+  <RC_Text_7948f16a8a0d44be>Patrol 06</RC_Text_7948f16a8a0d44be>
+  <RC_Text_9783f0bcb4274a79>Patrol 06 / Waypoint 1</RC_Text_9783f0bcb4274a79>
+  <RC_Text_68588c0b1e68a426>Patrol 06 / Waypoint 2</RC_Text_68588c0b1e68a426>
+  <RC_Text_4acc283ea854c5cd>Patrol 06 / Waypoint 3</RC_Text_4acc283ea854c5cd>
+  <RC_Text_444992acd7a3ee15>Patrol 06 / Waypoint 4</RC_Text_444992acd7a3ee15>
+  <RC_Text_ea45080f8c8a488f>Patrol 07</RC_Text_ea45080f8c8a488f>
+  <RC_Text_08d8cb4477e2077b>Patrol 07 / Waypoint 1</RC_Text_08d8cb4477e2077b>
+  <RC_Text_35fbd786ade4157d>Patrol 07 / Waypoint 2</RC_Text_35fbd786ade4157d>
+  <RC_Text_bbbf577d068644c3>Patrol 07 / Waypoint 3</RC_Text_bbbf577d068644c3>
+  <RC_Text_85f15cd72da9f533>Patrol 07 / Waypoint 4</RC_Text_85f15cd72da9f533>
+  <RC_Text_bf6c8c2db84454a6>Patrol 08</RC_Text_bf6c8c2db84454a6>
+  <RC_Text_9367988e8f2cf2c6>Patrol 08 / Waypoint 1</RC_Text_9367988e8f2cf2c6>
+  <RC_Text_4b399468d975d6e2>Patrol 08 / Waypoint 2</RC_Text_4b399468d975d6e2>
+  <RC_Text_42a294d7c5370552>Patrol 08 / Waypoint 3</RC_Text_42a294d7c5370552>
+  <RC_Text_9a22986a206ef7f8>Patrol 08 / Waypoint 4</RC_Text_9a22986a206ef7f8>
+  <RC_Text_8ae30c5064d6e8ff>Patrol 09</RC_Text_8ae30c5064d6e8ff>
+  <RC_Text_0abf929cb6fe9d70>Patrol 09 / Waypoint 1</RC_Text_0abf929cb6fe9d70>
+  <RC_Text_8f5ffa1225c75091>Patrol 09 / Waypoint 2</RC_Text_8f5ffa1225c75091>
+  <RC_Text_c52f4996e5f3da4d>Patrol 09 / Waypoint 3</RC_Text_c52f4996e5f3da4d>
+  <RC_Text_005283b54dbcdb90>Patrol 09 / Waypoint 4</RC_Text_005283b54dbcdb90>
+  <RC_Text_a67174f0487de475>Patrol 10</RC_Text_a67174f0487de475>
+  <RC_Text_7f03518f6848b9b2>Patrol 10 / Waypoint 1</RC_Text_7f03518f6848b9b2>
+  <RC_Text_99a84b1503652a1d>Patrol 10 / Waypoint 2</RC_Text_99a84b1503652a1d>
+  <RC_Text_f12bba01cc3443e1>Patrol 10 / Waypoint 3</RC_Text_f12bba01cc3443e1>
+  <RC_Text_ec4c298a60d2a4a2>Patrol 10 / Waypoint 4</RC_Text_ec4c298a60d2a4a2>
+  <RC_Text_7d11cf7ffb572b39>Patrol report
+
+The unidentified target wore red-and-white power armor and did not respond to identification challenges.
+
+Despite repeated hits, it continued to advance without any injury sufficient to halt its movement.
+
+The target returned fire with extreme force, killing several Imperial marines and tearing apart multiple light exoskeletons with its bare hands.
+
+Knight combat record
+
+A reinforcing knight engaged the target with APFSDS rounds from a 120 mm main gun mounted on a heavy exoskeleton. Combat records confirm four hits. The target fell after the fourth hit and was subsequently confirmed dead.
+
+Equipment inspection
+
+Post-combat inspection confirmed that the target's armor remained completely undamaged. Available evidence cannot explain its material or protective mechanism. The equipment's origin remains unknown.
+
+Attachments
+
+Gunnery records, on-site footage, equipment inspection photographs and coordinates of the area where the target was last observed. The area has been sealed, but a follow-up search has not been completed.</RC_Text_7d11cf7ffb572b39>
+  <RC_Text_e2b9ddbea69d795a>Work chair</RC_Text_e2b9ddbea69d795a>
+  <RC_Text_0594e80578636dd5>Tool cabinet</RC_Text_0594e80578636dd5>
+  <RC_Text_5084aa3f723cf520>Empty tool room shelf</RC_Text_5084aa3f723cf520>
+  <RC_Text_e8e84f908814e3da>His revolver couldn't penetrate a Pit Lord, so he filed a classified report?</RC_Text_e8e84f908814e3da>
+  <RC_Text_023a17193277380c>Let's hope it has what we need.</RC_Text_023a17193277380c>
+  <RC_Text_c5f5294df9c1e0e3>Conventional fire cannot reliably stop the armored target. Witnesses report that its wounds continuously close. If attacked, use passages and structural barriers to withdraw immediately.</RC_Text_c5f5294df9c1e0e3>
+  <RC_Text_58b44288a9cf01df>Good work.</RC_Text_58b44288a9cf01df>
+  <RC_Text_6a09793d67c76986>Good work. That's the last file.</RC_Text_6a09793d67c76986>
+  <RC_Text_741f7661b3615401>Flatscreen television</RC_Text_741f7661b3615401>
+  <RC_Text_a3287fca1d6b560e>Ghost</RC_Text_a3287fca1d6b560e>
+  <RC_Text_25cafa8f4e94d720>Broadcast control terminal</RC_Text_25cafa8f4e94d720>
+  <RC_Text_46071b17e5883a4c>Broadcast terminal: Play sound after hacking</RC_Text_46071b17e5883a4c>
+  <RC_Text_a801bf1e24f745c3>Automated turrets in the courtyard.</RC_Text_a801bf1e24f745c3>
+  <RC_Text_1c2ca05133cf3a70>Anomaly center — In-character name</RC_Text_1c2ca05133cf3a70>
+  <RC_Text_0c87084c248c9fa3>Any footage?</RC_Text_0c87084c248c9fa3>
+  <RC_Text_1eb6c70334ff2cbe>Come on, Price. This universe follows relativity. How strange can it get?</RC_Text_1eb6c70334ff2cbe>
+  <RC_Text_90a12356986e22f5>A psychic shock lance. Fully charged. They've been keeping archotech here, too.</RC_Text_90a12356986e22f5>
+  <RC_Text_152d962f9da0c88d>Emergency Room Handover Log</RC_Text_152d962f9da0c88d>
+  <RC_Text_64e54accfaa0ef80>We're not here to wipe out the outpost, Zimo.</RC_Text_64e54accfaa0ef80>
+  <RC_Text_ae759c4330ba9812>I've reached the offices.</RC_Text_ae759c4330ba9812>
+  <RC_Text_4faf1f9665d875ee>Shit... jackpot. Take a look at this, Price.</RC_Text_4faf1f9665d875ee>
+  <RC_Text_8322278db88bb09e>Holy shit. He survived that?</RC_Text_8322278db88bb09e>
+  <RC_Text_b15a71529ce020da>I've heard it twice. The door was still locked.</RC_Text_b15a71529ce020da>
+  <RC_Text_4c5d0e32e866082e>I've warped in a forge nearby.</RC_Text_4c5d0e32e866082e>
+  <RC_Text_d4278b7f7f7c822d>I'm starting to doubt we'll find anything useful.</RC_Text_d4278b7f7f7c822d>
+  <RC_Text_34d5f21b91edbb9b>I'm checking the drain! Watch this side for me. I'll be right back.</RC_Text_34d5f21b91edbb9b>
+  <RC_Text_b248f61b7fb1ba9a>I've been using it as my private stash.</RC_Text_b248f61b7fb1ba9a>
+  <RC_Text_aecf4a5e49d20b9f>I'm going in.</RC_Text_aecf4a5e49d20b9f>
+  <RC_Text_6fafbf6e25f63692>I'm inside. Got a clear view.</RC_Text_6fafbf6e25f63692>
+  <RC_Text_0724cd498ce2354e>Room 01 · Entrances at both ends / ready for refinement</RC_Text_0724cd498ce2354e>
+  <RC_Text_4153cbde290f2a98>Room 02 · Entrances at both ends / ready for refinement</RC_Text_4153cbde290f2a98>
+  <RC_Text_174ffbc2c243ca22>Room 03 · Entrances at both ends / ready for refinement</RC_Text_174ffbc2c243ca22>
+  <RC_Text_525e591eb5fff2dd>Room 04 · Entrances at both ends / ready for refinement</RC_Text_525e591eb5fff2dd>
+  <RC_Text_8b4688287b4ba8cb>Room 05 · Entrances at both ends / ready for refinement</RC_Text_8b4688287b4ba8cb>
+  <RC_Text_b412510663a027c5>Room 06 · Entrances at both ends / ready for refinement</RC_Text_b412510663a027c5>
+  <RC_Text_dee7afe5306865f3>Room 07 · Entrances at both ends / ready for refinement</RC_Text_dee7afe5306865f3>
+  <RC_Text_e3ef567fa92c2c06>Room 08 · Entrances at both ends / ready for refinement</RC_Text_e3ef567fa92c2c06>
+  <RC_Text_8fa39d62bd7fedcb>Room 09 · Entrances at both ends / ready for refinement</RC_Text_8fa39d62bd7fedcb>
+  <RC_Text_2421909b9434188d>Room 10 · Entrances at both ends / ready for refinement</RC_Text_2421909b9434188d>
+  <RC_Text_ba2ac24b5fa73e02>Room 11 · Entrances at both ends / ready for refinement</RC_Text_ba2ac24b5fa73e02>
+  <RC_Text_515129959a0a308a>Room 12 · Entrances at both ends / ready for refinement</RC_Text_515129959a0a308a>
+  <RC_Text_6899417ed9d882cf>Room 13 · Entrances at both ends / ready for refinement</RC_Text_6899417ed9d882cf>
+  <RC_Text_00cd81450e0d4491>Room 14 · Entrances at both ends / ready for refinement</RC_Text_00cd81450e0d4491>
+  <RC_Text_597a124f728b2593>Room 15 · Entrances at both ends / ready for refinement</RC_Text_597a124f728b2593>
+  <RC_Text_da9b3fc3619528e6>Room 16 · Entrances at both ends / ready for refinement</RC_Text_da9b3fc3619528e6>
+  <RC_Text_52bb1a9c4a0b89da>Room 17 · Entrances at both ends / ready for refinement</RC_Text_52bb1a9c4a0b89da>
+  <RC_Text_c2ba80e755ed8049>Room 18 · Entrances at both ends / ready for refinement</RC_Text_c2ba80e755ed8049>
+  <RC_Text_db7ea2534132b6ce>Room 19 · Entrances at both ends / ready for refinement</RC_Text_db7ea2534132b6ce>
+  <RC_Text_49a93e68280b60b2>Room 20 · Entrances at both ends / ready for refinement</RC_Text_49a93e68280b60b2>
+  <RC_Text_e3c39b1e514fcbd9>Room 21 · Entrances at both ends / ready for refinement</RC_Text_e3c39b1e514fcbd9>
+  <RC_Text_5268c20774890f9f>Room 22 · Entrances at both ends / ready for refinement</RC_Text_5268c20774890f9f>
+  <RC_Text_7c76757ef94b5269>Room 23 · Entrances at both ends / ready for refinement</RC_Text_7c76757ef94b5269>
+  <RC_Text_6ab32049a8ed4ea1>Room 24 · Entrances at both ends / ready for refinement</RC_Text_6ab32049a8ed4ea1>
+  <RC_Text_7eb8fde8bf8c5c7a>Room 25 · Entrances at both ends / ready for refinement</RC_Text_7eb8fde8bf8c5c7a>
+  <RC_Text_92b48e11da8d9806>Room 26 · Entrances at both ends / ready for refinement</RC_Text_92b48e11da8d9806>
+  <RC_Text_a4e580d0ba671ce4>Room 27 · Entrances at both ends / ready for refinement</RC_Text_a4e580d0ba671ce4>
+  <RC_Text_1d0f0f0d6336857b>Room 28 · Entrances at both ends / ready for refinement</RC_Text_1d0f0f0d6336857b>
+  <RC_Text_5a7501bbf8fbab59>Room 29 · Entrances at both ends / ready for refinement</RC_Text_5a7501bbf8fbab59>
+  <RC_Text_1aed8eab1ad15f4d>Room 30 · Entrances at both ends / ready for refinement</RC_Text_1aed8eab1ad15f4d>
+  <RC_Text_e0de3f847c24235c>Room 31 · Entrances at both ends / ready for refinement</RC_Text_e0de3f847c24235c>
+  <RC_Text_14421646adfebcb8>Room 32 · Entrances at both ends / ready for refinement</RC_Text_14421646adfebcb8>
+  <RC_Text_7ea6db166c0950b1>Room 33 · Entrances at both ends / ready for refinement</RC_Text_7ea6db166c0950b1>
+  <RC_Text_f87503dec882ec82>Open first aid cabinet</RC_Text_f87503dec882ec82>
+  <RC_Text_1af0b831cc505682>Open supply crate</RC_Text_1af0b831cc505682>
+  <RC_Text_183b473bf0365153>Four hits from 120 mm APFSDS, and the armor was still untouched?</RC_Text_183b473bf0365153>
+  <RC_Text_f2887f82bb4dbeb7>The Executor doesn't leave comrades behind.</RC_Text_f2887f82bb4dbeb7>
+  <RC_Text_2f25ee73cfe44c9f>The Executor has flexible moral standards.</RC_Text_2f25ee73cfe44c9f>
+  <RC_Text_94e8b7a4850e37cd>Executor, investigation coordinates acquired</RC_Text_94e8b7a4850e37cd>
+  <RC_Text_56f1a0c4423db6ea>Executor, we've found our tin man.</RC_Text_56f1a0c4423db6ea>
+  <RC_Text_692c82ebad1b4f3c>Approved, my ass. Sent back again. Missing a signature.</RC_Text_692c82ebad1b4f3c>
+  <RC_Text_db8abe494a53470b>Changed it twice! Stops at the same time every time. Isn't that creepy?</RC_Text_db8abe494a53470b>
+  <RC_Text_3e4d9a66321c247b>Change the battery. What do you want me to do about it?</RC_Text_3e4d9a66321c247b>
+  <RC_Text_e37c15c4fe58fab0>Disconnect the equipment yard's auxiliary circuit before connecting.</RC_Text_e37c15c4fe58fab0>
+  <RC_Text_1452e7eaf0c2f1bc>Connect to warp interface</RC_Text_1452e7eaf0c2f1bc>
+  <RC_Text_3789a405863623ac>Reception / Clerks' office / Document room</RC_Text_3789a405863623ac>
+  <RC_Text_73d314baa8cce7a4>Reception / Clerks' office / Document room / 1</RC_Text_73d314baa8cce7a4>
+  <RC_Text_6ca6316cd47fec9f>Reception / Clerks' office / Document room / 10</RC_Text_6ca6316cd47fec9f>
+  <RC_Text_a68eff3fcbb2b204>Reception / Clerks' office / Document room / 11</RC_Text_a68eff3fcbb2b204>
+  <RC_Text_db50d2ef7e8f1fc2>Reception / Clerks' office / Document room / 12</RC_Text_db50d2ef7e8f1fc2>
+  <RC_Text_99aefade54d1c0ec>Reception / Clerks' office / Document room / 13</RC_Text_99aefade54d1c0ec>
+  <RC_Text_ce30d1a58583bd13>Reception / Clerks' office / Document room / 14</RC_Text_ce30d1a58583bd13>
+  <RC_Text_0dfb5a22ddde48cf>Reception / Clerks' office / Document room / 15</RC_Text_0dfb5a22ddde48cf>
+  <RC_Text_c4cf1a989410f488>Reception / Clerks' office / Document room / 16</RC_Text_c4cf1a989410f488>
+  <RC_Text_1dab39b4f40ba1b3>Reception / Clerks' office / Document room / 17</RC_Text_1dab39b4f40ba1b3>
+  <RC_Text_5e7210efda5ee355>Reception / Clerks' office / Document room / 18</RC_Text_5e7210efda5ee355>
+  <RC_Text_92a0effb4ed5d78f>Reception / Clerks' office / Document room / 2</RC_Text_92a0effb4ed5d78f>
+  <RC_Text_997bb1a3805ef8f4>Reception / Clerks' office / Document room / 3</RC_Text_997bb1a3805ef8f4>
+  <RC_Text_c3b921ab238d9783>Reception / Clerks' office / Document room / 4</RC_Text_c3b921ab238d9783>
+  <RC_Text_c9ab66abca464aa9>Reception / Clerks' office / Document room / 5</RC_Text_c9ab66abca464aa9>
+  <RC_Text_9d70fd4f218d1e48>Reception / Clerks' office / Document room / 6</RC_Text_9d70fd4f218d1e48>
+  <RC_Text_77312a3e288ac608>Reception / Clerks' office / Document room / 7</RC_Text_77312a3e288ac608>
+  <RC_Text_62e552f6e540dbca>Reception / Clerks' office / Document room / 8</RC_Text_62e552f6e540dbca>
+  <RC_Text_5f943022ae890009>Reception / Clerks' office / Document room / 9</RC_Text_5f943022ae890009>
+  <RC_Text_0782703481844917>Reception desk</RC_Text_0782703481844917>
+  <RC_Text_2ead68d65e53fb91>Take over surveillance terminal</RC_Text_2ead68d65e53fb91>
+  <RC_Text_dd8c02b9c106050b>Submitted by: Imperial Baron
+
+I repeatedly fired my personal revolver at a Pit Lord and failed to penetrate its frontal armor. The relevant authorities should investigate this level of protection and provide me with an explanation.
+
+I request that this matter be classified to prevent unverified reports from circulating within my domain.
+
+Archival note: Restricted access at the submitter's request. No footage, wreckage or ammunition records were provided for analysis.</RC_Text_dd8c02b9c106050b>
+  <RC_Text_85b7b7a5a325f272>Dry them by the heater.</RC_Text_85b7b7a5a325f272>
+  <RC_Text_893d98c4f5630db5>The camera is uploading. Cut it off.</RC_Text_893d98c4f5630db5>
+  <RC_Text_3803e0142ebfc6b3>Column</RC_Text_3803e0142ebfc6b3>
+  <RC_Text_d55b704f1348a1ee>Copy.</RC_Text_d55b704f1348a1ee>
+  <RC_Text_d2ad0aaf318ec500>Copy. The observer feed is clear.</RC_Text_d2ad0aaf318ec500>
+  <RC_Text_522087b95157e501>Copy. Watch yourself. The observer can't see inside.</RC_Text_522087b95157e501>
+  <RC_Text_0f1b09131432aa4b>That damn mailroom clock stopped again. I thought our shift was almost over.</RC_Text_0f1b09131432aa4b>
+  <RC_Text_0c9cb260a40730f4>Keep it. Might save you a firefight.</RC_Text_0c9cb260a40730f4>
+  <RC_Text_1e74ef04eeccd148>Several witnesses reported a winged female humanoid in the evening sky. The figure appeared briefly before passing out of sight.
+
+Submitted footage shows only a blurred afterimage, with no identifiable face or equipment. The reports lack reliable matching timestamps, so it is not yet possible to establish whether they concern the same target.
+
+No landing site or recoverable material has been found. Retain these records pending further sightings and footage.</RC_Text_1e74ef04eeccd148>
+  <RC_Text_fbe81b13fe33bf93>Disconnect equipment yard auxiliary circuit</RC_Text_fbe81b13fe33bf93>
+  <RC_Text_478ce6d60de4b2a3>Sterile tile</RC_Text_478ce6d60de4b2a3>
+  <RC_Text_be58c1b5659298b0>Anything left at the old loading bay?</RC_Text_be58c1b5659298b0>
+  <RC_Text_666c275ab284705c>Understood. Download complete.</RC_Text_666c275ab284705c>
+  <RC_Text_566b16427c8e9bb4>Yesterday you said six rounds.</RC_Text_566b16427c8e9bb4>
+  <RC_Text_4c7e904b124ac0c9>Price</RC_Text_4c7e904b124ac0c9>
+  <RC_Text_0cbde33633741570>Price, I'm into the third terminal.</RC_Text_0cbde33633741570>
+  <RC_Text_7682e35c0d8d4d3e>Combat patrols</RC_Text_7682e35c0d8d4d3e>
+  <RC_Text_8c302471cafcfbd3>Aurora, this is Zero. I'm outside.</RC_Text_8c302471cafcfbd3>
+  <RC_Text_cab71779b15b1244>Changing room chair</RC_Text_cab71779b15b1244>
+  <RC_Text_eaad843e5e2b0510>Final extraction zone</RC_Text_eaad843e5e2b0510>
+  <RC_Text_d3bdd67ef4e612fe>Verification chair</RC_Text_d3bdd67ef4e612fe>
+  <RC_Text_3cc73c426b77fa88>Table (2x4)</RC_Text_3cc73c426b77fa88>
+  <RC_Text_db3e5e7281e502bd>Archive Station → Confirmation</RC_Text_db3e5e7281e502bd>
+  <RC_Text_7a1dedea4461fe46>Mason</RC_Text_7a1dedea4461fe46>
+  <RC_Text_b95df90d2c32c05c>Mason — Inherited from Mission 1</RC_Text_b95df90d2c32c05c>
+  <RC_Text_4ae77ab5a15cd53d>Mason entry</RC_Text_4ae77ab5a15cd53d>
+  <RC_Text_4a371ee9d6418bcf>Keep Mason alive</RC_Text_4a371ee9d6418bcf>
+  <RC_Text_2de460991ae58b34>Mason must survive</RC_Text_2de460991ae58b34>
+  <RC_Text_c4106fb9aecafbc4>Mason, check the other rooms.</RC_Text_c4106fb9aecafbc4>
+  <RC_Text_c8bb16da9fb04dfb>Mason: I'm out.
+
+Price: Good. Next stop: find out where our tin man came from.
+
+Investigation files acquired. The next investigation site has been identified.</RC_Text_c8bb16da9fb04dfb>
+  <RC_Text_e4fdf66e92843abd>Maintenance chair</RC_Text_e4fdf66e92843abd>
+  <RC_Text_3398f69c967a6d1d>Search the archives for an anomaly worth investigating</RC_Text_3398f69c967a6d1d>
+  <RC_Text_62b4951d08b1d07d>Every week. How do you keep forgetting?</RC_Text_62b4951d08b1d07d>
+  <RC_Text_961085f3c7ef705a>Couch</RC_Text_961085f3c7ef705a>
+  <RC_Text_9c7227ca37f418e4>Nothing happening.</RC_Text_9c7227ca37f418e4>
+  <RC_Text_635b1c833d711e1a>No.</RC_Text_635b1c833d711e1a>
+  <RC_Text_888804d5140fc5de>Not a waste. It fits under the table leg perfectly. No more wobbling at dinner.</RC_Text_888804d5140fc5de>
+  <RC_Text_b618affec17d7fc5>Follow the maintenance line to the controls. They should be nearby.</RC_Text_b618affec17d7fc5>
+  <RC_Text_cd475fd56d369e3d>Clean linen shelf (cloth placeholder)</RC_Text_cd475fd56d369e3d>
+  <RC_Text_d1c57e2539fbec48>Eliminate the Legion Centurion</RC_Text_d1c57e2539fbec48>
+  <RC_Text_6e6d714410a1da71>Deep water</RC_Text_6e6d714410a1da71>
+  <RC_Text_29646865f0e36c01>Concrete</RC_Text_29646865f0e36c01>
+  <RC_Text_424ce7fbb336cb41>Brazier</RC_Text_424ce7fbb336cb41>
+  <RC_Text_2b236eb9e1e44756>Electric stove</RC_Text_2b236eb9e1e44756>
+  <RC_Text_e394a5e6a41f03e8>Stew.</RC_Text_e394a5e6a41f03e8>
+  <RC_Text_99186958a14d2e68>Turret security terminal</RC_Text_99186958a14d2e68>
+  <RC_Text_ccd6073cc98beb5b>Turrets are down.</RC_Text_ccd6073cc98beb5b>
+  <RC_Text_bbd8308b63db7eed>Storage shelf</RC_Text_bbd8308b63db7eed>
+  <RC_Text_983538ff2c539a2c>Vitals monitor</RC_Text_983538ff2c539a2c>
+  <RC_Text_feca62c32bdc7a46>Electrical tool cabinet</RC_Text_feca62c32bdc7a46>
+  <RC_Text_af277c93d21d5f7d>Electrical maintenance bench</RC_Text_af277c93d21d5f7d>
+  <RC_Text_50ce772ed2b42725>Registrar's chair</RC_Text_50ce772ed2b42725>
+  <RC_Text_2b72c7e3cc213c0c>See if there's a surveillance terminal nearby.</RC_Text_2b72c7e3cc213c0c>
+  <RC_Text_02f636148ce95ec9>You're not even trying! That's what you said last time.</RC_Text_02f636148ce95ec9>
+  <RC_Text_4e13790fc7419edd>Got it. Go.</RC_Text_4e13790fc7419edd>
+  <RC_Text_4b4f615dfdcb01ef>Mission 1 — Reconnaissance</RC_Text_4b4f615dfdcb01ef>
+  <RC_Text_872939b7dea07b85>Mission 1 stealth</RC_Text_872939b7dea07b85>
+  <RC_Text_8bbefca2dbd7133f>Phase 3 — Champion Warrior spawn placeholder</RC_Text_8bbefca2dbd7133f>
+  <RC_Text_5b69f1214216f65e>Phase 3 — Unnamed Imperial Knight scene placeholder</RC_Text_5b69f1214216f65e>
+  <RC_Text_88e9b4183df4115f>Mission 2 — Confirmation</RC_Text_88e9b4183df4115f>
+  <RC_Text_1705adc4247f026b>Mission 2 — Confirmation — Red-and-White Outpost (Map Draft)</RC_Text_1705adc4247f026b>
+  <RC_Text_ef1520a609de9bf3>Briefing officer's chair</RC_Text_ef1520a609de9bf3>
+  <RC_Text_0dbc5bf14e015ba5>Briefing room chair</RC_Text_0dbc5bf14e015ba5>
+  <RC_Text_65e77990318b249e>Briefing document table</RC_Text_65e77990318b249e>
+  <RC_Text_833de3f41dc0176e>Fine carpet (red)</RC_Text_833de3f41dc0176e>
+  <RC_Text_957d851e0bb34999>Fine marble tile</RC_Text_957d851e0bb34999>
+  <RC_Text_fe1e3815e5dd589a>Sophia Empire Archive Station — Expanded Base</RC_Text_fe1e3815e5dd589a>
+  <RC_Text_c3cb515cb6a9272e>Intel on the fighter in red-and-white power armor acquired. You may extract now or search the remaining rooms. Extracting completes the mission immediately, even during combat or an active report countdown.
+Bring all physical files you have collected. Pick up any you left behind.</RC_Text_c3cb515cb6a9272e>
+  <RC_Text_837bb9b55ddf0f63>Maintenance workbench</RC_Text_837bb9b55ddf0f63>
+  <RC_Text_cba4f9d31eb33d8d>Maintenance tool cabinet</RC_Text_cba4f9d31eb33d8d>
+  <RC_Text_c5bea93c87847017>Maintenance workshop / Security office / Tool room</RC_Text_c5bea93c87847017>
+  <RC_Text_8d7b4da6639a93d6>Maintenance workshop / Security office / Tool room / 1</RC_Text_8d7b4da6639a93d6>
+  <RC_Text_0cc0dabb326a884f>Maintenance workshop / Security office / Tool room / 10</RC_Text_0cc0dabb326a884f>
+  <RC_Text_e057e1fa9d7ea469>Maintenance workshop / Security office / Tool room / 11</RC_Text_e057e1fa9d7ea469>
+  <RC_Text_ed92a53e2bb3fe1c>Maintenance workshop / Security office / Tool room / 12</RC_Text_ed92a53e2bb3fe1c>
+  <RC_Text_eaed1465c036c371>Maintenance workshop / Security office / Tool room / 13</RC_Text_eaed1465c036c371>
+  <RC_Text_386a39986f019afe>Maintenance workshop / Security office / Tool room / 14</RC_Text_386a39986f019afe>
+  <RC_Text_97e0feb31ba60e95>Maintenance workshop / Security office / Tool room / 2</RC_Text_97e0feb31ba60e95>
+  <RC_Text_8abbab046e15db36>Maintenance workshop / Security office / Tool room / 3</RC_Text_8abbab046e15db36>
+  <RC_Text_003b2f3433bf8e7a>Maintenance workshop / Security office / Tool room / 4</RC_Text_003b2f3433bf8e7a>
+  <RC_Text_778c18a1dc7cbf3c>Maintenance workshop / Security office / Tool room / 5</RC_Text_778c18a1dc7cbf3c>
+  <RC_Text_ec6874ba4d7e7697>Maintenance workshop / Security office / Tool room / 6</RC_Text_ec6874ba4d7e7697>
+  <RC_Text_4118cc7a2a095219>Maintenance workshop / Security office / Tool room / 7</RC_Text_4118cc7a2a095219>
+  <RC_Text_ca7f925750e2d046>Maintenance workshop / Security office / Tool room / 8</RC_Text_ca7f925750e2d046>
+  <RC_Text_a8b21883a7807475>Maintenance workshop / Security office / Tool room / 9</RC_Text_a8b21883a7807475>
+  <RC_Text_89a200e50e51c447>Empty maintenance materials shelf</RC_Text_89a200e50e51c447>
+  <RC_Text_1935b951fb2d9969>Why is that broken terminal still in the workshop? Wasn't the disposal request approved?</RC_Text_1935b951fb2d9969>
+  <RC_Text_0f358e1fca8e6d03>Mending chair</RC_Text_0f358e1fca8e6d03>
+  <RC_Text_c6f6f2f685a4baf1>Energy field stable. Warping in the Black Hat pack.</RC_Text_c6f6f2f685a4baf1>
+  <RC_Text_eb6a7dd262ae10c8>Air route archives / Archive junction</RC_Text_eb6a7dd262ae10c8>
+  <RC_Text_1c606e1846ec9851>Air route archives / Archive junction / 1</RC_Text_1c606e1846ec9851>
+  <RC_Text_b0909c506216bb49>Air route archives / Archive junction / 2</RC_Text_b0909c506216bb49>
+  <RC_Text_c59b80557bace203>Air route archives / Archive junction / 3</RC_Text_c59b80557bace203>
+  <RC_Text_775752ba31456e33>Air route archives / Archive junction / 4</RC_Text_775752ba31456e33>
+  <RC_Text_a2a675b57245ec08>Air route archives / Archive junction / 5</RC_Text_a2a675b57245ec08>
+  <RC_Text_1ba5f588d62a91e4>Air route archives / Archive junction / 6</RC_Text_1ba5f588d62a91e4>
+  <RC_Text_eceef5fd1568f9f6>Air route archives / Archive junction / 7</RC_Text_eceef5fd1568f9f6>
+  <RC_Text_7deec32358065892>Air route archives / Archive junction / 8</RC_Text_7deec32358065892>
+  <RC_Text_ddbfa3828205e467>Air route archives / Archive junction / 9</RC_Text_ddbfa3828205e467>
+  <RC_Text_bd723dd29bc4301c>Plant pot</RC_Text_bd723dd29bc4301c>
+  <RC_Text_c79700cefecc25e0>What happened to that writhing shadow in the barracks? Was it a ghost?</RC_Text_c79700cefecc25e0>
+  <RC_Text_bb84279cd3ef22bd>Battery</RC_Text_bb84279cd3ef22bd>
+  <RC_Text_2064529fe9e4a5f2>Void battery</RC_Text_2064529fe9e4a5f2>
+  <RC_Text_20876189cf798da3>Administrative courtyard</RC_Text_20876189cf798da3>
+  <RC_Text_f988e07a4b733ce9>Administrative courtyard / Relay equipment room / Central passage</RC_Text_f988e07a4b733ce9>
+  <RC_Text_1ef1519c33b07162>Administrative courtyard / Relay equipment room / Central passage / 1</RC_Text_1ef1519c33b07162>
+  <RC_Text_e21ef7907a6e4d2f>Administrative courtyard / Relay equipment room / Central passage / 10</RC_Text_e21ef7907a6e4d2f>
+  <RC_Text_8c967d1748baa039>Administrative courtyard / Relay equipment room / Central passage / 11</RC_Text_8c967d1748baa039>
+  <RC_Text_a1d2c1f3c16db221>Administrative courtyard / Relay equipment room / Central passage / 12</RC_Text_a1d2c1f3c16db221>
+  <RC_Text_8385f7f8bc36600d>Administrative courtyard / Relay equipment room / Central passage / 13</RC_Text_8385f7f8bc36600d>
+  <RC_Text_7453d2b6d670890c>Administrative courtyard / Relay equipment room / Central passage / 14</RC_Text_7453d2b6d670890c>
+  <RC_Text_c7962c4137076aa7>Administrative courtyard / Relay equipment room / Central passage / 15</RC_Text_c7962c4137076aa7>
+  <RC_Text_1db9047d0af5f94c>Administrative courtyard / Relay equipment room / Central passage / 2</RC_Text_1db9047d0af5f94c>
+  <RC_Text_7565fd9b7f6286ad>Administrative courtyard / Relay equipment room / Central passage / 3</RC_Text_7565fd9b7f6286ad>
+  <RC_Text_72249520d7e3c9e6>Administrative courtyard / Relay equipment room / Central passage / 4</RC_Text_72249520d7e3c9e6>
+  <RC_Text_687cf5ff0549c36b>Administrative courtyard / Relay equipment room / Central passage / 5</RC_Text_687cf5ff0549c36b>
+  <RC_Text_f11a77c662abbe7d>Administrative courtyard / Relay equipment room / Central passage / 6</RC_Text_f11a77c662abbe7d>
+  <RC_Text_805505e426f3abcf>Administrative courtyard / Relay equipment room / Central passage / 7</RC_Text_805505e426f3abcf>
+  <RC_Text_0189290f36ffa026>Administrative courtyard / Relay equipment room / Central passage / 8</RC_Text_0189290f36ffa026>
+  <RC_Text_a266db37811caa8e>Administrative courtyard / Relay equipment room / Central passage / 9</RC_Text_a266db37811caa8e>
+  <RC_Text_e314c897194d298c>Sure. You said that last time and came back with grease on your mouth.</RC_Text_e314c897194d298c>
+  <RC_Text_46d430b76d18543b>All right, set that aside. We've still got our tin man to find.</RC_Text_46d430b76d18543b>
+  <RC_Text_3322252e417ef0bd>Clothing repair bench</RC_Text_3322252e417ef0bd>
+  <RC_Text_b8207692392ba7aa>Burned carpet</RC_Text_b8207692392ba7aa>
+  <RC_Text_5014b608f237603d>Western loading bay / Northwest outer ring</RC_Text_5014b608f237603d>
+  <RC_Text_918a69af5786a451>Western loading bay / Northwest outer ring / 1</RC_Text_918a69af5786a451>
+  <RC_Text_0f3350407a2b16d4>Western loading bay / Northwest outer ring / 10</RC_Text_0f3350407a2b16d4>
+  <RC_Text_8e2e028f6593269a>Western loading bay / Northwest outer ring / 11</RC_Text_8e2e028f6593269a>
+  <RC_Text_cdba01df6c96ca08>Western loading bay / Northwest outer ring / 12</RC_Text_cdba01df6c96ca08>
+  <RC_Text_655cad008723ff2b>Western loading bay / Northwest outer ring / 2</RC_Text_655cad008723ff2b>
+  <RC_Text_01c118cfbccd9c21>Western loading bay / Northwest outer ring / 3</RC_Text_01c118cfbccd9c21>
+  <RC_Text_666d0c65c9e06e10>Western loading bay / Northwest outer ring / 4</RC_Text_666d0c65c9e06e10>
+  <RC_Text_a50a39a94ca01a43>Western loading bay / Northwest outer ring / 5</RC_Text_a50a39a94ca01a43>
+  <RC_Text_6291625ef58f0ea3>Western loading bay / Northwest outer ring / 6</RC_Text_6291625ef58f0ea3>
+  <RC_Text_b2f0285d25e110ab>Western loading bay / Northwest outer ring / 7</RC_Text_b2f0285d25e110ab>
+  <RC_Text_0c91fdb1dbaeb8b6>Western loading bay / Northwest outer ring / 8</RC_Text_0c91fdb1dbaeb8b6>
+  <RC_Text_85da0f44c1fd200a>Western loading bay / Northwest outer ring / 9</RC_Text_85da0f44c1fd200a>
+  <RC_Text_1cfe4008c38dfb91>Western outer wall breach route</RC_Text_1cfe4008c38dfb91>
+  <RC_Text_31b24ef54be6d1b4>Northwest extraction zone</RC_Text_31b24ef54be6d1b4>
+  <RC_Text_1516b0f08c20074b>Western escape route</RC_Text_1516b0f08c20074b>
+  <RC_Text_83beeba6747285cb>Feeling nervous, American?</RC_Text_83beeba6747285cb>
+  <RC_Text_711ff59a8d50fd4d>Have Karma hack it.</RC_Text_711ff59a8d50fd4d>
+  <RC_Text_c0655986b536ed34>Visitor armchair</RC_Text_c0655986b536ed34>
+  <RC_Text_a039106cc58e6d9b>Apparently it answers before they finish speaking.</RC_Text_a039106cc58e6d9b>
+  <RC_Text_3e73c379086695d5>The legions first muster, then swear before the standard, and finally march through the outer gate. The officiant must not exchange these steps.</RC_Text_3e73c379086695d5>
+  <RC_Text_63dd1f0387be58b0>Empty reading room bookcase</RC_Text_63dd1f0387be58b0>
+  <RC_Text_f4e32ac382b56298>Reading room / Sorting room / Northeast outer ring</RC_Text_f4e32ac382b56298>
+  <RC_Text_2f599f4ee1a95351>Reading room / Sorting room / Northeast outer ring / 1</RC_Text_2f599f4ee1a95351>
+  <RC_Text_7f0bfc61303253fe>Reading room / Sorting room / Northeast outer ring / 10</RC_Text_7f0bfc61303253fe>
+  <RC_Text_8a48aaacf8e94a73>Reading room / Sorting room / Northeast outer ring / 11</RC_Text_8a48aaacf8e94a73>
+  <RC_Text_09c876f99f62d979>Reading room / Sorting room / Northeast outer ring / 12</RC_Text_09c876f99f62d979>
+  <RC_Text_d9b494a925ceaf65>Reading room / Sorting room / Northeast outer ring / 13</RC_Text_d9b494a925ceaf65>
+  <RC_Text_70c7e56ae06e7b81>Reading room / Sorting room / Northeast outer ring / 2</RC_Text_70c7e56ae06e7b81>
+  <RC_Text_20d786bd21386882>Reading room / Sorting room / Northeast outer ring / 3</RC_Text_20d786bd21386882>
+  <RC_Text_3a860614e7ddecf2>Reading room / Sorting room / Northeast outer ring / 4</RC_Text_3a860614e7ddecf2>
+  <RC_Text_f129cb1784eb3182>Reading room / Sorting room / Northeast outer ring / 5</RC_Text_f129cb1784eb3182>
+  <RC_Text_abb31fd0b450d685>Reading room / Sorting room / Northeast outer ring / 6</RC_Text_abb31fd0b450d685>
+  <RC_Text_2394efa1c2bd5003>Reading room / Sorting room / Northeast outer ring / 7</RC_Text_2394efa1c2bd5003>
+  <RC_Text_3bd1075abca91ac3>Reading room / Sorting room / Northeast outer ring / 8</RC_Text_3bd1075abca91ac3>
+  <RC_Text_257e209b29086895>Reading room / Sorting room / Northeast outer ring / 9</RC_Text_257e209b29086895>
+  <RC_Text_d78083157e85998b>Reading room register desk</RC_Text_d78083157e85998b>
+  <RC_Text_750a1ba3b07e1c1f>Noble archives / North corridor</RC_Text_750a1ba3b07e1c1f>
+  <RC_Text_db340ea6bd072298>Noble archives / North corridor / 1</RC_Text_db340ea6bd072298>
+  <RC_Text_03a3677bc6f25bbb>Noble archives / North corridor / 10</RC_Text_03a3677bc6f25bbb>
+  <RC_Text_7d83af1ed00cd63c>Noble archives / North corridor / 2</RC_Text_7d83af1ed00cd63c>
+  <RC_Text_13f47aa9b357b0b1>Noble archives / North corridor / 3</RC_Text_13f47aa9b357b0b1>
+  <RC_Text_5e6f441b130016bb>Noble archives / North corridor / 4</RC_Text_5e6f441b130016bb>
+  <RC_Text_d1a82f92cb832b01>Noble archives / North corridor / 5</RC_Text_d1a82f92cb832b01>
+  <RC_Text_0ca0ed14c7b6b9e4>Noble archives / North corridor / 6</RC_Text_0ca0ed14c7b6b9e4>
+  <RC_Text_4835fd5113cfd1a1>Noble archives / North corridor / 7</RC_Text_4835fd5113cfd1a1>
+  <RC_Text_250a66f82c6b355c>Noble archives / North corridor / 8</RC_Text_250a66f82c6b355c>
+  <RC_Text_66f119d35d0e2266>Noble archives / North corridor / 9</RC_Text_66f119d35d0e2266>
+  <RC_Text_b1581ad41a24bcda>Is this archive nothing but ghost stories?</RC_Text_b1581ad41a24bcda>
+  <RC_Text_4f96e5615f78df90>Enter vault code</RC_Text_4f96e5615f78df90>
+  <RC_Text_703966e0a7edeaf9>Border Engagement Report: Unidentified Armored Combatant</RC_Text_703966e0a7edeaf9>
+  <RC_Text_d3192742dcb071e3>Border intelligence office / Communications room</RC_Text_d3192742dcb071e3>
+  <RC_Text_3f6cd747ecccd9df>Border intelligence office / Communications room / 1</RC_Text_3f6cd747ecccd9df>
+  <RC_Text_397589dcc0de2a13>Border intelligence office / Communications room / 10</RC_Text_397589dcc0de2a13>
+  <RC_Text_5ed015245c1264d2>Border intelligence office / Communications room / 11</RC_Text_5ed015245c1264d2>
+  <RC_Text_d9dca69221e93310>Border intelligence office / Communications room / 2</RC_Text_d9dca69221e93310>
+  <RC_Text_92397944e11391a3>Border intelligence office / Communications room / 3</RC_Text_92397944e11391a3>
+  <RC_Text_89374015291f05e1>Border intelligence office / Communications room / 4</RC_Text_89374015291f05e1>
+  <RC_Text_b08d55cf7cbdc191>Border intelligence office / Communications room / 5</RC_Text_b08d55cf7cbdc191>
+  <RC_Text_3d74d457e3edbb60>Border intelligence office / Communications room / 6</RC_Text_3d74d457e3edbb60>
+  <RC_Text_5d91b061e4589d2a>Border intelligence office / Communications room / 7</RC_Text_5d91b061e4589d2a>
+  <RC_Text_090019c0610aef9b>Border intelligence office / Communications room / 8</RC_Text_090019c0610aef9b>
+  <RC_Text_164d8d2689a85309>Border intelligence office / Communications room / 9</RC_Text_164d8d2689a85309>
+  <RC_Text_3271d51e8390eef1>Leave this one. Don't mix it in with the tin man's file.</RC_Text_3271d51e8390eef1>
+  <RC_Text_1c70e7fd287d6a16>This one looks more official.</RC_Text_1c70e7fd287d6a16>
+  <RC_Text_1dfbe7d1aea81afd>There's another stash back here.</RC_Text_1dfbe7d1aea81afd>
+  <RC_Text_170cb00b1f64b0a5>We're detecting energy-emitting archotech structures in this outpost. You can extract Solarite from them.</RC_Text_170cb00b1f64b0a5>
+  <RC_Text_91c99b0e83f1b5a1>How's it looking over here?</RC_Text_91c99b0e83f1b5a1>
+  <RC_Text_d8bc25e76a71988d>Escape the Champion Warrior (scene and chase not yet wired)</RC_Text_d8bc25e76a71988d>
+  <RC_Text_a0d236ad320c7a1b>Empty communications parts cabinet</RC_Text_a0d236ad320c7a1b>
+  <RC_Text_cb9e948f8a3218cc>Communications service and analysis bench</RC_Text_cb9e948f8a3218cc>
+  <RC_Text_90e9a58ccbb8d100>Stay clear of them. We're not here for a fight.</RC_Text_90e9a58ccbb8d100>
+  <RC_Text_2d63c02d36b47376>Then replace the clock. They won't change our shift to suit it.</RC_Text_2d63c02d36b47376>
+  <RC_Text_b4d993ee871caafa>Then get it signed. Whose is missing?</RC_Text_b4d993ee871caafa>
+  <RC_Text_1c8fe419c0485568>So that disposal request was a waste?</RC_Text_1c8fe419c0485568>
+  <RC_Text_f065c182d1e171fa>That's the second file.</RC_Text_f065c182d1e171fa>
+  <RC_Text_0b4534df43943648>Power Distribution Duty Log</RC_Text_0b4534df43943648>
+  <RC_Text_e51aab5913a1b7d6>Vault door: Check code and unlock</RC_Text_e51aab5913a1b7d6>
+  <RC_Text_338dfa7954551631>Vault door: Incorrect code sound</RC_Text_338dfa7954551631>
+  <RC_Text_ab75a317175d79a4>The Reaver's here. This thing won't be quiet.</RC_Text_ab75a317175d79a4>
+  <RC_Text_47ac7ae02a4b80af>Steel tile</RC_Text_47ac7ae02a4b80af>
+  <RC_Text_d6034075677dd6c4>Paved tile</RC_Text_d6034075677dd6c4>
+  <RC_Text_cc9cd8d0388100b7>Forge — Gunsmith tutorial</RC_Text_cc9cd8d0388100b7>
+  <RC_Text_e217e0279b289edb>A girl with wings. Only eyewitness reports.</RC_Text_e217e0279b289edb>
+  <RC_Text_b584b99d25ec9d19>Gatehouse spare weapon</RC_Text_b584b99d25ec9d19>
+  <RC_Text_8cb5b0f3110cab19>Gatehouse television</RC_Text_8cb5b0f3110cab19>
+  <RC_Text_63cf87bcf289a766>The door's sealed. Who goes there anymore?</RC_Text_63cf87bcf289a766>
+  <RC_Text_8c680a3e41d0df52>Read note</RC_Text_8c680a3e41d0df52>
+  <RC_Text_80e7da3195b8f9c5>Faction 1 (Player)</RC_Text_80e7da3195b8f9c5>
+  <RC_Text_5596991c6438e0c0>Faction 2</RC_Text_5596991c6438e0c0>
+  <RC_Text_7a92b1a923485cfc>Barricade point 01 · Interaction and collapsed footprint not yet wired</RC_Text_7a92b1a923485cfc>
+  <RC_Text_7c4f1add0ff3e6d8>Barricade point 02 · Interaction and collapsed footprint not yet wired</RC_Text_7c4f1add0ff3e6d8>
+  <RC_Text_ad16734a75858df6>Barricade point 03 · Interaction and collapsed footprint not yet wired</RC_Text_ad16734a75858df6>
+  <RC_Text_8073531b811114e8>Barricade point 04 · Interaction and collapsed footprint not yet wired</RC_Text_8073531b811114e8>
+  <RC_Text_786259bc6459d763>Barricade point 05 · Interaction and collapsed footprint not yet wired</RC_Text_786259bc6459d763>
+  <RC_Text_14a80bbc1c650eca>Barricade point 06 · Interaction and collapsed footprint not yet wired</RC_Text_14a80bbc1c650eca>
+  <RC_Text_1f78e884a9365739>Barricade point 07 · Interaction and collapsed footprint not yet wired</RC_Text_1f78e884a9365739>
+  <RC_Text_18690c7ff431fa09>Barricade point 08 · Interaction and collapsed footprint not yet wired</RC_Text_18690c7ff431fa09>
+  <RC_Text_f3fd45d4893c88ab>Barricade point 09 · Interaction and collapsed footprint not yet wired</RC_Text_f3fd45d4893c88ab>
+  <RC_Text_73e18e673ced4555>Barricade point 10 · Interaction and collapsed footprint not yet wired</RC_Text_73e18e673ced4555>
+  <RC_Text_81671cd1bdc25931>Barricade point 11 · Interaction and collapsed footprint not yet wired</RC_Text_81671cd1bdc25931>
+  <RC_Text_a409d138d88d7eb5>Barricade point 12 · Interaction and collapsed footprint not yet wired</RC_Text_a409d138d88d7eb5>
+  <RC_Text_bd8f279f331bda66>Barricade point 13 · Interaction and collapsed footprint not yet wired</RC_Text_bd8f279f331bda66>
+  <RC_Text_3614395aea0402a0>Barricade point 14 · Interaction and collapsed footprint not yet wired</RC_Text_3614395aea0402a0>
+  <RC_Text_1910d4e21dd86ca3>Barricade point 15 · Interaction and collapsed footprint not yet wired</RC_Text_1910d4e21dd86ca3>
+  <RC_Text_21208409d7ec0c55>Barricade point 16 · Interaction and collapsed footprint not yet wired</RC_Text_21208409d7ec0c55>
+  <RC_Text_4ab904d7f53769a2>Hidden conduit</RC_Text_4ab904d7f53769a2>
+  <RC_Text_f1c4824755341a3f>Uh... I suppose so?</RC_Text_f1c4824755341a3f>
+  <RC_Text_708ace25d84a366a>Wind turbine</RC_Text_708ace25d84a366a>
+  <RC_Text_2c9a72ad74308c82>Mess hall ration shelf 1</RC_Text_2c9a72ad74308c82>
+  <RC_Text_983c157a57a9b549>Mess hall ration shelf 2</RC_Text_983c157a57a9b549>
+  <RC_Text_e4cc43db8d6af478>Mess hall ration shelf 3</RC_Text_e4cc43db8d6af478>
+  <RC_Text_e08dcad7cf0e63d0>Mess hall / Changing room / General storage</RC_Text_e08dcad7cf0e63d0>
+  <RC_Text_8833200e4042ae54>Mess hall / Changing room / General storage / 1</RC_Text_8833200e4042ae54>
+  <RC_Text_e3d0850d72b6f1ec>Mess hall / Changing room / General storage / 10</RC_Text_e3d0850d72b6f1ec>
+  <RC_Text_42f4a193f08edb80>Mess hall / Changing room / General storage / 11</RC_Text_42f4a193f08edb80>
+  <RC_Text_130c121f50f3b0cf>Mess hall / Changing room / General storage / 12</RC_Text_130c121f50f3b0cf>
+  <RC_Text_47db5132090687cb>Mess hall / Changing room / General storage / 13</RC_Text_47db5132090687cb>
+  <RC_Text_bd82a17106276ef1>Mess hall / Changing room / General storage / 14</RC_Text_bd82a17106276ef1>
+  <RC_Text_52a3c2450243d2c0>Mess hall / Changing room / General storage / 15</RC_Text_52a3c2450243d2c0>
+  <RC_Text_3938d058dd0e3777>Mess hall / Changing room / General storage / 2</RC_Text_3938d058dd0e3777>
+  <RC_Text_70c3922cb4c2be19>Mess hall / Changing room / General storage / 3</RC_Text_70c3922cb4c2be19>
+  <RC_Text_08874ab409000077>Mess hall / Changing room / General storage / 4</RC_Text_08874ab409000077>
+  <RC_Text_c51cbe19f2e196fc>Mess hall / Changing room / General storage / 5</RC_Text_c51cbe19f2e196fc>
+  <RC_Text_774bd7a1870f0c43>Mess hall / Changing room / General storage / 6</RC_Text_774bd7a1870f0c43>
+  <RC_Text_d9e31dc4bfe42f53>Mess hall / Changing room / General storage / 7</RC_Text_d9e31dc4bfe42f53>
+  <RC_Text_2a6bdf86dde0cf81>Mess hall / Changing room / General storage / 8</RC_Text_2a6bdf86dde0cf81>
+  <RC_Text_56e61339edca4412>Mess hall / Changing room / General storage / 9</RC_Text_56e61339edca4412>
+  <RC_Text_9d1aa16bf3ff1353>Hack broadcast system</RC_Text_9d1aa16bf3ff1353>
+  <RC_Text_30d8ee136e3f2f90>Hack archive terminal: A01</RC_Text_30d8ee136e3f2f90>
+  <RC_Text_1cdabab11a448bda>Hack archive terminal: A02</RC_Text_1cdabab11a448bda>
+  <RC_Text_bf759751f0326bd4>Hack archive terminal: A03</RC_Text_bf759751f0326bd4>
+  <RC_Text_b2000224c926c8b5>Hack turret controls</RC_Text_b2000224c926c8b5>
+  <RC_Text_3c1f5b98c7081fdb>Hack: Disable courtyard turrets</RC_Text_3c1f5b98c7081fdb>
+  <RC_Text_99551a4b70b779cf>Hack: Play diversion broadcast</RC_Text_99551a4b70b779cf>
+  <RC_Text_5705c49afda83471>(Chuckles) Sure. Better than Shepherd, isn't it?</RC_Text_5705c49afda83471>
+  <RC_Text_e3e7293231964d50>Opening overview camera</RC_Text_e3e7293231964d50>
+  <RC_Text_76cb9bd4152ae6ef>Opening walk destination</RC_Text_76cb9bd4152ae6ef>
+  <RC_Text_f5d8c8125ea4392e>Mission 1 opening cinematic</RC_Text_f5d8c8125ea4392e>
+  <RC_Text_009bf4e99711e501>Time: {date}  {time}</RC_Text_009bf4e99711e501>
+  <RC_Text_c470bf11f4c9b056>Weather: {weather}</RC_Text_c470bf11f4c9b056>
+  <RC_Text_553921850861e6a3>Location: Sophia Empire archive station</RC_Text_553921850861e6a3>
+  <RC_Text_7339508aa3602003>Location: Red-and-white outpost</RC_Text_7339508aa3602003>
+  <RC_Text_2b838bb3367a31d2>OPERATION HUNTER</RC_Text_2b838bb3367a31d2>
+  <RC_Text_abd161a807d49c65>Operative: David Mason, Gestalt Zero</RC_Text_abd161a807d49c65>
+  <RC_Text_df61ebedd661b54c>Sophia Empire</RC_Text_df61ebedd661b54c>
+  <RC_Text_b8fd7f097a8e0c74>Solarite</RC_Text_b8fd7f097a8e0c74>
+  <RC_Text_6e6bc0e3272e523a>Engaged</RC_Text_6e6bc0e3272e523a>
+  <RC_Text_f1ce639626a930e9>Champion Warrior</RC_Text_f1ce639626a930e9>
+  <RC_Text_cbcc901cc48172d5>Reach the anomalous hub</RC_Text_cbcc901cc48172d5>
+  <RC_Text_dfbab9e45d7fc7d2>Upload the scan data</RC_Text_dfbab9e45d7fc7d2>
+  <RC_Text_981b318aaca15dad>Escape with the knight</RC_Text_981b318aaca15dad>
+  <RC_Text_1f00ec9e2e7e5606>Solve the obelisk sequence (optional)</RC_Text_1f00ec9e2e7e5606>
+  <RC_Text_39051c3407dfe3ca>Our terrain scan found an outpost near the target with technology far beyond local capabilities. Its insignia does not belong to the Sophia Empire.</RC_Text_39051c3407dfe3ca>
+  <RC_Text_c3dbf5813b6e304b>By the way, there is no chance of a covert approach here. These soldiers are well equipped and armed to the teeth.</RC_Text_c3dbf5813b6e304b>
+  <RC_Text_15a03996a0557942>Mason, reach the archotech structure at the center and bring back the data our phase-smith needs.</RC_Text_15a03996a0557942>
+  <RC_Text_65eeca071fb19409>I have warped a forge in nearby.</RC_Text_65eeca071fb19409>
+  <RC_Text_ae27fbb3c7afd11f>We have also detected archotech structures radiating energy at this outpost. You can extract Solarite from them.</RC_Text_ae27fbb3c7afd11f>
+  <RC_Text_c02f0c0b7d3f60e8>Happy hunting, David. Stay focused. We are all counting on you.</RC_Text_c02f0c0b7d3f60e8>
+  <RC_Text_9ce91d54c5a9e24f>Done. Moving on.</RC_Text_9ce91d54c5a9e24f>
+  <RC_Text_1748fe629fc4e144>Select the highlighted Gunsmith command.</RC_Text_1748fe629fc4e144>
+  <RC_Text_ff0b26d1937435fb>Select Mason's C7 Templar assault rifle.</RC_Text_ff0b26d1937435fb>
+  <RC_Text_2ca2dcbe12e7ad07>Select the Stock slot.</RC_Text_2ca2dcbe12e7ad07>
+  <RC_Text_256dc3b615f804fe>Select the telescoping stock.</RC_Text_256dc3b615f804fe>
+  <RC_Text_d2214f4c2ccbf465>Apply the loadout to finish the modification.</RC_Text_d2214f4c2ccbf465>
+  <RC_Text_b5f33776bb72f3f5>I have the Solarite.</RC_Text_b5f33776bb72f3f5>
+  <RC_Text_b72b217a9b67e32d>Good work. You can modify your weapon at the forge.</RC_Text_b72b217a9b67e32d>
+  <RC_Text_44ad9c088bbdd612>Extract Solarite</RC_Text_44ad9c088bbdd612>
+  <RC_Text_3be6fa36133826f7>Activated. Let me tap into their power circuit. Time to collect a maintenance fee.</RC_Text_3be6fa36133826f7>
+  <RC_Text_5189915e35b404ec>The channels on the obelisk go dark. The sequence has reset.</RC_Text_5189915e35b404ec>
+  <RC_Text_3f8877aa890e285d>Activate: Muster</RC_Text_3f8877aa890e285d>
+  <RC_Text_f9f4a3b48f11fb79>Activate: Swear</RC_Text_f9f4a3b48f11fb79>
+  <RC_Text_7ac07630484993c9>Activate: March</RC_Text_7ac07630484993c9>
+  <RC_Text_00a9a4051d0fd43f>I have reached the center.</RC_Text_00a9a4051d0fd43f>
+  <RC_Text_7ee019f0b7ab20cb>Looks like there is more than one of the creatures mentioned in that report.</RC_Text_7ee019f0b7ab20cb>
+  <RC_Text_77e3a8044834a8b4>This is Mason. Enemy contacted!</RC_Text_77e3a8044834a8b4>
+  <RC_Text_d9b835eaf49b9fc7>Mason reporting. Enemy eliminated.</RC_Text_d9b835eaf49b9fc7>
+  <RC_Text_8a1e5de822c3200f>Copy. You can place the equipment now.</RC_Text_8a1e5de822c3200f>
+  <RC_Text_b3cd0314630913d1>Do not face that rotary cannon head-on. Get to cover!</RC_Text_b3cd0314630913d1>
+  <RC_Text_ba5117138a67a7a7>Data uploaded.</RC_Text_ba5117138a67a7a7>
+  <RC_Text_69c71b05af4ad055>Received. Our phase-smith has started analyzing the data.</RC_Text_69c71b05af4ad055>
+  <RC_Text_3cfb1ef8946d4deb>Wait, David. We just picked up an intense reality distortion near you.</RC_Text_3cfb1ef8946d4deb>
+  <RC_Text_ad55a9414641da9c>What the fuck is that thing?</RC_Text_ad55a9414641da9c>
+  <RC_Text_2c25bfa970ee549a>Damn it, get out of there, David!</RC_Text_2c25bfa970ee549a>
+  <RC_Text_bfcc35f1f392d7a1>Hey! You there! Over here!</RC_Text_bfcc35f1f392d7a1>
+  <RC_Text_843d57de6b03b727>Knight</RC_Text_843d57de6b03b727>
+  <RC_Text_a901956e3982c571>Who are you?</RC_Text_a901956e3982c571>
+  <RC_Text_c14e93bd68e9f1a3>A local. After the noise you made at this outpost, He has noticed us. We need to leave. We cannot take on a Champion Warrior.</RC_Text_c14e93bd68e9f1a3>
+  <RC_Text_cd8d141f3a2b359c>Place scanner and upload data</RC_Text_cd8d141f3a2b359c>
+  <RC_Text_100cd178381ec1bd>Impressive. But the Champion cannot die. We must leave before he gets back up.</RC_Text_100cd178381ec1bd>
+  <RC_Text_94998ee6034f02de>Ha! Try that, big guy.</RC_Text_94998ee6034f02de>
+  <RC_Text_98b93703e02f11d5>Obstacle in place.</RC_Text_98b93703e02f11d5>
+  <RC_Text_835d5ae79848c9a0>The structure has collapsed.</RC_Text_835d5ae79848c9a0>
+  <RC_Text_5f2091f68f7245c8>Loosen the bolts</RC_Text_5f2091f68f7245c8>
+  <RC_Text_f39b6aacb4998cdf>We can use these structures to slow that big guy down.</RC_Text_f39b6aacb4998cdf>
+  <RC_Text_fb147e461a5191dc>Topple the support frame</RC_Text_fb147e461a5191dc>
+  <RC_Text_923f54d3f62fe7bf>Detonate the support</RC_Text_923f54d3f62fe7bf>
+  <RC_Text_4558db5bb8a4ea36>Tearing walls down with your bare hands... are you really human?</RC_Text_4558db5bb8a4ea36>
+  <RC_Text_d9e878b5f81d3dd0>It will buy us some time.</RC_Text_d9e878b5f81d3dd0>
+  <RC_Text_dbefb40690a4cb05>This is far enough.</RC_Text_dbefb40690a4cb05>
+  <RC_Text_bd71f5616dba6547>Sorry I never introduced myself. I am Cassandra, a baroness of the Sophia Empire.</RC_Text_bd71f5616dba6547>
+  <RC_Text_84109b7f387e3985>Mason. Thanks for the support.</RC_Text_84109b7f387e3985>
+  <RC_Text_0e0753d8cefa2f0f>You are not from around here, are you?</RC_Text_0e0753d8cefa2f0f>
+  <RC_Text_881e56786d9a1067>Cassandra</RC_Text_881e56786d9a1067>
+  <RC_Text_55b645b48b8beba3>Our merchant ship was passing through. A few of our people went missing near this camp.</RC_Text_55b645b48b8beba3>
+  <RC_Text_71b6338d98c98b73>They have probably become part of the Legion.</RC_Text_71b6338d98c98b73>
+  <RC_Text_1c4ea318ab37881e>I am heading to those fanatics' base anyway. Want to join me? Your friends might still be alive.</RC_Text_1c4ea318ab37881e>
+  <RC_Text_8ddfab8cbd170735>If you are interested, our outpost is nearby.</RC_Text_8ddfab8cbd170735>
+  <RC_Text_ca206cb7ce08f95d>Gladly, Knight Cassandra.</RC_Text_ca206cb7ce08f95d>
+  <RC_Text_a235ac3e4c314463>Quick thinking, Mason.</RC_Text_a235ac3e4c314463>
+  <RC_Text_47f5afccd9d70643>Return to the Aurora first. We need to reassess this anomaly.</RC_Text_47f5afccd9d70643>
+  <RC_Text_791b6af6c746a7d3>TERRAIN SCAN / ANOMALOUS OUTPOST</RC_Text_791b6af6c746a7d3>
+  <RC_Text_e21844f32445c94b>Romulus</RC_Text_e21844f32445c94b>
+  <RC_Text_2944f37f6f71aa55>Cannot collapse the structure now: a safe escape route must remain.</RC_Text_2944f37f6f71aa55>
+  <RC_Text_7af0a9aef59e883e>This interaction is already complete.</RC_Text_7af0a9aef59e883e>
+  <RC_Text_cbe84b1393d9404e>The requirements for this interaction have not been met.</RC_Text_cbe84b1393d9404e>
+  <RC_Text_2d972a0c486e1deb>Reviving in: </RC_Text_2d972a0c486e1deb>
+  <RC_Text_a48e925489269178>Forge support: Mason approaches</RC_Text_a48e925489269178>
+  <RC_Text_50640733708c6a3a>Gallery rune: Muster</RC_Text_50640733708c6a3a>
+  <RC_Text_1eb6a442d78cfa62>Gallery rune: Swear</RC_Text_1eb6a442d78cfa62>
+  <RC_Text_21df8df050e21a13>Gallery rune: March</RC_Text_21df8df050e21a13>
+  <RC_Text_1624a4672eed2db3>Champion (pursuit boss)</RC_Text_1624a4672eed2db3>
+  <RC_Text_e26ab78066525d85>Mason opening walk destination</RC_Text_e26ab78066525d85>
+  <RC_Text_eee5ec5774f222a7>Briefing: outpost marker</RC_Text_eee5ec5774f222a7>
+  <RC_Text_811ee6d4df7487db>Briefing: defenses marker</RC_Text_811ee6d4df7487db>
+  <RC_Text_c8824b02bd3b21a1>Hub cinematic: Mason position</RC_Text_c8824b02bd3b21a1>
+  <RC_Text_a2ebb31cef6abfd3>Knight north route: inner waypoint</RC_Text_a2ebb31cef6abfd3>
+  <RC_Text_760c98bd2f4a55e3>Knight north route: perimeter waypoint</RC_Text_760c98bd2f4a55e3>
+  <RC_Text_14af9d5d488a0b3d>Knight guide destination</RC_Text_14af9d5d488a0b3d>
+  <RC_Text_4a08e05a6bda48a8>Entrance combat sentry 2</RC_Text_4a08e05a6bda48a8>
+  <RC_Text_174852adeca883bd>Knight west route: gate waypoint</RC_Text_174852adeca883bd>
+  <RC_Text_cb4502bec32096e7>Knight west route: perimeter waypoint</RC_Text_cb4502bec32096e7>
+  <RC_Text_93e5f54e644de6c1>Automatic Solarite stockpile position</RC_Text_93e5f54e644de6c1>
+  <RC_Text_bc1492c670c60fe9>Entrance sentry 1: pursuit position</RC_Text_bc1492c670c60fe9>
+  <RC_Text_10ecb624714a1380>Entrance sentry 2: pursuit position</RC_Text_10ecb624714a1380>
+  <RC_Text_910c1ea83b4657d7>Script location marker, not a spawned entity. Moving it changes the corresponding camera or movement target.</RC_Text_910c1ea83b4657d7>
+  <RC_Text_d88b526b70f9c4f9>Solarite extraction structure (tutorial)</RC_Text_d88b526b70f9c4f9>
+  <RC_Text_38d7d79fb1a6cb97>Support forge (warps in near entrance)</RC_Text_38d7d79fb1a6cb97>
+  <RC_Text_96d691d1d5a803c1>Anomaly hub (scan after defeating the Centurion)</RC_Text_96d691d1d5a803c1>
+  <RC_Text_25d0b073dcee75e5>Tutorial Solarite location marker</RC_Text_25d0b073dcee75e5>
+  <RC_Text_98c5ee599a320990>Gallery Solarite reward marker</RC_Text_98c5ee599a320990>
+  <RC_Text_44cdc848fa58073e>Knight arrival camera marker</RC_Text_44cdc848fa58073e>
+  <RC_Text_0301dd93e9c2c556>Knight cinematic firing position</RC_Text_0301dd93e9c2c556>
+  <RC_Text_61dbfd6b5ec385d3>Final extraction rendezvous</RC_Text_61dbfd6b5ec385d3>
+  <RC_Text_30004b0471133919>Northern escape route marker</RC_Text_30004b0471133919>
+  <RC_Text_2de8ffbcaebbaada>Western escape route marker</RC_Text_2de8ffbcaebbaada>
+  <RC_Text_d887dc05e21bad07>Imperial knight (appears in phase three)</RC_Text_d887dc05e21bad07>
+  <RC_Text_801f81c72e63f419>Extract Solarite and start the gunsmith tutorial</RC_Text_801f81c72e63f419>
+  <RC_Text_c482569f2daca632>Scan the anomaly hub and begin evacuation</RC_Text_c482569f2daca632>
+  <RC_Text_0f18a1008f0b6305>Advance mission phase (1 explore / 2 Centurion / 3 scan / 4 escape)</RC_Text_0f18a1008f0b6305>
+  <RC_Text_6c8b7d2cd22ec1a3>Mark roadblock hint as played</RC_Text_6c8b7d2cd22ec1a3>
+  <RC_Text_de688432052cbdb0>Record successful roadblocks</RC_Text_de688432052cbdb0>
+  <RC_Text_f5310ef781cbd42b>Mark the forge ready</RC_Text_f5310ef781cbd42b>
+  <RC_Text_754dba6b59e2b34b>Increment roadblocks used</RC_Text_754dba6b59e2b34b>
+  <RC_Text_c9bb82377117056f>Independent patrol route. Bound actors appear in Overview. Actors follow the listed waypoints and pause at checkpoints.</RC_Text_c9bb82377117056f>
+  <RC_Text_92523c47e305127e>Patrol waypoint. Click the route and its bound guards in Overview.</RC_Text_92523c47e305127e>
+  <RC_Text_425b14638981598f>Interactive Romulus wall. During the chase, right-click it to collapse the adjacent passage. Overview links to its action and rubble footprint.</RC_Text_425b14638981598f>
+  <RC_Text_8939c2c0fa5afe02>Usable once during the chase. Operate the orange-highlighted wall to create native collapsed rocks and force a detour. The host wall remains. Shaded cells show the rubble footprint.</RC_Text_8939c2c0fa5afe02>
+  <RC_Text_a3fa892039be1e3e>Communication hint only; spawns no rocks. Fires during the chase if the hint has not played. The linked wall interaction performs the actual collapse.</RC_Text_a3fa892039be1e3e>
+  <RC_Text_844fc87a5520fa19>Approach the linked building and right-click to use it. Conditions and rewards are listed below.</RC_Text_844fc87a5520fa19>
+  <RC_Text_1c1a2fb28b63ed4d>Not spawned at start. Appears after the hub scan and guides the escape; the player controls only Mason.</RC_Text_1c1a2fb28b63ed4d>
+  <RC_Text_7be004d773b3c557>Extracting grants 15 Solarite and starts the native gunsmith tutorial. Requires the forge to finish warping in; one use only.</RC_Text_7be004d773b3c557>
+  <RC_Text_35ba3b0d608a24c9>Warps in when Mason approaches after the entrance battle. This object sets the spawn position; the linked trigger sets the activation range.</RC_Text_35ba3b0d608a24c9>
+  <RC_Text_b9acaf911253ec11>Scanning unlocks after the Centurion dies. Completing the scan starts the Champion chase and knight cinematic.</RC_Text_b9acaf911253ec11>
+  <RC_Text_67e812e950576514>Location marker, not an extraction building. Use the Solarite extraction structure.</RC_Text_67e812e950576514>
+  <RC_Text_ca3b473394689765>Awards 30 Solarite after the optional sequence puzzle.</RC_Text_ca3b473394689765>
+  <RC_Text_6c3811c0b2b1f8e6>Phase-three camera and dialogue marker; creates no entity.</RC_Text_6c3811c0b2b1f8e6>
+  <RC_Text_1321324ad64f179e>The knight fires at the Champion here, then begins guiding Mason.</RC_Text_1321324ad64f179e>
+  <RC_Text_81a9eab9ccd3aa20>The mission completes when both Mason and the knight arrive.</RC_Text_81a9eab9ccd3aa20>
+  <RC_Text_1a797342f44b9328>The knight's default escape direction.</RC_Text_1a797342f44b9328>
+  <RC_Text_298c3363709dd4cb>Switches the guide route when Mason approaches the western exit.</RC_Text_298c3363709dd4cb>
+  <RC_Text_e7982087e21c35f2>Approach Centurion: begin central battle</RC_Text_e7982087e21c35f2>
+  <RC_Text_1f27a1bc66c1d0a9>Enter within 18 cells of the Centurion to begin phase two. Detection follows the boss.</RC_Text_1f27a1bc66c1d0a9>
+  <RC_Text_b8c2b729943facdc>Centurion dies: unlock hub scan</RC_Text_b8c2b729943facdc>
+  <RC_Text_8d9d9e50f9bce35d>Normal Centurion death advances to phase three and unlocks the anomaly hub scan.</RC_Text_8d9d9e50f9bce35d>
+  <RC_Text_271e039a1bbd4841>Central battle: injury hint</RC_Text_271e039a1bbd4841>
+  <RC_Text_f534ee67c61212f8>During phase two, accumulated damage to Mason triggers combat advice.</RC_Text_f534ee67c61212f8>
+  <RC_Text_1e4e862fa09fca89>Champion downed: revival hint</RC_Text_1e4e862fa09fca89>
+  <RC_Text_8cbbf3f455662086>Warns that the Champion cannot be permanently killed. The boss configuration handles the 77-second revival.</RC_Text_8cbbf3f455662086>
+  <RC_Text_f0d06858bab9670c>First roadblock: communication feedback</RC_Text_f0d06858bab9670c>
+  <RC_Text_825ac109ef33b0c0>Plays once after a completed wall interaction sets m2-barrier-used.</RC_Text_825ac109ef33b0c0>
+  <RC_Text_53e59087f7e576a8>Mason and knight arrive: complete mission</RC_Text_53e59087f7e576a8>
+  <RC_Text_5029ccd2000bed20>Requires the chase phase, the knight at extraction, and Mason within 8 cells.</RC_Text_5029ccd2000bed20>
+  <RC_Text_5e5f16f00d4c3e1f>Western junction: switch escape route</RC_Text_5e5f16f00d4c3e1f>
+  <RC_Text_99750949f11ddc36>During the chase, approaching the current western gate switches the knight to the western route. The final rendezvous remains north.</RC_Text_99750949f11ddc36>
+  <RC_Text_10226a11c7fd3eaa>After entrance battle: approach forge support</RC_Text_10226a11c7fd3eaa>
+  <RC_Text_4cdf391362c3f697>Enabled after the entrance battle. Fires once when Mason enters its 10-cell radius, warping in the forge and unlocking Solarite teaching.</RC_Text_4cdf391362c3f697>
+  <RC_Text_c3cee464d839f20e>Roadblock 01: collapse side wall</RC_Text_c3cee464d839f20e>
+  <RC_Text_e0508216f611e709>Roadblock 01 operating wall</RC_Text_e0508216f611e709>
+  <RC_Text_857ea4e8daf0cb08>Roadblock 01: approach hint</RC_Text_857ea4e8daf0cb08>
+  <RC_Text_dbc64138a7c95907>Roadblock 02: collapse side wall</RC_Text_dbc64138a7c95907>
+  <RC_Text_2f82b52997095a21>Roadblock 02 operating wall</RC_Text_2f82b52997095a21>
+  <RC_Text_67fcc53c39867268>Roadblock 02: approach hint</RC_Text_67fcc53c39867268>
+  <RC_Text_c5aa4479c4c4af29>Roadblock 03: collapse side wall</RC_Text_c5aa4479c4c4af29>
+  <RC_Text_f40486bac22c1ef1>Roadblock 03 operating wall</RC_Text_f40486bac22c1ef1>
+  <RC_Text_a84454fdb1bc99c8>Roadblock 03: approach hint</RC_Text_a84454fdb1bc99c8>
+  <RC_Text_05461d5fd945189f>Roadblock 04: collapse side wall</RC_Text_05461d5fd945189f>
+  <RC_Text_0500ea98b258576d>Roadblock 04 operating wall</RC_Text_0500ea98b258576d>
+  <RC_Text_be0496e4e9d6b920>Roadblock 04: approach hint</RC_Text_be0496e4e9d6b920>
+  <RC_Text_ddd36cc6222783c9>Roadblock 05: collapse side wall</RC_Text_ddd36cc6222783c9>
+  <RC_Text_488c4596025ca197>Roadblock 05 operating wall</RC_Text_488c4596025ca197>
+  <RC_Text_4ee08623b7677b0a>Roadblock 05: approach hint</RC_Text_4ee08623b7677b0a>
+  <RC_Text_e79177655f73ff52>Roadblock 06: collapse side wall</RC_Text_e79177655f73ff52>
+  <RC_Text_e21c2daa7eebf1d4>Roadblock 06 operating wall</RC_Text_e21c2daa7eebf1d4>
+  <RC_Text_88774db8b5f8fe96>Roadblock 06: approach hint</RC_Text_88774db8b5f8fe96>
+  <RC_Text_d705c3c143d0b0da>Roadblock 07: collapse side wall</RC_Text_d705c3c143d0b0da>
+  <RC_Text_1f9ec4cccd72c4e6>Roadblock 07 operating wall</RC_Text_1f9ec4cccd72c4e6>
+  <RC_Text_6be4b02ad7c38564>Roadblock 07: approach hint</RC_Text_6be4b02ad7c38564>
+  <RC_Text_28019b3a82e50c8b>Roadblock 08: collapse side wall</RC_Text_28019b3a82e50c8b>
+  <RC_Text_c5edcafbb57ece97>Roadblock 08 operating wall</RC_Text_c5edcafbb57ece97>
+  <RC_Text_f72b84921d1c942a>Roadblock 08: approach hint</RC_Text_f72b84921d1c942a>
+  <RC_Text_da8a9dac78d258c7>Roadblock 09: collapse side wall</RC_Text_da8a9dac78d258c7>
+  <RC_Text_65d43aed0f3dff43>Roadblock 09 operating wall</RC_Text_65d43aed0f3dff43>
+  <RC_Text_9f46829dbc053668>Roadblock 09: approach hint</RC_Text_9f46829dbc053668>
+  <RC_Text_3085eb27db45cf32>Roadblock 10: collapse side wall</RC_Text_3085eb27db45cf32>
+  <RC_Text_7daa43eb2a42ffd8>Roadblock 10 operating wall</RC_Text_7daa43eb2a42ffd8>
+  <RC_Text_0476dd409178c315>Roadblock 10: approach hint</RC_Text_0476dd409178c315>
+  <RC_Text_6b89c19ce4d7fd83>Roadblock 11: collapse side wall</RC_Text_6b89c19ce4d7fd83>
+  <RC_Text_c354f5bfa14ec3e8>Roadblock 11 operating wall</RC_Text_c354f5bfa14ec3e8>
+  <RC_Text_7a2a347124c16dbd>Roadblock 11: approach hint</RC_Text_7a2a347124c16dbd>
+  <RC_Text_41988ac3aef25039>Roadblock 12: collapse side wall</RC_Text_41988ac3aef25039>
+  <RC_Text_b658106eb8641715>Roadblock 12 operating wall</RC_Text_b658106eb8641715>
+  <RC_Text_6eb57813e442f8fc>Roadblock 12: approach hint</RC_Text_6eb57813e442f8fc>
+  <RC_Text_0f58f65d69a11e3b>Roadblock 13: collapse side wall</RC_Text_0f58f65d69a11e3b>
+  <RC_Text_1b90b6845768f67f>Roadblock 13 operating wall</RC_Text_1b90b6845768f67f>
+  <RC_Text_c31b09166bc04ece>Roadblock 13: approach hint</RC_Text_c31b09166bc04ece>
+  <RC_Text_3805de28169998ca>Roadblock 14: collapse side wall</RC_Text_3805de28169998ca>
+  <RC_Text_5d2911c912c5b62c>Roadblock 14 operating wall</RC_Text_5d2911c912c5b62c>
+  <RC_Text_fb7be7bd09a54ae3>Roadblock 14: approach hint</RC_Text_fb7be7bd09a54ae3>
+  <RC_Text_391cf0a5b00e844d>Roadblock 15: collapse side wall</RC_Text_391cf0a5b00e844d>
+  <RC_Text_cecb5ebd9da91e9d>Roadblock 15 operating wall</RC_Text_cecb5ebd9da91e9d>
+  <RC_Text_4a2bf7a7bac349aa>Roadblock 15: approach hint</RC_Text_4a2bf7a7bac349aa>
+  <RC_Text_bd255c857791fdae>Roadblock 16: collapse side wall</RC_Text_bd255c857791fdae>
+  <RC_Text_24d7a0fb81b3f1fd>Roadblock 16 operating wall</RC_Text_24d7a0fb81b3f1fd>
+  <RC_Text_3eac0f773ebc321b>Roadblock 16: approach hint</RC_Text_3eac0f773ebc321b>
+  <RC_Text_e6c17fa08c4e2546>Shared faction for this mission's Romulus defenders, turrets and structural walls.</RC_Text_e6c17fa08c4e2546>
+  <RC_Text_da6defe57924f064>Leave through the selected exit, proceed directly to extraction, and wait for Mason.</RC_Text_da6defe57924f064>
+  <RC_Text_153a9ab0b8159e77>Camera reference only. Lightning and arrival effects follow the Champion placement directly.</RC_Text_153a9ab0b8159e77>
+  <RC_Text_68b6584bcefbfea1>Direct pursuit with wall breaching</RC_Text_68b6584bcefbfea1>
+  <RC_Text_9a5a6d1d81dd84af>Pursue Mason in a straight line. Each wall or fallen-rock cell takes 1.5 seconds to breach. Explicitly enabled for this boss only.</RC_Text_9a5a6d1d81dd84af>
+  <RC_Text_ebb60fc12f399f4a>Cracked side wall. Activate during the chase to create fallen rocks. Each obstacle cell delays the Champion by about 1.5 seconds.</RC_Text_ebb60fc12f399f4a>
+  <RC_Text_e05f400cd392952a>An interactive side wall with prominent cracks. Activate during the chase to create fallen rocks and delay the Champion.</RC_Text_e05f400cd392952a>
+  <RC_Text_608f68eed9ba0bc5>Roadblock 17: collapse escape passage</RC_Text_608f68eed9ba0bc5>
+  <RC_Text_86374e4e555dba77>Roadblock 17 operating wall</RC_Text_86374e4e555dba77>
+  <RC_Text_8b44dbc0e0f2456c>Roadblock 17: approach hint</RC_Text_8b44dbc0e0f2456c>
+  <RC_Text_3979f8752e7af8d6>Roadblock 18: collapse escape passage</RC_Text_3979f8752e7af8d6>
+  <RC_Text_3c138674f46a4ab1>Roadblock 18 operating wall</RC_Text_3c138674f46a4ab1>
+  <RC_Text_bea2034a999a47e6>Roadblock 18: approach hint</RC_Text_bea2034a999a47e6>
+  <RC_Text_054e90d8fade0626>Roadblock 19: collapse escape passage</RC_Text_054e90d8fade0626>
+  <RC_Text_feecc1d0fcafc1e7>Roadblock 19 operating wall</RC_Text_feecc1d0fcafc1e7>
+  <RC_Text_8fa6eb91a8f2d8ee>Roadblock 19: approach hint</RC_Text_8fa6eb91a8f2d8ee>
+  <RC_Text_d2a7eeb288a584ea>Roadblock 20: collapse escape passage</RC_Text_d2a7eeb288a584ea>
+  <RC_Text_abecd7e58c002325>Roadblock 20 operating wall</RC_Text_abecd7e58c002325>
+  <RC_Text_26dfe3d370d24098>Roadblock 20: approach hint</RC_Text_26dfe3d370d24098>
+  <RC_Text_b81f611c92c67c75>Roadblock 21: collapse escape passage</RC_Text_b81f611c92c67c75>
+  <RC_Text_5813edd0acba64a2>Roadblock 21 operating wall</RC_Text_5813edd0acba64a2>
+  <RC_Text_0d6fa0a940bfbfcf>Roadblock 21: approach hint</RC_Text_0d6fa0a940bfbfcf>
+  <RC_Text_ff2b881b6b8d4732>Roadblock 22: collapse escape passage</RC_Text_ff2b881b6b8d4732>
+  <RC_Text_ec65d0ed67e4da4e>Roadblock 22 operating wall</RC_Text_ec65d0ed67e4da4e>
+  <RC_Text_489c6750e9c0940c>Roadblock 22: approach hint</RC_Text_489c6750e9c0940c>
+  <RC_Text_f82195ee19bf40df>Roadblock 23: collapse escape passage</RC_Text_f82195ee19bf40df>
+  <RC_Text_4946c581b8624430>Roadblock 23 operating wall</RC_Text_4946c581b8624430>
+  <RC_Text_0faff53553d1e730>Roadblock 23: approach hint</RC_Text_0faff53553d1e730>
+  <RC_Text_81cf6ce999ead956>Roadblock 24: collapse escape passage</RC_Text_81cf6ce999ead956>
+  <RC_Text_4ba3128665955390>Roadblock 24 operating wall</RC_Text_4ba3128665955390>
+  <RC_Text_6c37622165b9ced4>Roadblock 24: approach hint</RC_Text_6c37622165b9ced4>
+  <RC_Text_66675d1ff7a2753c>Roadblock 25: collapse escape passage</RC_Text_66675d1ff7a2753c>
+  <RC_Text_0347cb0bb6cc90e3>Roadblock 25 operating wall</RC_Text_0347cb0bb6cc90e3>
+  <RC_Text_db60a66f68fe5377>Roadblock 25: approach hint</RC_Text_db60a66f68fe5377>
+  <RC_Text_366a9fa6e43fe326>Roadblock 26: collapse escape passage</RC_Text_366a9fa6e43fe326>
+  <RC_Text_8509275eec719c6f>Roadblock 26 operating wall</RC_Text_8509275eec719c6f>
+  <RC_Text_f6fcc7720c008820>Roadblock 26: approach hint</RC_Text_f6fcc7720c008820>
+  <RC_Text_6ff016d021c03add>Roadblock 27: collapse escape passage</RC_Text_6ff016d021c03add>
+  <RC_Text_9eb4002aefa6e6ff>Roadblock 27 operating wall</RC_Text_9eb4002aefa6e6ff>
+  <RC_Text_962b722f923faf8e>Roadblock 27: approach hint</RC_Text_962b722f923faf8e>
+  <RC_Text_9c6114d52da1c1aa>Roadblock 28: collapse escape passage</RC_Text_9c6114d52da1c1aa>
+  <RC_Text_d9c3de9595a885ec>Roadblock 28 operating wall</RC_Text_d9c3de9595a885ec>
+  <RC_Text_09a31b8e60bc72e7>Roadblock 28: approach hint</RC_Text_09a31b8e60bc72e7>
+  <RC_Text_3604f70b0f049a47>Roadblock 29: collapse escape passage</RC_Text_3604f70b0f049a47>
+  <RC_Text_16eef5c3d6d86168>Roadblock 29 operating wall</RC_Text_16eef5c3d6d86168>
+  <RC_Text_5db81e8c2f0efae3>Roadblock 29: approach hint</RC_Text_5db81e8c2f0efae3>
+  <RC_Text_9ebe05df4ce2744d>Roadblock 30: collapse escape passage</RC_Text_9ebe05df4ce2744d>
+  <RC_Text_e5a6fe2c959c1393>Roadblock 30 operating wall</RC_Text_e5a6fe2c959c1393>
+  <RC_Text_bb48e95afb079461>Roadblock 30: approach hint</RC_Text_bb48e95afb079461>
+  <RC_Text_e68be261f598c934>Roadblock 31: collapse escape passage</RC_Text_e68be261f598c934>
+  <RC_Text_8f236bcffa0ffccf>Roadblock 31 operating wall</RC_Text_8f236bcffa0ffccf>
+  <RC_Text_3b4a7a9132e433d0>Roadblock 31: approach hint</RC_Text_3b4a7a9132e433d0>
+  <RC_Text_d0044ed991c7e75d>Roadblock 32: collapse escape passage</RC_Text_d0044ed991c7e75d>
+  <RC_Text_befbddf2d7fba0f0>Roadblock 32 operating wall</RC_Text_befbddf2d7fba0f0>
+  <RC_Text_a36f011c43bee572>Roadblock 32: approach hint</RC_Text_a36f011c43bee572>
+  <RC_Text_dd3dffe2d08c77f3>Mason reunites with the knight</RC_Text_dd3dffe2d08c77f3>
+  <RC_Text_1b4b216697c7efd6>Mission Three — Resistance (Demo)</RC_Text_1b4b216697c7efd6>
+  <RC_Text_75addb6e72ac82fd>Mission Three — Resistance</RC_Text_75addb6e72ac82fd>
+  <RC_Text_38832caa7c93791d>Operation Avenger</RC_Text_38832caa7c93791d>
+  <RC_Text_b91ba563fdb98c45>Operator: Prism Alpha fire control</RC_Text_b91ba563fdb98c45>
+  <RC_Text_f812c2feef471deb>Location: Legion assembly sanctuary</RC_Text_f812c2feef471deb>
+  <RC_Text_322f6a10248dc633>TERRAIN SCAN / LEGION SANCTUARY</RC_Text_322f6a10248dc633>
+  <RC_Text_47cdfe877cb30b32>Legion assembly sanctuary</RC_Text_47cdfe877cb30b32>
+  <RC_Text_e9017effd34bbd8d>Sophia Empire: Allied → Neutral</RC_Text_e9017effd34bbd8d>
+  <RC_Text_ec414eed371e7cd3>Destroy the anomaly core</RC_Text_ec414eed371e7cd3>
+  <RC_Text_c4929b0c87a6a9ca>We call them the Legion. They feel no pain, they never stop coming, and their technology far exceeds ours. I have lost many soldiers.</RC_Text_c4929b0c87a6a9ca>
+  <RC_Text_6b6590735b4f16ab>Our troops will advance from the west to buy you time. I hope your air support is enough.</RC_Text_6b6590735b4f16ab>
+  <RC_Text_9e2e24f514efbee0>Copy. I will infiltrate from the south.</RC_Text_9e2e24f514efbee0>
+  <RC_Text_09e3e1bfabf91ac5>Aurora, this is Mason. I have the designator. I will mark coordinates for your strikes.</RC_Text_09e3e1bfabf91ac5>
+  <RC_Text_b785024f9760a794>Mason, this is Prism Alpha. We are arriving above the planet. Stand by.</RC_Text_b785024f9760a794>
+  <RC_Text_944dfbac7a72fbfb>Fire control, you are cleared to engage.</RC_Text_944dfbac7a72fbfb>
+  <RC_Text_b19675fa0be05ea8>Enemy squad marked.</RC_Text_b19675fa0be05ea8>
+  <RC_Text_4a5b25db6f25d04d>Copy. Fire control, engage with the heavy-particle autocannon.</RC_Text_4a5b25db6f25d04d>
+  <RC_Text_4ecc24e1b1486abe>Prism Alpha, there are turrets at the next position.</RC_Text_4ecc24e1b1486abe>
+  <RC_Text_47cd069270f1a72c>Copy. Fire control, relativistic particle shots are now available.</RC_Text_47cd069270f1a72c>
+  <RC_Text_36df0220d181a696>Take them out.</RC_Text_36df0220d181a696>
+  <RC_Text_d4c20088e7661f18>Kaldalis, there is a Champion at the next position.</RC_Text_d4c20088e7661f18>
+  <RC_Text_ccaa3f8f5291d3c7>Copy. Fire control, the Executor authorizes low-power fire from the planet-fracture cannon.</RC_Text_ccaa3f8f5291d3c7>
+  <RC_Text_d6afd217deb54982>The shields are down! Warriors of the Empire, fight for our home!</RC_Text_d6afd217deb54982>
+  <RC_Text_d75c57f3fd479d7d>This is the first time we have defeated those religious fanatics.</RC_Text_d75c57f3fd479d7d>
+  <RC_Text_44ce7fb5274ee696>How are your casualties?</RC_Text_44ce7fb5274ee696>
+  <RC_Text_60dbd3e1e1684f54>Heavy. But we avenged our fallen comrades.</RC_Text_60dbd3e1e1684f54>
+  <RC_Text_3b39fb4b4a206bcf>What will you do now?</RC_Text_3b39fb4b4a206bcf>
+  <RC_Text_7a22135eb71c627f>Command wants an accounting for my unauthorized action. I may be suspended for a few days.</RC_Text_7a22135eb71c627f>
+  <RC_Text_721d617eac2be916>They have serious concerns about your people.</RC_Text_721d617eac2be916>
+  <RC_Text_902c869ef99198b0>I understand. But we will keep investigating Romulus.</RC_Text_902c869ef99198b0>
+  <RC_Text_83316f6c0654f24f>One more thing, Mason.</RC_Text_83316f6c0654f24f>
+  <RC_Text_7e8aac8ce3f2d619>Thank your commander for me.</RC_Text_7e8aac8ce3f2d619>
+  <RC_Text_0adddc0a0dabd730>I will.</RC_Text_0adddc0a0dabd730>
+  <RC_Text_7ef1ab7a7cfbe9c7>Karma just reported a new signal nearby.</RC_Text_7ef1ab7a7cfbe9c7>
+  <RC_Text_3f7cd61ba9120e4b>Looks like violence did not solve the problem, eh?</RC_Text_3f7cd61ba9120e4b>
+  <RC_Text_992131cb6a4f8e2e>Bell and Adler are already on their way to investigate. Mason, we will warp you back first.</RC_Text_992131cb6a4f8e2e>
+  <RC_Text_6c599bb4d30cd922>Good work. Get some rest.</RC_Text_6c599bb4d30cd922>
+  <RC_Text_79fb7de3bdc5cdd7>The Legion base has been destroyed. Bell and Adler are investigating a new anomaly signal nearby.</RC_Text_79fb7de3bdc5cdd7>
+  <RC_Text_a96669a7bb71e8df>Disable shield 1 and capture the position</RC_Text_a96669a7bb71e8df>
+  <RC_Text_7d7de6cf38cf39ba>Disable shield 2 and capture the position</RC_Text_7d7de6cf38cf39ba>
+  <RC_Text_68375bb77e265162>Disable shield 3 and capture the position</RC_Text_68375bb77e265162>
+  <RC_Text_d95420bcd99fcd4b>Kaldalis</RC_Text_d95420bcd99fcd4b>
+  <RC_Text_fd826e582f635e5d>Imperial approach road</RC_Text_fd826e582f635e5d>
+  <RC_Text_8aa9d8290c05c4d8>Legion courtyard pavement</RC_Text_8aa9d8290c05c4d8>
+  <RC_Text_e656fe7668b9888c>Imperial drop-pod staging area</RC_Text_e656fe7668b9888c>
+  <RC_Text_0b0e9904db31dbac>Imperial ground forces</RC_Text_0b0e9904db31dbac>
+  <RC_Text_40545618c1de2a7f>Eliminate the Champion Warrior</RC_Text_40545618c1de2a7f>
+  <RC_Text_7c88c361e8c2c595>Destroy the final Romulus hub</RC_Text_7c88c361e8c2c595>
+  <RC_Text_8e3310324ed7de30>Disable the third shield and clear its position (optional)</RC_Text_8e3310324ed7de30>
+  <RC_Text_7dc9e5f6b2ab426b>The Champion Warrior is dead and the final Romulus hub has been destroyed. A new anomalous signal has appeared nearby; Bell and Adler are investigating.</RC_Text_7dc9e5f6b2ab426b>
+  <RC_Text_8e5fe897cf9fd8f0>• Avoid killing whenever possible (optional)</RC_Text_8e5fe897cf9fd8f0>
+  <RC_Text_c43707d04a7e2cfd>The Champion Warrior is dead and the final Romulus hub has been destroyed. A new anomalous signal has appeared nearby; Bell and Adler are investigating.</RC_Text_c43707d04a7e2cfd>
+  <RC_Text_2c5015006cd2f1b4>Find the hub and install the scanning device on it</RC_Text_2c5015006cd2f1b4>
+  <RC_Text_e664f4dad8815cb0>Defeat the Legion Centurion</RC_Text_e664f4dad8815cb0>
+  <RC_Text_5f5ba114e8ca1e23>Follow the Imperial Knight to extraction</RC_Text_5f5ba114e8ca1e23>
+  <RC_Text_3478d547af3c67f8>Install the scanning device</RC_Text_3478d547af3c67f8>
+  <RC_Text_b01118f5239649bd>30 Solarite</RC_Text_b01118f5239649bd>
+  <RC_Text_c627f3282fbdf14a>50 Solarite</RC_Text_c627f3282fbdf14a>
+</LanguageData>

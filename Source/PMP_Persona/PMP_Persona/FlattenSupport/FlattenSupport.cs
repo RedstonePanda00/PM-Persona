@@ -73,7 +73,7 @@ namespace PMP_Persona.FlattenSupport
             }
             catch
             {
-                // A failed activation must not leave paid-for half captures behind.
+                // Roll back incomplete captures on activation failure.
                 foreach (var sheet in made) sheet.RollbackCapture();
                 throw;
             }

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/StatDef[defName="MoveSpeed"]/parts</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/StatDef[defName="MoveSpeed"]/parts</xpath>
+      <value>
+        <li Class="PMP_Persona.Romulus.StatPart_Legion" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/StatDef[defName="MoveSpeed"]</xpath>
+      <value>
+        <parts>
+          <li Class="PMP_Persona.Romulus.StatPart_Legion" />
+        </parts>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+      <value>
+        <li Class="PMP_Persona.Romulus.StatPart_Legion" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/StatDef[defName="MeleeDamageFactor"]</xpath>
+      <value>
+        <parts>
+          <li Class="PMP_Persona.Romulus.StatPart_Legion" />
+        </parts>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/StatDef[defName="AimingDelayFactor"]/parts</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/StatDef[defName="AimingDelayFactor"]/parts</xpath>
+      <value>
+        <li Class="PMP_Persona.Romulus.StatPart_Legion" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/StatDef[defName="AimingDelayFactor"]</xpath>
+      <value>
+        <parts>
+          <li Class="PMP_Persona.Romulus.StatPart_Legion" />
+        </parts>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/StatDef[defName="RangedCooldownFactor"]/parts</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/StatDef[defName="RangedCooldownFactor"]/parts</xpath>
+      <value>
+        <li Class="PMP_Persona.Romulus.StatPart_Legion" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/StatDef[defName="RangedCooldownFactor"]</xpath>
+      <value>
+        <parts>
+          <li Class="PMP_Persona.Romulus.StatPart_Legion" />
+        </parts>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

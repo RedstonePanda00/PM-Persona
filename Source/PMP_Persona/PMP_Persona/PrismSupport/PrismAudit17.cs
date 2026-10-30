@@ -96,6 +96,7 @@ namespace PMP_Persona.PrismSupport
                 {
                     ship.EntryElapsed = ship.EntryEnd - .01f; c.Advance(.02f);
                     Check(ship.Ready && ship.RemainingLifeTicks == 3600, "readiness/timer handoff");
+                    OrbitalCameraShakeAudit.Run(Folder);
                     TestMagazines();
                     ship.SetupOrbit(); ship.CameraSaved = true; ship.Phase = OrbitalSupportSession.SupportPhase.FireControl;
                     Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;

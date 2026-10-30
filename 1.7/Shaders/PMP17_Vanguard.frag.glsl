@@ -31,7 +31,7 @@ void main() {
         float n=fbm(p*3.6+drift+curl*.7);
         float detail=fbm(p*9.0+vec2(-t*.08,t*.06)+curl);
         float cloud=smoothstep(.27,.77,n*.75+detail*.25);
-        // A soft central opening keeps the ship readable; the clouds retain parallax motion.
+        // Central cloud opening with parallax motion.
         float edge=mix(.30,1.0,smoothstep(.15,.65,length(p)));
         outColor=vec4(mix(vec3(.15,.20,.25),vec3(.74,.80,.84),n),cloud*edge*a*opacity);
     } else if(mode<2.5) {
@@ -56,7 +56,7 @@ void main() {
         outColor=vec4(.035,.045,.08,sampleTex(uv).a*opacity);
     } else if(mode<6.5) {
         vec4 body=sampleTex(uv);
-        // Relative heat signature on the actual visible RenderTree, not a temperature simulation.
+        // Relative RenderTree heat-signature visualization.
         float heat=mix(.78,1.0,dot(body.rgb,vec3(.3,.5,.2)));
         outColor=vec4(vec3(heat),body.a*opacity);
     } else {

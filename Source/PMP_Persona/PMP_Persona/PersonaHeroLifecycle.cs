@@ -7,8 +7,7 @@ using Verse;
 
 namespace PMP_Persona
 {
-    // Deep-owned pooled Pawns load with small game components, before World/FactionManager.
-    // Their serialized needs are restored afterwards; do not query player faction in this constructor pass.
+    // Load pooled-pawn components before World/FactionManager; defer player-faction queries.
     [HarmonyPatch(typeof(Pawn_NeedsTracker), "ShouldHaveNeed")]
     internal static class PooledHeroNeedsDuringLoad
     {
@@ -206,9 +205,7 @@ namespace PMP_Persona
             var invalidKeys = new List<string>();
             foreach (KeyValuePair<string, Pawn> entry in pooledPawns)
             {
-                // A lifecycle-specific owner may be able to repair a pooled pawn's
-                // health state after loading. Callers still reject dead pawns by
-                // default through PeekPooledPawn/TakePooledPawn.
+                // Allow lifecycle owners to inspect dead pooled pawns for health-state repair.
                 if (entry.Value == null || entry.Value.Destroyed)
                     invalidKeys.Add(entry.Key);
             }

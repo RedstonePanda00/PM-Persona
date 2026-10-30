@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Preserve the vanilla chain shotgun's handling and artwork until legion art is ready. -->
+  <ThingDef ParentName="Gun_ChainShotgun">
+    <defName>PMP_Cerberus</defName>
+    <label>Cerberus</label>
+    <description>A legion shotgun whose powerful armor-piercing rounds are limited by the short range and accuracy of its chain-shotgun pattern.</description>
+    <techLevel>Archotech</techLevel>
+    <graphicData><texPath>Things/Item/Equipment/WeaponRanged/ChainShotgun</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MaxHitPoints>400</MaxHitPoints><Flammability>0</Flammability></statBases>
+    <generateCommonality>1</generateCommonality>
+    <thingSetMakerTags Inherit="false"/>
+    <tradeTags Inherit="false"/>
+    <weaponTags Inherit="false"><li>PMP_Cerberus</li></weaponTags>
+    <recipeMaker IsNull="True"/>
+    <verbs Inherit="false"><li>
+      <verbClass>Verb_Shoot</verbClass><hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PMP_CerberusShot</defaultProjectile>
+      <warmupTime>1.2</warmupTime><range>12.9</range>
+      <burstShotCount>3</burstShotCount><ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+      <soundCast>Shot_Shotgun</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>9</muzzleFlashScale>
+    </li></verbs>
+    <modExtensions><li Class="PMP_Persona.Romulus.LegionExtension"><advanced>true</advanced></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_CerberusShot</defName><label>Cerberus round</label>
+    <graphicData><texPath>Things/Projectile/Bullet_Small</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <projectile><damageDef>Bullet</damageDef><damageAmountBase>77</damageAmountBase><armorPenetrationBase>1.30</armorPenetrationBase><stoppingPower>3</stoppingPower><speed>55</speed></projectile>
+  </ThingDef>
+</Defs>

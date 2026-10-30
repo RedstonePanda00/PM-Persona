@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_UpgradeLegionShield.label>升级为军团重盾</PMP_UpgradeLegionShield.label>
+  <PMP_UpgradeLegionShield.description>消耗一件对应原型及1片超凡科技护甲片，升级为军团重盾。产物品质不低于实际消耗的原型品质。</PMP_UpgradeLegionShield.description>
+  <PMP_UpgradeLegionShield.jobString>正在升级军团装备。</PMP_UpgradeLegionShield.jobString>
+  <PMP_UpgradeBelieverArmor.label>升级为信徒战甲</PMP_UpgradeBelieverArmor.label>
+  <PMP_UpgradeBelieverArmor.description>消耗一件对应原型及1片超凡科技护甲片，升级为信徒战甲。产物品质不低于实际消耗的原型品质。</PMP_UpgradeBelieverArmor.description>
+  <PMP_UpgradeBelieverArmor.jobString>正在升级军团装备。</PMP_UpgradeBelieverArmor.jobString>
+  <PMP_UpgradeBelieverHelmet.label>升级为信徒头盔</PMP_UpgradeBelieverHelmet.label>
+  <PMP_UpgradeBelieverHelmet.description>消耗一件对应原型及1片超凡科技护甲片，升级为信徒头盔。产物品质不低于实际消耗的原型品质。</PMP_UpgradeBelieverHelmet.description>
+  <PMP_UpgradeBelieverHelmet.jobString>正在升级军团装备。</PMP_UpgradeBelieverHelmet.jobString>
+  <PMP_UpgradeCenturionArmor.label>升级为百夫长战甲</PMP_UpgradeCenturionArmor.label>
+  <PMP_UpgradeCenturionArmor.description>消耗一件对应原型及2片超凡科技护甲片，升级为百夫长战甲。产物品质不低于实际消耗的原型品质。</PMP_UpgradeCenturionArmor.description>
+  <PMP_UpgradeCenturionArmor.jobString>正在升级军团装备。</PMP_UpgradeCenturionArmor.jobString>
+  <PMP_UpgradeCenturionHelmet.label>升级为百夫长头盔</PMP_UpgradeCenturionHelmet.label>
+  <PMP_UpgradeCenturionHelmet.description>消耗一件对应原型及2片超凡科技护甲片，升级为百夫长头盔。产物品质不低于实际消耗的原型品质。</PMP_UpgradeCenturionHelmet.description>
+  <PMP_UpgradeCenturionHelmet.jobString>正在升级军团装备。</PMP_UpgradeCenturionHelmet.jobString>
+  <PMP_UpgradeChampionArmor.label>升级为冠军勇士战甲</PMP_UpgradeChampionArmor.label>
+  <PMP_UpgradeChampionArmor.description>消耗一件对应原型及4片超凡科技护甲片，升级为冠军勇士战甲。产物品质不低于实际消耗的原型品质。</PMP_UpgradeChampionArmor.description>
+  <PMP_UpgradeChampionArmor.jobString>正在升级军团装备。</PMP_UpgradeChampionArmor.jobString>
+  <PMP_UpgradeChampionHelmet.label>升级为冠军勇士头盔</PMP_UpgradeChampionHelmet.label>
+  <PMP_UpgradeChampionHelmet.description>消耗一件对应原型及4片超凡科技护甲片，升级为冠军勇士头盔。产物品质不低于实际消耗的原型品质。</PMP_UpgradeChampionHelmet.description>
+  <PMP_UpgradeChampionHelmet.jobString>正在升级军团装备。</PMP_UpgradeChampionHelmet.jobString>
+</LanguageData>

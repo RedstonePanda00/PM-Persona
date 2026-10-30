@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><AssemblyName>PMP.LegionDefaultFactionAudit</AssemblyName><OutputPath>../../../artifacts/legion-default-faction/audit-bin/</OutputPath></PropertyGroup>
+</Project>

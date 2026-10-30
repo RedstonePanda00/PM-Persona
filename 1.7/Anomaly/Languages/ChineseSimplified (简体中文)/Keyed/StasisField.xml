@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+ <PMP.Stasis.Suspended>静滞中：内部实体无法突破收容。</PMP.Stasis.Suspended>
+ <PMP.Stasis.Assigned>等待收容：{0}</PMP.Stasis.Assigned>
+ <PMP.Stasis.Assign>收容实体</PMP.Stasis.Assign><PMP.Stasis.AssignDesc>选择倒地或休眠的实体，或可搬运的异常物体，由搬运人员送入力场。每座容纳一个实体。断电时释放实体；太阳耀斑不会使力场停机。</PMP.Stasis.AssignDesc>
+ <PMP.Stasis.Carry>收容{0}</PMP.Stasis.Carry>
+ <PMP.Stasis.Release>释放实体</PMP.Stasis.Release><PMP.Stasis.ReleaseDesc>将原实体释放到附近，恢复其敌对关系和异常活动。</PMP.Stasis.ReleaseDesc>
+ <PMP.Stasis.Study>研究实体</PMP.Stasis.Study><PMP.Stasis.StudyDesc>通过力场进行暗黑研究，保留实体原有的研究进度、解锁条件及冷却。</PMP.Stasis.StudyDesc>
+ <PMP.Stasis.StudyComplete>研究已完成。</PMP.Stasis.StudyComplete><PMP.Stasis.StudyLocked>尚未解锁对此实体的研究。</PMP.Stasis.StudyLocked>
+</LanguageData>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Appearance rollout: preserve the former marine equipment's stats until balance is specified. -->
+  <ThingDef ParentName="ApparelArmorPowerBase">
+    <defName>PMP_CenturionArmor</defName><label>centurion power armor</label>
+    <description>Ivory legion officer armor with muted gold fittings and an attached crimson cape bearing the Romulus insignia. Its equipment bonuses use the legion's existing rank system.</description>
+    <techLevel>Archotech</techLevel><colorGenerator IsNull="True" /><generateCommonality>1</generateCommonality>
+    <graphicData><texPath>Things/Apparel/Romulus/CenturionArmor/CenturionArmor</texPath><graphicClass>Graphic_Single</graphicClass><color>(1,1,1)</color></graphicData>
+    <recipeMaker IsNull="True" /><thingSetMakerTags Inherit="false" /><tradeTags Inherit="false" />
+    <statBases><MaxHitPoints>340</MaxHitPoints><Mass>12</Mass><Flammability>0.4</Flammability><WorkToMake>60000</WorkToMake><ArmorRating_Sharp>1.06</ArmorRating_Sharp><ArmorRating_Blunt>0.45</ArmorRating_Blunt><ArmorRating_Heat>0.54</ArmorRating_Heat><Insulation_Cold>68</Insulation_Cold><Insulation_Heat>10</Insulation_Heat><EquipDelay>14</EquipDelay></statBases>
+    <costList><ComponentSpacer>4</ComponentSpacer><Plasteel>100</Plasteel><Uranium>20</Uranium></costList>
+    <equippedStatOffsets><MoveSpeed>-0.25</MoveSpeed></equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Apparel/Romulus/CenturionArmor/CenturionArmor</wornGraphicPath>
+      <tags Inherit="false"><li>PMP_CenturionArmor</li></tags>
+      <layers Inherit="false"><li>OnSkin</li><li>Middle</li><li>Shell</li></layers>
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
+      <drawData><defaultData><offset>(0, 0, -0.07)</offset></defaultData><dataEast><offset>(-0.06, 0, -0.07)</offset></dataEast><dataWest><offset>(0.06, 0, -0.07)</offset></dataWest></drawData>
+    </apparel>
+    <modExtensions><li Class="PMP_Persona.Romulus.LegionExtension"><advanced>true</advanced></li><li Class="PMP_Persona.Romulus.SharedApparelBodyGraphic"><bodyType>Male</bodyType></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="ApparelArmorHelmetPowerBase">
+    <defName>PMP_CenturionHelmet</defName><label>centurion helmet</label>
+    <description>An ivory officer helmet with paired red optics, a gold laurel and a tall transverse crimson crest. The crest is seen edge-on from the side.</description>
+    <techLevel>Archotech</techLevel><colorGenerator IsNull="True" /><generateCommonality>1</generateCommonality>
+    <graphicData><texPath>Things/Apparel/Romulus/CenturionHelmet/CenturionHelmet</texPath><graphicClass>Graphic_Single</graphicClass><color>(1,1,1)</color></graphicData>
+    <recipeMaker IsNull="True" /><thingSetMakerTags Inherit="false" /><tradeTags Inherit="false" />
+    <statBases><MaxHitPoints>150</MaxHitPoints><Mass>1.5</Mass><Flammability>0.4</Flammability><WorkToMake>21000</WorkToMake><ArmorRating_Sharp>1.06</ArmorRating_Sharp><ArmorRating_Blunt>0.45</ArmorRating_Blunt><ArmorRating_Heat>0.54</ArmorRating_Heat><Insulation_Cold>4</Insulation_Cold><Insulation_Heat>2</Insulation_Heat><EquipDelay>4</EquipDelay></statBases>
+    <costList><ComponentSpacer>1</ComponentSpacer><Plasteel>40</Plasteel></costList>
+    <apparel><wornGraphicPath>Things/Apparel/Romulus/CenturionHelmet/CenturionHelmet</wornGraphicPath><tags Inherit="false"><li>PMP_CenturionHelmet</li></tags><forceEyesVisibleForRotations Inherit="false" /></apparel>
+    <modExtensions><li Class="PMP_Persona.Romulus.LegionExtension"><advanced>true</advanced></li></modExtensions>
+  </ThingDef>
+</Defs>

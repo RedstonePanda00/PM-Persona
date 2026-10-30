@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -9,6 +9,7 @@ namespace PMP_Persona.VanguardSupport
 {
     public sealed class VanguardFireControl : GameComponent
     {
+        public static event Action<OrbitalSupportSession> DrawOverlay;
         internal OrbitalSupportSession Ship;
         internal VanguardPresentation Presentation;
         internal PrismArrivalPresentation PrismArrival;
@@ -158,8 +159,7 @@ namespace PMP_Persona.VanguardSupport
             {
                 float t = Ship.EntryElapsed / Ship.EntryDuration * 7;
                 size = Mathf.Lerp(Ship.ReturnSize, OverviewSize(Ship), VanguardPresentation.Ease(t / 1.6f));
-                // Interpolate magnification ratios so zoom is visible throughout descent,
-                // rather than concentrating apparent enlargement near the final small size.
+                // Interpolate magnification ratios throughout descent.
                 size = Mathf.Exp(Mathf.Lerp(Mathf.Log(size), Mathf.Log(ArrivalCloseSize), VanguardPresentation.CameraApproach(t)));
             }
             else if (Ship.Phase == OrbitalSupportSession.SupportPhase.Departure)
@@ -214,6 +214,7 @@ namespace PMP_Persona.VanguardSupport
             { Ship.CycleWeapon(); ev.Use(); }
             if (Ship.IsPrism && Ship.Phase == OrbitalSupportSession.SupportPhase.Arrival) PrismArrival.Draw(Ship);
             else Presentation.Draw(Ship);
+            DrawOverlay?.Invoke(Ship);
             if (ev.type == EventType.KeyDown || ev.type == EventType.MouseDown || ev.type == EventType.MouseUp
                 || ev.type == EventType.ScrollWheel) ev.Use();
         }
@@ -249,9 +250,12 @@ namespace PMP_Persona.VanguardSupport
     [HarmonyPatch(typeof(CameraDriver), nameof(CameraDriver.Update))]
     internal static class VanguardCamera
     {
-        static bool Prefix()
+        static bool Prefix(CameraDriver __instance)
         {
             if (!VanguardFireControl.OwnsView) return true;
+            // We replace CameraDriver.Update, including its normal shake-decay call.
+            // SetRootPosAndSize still applies ShakeOffset, so the shaker must keep ticking.
+            __instance.shaker.Update();
             VanguardFireControl.CurrentController.ApplyCamera();
             return false;
         }
@@ -259,7 +263,7 @@ namespace PMP_Persona.VanguardSupport
     [HarmonyPatch(typeof(Verse.Profile.MemoryUtility), nameof(Verse.Profile.MemoryUtility.ClearAllMapsAndWorld))]
     internal static class VanguardSessionCleanup
     {
-        // Scene teardown invalidates the old CameraDriver; never enqueue camera work here.
+        // Release camera state during scene teardown.
         static void Prefix()
         {
             VanguardFireControl.CurrentController?.End(false);

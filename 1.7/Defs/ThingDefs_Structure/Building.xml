@@ -24,7 +24,7 @@
         <designationCategory>Misc</designationCategory>
         <uiOrder>3000</uiOrder>
         <statBases>
-            <MaxHitPoints>20000</MaxHitPoints>
+            <MaxHitPoints>400</MaxHitPoints>
             <WorkToBuild>10000</WorkToBuild>
             <Flammability>0</Flammability>
             <Beauty>100</Beauty>
@@ -38,6 +38,14 @@
             <li>PM_PurifierProjectFinal</li>
         </researchPrerequisites>
         <comps>
+            <li Class="ProtossMech.CompProperties_ProtossBuilding"/>
+            <li Class="ProtossMech.CompProperties_ProtossMechShield">
+              <energyMax>400</energyMax>
+              <energyGainPerTick>0.2</energyGainPerTick>
+              <ticksToBeginRecharge>600</ticksToBeginRecharge>
+              <minDrawSize>3.0</minDrawSize>
+              <maxDrawSize>3.5</maxDrawSize>
+            </li>
             <li Class="PMP_Persona.Conclave.CompProperties_Console" />
             <li Class="CompProperties_Glower">
                 <overlightRadius>5</overlightRadius>
@@ -90,6 +98,7 @@
             </li>
         </modExtensions>
         <comps>
+            <li Class="ProtossMech.CompProperties_ProtossBuilding"/>
             <li Class="RsPandaLibrary.CompProperties_Mobile">
                 <moveSpeedPerSecond>4</moveSpeedPerSecond>
             </li>
@@ -141,6 +150,7 @@
             </li>
         </modExtensions>
         <comps>
+            <li Class="ProtossMech.CompProperties_ProtossBuilding"/>
             <li Class="RsPandaLibrary.CompProperties_Mobile">
                 <moveSpeedPerSecond>12</moveSpeedPerSecond>
             </li>
@@ -398,6 +408,7 @@
         </statBases>
         <size>(1,1)</size>
         <comps>
+            <li Class="ProtossMech.CompProperties_ProtossBuilding"/>
             <li Class="PMP_Persona.SupernovaSupport.CompProperties_StarVisual">
                 <radius>1.0</radius>
             </li>

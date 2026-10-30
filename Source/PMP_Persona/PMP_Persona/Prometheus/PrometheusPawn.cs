@@ -29,7 +29,7 @@ namespace PMP_Persona.Prometheus
             workSettings?.DisableAll();
             foreach (string name in new[] { "Hauling", "Cleaning", "Firefighter" })
                 workSettings?.SetPriority(DefDatabase<WorkTypeDef>.GetNamed(name), name == "Firefighter" ? 1 : 3);
-            // Empty weaponTags deliberately prevent vanilla repairs/resurrection from printing weapons.
+            // Disable generated weapons on repair and resurrection.
             if (equipment != null && equipment.Primary == null)
                 equipment.AddEquipment((ThingWithComps)ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed("PMP_HardlightRifle")));
             GetComp<ProtossMechShield>()?.RestoreShield();
@@ -38,7 +38,7 @@ namespace PMP_Persona.Prometheus
         internal void EnsureApparel()
         {
             apparel ??= new Pawn_ApparelTracker(this);
-            // Native apparel graphics require body/head metadata. This does not change mech race or autonomy.
+            // Initialize body and head metadata for native apparel rendering.
             story ??= new Pawn_StoryTracker(this);
             story.bodyType ??= BodyTypeDefOf.Male;
             story.headType ??= DefDatabase<HeadTypeDef>.AllDefsListForReading
@@ -55,8 +55,7 @@ namespace PMP_Persona.Prometheus
                     priorities[work] = workSettings.GetPriority(work);
             base.Kill(dinfo, exactCulprit);
             if (!Dead || Discarded || Corpse == null) return;
-            // Let vanilla finish death, gear drops and notifications, then replace the visible remains.
-            // The suspended inner corpse preserves the original pawn and its resurrection lifecycle.
+            // Wrap the corpse after vanilla death handling; retain it for resurrection.
             Thing_Fireseed.ReplaceRemains(Corpse, priorities);
         }
     }
@@ -71,8 +70,7 @@ namespace PMP_Persona.Prometheus
             if (race == null) return;
             race.mechEnabledWorkTypes = DefDatabase<WorkTypeDef>.AllDefsListForReading.ToList();
             race.mechFixedSkillLevel = 10;
-            // Apparel metadata must not expose a human character card. Copy the inherited
-            // list once, rather than patching visibility for every selected pawn/UI frame.
+            // Copy inspect tabs once and exclude the human character card.
             def.inspectorTabsResolved = def.inspectorTabsResolved?
                 .Where(tab => !(tab is ITab_Pawn_Character)).ToList();
         }

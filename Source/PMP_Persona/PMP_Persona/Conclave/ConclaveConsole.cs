@@ -23,7 +23,7 @@ namespace PMP_Persona.Conclave
             };
         }
     }
-    // Independent pages keep future council information out of the hero-status renderer.
+    // Council console page definitions.
     public abstract class ConclavePage
     {
         public abstract string Id { get; }
@@ -88,7 +88,7 @@ namespace PMP_Persona.Conclave
         private Pawn Preview(PawnKindDef kind)
         {
             if (previews.TryGetValue(kind, out var pawn)) return pawn;
-            // Preview-only, never spawned or registered as an active persona. Preserve gameplay RNG.
+            // Create an unspawned preview pawn while preserving gameplay RNG.
             Rand.PushState(GenText.StableStringHash(kind.defName));
             try {
                 pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, null,

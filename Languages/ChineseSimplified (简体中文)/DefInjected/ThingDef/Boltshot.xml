@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_Boltshot.label>Z-110 硬光手枪</PMP_Boltshot.label>
+  <PMP_Boltshot.description>一种紧凑的硬光副武器，分段装甲包覆着内部的储能腔。聚焦组件将能量凝聚成细窄的弹束，也能将积蓄的能量一并释放，在近距离形成灼热的散射。\n\n这把武器是在曙光号上的分子打印机内，由能量直接转化为物质整枪打印的。</PMP_Boltshot.description>
+  <PMP_Boltshot.verbs.0.label>射击</PMP_Boltshot.verbs.0.label>
+  <PMP_Boltshot.tools.0.label>握柄</PMP_Boltshot.tools.0.label>
+  <PMP_BoltshotBolt.label>硬光手枪弹束</PMP_BoltshotBolt.label>
+  <PMP_BoltshotPellet.label>蓄能硬光弹丸</PMP_BoltshotPellet.label>
+</LanguageData>

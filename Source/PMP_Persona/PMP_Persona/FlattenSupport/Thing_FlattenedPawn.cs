@@ -38,7 +38,7 @@ namespace PMP_Persona.FlattenSupport
             originalMap = pawn.Map; originalCell = pawn.Position; captureCandidate = pawn;
             facing = pawn.Rotation; posture = pawn.GetPosture();
             startedTick = Find.TickManager.TicksGame; duration = animationTicks;
-            // Make the physical item first so its held pawn always has a map/position owner.
+            // Create the item owner before capturing the pawn.
             GenSpawn.Spawn(this, originalCell, originalMap);
             pawn.DeSpawn();
             if (!contents.TryAdd(pawn, false)) throw new InvalidOperationException("Flatten container rejected pawn");
@@ -87,8 +87,7 @@ namespace PMP_Persona.FlattenSupport
         public override bool CanStackWith(Thing other) => false;
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
-            // Neither damage, generic cleanup nor a destruction gizmo may free/kill the entity.
-            // Only an empty sheet (after a successful release/rollback) is consumed.
+            // Consume only empty sheets after release or rollback.
             if (HeldPawn != null) return;
             bool old = allowDestroyNonDestroyable;
             try { allowDestroyNonDestroyable = true; base.Destroy(mode); }
@@ -138,7 +137,7 @@ namespace PMP_Persona.FlattenSupport
             parms.pawn = HeldPawn; parms.facing = displayFacing; parms.posture = posture;
             parms.flags = PawnRenderFlags.Headgear | PawnRenderFlags.Clothes | PawnRenderFlags.NeverAimWeapon;
             parms.rotDrawMode = RotDrawMode.Fresh; parms.tint = Color.white;
-            // Keep the finished body intact. The shader supplies collapsing depth slices.
+            // Render the intact body with shader-based depth collapse.
             parms.matrix = Matrix4x4.TRS(drawLoc, Quaternion.identity, Vector3.one);
             return parms;
         }

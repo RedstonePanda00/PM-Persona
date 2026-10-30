@@ -1,0 +1,6 @@
+<Defs>
+  <ShaderDef><defName>PMP17_CampaignTerrain</defName><shaderProgram><vertexShaderFileName>PMP17_Vanguard.vert.glsl</vertexShaderFileName><fragmentShaderFileName>PMP17_CampaignTerrain.frag.glsl</fragmentShaderFileName><transparent>true</transparent><depthTest>false</depthTest><depthWrite>false</depthWrite><cullMode>None</cullMode><renderQueue>4000</renderQueue><blendMode>Custom</blendMode><blendSrcFactor>SrcAlpha</blendSrcFactor><blendDstFactor>OneMinusSrcAlpha</blendDstFactor></shaderProgram></ShaderDef>
+  <MaterialDef><defName>PMP17_CampaignTerrainMaterial</defName><shader>PMP17_CampaignTerrain</shader></MaterialDef>
+  <ShaderDef><defName>PMP17_RomulusRune</defName><shaderProgram><vertexShaderFileName>PMP17_Vanguard.vert.glsl</vertexShaderFileName><fragmentShaderFileName>PMP17_RomulusRune.frag.glsl</fragmentShaderFileName><transparent>true</transparent><depthTest>true</depthTest><depthWrite>false</depthWrite><cullMode>None</cullMode><renderQueue>3100</renderQueue><blendMode>Custom</blendMode><blendSrcFactor>SrcAlpha</blendSrcFactor><blendDstFactor>One</blendDstFactor></shaderProgram></ShaderDef>
+  <MaterialDef><defName>PMP17_RomulusRuneMaterial</defName><shader>PMP17_RomulusRune</shader></MaterialDef>
+</Defs>

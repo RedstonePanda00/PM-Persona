@@ -1,0 +1,7 @@
+<Patch>
+<Operation Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="Gun_Minigun"]/weaponTags</xpath><value><li>PMP_M3_Minigun</li></value></Operation>
+<Operation Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="Gun_ChargeRifle"]/weaponTags</xpath><value><li>PMP_M3_ChargeRifle</li></value></Operation>
+<Operation Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="Gun_ChargeLance"]/weaponTags</xpath><value><li>PMP_M3_ChargeLance</li></value></Operation>
+<Operation Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="Gun_AssaultRifle"]/weaponTags</xpath><value><li>PMP_M3_AssaultRifle</li></value></Operation>
+<Operation Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="MeleeWeapon_LongSword"]/weaponTags</xpath><value><li>PMP_M3_LongSword</li></value></Operation>
+</Patch>

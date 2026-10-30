@@ -27,8 +27,7 @@ void main() {
         float ring=exp(-torus*torus/.0012)*(1.-u._Beam.y*.7);
         float pulse=.85+.15*sin(p.y*70.-u._Beam.x*40.);
         float edge=1.-smoothstep(.72,.98,radial);
-        // A thick column needs lower absorption: otherwise its amber front surface
-        // becomes opaque before the ray reaches the white emissive core.
+        // Reduce column absorption to expose the emissive core.
         float density=(core*(u._Beam.y>.5 ? .75 : 5.)+ring*8.)*pulse*u._Beam.z*edge;
         float alpha=1.-exp(-density*stepLength*7.);
         float whiteCore=u._Beam.y>.5 ? 1.-smoothstep(.10,.50,radial) : core;

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+ <PMP_StasisField.label>静滞力场</PMP_StasisField.label>
+ <PMP_StasisField.description>将一片封闭空间中的时间凝固的收容平台。内部实体保持静滞，研究人员则从力场之外观察它。力场失去供电时，被收容的实体将返回正常空间。</PMP_StasisField.description>
+</LanguageData>

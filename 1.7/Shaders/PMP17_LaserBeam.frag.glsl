@@ -39,8 +39,7 @@ float distance(vec2 p, float q) {return length(p-vec2(q));}
 #define dFdy(x) ((x)*0.0)
 void clip(float v) {}
 #else
-// Unity's Vulkan binaries use coarse derivatives for HLSL fwidth/ddx/ddy.
-// Native GLSL's unspecified derivative choice can change fine line coverage.
+// Use coarse derivatives to match Unity's Vulkan fwidth/ddx/ddy.
 #define fwidth(x) (abs(dFdxCoarse(x)) + abs(dFdyCoarse(x)))
 #define dFdx(x) dFdxCoarse(x)
 #define dFdy(x) dFdyCoarse(x)

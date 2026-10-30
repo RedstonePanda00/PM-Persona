@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="BaseGun">
+    <defName>PMP_Boltshot</defName>
+    <label>Z-110 Boltshot</label>
+    <description>A compact hardlight sidearm with an energy chamber enclosed by segmented armor. Its focusing assembly forms narrow bolts for precise fire or releases the accumulated charge in a searing spread at close quarters.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <thingClass>GunSmithFramework.Thing_ModularGun</thingClass>
+    <techLevel>Spacer</techLevel>
+    <smeltable>false</smeltable>
+    <relicChance>0</relicChance>
+    <graphicData>
+      <texPath>Things/Weapon/Boltshot/Boltshot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="GunSmithFramework.CompProperties_ModularGun">
+        <platformDef>PMP_GunSmith_Boltshot</platformDef>
+      </li>
+    </comps>
+    <statBases>
+      <Mass>1.2</Mass>
+      <MarketValue>240</MarketValue>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="ProtossMech.VerbProperties_Shotgun">
+        <verbClass>PMP_Persona.Prometheus.Verb_Boltshot</verbClass>
+        <label>fire</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>PMP_BoltshotBolt</defaultProjectile>
+        <warmupTime>0.25</warmupTime>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <pelletCount>1</pelletCount>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>2</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_BoltshotBolt</defName>
+    <label>hardlight pistol bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <color>(1,0.8,0.2)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>Burn</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <armorPenetrationBase>2</armorPenetrationBase>
+      <speed>85</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>PMP_BoltshotPellet</defName>
+    <label>charged hardlight pellet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <color>(1,0.7,0.1)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>Burn</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <armorPenetrationBase>2</armorPenetrationBase>
+      <speed>85</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

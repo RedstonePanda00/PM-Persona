@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <GunSmithFramework.GunSmithPlatformDef>
+    <defName>PMP_GunSmith_Scattershot</defName>
+    <label>Z-180 Scattershot</label>
+    <description>A hardlight shotgun whose broad emitter releases a fan of energized fragments. The fragments briefly retain their cohesion after striking hard surfaces, throwing lethal ricochets through corridors and enclosed rooms.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <weaponThingDef>PMP_Scattershot</weaponThingDef>
+    <weaponCategory>Shotgun</weaponCategory>
+    <bodyTexPath>Things/Weapon/Scattershot/Scattershot</bodyTexPath>
+    <bakeTextureSize>512</bakeTextureSize>
+    <bakePadding>0.05</bakePadding>
+    <shadowDilatePixels>3</shadowDilatePixels>
+    <shadowAlpha>1</shadowAlpha>
+    <slotAttachmentOffsets>
+      <li>
+        <slotId>Optic</slotId>
+        <offset>(0.22,-0.24)</offset>
+        <gizmoOffset>(0.22,-0.35)</gizmoOffset>
+      </li>
+      <li>
+        <slotId>Grip</slotId>
+        <offset>(0,0)</offset>
+        <gizmoOffset>(0.32,0.20)</gizmoOffset>
+      </li>
+    </slotAttachmentOffsets>
+    <slots>
+      <li>
+        <slotId>Grip</slotId>
+        <slotType>Grip</slotType>
+        <optional>true</optional>
+      </li>
+      <li>
+        <slotId>Optic</slotId>
+        <slotType>Optic</slotType>
+        <optional>true</optional>
+      </li>
+    </slots>
+    <modExtensions>
+      <li Class="ProtossMech.GunSmith.GunSmithContentExtension">
+        <costList>
+          <li>
+            <thingDef>PM_Solarite</thingDef>
+            <count>50</count>
+          </li>
+        </costList>
+      </li>
+    </modExtensions>
+    <dualWieldSeparation>0.32</dualWieldSeparation>
+    <dualWieldMuzzleOffset>(0.64,0)</dualWieldMuzzleOffset>
+  </GunSmithFramework.GunSmithPlatformDef>
+  <GunSmithFramework.GunSmithPartDef>
+    <defName>PMP_Scattershot_GripDual</defName>
+    <label>dual-wield grip</label>
+    <description>Carry two Scattershots and fire both eight-pellet shots together. Adds a second weapon and reduces accuracy.</description>
+    <platformDef>PMP_GunSmith_Scattershot</platformDef>
+    <slotType>Grip</slotType>
+    <drawOnWeapon>false</drawOnWeapon>
+    <iconPath>Things/Weapon/Scattershot/Scattershot_DualGrip_Icon</iconPath>
+    <enablesDualWield>true</enablesDualWield>
+    <ceShotSpreadFactor>1.5</ceShotSpreadFactor>
+    <ceSwayFactor>1.35</ceSwayFactor>
+    <modExtensions>
+      <li Class="ProtossMech.GunSmith.GunSmithContentExtension">
+        <costList>
+          <li>
+            <thingDef>PM_Solarite</thingDef>
+            <count>50</count>
+          </li>
+        </costList>
+      </li>
+    </modExtensions>
+    <statOffsets>
+      <Mass>3</Mass>
+      <AccuracyTouch>-0.05</AccuracyTouch>
+      <AccuracyShort>-0.05</AccuracyShort>
+      <AccuracyMedium>-0.15</AccuracyMedium>
+      <AccuracyLong>-0.2</AccuracyLong>
+    </statOffsets>
+  </GunSmithFramework.GunSmithPartDef>
+</Defs>

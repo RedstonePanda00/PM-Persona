@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <!-- Shared human legion pawn kinds and their existing equipment requirements. -->
+  <PawnKindDef Name="PMP_OutpostGuardBase" Abstract="True">
+    <race>Human</race><defaultFactionDef>Pirate</defaultFactionDef><isFighter>true</isFighter>
+    <requiredWorkTags>Violent</requiredWorkTags>
+    <minGenerationAge>24</minGenerationAge><maxGenerationAge>48</maxGenerationAge>
+    <apparelMoney>0</apparelMoney><weaponMoney>0</weaponMoney><invNutrition>0</invNutrition>
+    <initialResistanceRange>10~20</initialResistanceRange><initialWillRange>1~3</initialWillRange>
+    <combatPower>70</combatPower><apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired><li>Apparel_Pants</li><li>Apparel_CollarShirt</li><li>Apparel_FlakVest</li><li>Apparel_SimpleHelmet</li></apparelRequired>
+  </PawnKindDef>
+  <PawnKindDef Name="PMP_BelieverBase" ParentName="PMP_OutpostGuardBase" Abstract="True">
+    <defaultFactionDef>PMP_RomulusLegion</defaultFactionDef>
+    <modExtensions><li Class="PMP_Persona.Romulus.LegionSalvageExtension"><armorFragments>1</armorFragments></li></modExtensions>
+    <combatPower>180</combatPower><weaponMoney>10000</weaponMoney><apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <apparelRequired Inherit="false"><li>PMP_BelieverArmor</li><li>PMP_BelieverHelmet</li></apparelRequired>
+    <weaponTags Inherit="false"><li>PMP_BelieverSpearRifle</li></weaponTags>
+    <minApparelQuality>Normal</minApparelQuality><maxApparelQuality>Normal</maxApparelQuality><itemQuality>Normal</itemQuality><gearHealthRange>1</gearHealthRange>
+    <skills><li><skill>Shooting</skill><range>8~10</range></li><li><skill>Melee</skill><range>8~10</range></li></skills>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PMP_BelieverBase"><defName>PMP_OutpostGuard</defName><label>outpost guard</label></PawnKindDef>
+  <PawnKindDef ParentName="PMP_BelieverBase">
+    <defName>PMP_BelieverCerberus</defName><label>legion believer (Cerberus)</label>
+    <weaponTags Inherit="false"><li>PMP_Cerberus</li></weaponTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PMP_BelieverBase">
+    <defName>PMP_BelieverOpis</defName><label>legion believer (Opis)</label>
+    <weaponTags Inherit="false"><li>PMP_Opis</li></weaponTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PMP_OutpostGuardBase">
+    <defName>PMP_LegionCenturion</defName><label>Legion Centurion</label><combatPower>220</combatPower>
+    <defaultFactionDef>PMP_RomulusLegion</defaultFactionDef>
+    <weaponMoney>10000</weaponMoney>
+    <weaponTags Inherit="false"><li>PMP_Absolution</li></weaponTags>
+    <modExtensions>
+      <li Class="RimCampaign.Runtime.BossPawnExtension"><template>PMP_RegularCenturionBoss</template></li>
+      <li Class="PMP_Persona.Romulus.LegionSalvageExtension"><armorFragments>2</armorFragments></li>
+      <li Class="PMP_Persona.Romulus.LegionApparelMigrationExtension"><upgrades>
+        <li><from>Apparel_PowerArmor</from><to>PMP_CenturionArmor</to></li>
+        <li><from>Apparel_PowerArmorHelmet</from><to>PMP_CenturionHelmet</to></li>
+      </upgrades></li>
+    </modExtensions>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <apparelRequired Inherit="false"><li>PMP_CenturionArmor</li><li>PMP_CenturionHelmet</li></apparelRequired>
+    <forcedTraits><Tough>0</Tough></forcedTraits>
+    <skills><li><skill>Shooting</skill><range>14</range></li><li><skill>Melee</skill><range>16</range></li></skills>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PMP_OutpostGuardBase">
+    <defName>PMP_ChampionWarrior</defName><label>Champion Warrior</label><combatPower>1200</combatPower>
+    <fixedGender>Male</fixedGender><defaultFactionDef>PMP_RomulusLegion</defaultFactionDef><apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <apparelRequired Inherit="false"><li>PMP_ChampionArmor</li><li>PMP_ChampionHelmet</li></apparelRequired><forcedTraits><Tough>0</Tough></forcedTraits>
+    <modExtensions><li Class="PMP_Persona.Romulus.ChampionIdentityExtension"/><li Class="PMP_Persona.Romulus.LegionSalvageExtension"><armorFragments>8</armorFragments></li></modExtensions>
+  </PawnKindDef>
+</Defs>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <PMP_WarhoundResearch.label>战犬构造</PMP_WarhoundResearch.label>
+  <PMP_WarhoundResearch.description>通过心灵仪式召唤敌对军团机械体，击败后即可获得它。需要异象。</PMP_WarhoundResearch.description>
+  <PMP_LegionGuardResearch.label>军团禁军构造</PMP_LegionGuardResearch.label>
+  <PMP_LegionGuardResearch.description>通过心灵仪式召唤敌对军团机械体，击败后即可获得它。需要异象。</PMP_LegionGuardResearch.description>
+  <PMP_LegionChosenResearch.label>军团神选者构造</PMP_LegionChosenResearch.label>
+  <PMP_LegionChosenResearch.description>通过心灵仪式召唤敌对军团机械体，击败后即可获得它。需要异象。</PMP_LegionChosenResearch.description>
+</LanguageData>

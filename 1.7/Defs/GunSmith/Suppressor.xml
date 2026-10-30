@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <GunSmithFramework.GunSmithPlatformDef>
+    <defName>PMP_GunSmith_Suppressor</defName>
+    <label>Z-130 Suppressor</label>
+    <description>An automatic hardlight weapon built around a rapid-cycling emitter. Dense streams of incandescent bolts sweep across the space ahead, scorching armor and machinery. Its compact frame is suited to the confined passages of ships and fortifications.\n\nThe entire weapon is printed in a molecular printer aboard the Aurora, which converts energy directly into matter.</description>
+    <weaponThingDef>PMP_Suppressor</weaponThingDef>
+    <weaponCategory>SubmachineGun</weaponCategory>
+    <bodyTexPath>Things/Weapon/Suppressor/Suppressor</bodyTexPath>
+    <bakeTextureSize>512</bakeTextureSize>
+    <bakePadding>0.05</bakePadding>
+    <shadowDilatePixels>3</shadowDilatePixels>
+    <shadowAlpha>1</shadowAlpha>
+    <slotAttachmentOffsets>
+      <li>
+        <slotId>Optic</slotId>
+        <offset>(0.22,-0.25)</offset>
+        <gizmoOffset>(0.22,-0.35)</gizmoOffset>
+      </li>
+      <li>
+        <slotId>Grip</slotId>
+        <offset>(0,0)</offset>
+        <gizmoOffset>(0.32,0.20)</gizmoOffset>
+      </li>
+    </slotAttachmentOffsets>
+    <slots>
+      <li>
+        <slotId>Grip</slotId>
+        <slotType>Grip</slotType>
+        <optional>true</optional>
+      </li>
+      <li>
+        <slotId>Optic</slotId>
+        <slotType>Optic</slotType>
+        <optional>true</optional>
+      </li>
+    </slots>
+    <modExtensions>
+      <li Class="ProtossMech.GunSmith.GunSmithContentExtension">
+        <costList>
+          <li>
+            <thingDef>PM_Solarite</thingDef>
+            <count>40</count>
+          </li>
+        </costList>
+      </li>
+    </modExtensions>
+    <dualWieldSeparation>0.29</dualWieldSeparation>
+    <dualWieldMuzzleOffset>(0.55,0)</dualWieldMuzzleOffset>
+  </GunSmithFramework.GunSmithPlatformDef>
+  <GunSmithFramework.GunSmithPartDef>
+    <defName>PMP_Suppressor_GripDual</defName>
+    <label>dual-wield grip</label>
+    <description>Carry two Suppressors and fire both nine-round bursts together. Adds a second weapon and reduces accuracy.</description>
+    <platformDef>PMP_GunSmith_Suppressor</platformDef>
+    <slotType>Grip</slotType>
+    <drawOnWeapon>false</drawOnWeapon>
+    <iconPath>Things/Weapon/Suppressor/Suppressor_DualGrip_Icon</iconPath>
+    <enablesDualWield>true</enablesDualWield>
+    <ceShotSpreadFactor>1.5</ceShotSpreadFactor>
+    <ceSwayFactor>1.35</ceSwayFactor>
+    <modExtensions>
+      <li Class="ProtossMech.GunSmith.GunSmithContentExtension">
+        <costList>
+          <li>
+            <thingDef>PM_Solarite</thingDef>
+            <count>40</count>
+          </li>
+        </costList>
+      </li>
+    </modExtensions>
+    <statOffsets>
+      <Mass>2.4</Mass>
+      <AccuracyTouch>-0.05</AccuracyTouch>
+      <AccuracyShort>-0.05</AccuracyShort>
+      <AccuracyMedium>-0.15</AccuracyMedium>
+      <AccuracyLong>-0.2</AccuracyLong>
+    </statOffsets>
+  </GunSmithFramework.GunSmithPartDef>
+</Defs>

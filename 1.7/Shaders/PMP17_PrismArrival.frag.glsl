@@ -33,14 +33,13 @@ void main() {
             float angle=(sector+.15+random*.70)/count*6.28318-3.14159;
             float da=abs(atan(sin(theta-angle),cos(theta-angle)))*r;
             float head=exp(fract(random+t*(.40+float(layer)*.13))*4.-2.3);
-            // Finite, moving streaks instead of continuous spokes from the vanishing point.
+            // Render finite moving star streaks.
             float trailLength=.018+head*.075;
             float trail=smoothstep(head-trailLength,head-trailLength*.65,r)*(1.-smoothstep(head,head+.006,r));
             float star=exp(-da*da/.0000012)*trail*step(.48,random);
             color+=vec3(.56,.73,1.)*star*(.65+float(layer)*.25);
         }
-        // Reveal the actual world camera through its projected spherical silhouette.
-        // No replacement planet texture, shader sphere or extra world capture is involved.
+        // Reveal the world camera through the projected planet silhouette.
         float planetDistance=length((uv-u._Planet.xy)*vec2(u._Clock.w,1.));
         float outside=smoothstep(u._Planet.z-.001,u._Planet.z+.002,planetDistance);
         alpha*=mix(1.,outside,u._Planet.w);
@@ -48,8 +47,7 @@ void main() {
         vec2 delta=(uv-u._Jet.xy)*vec2(u._Clock.w,1.);
         vec2 projected=normalize(u._Jet.zw);
         float along=dot(delta,projected),across=abs(dot(delta,vec2(-projected.y,projected.x)));
-        // Ray-march an inclined 3D jet. Shock cells and toroidal Mach rings are volume
-        // densities, not painted rings or a stretched flame texture.
+        // Ray-march an inclined jet with volumetric shock cells and Mach rings.
         if(along<-.035 || along>.36 || across>.065) discard;
         vec3 axis=normalize(vec3(projected,.42));
         float opacity=0.;vec3 emission=vec3(0.);

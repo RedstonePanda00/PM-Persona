@@ -87,7 +87,7 @@ namespace PMP_Persona
             {
                 victim.TakeDamage(splashDinfo);
                 MoteMaker.MakeStaticMote(victim.Position, map, ThingDefOf.Mote_Stun, 0.8f);
-                return; // Building primary: backup damage only; no radial (avoids recursive splash noise).
+                return; // Apply backup damage only to primary buildings.
             }
 
             IEnumerable<Thing> potentialTargets = GenRadial.RadialDistinctThingsAround(center, map, this.Props.splashRadius, false);

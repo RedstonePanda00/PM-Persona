@@ -18,7 +18,7 @@ float box(vec2 p,vec2 size) {
 }
 void main() {
     float t=clamp(u._State.x,0.,1.);
-    // Smooth start/end; continuous closure, no final scale or facing discontinuity.
+    // Smooth closure envelope.
     float envelope=smoothstep(0.,.12,t)*(1.-smoothstep(.82,1.,t));
     float spread=(1.-smoothstep(.15,.86,t))*.64;
     vec2 p=(vUv-.5)*4.;
@@ -28,7 +28,7 @@ void main() {
     for(int i=0;i<3;i++) {
         float layer=float(i)-1.;
         vec2 q=p-vec2(.80,.42)*layer*spread;
-        // Slightly oblique energy screens; no permanent opaque rectangle around the item.
+        // Render oblique energy screens.
         vec2 screen=vec2(q.x+q.y*.16,q.y);
         float d=box(screen,vec2(.72,.90));
         float border=(1.-smoothstep(width,width*2.6,abs(d)))*.72;
@@ -42,7 +42,7 @@ void main() {
         light+=mix(gold,white,scan)*energy;
         opacity+=((inside*.035+border*.4+ghost*.5+scan*.12)*envelope);
     }
-    // Last brief seal travels outward instead of switching the pawn sprite off/on.
+    // Expand the final seal outward.
     float seal=exp(-pow((t-.84)/.065,2.))*(1.-smoothstep(.95,1.,t));
     float ring=1.-smoothstep(width,width*3.,abs(length(p)-mix(.35,1.45,smoothstep(.76,1.,t))));
     light+=white*ring*seal*.7;opacity+=ring*seal*.25;

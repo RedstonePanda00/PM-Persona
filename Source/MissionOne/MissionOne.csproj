@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles><RuntimeFrameworkVersion>10.0.0</RuntimeFrameworkVersion><UseAppHost>false</UseAppHost></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../../.work/RimCampaign-stealth/Source/RimCampaign.Core/RimCampaign.Core.csproj" /></ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PMP_Suppressor.label>Z-130 硬光冲锋枪</PMP_Suppressor.label>
+  <PMP_Suppressor.description>一种围绕高速循环发射器构造的全自动硬光武器。密集的炽热弹束扫过前方空间，灼烧装甲与机械结构。紧凑的枪身适于舰内通道与堡垒中的近距离交战。\n\n这把武器是在曙光号上的分子打印机内，由能量直接转化为物质整枪打印的。</PMP_Suppressor.description>
+  <PMP_Suppressor.tools.0.label>枪托</PMP_Suppressor.tools.0.label>
+  <PMP_SuppressorBolt.label>压制者硬光弹束</PMP_SuppressorBolt.label>
+</LanguageData>

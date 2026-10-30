@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ProtossMech.WarpReinforcementDef>
+    <defName>PMP_WarpPrometheus</defName>
+    <label>Prometheus</label>
+    <description>Warp in a Prometheus equipped with a hardlight rifle.</description>
+    <pawnDefName>PMP_Prometheus</pawnDefName>
+    <costList>
+      <li><thingDef>Plasteel</thingDef><count>125</count></li>
+      <li><thingDef>PM_Solarite</thingDef><count>50</count></li>
+    </costList>
+    <warpInTicks>300</warpInTicks>
+    <researchPrerequisites><li>PM_PositronicAI</li></researchPrerequisites>
+    <requiredGateDef>PM_WarpGate</requiredGateDef>
+  </ProtossMech.WarpReinforcementDef>
+</Defs>

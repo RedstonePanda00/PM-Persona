@@ -16,8 +16,7 @@ namespace PMP_Persona.Prometheus
         private static bool Prefix(SkillRequirement __instance, Pawn pawn, ref bool __result)
         {
             if (!(pawn is Pawn_Prometheus)) return true;
-            // Vanilla's fast path requires an overseer-controlled mech. PMC mechs are
-            // autonomous; use the same fixed race level without inventing skill records.
+            // Use the fixed race skill level for autonomous mechs.
             __result = pawn.RaceProps.mechFixedSkillLevel >= __instance.minLevel;
             return false;
         }
@@ -28,17 +27,18 @@ namespace PMP_Persona.Prometheus
     {
         private static bool Prefix(Thing thing, ref bool __result)
         {
-            if (!(thing is Pawn_Prometheus)) return true;
-            // Vanilla uses story presence as a proxy for human skills. Here story is
-            // apparel metadata only; mechanical skills have no disabled-skill records.
+            if (!(thing is Pawn pawn) || pawn.skills != null
+                || !(pawn is Pawn_Prometheus || pawn is Romulus.Pawn_Legion)) return true;
+            // These mech classes add story data only for apparel rendering. Vanilla
+            // IsDisabledFor assumes story implies a human skill tracker, which makes
+            // the developer-mode shooting-stat check dereference null every tick.
+            // Keep native fixed-mech stat calculations; do not invent human skills.
             __result = false;
             return false;
         }
     }
 
-    // No per-pawn skills, fake SkillRecords, or global learning patches. Adapt only
-    // the vanilla work/interaction paths that still assume a human skill tracker.
-    // Research and scanner null guards are already provided by PMC.
+    // Adapt vanilla work and interaction paths to the fixed mechanical skill level.
     [HarmonyPatch]
     internal static class PrometheusWorkCompatibility
     {
@@ -142,8 +142,7 @@ namespace PMP_Persona.Prometheus
         private static bool Prefix(JobDriver_Lessongiving __instance, Pawn student, ref SkillDef __result)
         {
             if (!(__instance.pawn is Pawn_Prometheus)) return true;
-            // All mechanical skills have the same fixed level. Reservoir sampling avoids
-            // allocating/sorting a pretend human skill list each time a lesson begins.
+            // Choose an equally leveled mechanical skill by reservoir sampling.
             __result = null;
             int eligible = 0;
             foreach (var skill in DefDatabase<SkillDef>.AllDefsListForReading)

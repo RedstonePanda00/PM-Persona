@@ -5,3 +5,18 @@
 **/.vs/
 *.DotSettings.user
 .work/
+
+# Local development tools, notes, and generated artifacts (case-insensitive names).
+/[Tt]ools/
+/[Dd]ocs/
+/[Aa]rtifacts/
+
+# Temporary files and editor backups.
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*~
+**/__pycache__/
+*.pyc

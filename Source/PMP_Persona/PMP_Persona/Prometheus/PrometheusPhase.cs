@@ -27,6 +27,7 @@ namespace PMP_Persona.Prometheus
             FleckMaker.Static(pawn.Position, pawn.Map, FleckDefOf.PsycastSkipFlashEntry, 0.7f);
             pawn.Position = target.Cell;
             pawn.Notify_Teleported(endCurrentJob: false);
+            pawn.GetComp<CompPrometheusTactics>()?.BeginPhaseShieldRecovery();
             FleckMaker.Static(target.Cell, pawn.Map, FleckDefOf.PsycastSkipInnerExit, 0.7f);
         }
     }
@@ -36,8 +37,22 @@ namespace PMP_Persona.Prometheus
     }
     public sealed class CompPrometheusTactics : ThingComp
     {
+        private int phaseShieldUntilTick = -1;
+
+        public void BeginPhaseShieldRecovery() => phaseShieldUntilTick = Find.TickManager.TicksGame + 300;
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look(ref phaseShieldUntilTick, "phaseShieldUntilTick", -1);
+        }
+
         public override void CompTick()
         {
+            int tick = Find.TickManager.TicksGame;
+            if (tick > phaseShieldUntilTick - 300 && tick <= phaseShieldUntilTick
+                && parent is Pawn recovering && recovering.Spawned && !recovering.Dead)
+                recovering.GetComp<ProtossMech.ProtossMechShield>()?.AddShieldEnergy(50f / 300f);
             if (!parent.IsHashIntervalTick(30) || !(parent is Pawn pawn) || !pawn.Spawned || pawn.Dead
                 || pawn.Downed || !pawn.Drafted || pawn.equipment?.Primary?.def.IsRangedWeapon != true
                 || pawn.CurJob?.playerForced == true) return;

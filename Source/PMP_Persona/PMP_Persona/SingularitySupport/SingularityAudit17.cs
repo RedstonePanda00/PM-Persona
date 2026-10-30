@@ -200,8 +200,7 @@ namespace PMP_Persona.SingularitySupport
         }
         private void CheckUniformContraction(Material material, TargetOutlineCaptureCamera camera, RenderTexture rt)
         {
-            // A solid circular source lets us measure the rendered outer radius without
-            // depending on the random test map's buildings, terrain or screenshot alpha.
+            // Use a solid circular fixture to measure the rendered outer radius.
             var source = new Texture2D(256,256,TextureFormat.RGBA32,false);
             var image = new Texture2D(256,256,TextureFormat.RGBA32,false);
             try

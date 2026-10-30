@@ -4,10 +4,15 @@
 	<packageId>Redstone.PMPersona</packageId>
 	<name>ProtossMech:Persona</name>
 	<author>Redstone</author>
+	<modIconPath>UI/Campaign/RomulusInsignia</modIconPath>
 	<supportedVersions>
 		<li>1.7</li>
 	</supportedVersions>
 	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Royalty</packageId>
+			<displayName>Royalty</displayName>
+		</li>
 		<li>
 			<packageId>Ludeon.RimWorld.Biotech</packageId>
 			<displayName>Biotech</displayName>
@@ -26,6 +31,7 @@
     <li><packageId>redstonepanda.redstonepandalibrary</packageId><displayName>PandaLib</displayName></li>
   </modDependencies>
 	<loadAfter>
+		<li>Ludeon.RimWorld.Royalty</li>
 		<li>brrainz.harmony</li>
 		<li>Ludeon.RimWorld.Biotech</li>
 		<li>RedstonePanda.ProtossMechCore</li>
